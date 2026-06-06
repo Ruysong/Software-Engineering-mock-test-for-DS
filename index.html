@@ -127,6 +127,12 @@
     transition:opacity .16s, transform .16s;
   }
   .card.swapping{opacity:0;transform:translateX(var(--slidedir,0));}
+  .card.celebrate{animation:gold-pulse .36s ease-out;}
+  @keyframes gold-pulse{
+    0%{box-shadow:var(--shadow-lg);}
+    45%{border-color:#e4b744;box-shadow:0 0 0 4px rgba(228,183,68,.22),0 0 34px rgba(228,183,68,.52),var(--shadow-lg);}
+    100%{box-shadow:var(--shadow-lg);}
+  }
 
   .pane{padding:30px 32px;}
   .pane-q{border-right:1px solid var(--line-soft);}
@@ -477,9 +483,14 @@ function go(delta){
   const card=document.getElementById('card');
   if(card){
     card.style.setProperty('--slidedir', delta>0 ? '-24px':'24px');
-    card.classList.add('swapping');
+    if(delta>0){
+      card.classList.add('celebrate');
+      setTimeout(()=>card.classList.add('swapping'), 210);
+    } else {
+      card.classList.add('swapping');
+    }
   }
-  setTimeout(()=>{ idx=ni; render(); }, 150);
+  setTimeout(()=>{ idx=ni; render(); }, delta>0 ? 360 : 150);
 }
 
 /* ===== 표시(자기평가) ===== */
