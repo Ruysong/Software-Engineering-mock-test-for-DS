@@ -451,7 +451,7 @@ function render(){
     </div>
   </div>`;
 
-  document.getElementById('cover').addEventListener('click', reveal);
+  document.querySelector('.pane-a').addEventListener('click', toggleAnswer);
   document.getElementById('curNum').textContent = idx+1;
   document.getElementById('progFill').style.width = ((idx+1)/deck.length*100)+'%';
   document.getElementById('prevBtn').disabled = (idx===0);
@@ -462,6 +462,11 @@ function render(){
 function reveal(){
   const card=document.getElementById('card');
   if(card){ card.classList.add('revealed'); revealed=true; }
+}
+
+function toggleAnswer(){
+  const card=document.getElementById('card');
+  if(card){ revealed=card.classList.toggle('revealed'); }
 }
 
 /* 카드 전환 (슬라이드) */
@@ -536,7 +541,7 @@ document.addEventListener('keydown',e=>{
   switch(e.key){
     case 'ArrowRight': case 'Enter': e.preventDefault(); if(!revealed) reveal(); else go(1); break;
     case 'ArrowLeft': e.preventDefault(); go(-1); break;
-    case ' ': case 'ArrowDown': e.preventDefault(); reveal(); break;
+    case ' ': case 'ArrowDown': e.preventDefault(); toggleAnswer(); break;
     case '1': setMark('r'); break;
     case '2': setMark('y'); break;
     case '3': setMark('g'); break;
