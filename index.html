@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C언어 기말 문제은행 · 플래시카드</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+  :root{
+    --bg:#fafaf8;
+    --card:#ffffff;
+    --ink:#1a1a1a;
+    --ink-soft:#555;
+    --ink-dim:#8a8a8a;
+    --line:#e6e6e1;
+    --line-soft:#f0f0ec;
+    --accent:#e8893b;       /* warm amber */
+    --accent-soft:#fdf2e7;
+    --code-bg:#f6f6f3;
+    --hl:#fff3c4;            /* blank highlight */
+    --green:#3a9d5d;
+    --green-soft:#eaf6ee;
+    --yellow:#d8a128;
+    --yellow-soft:#fbf3df;
+    --red:#d2503e;
+    --red-soft:#fbecea;
+    --blue:#3a72b8;
+    --blue-soft:#eaf1fa;
+    --purple:#7a5bb0;
+    --purple-soft:#f1ecf8;
+    --shadow:0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+    --shadow-lg:0 4px 12px rgba(0,0,0,.06), 0 16px 48px rgba(0,0,0,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Gowun Dodum',sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;
+    min-height:100vh;
+  }
+  code,pre,.mono{font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:60;
+    background:rgba(250,250,248,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    max-width:1180px;margin:0 auto;padding:12px 20px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  }
+  .brand{
+    font-family:'Fraunces',serif;font-weight:600;font-size:19px;
+    letter-spacing:-.3px;color:var(--ink);white-space:nowrap;
+    display:flex;align-items:center;gap:9px;
+  }
+  .brand .tag{
+    font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;
+    background:var(--accent);color:#fff;padding:2px 7px;border-radius:5px;
+    letter-spacing:.5px;
+  }
+  .progress-wrap{flex:1;min-width:160px;display:flex;align-items:center;gap:12px;}
+  .progress-track{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden;min-width:80px;}
+  .progress-fill{height:100%;background:var(--accent);border-radius:6px;transition:width .3s;width:0%;}
+  .progress-text{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-soft);white-space:nowrap;}
+  .progress-text b{color:var(--ink);font-size:15px;}
+
+  .top-actions{display:flex;gap:8px;align-items:center;}
+  .icon-btn{
+    font-family:'JetBrains Mono',monospace;font-size:12px;
+    border:1px solid var(--line);background:var(--card);color:var(--ink-soft);
+    padding:7px 12px;border-radius:9px;cursor:pointer;transition:all .14s;
+    display:flex;align-items:center;gap:6px;white-space:nowrap;
+  }
+  .icon-btn:hover{border-color:var(--accent);color:var(--ink);}
+  .icon-btn.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
+
+  /* ---------- Filter panel ---------- */
+  .filters{
+    max-width:1180px;margin:0 auto;width:100%;padding:0 20px;
+    overflow:hidden;max-height:0;transition:max-height .3s ease, padding .3s;
+  }
+  .filters.open{max-height:600px;padding-top:14px;padding-bottom:4px;}
+  .filter-row{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:10px;}
+  .filter-label{
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-dim);
+    text-transform:uppercase;letter-spacing:1px;width:54px;flex-shrink:0;
+  }
+  .chip{
+    font-family:'JetBrains Mono',monospace;font-size:12.5px;
+    padding:5px 12px;border-radius:18px;cursor:pointer;
+    border:1px solid var(--line);background:var(--card);color:var(--ink-soft);
+    transition:all .14s;user-select:none;
+  }
+  .chip:hover{border-color:var(--accent);color:var(--ink);}
+  .chip.active{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600;}
+  .chip.mark-r.active{background:var(--red);border-color:var(--red);}
+  .chip.mark-y.active{background:var(--yellow);border-color:var(--yellow);}
+  .chip.mark-g.active{background:var(--green);border-color:var(--green);}
+  .chip.mark-s.active{background:var(--accent);border-color:var(--accent);}
+  .search-box{
+    display:flex;align-items:center;gap:8px;flex:1;min-width:180px;
+    background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px;
+  }
+  .search-box input{flex:1;border:none;outline:none;background:none;color:var(--ink);
+    font-family:'Gowun Dodum',sans-serif;font-size:14px;}
+  .search-box svg{opacity:.4;flex-shrink:0;}
+
+  /* ---------- Stage ---------- */
+  .stage{
+    flex:1;display:flex;align-items:flex-start;justify-content:center;
+    padding:28px 20px 120px;width:100%;
+  }
+  .card{
+    width:100%;max-width:1120px;
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    box-shadow:var(--shadow-lg);overflow:hidden;
+    display:grid;grid-template-columns:1fr 1fr;
+    min-height:440px;
+    transition:opacity .16s, transform .16s;
+  }
+  .card.swapping{opacity:0;transform:translateX(var(--slidedir,0));}
+
+  .pane{padding:30px 32px;}
+  .pane-q{border-right:1px solid var(--line-soft);}
+
+  .meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .id-badge{
+    font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;
+    color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:7px;
+  }
+  .grade-badge,.type-badge{
+    font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+    padding:3px 9px;border-radius:6px;
+  }
+  .g-Splus{background:var(--red-soft);color:var(--red);}
+  .g-S{background:var(--accent-soft);color:var(--accent);}
+  .g-Aplus{background:var(--green-soft);color:var(--green);}
+  .g-A{background:var(--green-soft);color:var(--green);}
+  .g-Bplus,.g-B{background:var(--blue-soft);color:var(--blue);}
+  .g-Cplus,.g-C{background:var(--line-soft);color:var(--ink-dim);}
+  .t-blank{background:var(--blue-soft);color:var(--blue);}
+  .t-fix{background:var(--red-soft);color:var(--red);}
+  .t-trace{background:var(--purple-soft);color:var(--purple);}
+  .t-impl{background:var(--green-soft);color:var(--green);}
+  .t-concept{background:var(--accent-soft);color:var(--accent);}
+  .topic{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-dim);margin-left:auto;}
+
+  .q-text{font-size:18px;line-height:1.65;color:var(--ink);margin-bottom:6px;}
+  .q-text b{color:var(--accent);font-weight:600;}
+  .pane-label{
+    font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+    letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-dim);margin-bottom:12px;
+    display:flex;align-items:center;gap:7px;
+  }
+  .pane-label .dot{width:7px;height:7px;border-radius:50%;background:currentColor;}
+
+  pre{
+    background:var(--code-bg);border:1px solid var(--line-soft);border-radius:12px;
+    padding:16px 18px;overflow-x:auto;font-size:14px;line-height:1.65;color:#2a2a2a;
+    margin:10px 0;tab-size:4;
+  }
+  pre .cmt{color:#9a9a90;font-style:italic;}
+  pre .blank{background:var(--hl);color:#8a6d00;font-weight:700;border-radius:3px;padding:0 3px;}
+
+  /* answer pane hidden state */
+  .pane-a{position:relative;display:flex;flex-direction:column;}
+  .answer-content{opacity:0;transition:opacity .25s;pointer-events:none;}
+  .card.revealed .answer-content{opacity:1;pointer-events:auto;}
+  .cover{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:14px;cursor:pointer;
+    background:var(--card);transition:opacity .25s;text-align:center;padding:30px;
+  }
+  .card.revealed .cover{opacity:0;pointer-events:none;}
+  .cover-icon{
+    width:54px;height:54px;border-radius:50%;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);
+  }
+  .cover-text{font-size:15px;color:var(--ink-soft);}
+  .cover-key{
+    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-dim);
+    border:1px solid var(--line);border-radius:7px;padding:6px 12px;
+  }
+  .cover-key b{color:var(--accent);}
+
+  .ans-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+    letter-spacing:1px;text-transform:uppercase;margin:14px 0 6px;display:flex;align-items:center;gap:7px;}
+  .ans-label:first-child{margin-top:0;}
+  .ans-label.answer{color:var(--green);}
+  .ans-label.explain{color:var(--blue);}
+  .ans-label.trap{color:var(--red);}
+  .ans-label .dot{width:7px;height:7px;border-radius:50%;background:currentColor;}
+  .explain-text{font-size:15px;color:var(--ink);}
+  .explain-text code{background:var(--code-bg);padding:1px 6px;border-radius:5px;font-size:12.5px;
+    color:#a8651e;border:1px solid var(--line-soft);}
+  .trap-text{font-size:14.5px;color:#9c3b2c;background:var(--red-soft);
+    border-left:3px solid var(--red);padding:9px 13px;border-radius:0 9px 9px 0;}
+  .trap-text code{background:#fff;padding:1px 5px;border-radius:4px;font-size:12px;color:var(--red);}
+
+  /* ---------- Bottom bar ---------- */
+  .bottombar{
+    position:fixed;bottom:0;left:0;right:0;z-index:60;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+  }
+  .bottombar-inner{
+    max-width:1120px;margin:0 auto;padding:12px 20px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .nav-btn{
+    font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);
+    padding:11px 20px;border-radius:11px;cursor:pointer;transition:all .14s;
+    display:flex;align-items:center;gap:7px;
+  }
+  .nav-btn:hover{border-color:var(--accent);}
+  .nav-btn.primary{background:var(--ink);color:#fff;border-color:var(--ink);flex:0 0 auto;}
+  .nav-btn.primary:hover{background:#000;}
+  .nav-btn:disabled{opacity:.35;cursor:not-allowed;}
+
+  .marks{display:flex;gap:7px;margin:0 auto;}
+  .mark-btn{
+    width:42px;height:42px;border-radius:11px;border:1.5px solid var(--line);
+    background:var(--card);cursor:pointer;font-size:18px;transition:all .14s;
+    display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .mark-btn:hover{transform:translateY(-2px);}
+  .mark-btn .klabel{position:absolute;bottom:-16px;font-family:'JetBrains Mono',monospace;
+    font-size:9px;color:var(--ink-dim);}
+  .mark-btn.sel-r{background:var(--red-soft);border-color:var(--red);}
+  .mark-btn.sel-y{background:var(--yellow-soft);border-color:var(--yellow);}
+  .mark-btn.sel-g{background:var(--green-soft);border-color:var(--green);}
+  .mark-btn.sel-s{background:var(--accent-soft);border-color:var(--accent);}
+
+  .empty{max-width:560px;margin:80px auto;text-align:center;color:var(--ink-dim);
+    font-family:'JetBrains Mono',monospace;font-size:15px;line-height:2;}
+  .empty .big{font-size:40px;margin-bottom:10px;}
+
+  /* scrollbar */
+  ::-webkit-scrollbar{height:8px;width:8px;}
+  ::-webkit-scrollbar-thumb{background:#d4d4cc;border-radius:8px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+
+  @media(max-width:820px){
+    .card{grid-template-columns:1fr;min-height:0;}
+    .pane-q{border-right:none;border-bottom:1px solid var(--line-soft);}
+    .pane{padding:24px 22px;}
+    .q-text{font-size:16.5px;}
+    .pane-a{min-height:260px;}
+    .brand .full{display:none;}
+    .marks{margin:0;}
+    .bottombar-inner{flex-wrap:wrap;gap:10px;}
+    .nav-btn{padding:10px 14px;font-size:13px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="tag">C</span>
+      <span class="full">C언어 기말 문제은행</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progFill"></div></div>
+      <div class="progress-text"><b id="curNum">1</b> / <span id="totNum">151</span></div>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" id="shuffleBtn" title="셔플">↻ 셔플</button>
+      <button class="icon-btn" id="filterToggle" title="필터 (단축키: 없음)">⚙ 필터</button>
+    </div>
+  </div>
+  <div class="filters" id="filterPanel">
+    <div class="topbar-inner" style="padding-top:0;flex-direction:column;align-items:stretch;gap:0;">
+      <div class="filter-row">
+        <span class="filter-label">주차</span>
+        <span class="chip wk active" data-wk="all">전체</span>
+        <span class="chip wk" data-wk="9">9 배열</span>
+        <span class="chip wk" data-wk="10">10 배열·함수</span>
+        <span class="chip wk" data-wk="11">11 문자열</span>
+        <span class="chip wk" data-wk="12">12 포인터</span>
+        <span class="chip wk" data-wk="13">13 포인터심화</span>
+        <span class="chip wk" data-wk="14">14 구조체</span>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">유형</span>
+        <span class="chip ty active" data-ty="all">전체</span>
+        <span class="chip ty" data-ty="blank">빈칸</span>
+        <span class="chip ty" data-ty="fix">오류수정</span>
+        <span class="chip ty" data-ty="trace">실행추적</span>
+        <span class="chip ty" data-ty="impl">변형구현</span>
+        <span class="chip ty" data-ty="concept">개념</span>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">난이도</span>
+        <span class="chip gr active" data-gr="all">전체</span>
+        <span class="chip gr" data-gr="S+">S+</span>
+        <span class="chip gr" data-gr="S">S</span>
+        <span class="chip gr" data-gr="A+">A+</span>
+        <span class="chip gr" data-gr="A">A</span>
+        <span class="chip gr" data-gr="B">B</span>
+        <span class="chip gr" data-gr="C">C</span>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">표시</span>
+        <span class="chip mk active" data-mk="all">전체</span>
+        <span class="chip mk mark-r" data-mk="r">🔴 모름</span>
+        <span class="chip mk mark-y" data-mk="y">🟡 애매</span>
+        <span class="chip mk mark-g" data-mk="g">🟢 앎</span>
+        <span class="chip mk mark-s" data-mk="s">⭐ 별표</span>
+        <span class="chip mk" data-mk="none">미표시</span>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">검색</span>
+        <div class="search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+          <input type="text" id="search" placeholder="번호·주제·키워드 검색…">
+        </div>
+        <button class="icon-btn" id="resetMarks" title="모든 표시 지우기">표시 초기화</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stage" id="stage"></div>
+
+<div class="bottombar">
+  <div class="bottombar-inner">
+    <button class="nav-btn" id="prevBtn">← 이전</button>
+    <div class="marks" id="markBar">
+      <button class="mark-btn" data-m="r" title="모름 (1)">🔴<span class="klabel">1</span></button>
+      <button class="mark-btn" data-m="y" title="애매 (2)">🟡<span class="klabel">2</span></button>
+      <button class="mark-btn" data-m="g" title="앎 (3)">🟢<span class="klabel">3</span></button>
+      <button class="mark-btn" data-m="s" title="별표 (4)">⭐<span class="klabel">4</span></button>
+    </div>
+    <button class="nav-btn" id="nextBtn">다음 →</button>
+  </div>
+</div>
+
+<script>
+/* ===== 데이터 주입 ===== */
+const PROBLEMS = [{"id":"9.1-1","week":9,"topic":"배열 요소 출력","grade":"C","type":"blank","q":"문자 배열 arr의 모든 요소를 <b>순서대로</b> 출력하려고 한다. 빈칸을 채우시오.","code":"char arr[5] = {'A','B','C','D','E'};\nfor (int i = 0; i < ____; i++) {\n    printf(\"%c \", arr[i]);\n}","a":"5","ex":"크기가 5인 배열의 유효 인덱스는 0~4. 조건은 <code>i < 5</code> (또는 <code>i &lt;= 4</code>). <code>i &lt;= 5</code>로 쓰면 arr[5]에 접근해 범위를 벗어난다.","trap":"<code>i &lt;= 5</code> 로 쓰면 배열 범위 초과(out of bounds)."},{"id":"9.1-2","week":9,"topic":"배열 요소 출력","grade":"C","type":"blank","q":"문자 배열 arr를 <b>역순으로</b> 출력하려고 한다. 두 빈칸을 채우시오.","code":"char arr[5] = {'A','B','C','D','E'};\nfor (int i = ____; i >= 0; i____) {\n    printf(\"%c \", arr[i]);\n}","a":"i = 4 (또는 size-1) / i--","ex":"역순은 마지막 인덱스 4에서 시작해 0까지 1씩 감소. 시작값 <code>4</code>, 갱신 <code>i--</code>. 출력은 E D C B A.","trap":"시작을 5로 잡으면 첫 출력이 arr[5](쓰레기값). 조건을 <code>i &gt; 0</code>으로 하면 arr[0]이 누락."},{"id":"9.1-3","week":9,"topic":"배열 요소 출력","grade":"C","type":"trace","q":"다음 코드의 출력 결과를 쓰시오.","code":"char arr[5] = {'A','B','C','D','E'};\nfor (int i = 0; i < 5; i++)\n    printf(\"%c \", arr[i]);\nprintf(\"\\n\");\nfor (int i = 4; i >= 0; i--)\n    printf(\"%c \", arr[i]);","a":"A B C D E\nE D C B A","ex":"첫 루프는 0→4 순서, 둘째 루프는 4→0 역순. 각 문자 뒤에 공백이 붙는다.","trap":"역순 루프의 시작값/종료조건을 헷갈리면 한 글자 빠지거나 쓰레기값이 나온다."},{"id":"9.1-4","week":9,"topic":"배열 요소 출력","grade":"C","type":"fix","q":"마지막 요소를 출력하려는 의도다. 잘못된 부분을 고치시오.","code":"char arr[5] = {'A','B','C','D','E'};\nprintf(\"마지막 요소: %c\\n\", arr[5]);","a":"arr[5] → arr[4]","ex":"크기 5 배열의 마지막 유효 인덱스는 <code>size - 1 = 4</code>. arr[5]는 존재하지 않는 영역.","trap":"\"마지막은 size 번째\"라는 착각. 항상 마지막 인덱스 = size - 1."},{"id":"9.1-5","week":9,"topic":"배열 요소 출력","grade":"B","type":"concept","q":"배열 <code>int a[5]</code>에서 <code>a[i]</code>와 <code>i</code>의 의미 차이를 설명하시오.","code":"int a[5] = {10,20,30,40,50};\n// i = 2 일 때","a":"i 는 인덱스(위치, 0부터 시작), a[i] 는 그 위치에 저장된 값. i=2면 위치는 세 번째, a[2]=30(값).","ex":"출력 문제에서 <code>printf(\"%d\", i)</code>로 쓰면 위치 0,1,2..가 찍히고, <code>printf(\"%d\", a[i])</code>로 써야 실제 값이 나온다.","trap":"인덱스와 값 혼동은 배열 전 범위 공통 함정."},{"id":"9.2-1","week":9,"topic":"최솟값과 인덱스","grade":"A","type":"blank","q":"실수 배열에서 최솟값과 그 인덱스를 찾는다. 빈칸 3개를 채우시오.","code":"float arr[5] = {3.5, 1.2, 4.6, 0.9, 2.3};\nfloat min = ______;     // (1) 초기값\nint min_index = 0;\nfor (int i = 1; i < 5; i++) {\n    if (arr[i] < ____) {  // (2) 비교 대상\n        min = arr[i];\n        min_index = ____;  // (3)\n    }\n}","a":"(1) arr[0]  (2) min  (3) i","ex":"최솟값 후보를 첫 원소 arr[0]로 두고 i=1부터 비교. 더 작으면 min과 위치 i를 함께 갱신.","trap":"min을 0으로 초기화하면 모든 양수 배열에서 최솟값이 0으로 잘못 나온다. min_index에 i 대신 arr[i]를 넣는 실수."},{"id":"9.2-2","week":9,"topic":"최솟값과 인덱스","grade":"A","type":"fix","q":"최솟값과 인덱스를 찾는 코드다. 틀린 부분 2곳을 고치시오.","code":"float arr[5] = {3.5, 1.2, 4.6, 0.9, 2.3};\nfloat min = 0;\nint min_index = arr[0];\nfor (int i = 1; i < 5; i++) {\n    if (arr[i] < min) {\n        min = arr[i];\n        min_index = i;\n    }\n}","a":"min = 0 → min = arr[0]\nmin_index = arr[0] → min_index = 0","ex":"min은 첫 원소값(arr[0])으로, min_index는 첫 위치(0)로 초기화해야 한다. min=0이면 양수 배열에서 갱신이 한 번도 안 일어난다.","trap":"초기값에 값/인덱스를 뒤바꿔 넣는 전형적 함정."},{"id":"9.2-3","week":9,"topic":"최솟값과 인덱스","grade":"A","type":"trace","q":"다음 코드에서 min_index의 최종 값은?","code":"int a[5] = {5, 2, 8, 2, 1};\nint min = a[0], min_index = 0;\nfor (int i = 1; i < 5; i++) {\n    if (a[i] < min) {\n        min = a[i];\n        min_index = i;\n    }\n}","a":"4","ex":"값 추적: i=1(2<5→min=2,idx=1), i=2(8<2 X), i=3(2<2 X, 같으면 갱신 안 함), i=4(1<2→min=1,idx=4). 최종 min_index=4.","trap":"<code>&lt;</code>는 같은 값일 때 갱신하지 않으므로 첫 번째 최솟값 위치를 유지. <code>&lt;=</code>였다면 마지막 위치."},{"id":"9.2-4","week":9,"topic":"최솟값과 인덱스","grade":"A","type":"concept","q":"동일한 최솟값이 여러 개일 때, <code>&lt;</code> 와 <code>&lt;=</code> 비교 연산자는 결과가 어떻게 달라지는가?","code":"if (a[i] <  min)  // (A)\nif (a[i] <= min)  // (B)","a":"(A) < 는 처음 나온 최솟값의 위치를 유지(첫 번째 위치). (B) <= 는 같은 값이 나올 때마다 갱신하므로 마지막 위치를 가리킨다.","ex":"\"가장 처음/마지막 최솟값 위치를 구하라\"는 변형에서 핵심이 되는 차이.","trap":"문제에서 '첫 번째 위치'를 요구하는데 <code>&lt;=</code>를 쓰면 오답."},{"id":"9.2-5","week":9,"topic":"최댓값으로 변형","grade":"A","type":"impl","q":"위 최솟값 코드를 <b>최댓값과 그 인덱스</b>를 찾도록 변형해 작성하시오.","code":"float arr[5] = {3.5, 1.2, 4.6, 0.9, 2.3};\n// max, max_index 를 구하라","a":"float max = arr[0];\nint max_index = 0;\nfor (int i = 1; i < 5; i++) {\n    if (arr[i] > max) {\n        max = arr[i];\n        max_index = i;\n    }\n}","ex":"비교 연산자만 <code>&lt;</code> → <code>&gt;</code>로 바꾸면 된다. 초기화는 동일하게 arr[0], 0.","trap":"비교만 바꾸고 변수명을 그대로 min으로 두는 실수."},{"id":"9.3-1","week":9,"topic":"배열 입력/출력","grade":"C","type":"fix","q":"정수 5개를 입력받는 코드다. 잘못된 부분을 고치시오.","code":"int arr[5];\nfor (int i = 0; i < 5; i++) {\n    scanf(\"%d\", arr[i]);\n}","a":"scanf(\"%d\", arr[i]) → scanf(\"%d\", &arr[i])","ex":"scanf는 저장할 주소가 필요하므로 <code>&arr[i]</code>. arr[i]만 넘기면 값(쓰레기)을 주소로 해석해 크래시.","trap":"scanf에서 & 누락은 가장 흔한 감점 포인트."},{"id":"9.3-2","week":9,"topic":"배열 입력/출력","grade":"C","type":"fix","q":"입력된 정수를 출력하는 코드다. 잘못된 부분을 고치시오.","code":"for (int i = 0; i < 5; i++) {\n    printf(\"%d \", &arr[i]);\n}","a":"&arr[i] → arr[i]","ex":"printf는 값을 출력하므로 <code>arr[i]</code>. &arr[i]를 %d로 출력하면 주소값(엉뚱한 숫자)이 찍힌다.","trap":"scanf와 printf의 & 사용이 정반대임을 혼동."},{"id":"9.3-3","week":9,"topic":"배열 입력/출력 (종료값)","grade":"B","type":"trace","q":"입력이 <code>10 20 -1 30</code> 순서로 들어올 때, 아래 코드가 출력하는 내용은?","code":"int arr[5], count = 0;\nwhile (count < 5) {\n    int num;\n    scanf(\"%d\", &num);\n    if (num == -1) break;\n    arr[count] = num;\n    count++;\n}\nfor (int i = 0; i < count; i++)\n    printf(\"%d \", arr[i]);","a":"10 20","ex":"-1을 만나면 즉시 break하여 그 전까지만 저장(10, 20). 30은 읽기 전에 종료. count=2.","trap":"종료값 -1이 배열에 저장되지 않음. count 기준으로 출력해야 한다(5가 아님)."},{"id":"9.3-4","week":9,"topic":"배열 입력/출력","grade":"C","type":"concept","q":"종료값 방식 입력에서 <code>count</code> 변수가 반드시 필요한 이유는?","code":"while (count < 5) { ... arr[count]=num; count++; }","a":"최대 크기(5)와 실제 입력된 개수가 다를 수 있기 때문. 출력·평균 등 이후 처리에서 실제 개수 count를 써야 쓰레기값을 건드리지 않는다.","ex":"5칸 중 2개만 입력되면 나머지 3칸은 쓰레기값. count로 범위를 제한해야 한다.","trap":"출력 루프를 <code>i < 5</code>로 하면 입력 안 된 칸까지 출력."},{"id":"9.4-1","week":9,"topic":"특정값 검색","grade":"B","type":"blank","q":"배열에서 key를 검색해 첫 인덱스를 찾는다. 빈칸을 채우시오.","code":"int list[10] = {5,3,8,1,4,9,2,7,6,0};\nint index = ____;        // (1) 못 찾음 표시\nfor (int i = 0; i < 10; i++) {\n    if (list[i] == key) {\n        index = i;\n        ______;          // (2) 첫 위치에서 멈춤\n    }\n}","a":"(1) -1   (2) break","ex":"못 찾은 경우를 -1로 초기화하면 끝에서 -1 여부로 판단 가능. break는 첫 번째 일치에서 멈추기 위함.","trap":"index를 0으로 초기화하면 '못 찾음'과 '0번에서 찾음'을 구별 못 한다."},{"id":"9.4-2","week":9,"topic":"특정값 검색","grade":"B","type":"fix","q":"검색 코드의 비교식에 오류가 있다. 고치시오.","code":"for (int i = 0; i < 10; i++) {\n    if (list[i] = key) {\n        index = i;\n        break;\n    }\n}","a":"list[i] = key → list[i] == key","ex":"<code>=</code>는 대입, <code>==</code>는 비교. 대입을 쓰면 list[i]에 key를 넣고 그 값이 0이 아니면 항상 참이 되어 첫 칸에서 멈춘다.","trap":"= 와 == 혼동. 컴파일은 되지만 논리가 완전히 깨진다."},{"id":"9.4-3","week":9,"topic":"특정값 검색","grade":"B","type":"impl","q":"같은 검색을 <b>마지막 일치 위치</b>를 찾도록 변형하시오.","code":"int list[5] = {3, 7, 3, 7, 3};\nint key = 3;\n// 마지막으로 3이 나온 인덱스를 index에 저장","a":"int index = -1;\nfor (int i = 0; i < 5; i++) {\n    if (list[i] == key) {\n        index = i;   // break 없음 → 계속 갱신\n    }\n}","ex":"break를 제거하면 끝까지 돌며 마지막 일치 위치로 index가 덮어쓰여 마지막 위치가 남는다. 예시에선 index=4.","trap":"마지막 위치를 원하면 break가 있으면 안 된다."},{"id":"9.4-4","week":9,"topic":"특정값 검색 (원본 추적)","grade":"B","type":"trace","q":"원본 코드에는 검색 결과 출력 블록이 <b>두 번</b> 들어 있다. key=8로 검색했을 때 화면에 어떤 줄이 나오는가?","code":"int list[10] = {5,3,8,1,4,9,2,7,6,0};\n// key = 8 → index = 2\nprintf(\"검색 결과: \");\nif (index != -1)\n    printf(\"...인덱스: %d\\n\", index);\nelse printf(\"없다\\n\");\n// 아래 블록이 한 번 더 반복됨\nif (index != -1)\n    printf(\"...인덱스: %d\\n\", index);\nelse printf(\"없다\\n\");","a":"인덱스 2가 두 줄 출력된다 (출력 블록이 중복되어 있기 때문).","ex":"원본에는 동일 출력 블록이 중복되어 있어 결과가 두 번 찍힌다. 이런 '의도치 않은 중복' 추적도 시험에 나올 수 있다.","trap":"코드를 끝까지 읽지 않고 한 번만 출력될 거라 단정."},{"id":"10.1-1","week":10,"topic":"평균 구하기","grade":"A","type":"blank","q":"종료값 s가 나오기 전까지 입력받고 개수를 반환한다. 빈칸을 채우시오.","code":"int GetIntegerArray(int a[], int n, int s) {\n    int i, x;\n    for (i = 0; i < n; i++) {\n        scanf(\"%d\", &x);\n        if (x == s) ______;   // (1) 종료\n        a[i] = x;\n    }\n    return ____;              // (2) 실제 개수\n}","a":"(1) break   (2) i","ex":"종료값을 만나면 break, 루프 변수 i가 곧 저장된 개수. i는 break 시점까지 증가한 값.","trap":"return n(최대크기)으로 쓰면 실제 개수와 다르다. 종료값을 a[i]에 저장하면 안 됨(break가 저장 위에 있어야 함)."},{"id":"10.1-2","week":10,"topic":"평균 구하기","grade":"A","type":"fix","q":"평균 계산 함수다. 정수 나눗셈으로 인한 오류가 있다. 고치시오.","code":"double AverageIntegerArray(int a[], int n) {\n    int i, sum = 0;\n    if (n <= 0) return 0.0;\n    for (i = 0; i < n; i++) sum += a[i];\n    return sum / n;\n}","a":"return sum / n; → return (double)sum / n;","ex":"sum과 n이 모두 int면 정수 나눗셈이 되어 소수점이 버려진다. <code>(double)</code> 캐스팅으로 실수 나눗셈을 강제.","trap":"(double)(sum/n)으로 쓰면 이미 정수 나눗셈한 뒤 캐스팅이라 여전히 틀림. 캐스팅 위치가 중요."},{"id":"10.1-3","week":10,"topic":"평균 구하기","grade":"A","type":"trace","q":"입력이 <code>80 90 100 -1</code>일 때, count와 평균 출력은? (종료값 -1)","code":"count = GetIntegerArray(arr, 100, -1);\navg = AverageIntegerArray(arr, count);\nprintf(\"평균: %.4lf\\n\", avg);","a":"count = 3, 평균: 90.0000","ex":"80,90,100 세 개 저장 후 -1에서 종료 → count=3. 합 270 / 3 = 90.0000.","trap":"종료값 -1을 개수에 포함하거나 합에 더하면 오답."},{"id":"10.1-4","week":10,"topic":"평균 구하기","grade":"A","type":"concept","q":"<code>AverageIntegerArray</code>에서 <code>if (n &lt;= 0) return 0.0;</code> 가 필요한 이유는?","code":"if (n <= 0) return 0.0;\nreturn (double)sum / n;","a":"입력이 하나도 없을 때(n=0) 0으로 나누는 것을 막기 위함. 0으로 나누면 런타임 오류/정의되지 않은 동작이 발생.","ex":"방어 코드(guard). 종료값이 첫 입력으로 들어오면 count=0이 되는 상황을 처리.","trap":"방어 없이 sum/0을 수행하면 프로그램이 죽거나 inf/nan."},{"id":"10.2-1","week":10,"topic":"두 배열 비교","grade":"B","type":"fix","q":"두 배열이 모두 같으면 1을 반환해야 한다. 논리 오류를 고치시오.","code":"int ArrayCmp(int a1[], int a2[], int size) {\n    for (int i = 0; i < size; i++) {\n        if (a1[i] == a2[i]) return 1;\n    }\n    return 0;\n}","a":"if (a1[i] == a2[i]) return 1; → if (a1[i] != a2[i]) return 0;\n그리고 루프 뒤에 return 1;","ex":"하나라도 다르면 즉시 0을 반환하고, 끝까지 다 같았을 때만 마지막에 1을 반환해야 한다. 첫 원소가 같다고 바로 1을 반환하면 안 됨.","trap":"return 1을 루프 안에 두는 것이 핵심 함정. '모두 같아야' 1이므로 1은 루프 밖에."},{"id":"10.2-2","week":10,"topic":"두 배열 비교","grade":"B","type":"trace","q":"다음 호출의 반환값은?","code":"int a[5] = {1,2,3,4,5};\nint b[5] = {1,2,9,4,5};\n// ArrayCmp: 다르면 0, 모두 같으면 1\nint r = ArrayCmp(a, b, 5);","a":"0","ex":"인덱스 2에서 3≠9이므로 즉시 0 반환.","trap":"앞 두 개가 같다고 1로 착각. 하나라도 다르면 전체는 '다름'."},{"id":"10.2-3","week":10,"topic":"두 배열 비교","grade":"B","type":"fix","q":"main에서 비교 결과를 판단하는 if문에 오류가 있다. 고치시오.","code":"int result = ArrayCmp(list1, list2, 5);\nif (result = 1)\n    printf(\"같습니다.\\n\");","a":"if (result = 1) → if (result == 1)","ex":"<code>=</code>는 대입이라 result에 1을 넣고 조건이 항상 참이 된다. 비교는 <code>==</code>.","trap":"조건문 안의 = / == 혼동."},{"id":"10.3-1","week":10,"topic":"인덱스 찾기 함수","grade":"B","type":"blank","q":"key의 첫 인덱스를 반환하고 없으면 -1을 반환한다. 빈칸을 채우시오.","code":"int Find(int a[], int n, int key) {\n    for (int i = 0; i < n; i++) {\n        if (a[i] == key)\n            return ____;    // (1)\n    }\n    return ____;            // (2) 못 찾음\n}","a":"(1) i   (2) -1","ex":"찾으면 위치 i를 반환(값 a[i]가 아님). 루프를 다 돌고도 못 찾으면 -1.","trap":"return a[i]로 쓰면 값을 반환해버려 인덱스가 안 나온다. -1 반환을 루프 안에 두면 첫 불일치에서 종료."},{"id":"10.3-2","week":10,"topic":"인덱스 찾기 함수","grade":"B","type":"fix","q":"못 찾았을 때의 처리가 잘못됐다. 고치시오.","code":"int Find(int a[], int n, int key) {\n    for (int i = 0; i < n; i++) {\n        if (a[i] == key) return i;\n        else return -1;\n    }\n}","a":"else return -1; 를 루프 밖으로 이동\n(루프 안 else 제거, 루프 종료 후 return -1;)","ex":"else return -1이 루프 안에 있으면 첫 원소가 다른 순간 -1을 반환하고 끝난다. 끝까지 다 본 뒤에야 -1.","trap":"실패 반환 위치가 루프 안인지 밖인지가 핵심."},{"id":"10.3-3","week":10,"topic":"인덱스 찾기 함수","grade":"B","type":"trace","q":"배열 {11,22,33,22,44}에서 Find(list,5,22)의 반환값은?","code":"int Find(int a[], int n, int key) {\n    for (int i = 0; i < n; i++)\n        if (a[i] == key) return i;\n    return -1;\n}","a":"1","ex":"22는 인덱스 1과 3에 있지만 return i가 첫 일치에서 즉시 반환하므로 1.","trap":"마지막 위치 3으로 착각. return i는 첫 위치."},{"id":"10.4-1","week":10,"topic":"배열 요소 삭제","grade":"S","type":"blank","q":"인덱스 p의 원소를 삭제(앞으로 당기기)하고 새 크기를 반환한다. 빈칸을 채우시오.","code":"int Delete(int a[], int s, int p) {\n    if (p < 0 || p >= s) return s;   // 잘못된 인덱스\n    for (int i = p; i < ____; i++)   // (1)\n        a[i] = a[____];              // (2)\n    return ____;                     // (3)\n}","a":"(1) s - 1   (2) i + 1   (3) s - 1","ex":"p부터 한 칸씩 뒤 원소를 앞으로 당김: a[i]=a[i+1]. i는 s-1 직전까지(마지막은 a[s-2]=a[s-1]). 크기는 1 줄어 s-1.","trap":"조건을 i<s로 하면 a[s-1]=a[s](범위 초과). 당기는 방향을 a[i+1]=a[i]로 하면 값이 복제됨."},{"id":"10.4-2","week":10,"topic":"배열 요소 삭제","grade":"S","type":"fix","q":"삭제 함수에 잘못된 인덱스 검사 오류가 있다. 고치시오.","code":"int Delete(int a[], int s, int p) {\n    if (p < 0 && p >= s) return s;\n    for (int i = p; i < s - 1; i++)\n        a[i] = a[i + 1];\n    return s - 1;\n}","a":"if (p < 0 && p >= s) → if (p < 0 || p >= s)","ex":"p가 음수<b>이거나</b> s 이상이면 잘못된 인덱스. 두 조건은 동시에 참일 수 없으므로 &&면 검사가 절대 작동 안 함.","trap":"&& vs || 혼동. 범위 검사는 거의 항상 ||(or)."},{"id":"10.4-3","week":10,"topic":"배열 요소 삭제","grade":"S","type":"trace","q":"배열 {11,22,33,44,55}(size=5)에서 인덱스 1을 삭제하면, 삭제 후 배열과 size는?","code":"// Delete(arr, 5, 1)\nfor (i = 1; i < 4; i++)\n    a[i] = a[i + 1];\nreturn 5 - 1;","a":"11 33 44 55 (size=4)","ex":"a[1]=a[2]=33, a[2]=a[3]=44, a[3]=a[4]=55. 인덱스 0의 11은 그대로. 새 size=4라서 마지막 55(원래 인덱스4 잔재)는 출력 범위 밖.","trap":"실제 메모리 칸 수가 줄어든 게 아니라, 반환된 size로 출력 범위를 제한하는 것임."},{"id":"10.4-4","week":10,"topic":"배열 요소 삭제","grade":"S","type":"fix","q":"삭제 후에도 크기가 그대로다. 반환값 오류를 고치시오.","code":"for (int i = p; i < s - 1; i++)\n    a[i] = a[i + 1];\nreturn s;","a":"return s; → return s - 1;","ex":"한 원소를 삭제했으므로 유효 크기는 1 줄어든 s-1을 반환해야 한다.","trap":"이동만 하고 크기 갱신을 빠뜨리면 마지막에 잔재값이 한 번 더 출력."},{"id":"10.4-5","week":10,"topic":"배열 요소 삭제","grade":"S","type":"concept","q":"\"배열 요소 삭제\"에서 실제로 메모리가 줄어드는가? 무엇이 '삭제'를 의미하는가?","code":"int arr[10] = {11,22,33,44,55}; // size=5","a":"아니다. 배열 메모리 칸 수는 그대로다. 뒤 원소를 앞으로 당기고 '유효 크기(size)'를 1 줄여서, 논리적으로만 삭제된 것처럼 다룬다.","ex":"물리적 크기(10)와 논리적 크기(size)는 별개. 출력·처리 시 size 범위만 본다.","trap":"free나 realloc이 일어난다고 착각. 정적 배열은 크기가 고정."},{"id":"10.5-1","week":10,"topic":"성적 히스토그램","grade":"S","type":"blank","q":"점수를 구간 인덱스로 변환한다. 빈칸을 채우시오. (구간: 0~9→0, ..., 90~99→9, 100→10)","code":"void BuildHistogram(int scores[], int n, int hist[]) {\n    for (int i = 0; i < n; i++) {\n        int s = scores[i];\n        int idx;\n        if (s == 100) idx = ____;   // (1)\n        else          idx = ____;   // (2)\n        hist[idx]++;\n    }\n}","a":"(1) 10   (2) s / 10","ex":"100은 별도 칸 hist[10]. 그 외는 s/10이 구간 인덱스(예: 95/10=9, 7/10=0).","trap":"100을 s/10으로 처리하면 idx=10이 되긴 하지만, 99까지는 90대(9)여야 하므로 100만 예외 처리해야 hist 범위(0~10)를 안 벗어난다. 사실 100/10=10이라 우연히 같지만, 일반화하면 100 예외를 명시하는 게 안전."},{"id":"10.5-2","week":10,"topic":"성적 히스토그램","grade":"S","type":"trace","q":"점수 입력이 <code>95 100 90 7 -1</code>일 때, hist[9], hist[10], hist[0]의 값은?","code":"// 95→9, 100→10, 90→9, 7→0\nhist[idx]++;","a":"hist[9]=2, hist[10]=1, hist[0]=1","ex":"95→9, 90→9 (둘이 hist[9]=2), 100→10 (hist[10]=1), 7→0 (hist[0]=1). -1은 종료값.","trap":"90과 100을 같은 칸에 넣는 실수. 90~99는 9, 100은 10으로 분리."},{"id":"10.5-3","week":10,"topic":"성적 히스토그램","grade":"S","type":"fix","q":"히스토그램 카운트 배열 초기화에 문제가 있다. 고치시오.","code":"int hist[11];\n// 곧바로 hist[idx]++ 수행","a":"int hist[11]; → int hist[11] = {0};","ex":"초기화하지 않으면 hist에 쓰레기값이 들어 있어 ++ 결과가 엉뚱해진다. <code>= {0}</code>으로 전부 0으로 시작.","trap":"카운트 배열은 반드시 0으로 초기화. 지역 배열은 자동 0이 아님."},{"id":"10.5-4","week":10,"topic":"성적 히스토그램","grade":"S","type":"blank","q":"GetScores: -1이 들어올 때까지 입력받고 개수를 반환한다. 빈칸을 채우시오.","code":"int GetScores(int a[], int n) {\n    int i, x;\n    for (i = 0; i < n; i++) {\n        scanf(\"%d\", &x);\n        if (x == ____) break;   // (1)\n        a[i] = x;\n    }\n    return ____;                // (2)\n}","a":"(1) -1   (2) i","ex":"종료값 -1에서 break, 저장된 개수 i 반환. 10.1의 GetIntegerArray와 같은 패턴.","trap":"종료값을 배열에 넣지 않도록 break를 저장보다 위에."},{"id":"10.6-1","week":10,"topic":"2차원 합계표","grade":"S","type":"blank","q":"3×6 배열에서 각 행의 합을 마지막 열(인덱스 5)에 저장한다. 빈칸을 채우시오. (데이터는 2행 5열)","code":"void FillSums(int m[][6]) {\n    for (int i = 0; i < 2; i++) {\n        int sum = 0;\n        for (int j = 0; j < ____; j++)  // (1) 데이터 열 개수\n            sum += m[i][j];\n        m[i][____] = sum;               // (2) 합 저장 위치\n    }\n}","a":"(1) 5   (2) 5","ex":"데이터는 0~4열(5개)을 더해서 인덱스 5(6번째 열)에 행 합을 넣는다.","trap":"j<6으로 하면 아직 채워지지 않은 합계칸까지 더해 잘못된 값. 합 저장 위치는 인덱스 5."},{"id":"10.6-2","week":10,"topic":"2차원 합계표","grade":"S","type":"fix","q":"2차원 배열 매개변수 선언에 오류가 있다. 고치시오.","code":"void FillSums(int m[][]) {\n    // ...\n}","a":"int m[][] → int m[][6]","ex":"C에서 2차원 배열을 매개변수로 받을 때 <b>두 번째 차원 크기는 반드시</b> 명시해야 한다(컴파일러가 행 주소 계산에 필요). 첫 번째 차원만 생략 가능.","trap":"이 문제의 단골 함정. m[][6]은 OK, m[][]는 컴파일 에러."},{"id":"10.6-3","week":10,"topic":"2차원 합계표","grade":"S","type":"trace","q":"데이터가 1행 {1,2,3,4,5}, 2행 {10,20,30,40,50}일 때 m[0][5], m[2][0], m[2][5]는?","code":"// 행합 → [i][5], 열합 → [2][j], 전체합 → [2][5]","a":"m[0][5]=15, m[2][0]=11, m[2][5]=165","ex":"1행 합 1+2+3+4+5=15. 0열 합 1+10=11. 전체 합 15+150=165.","trap":"행/열/전체 합의 저장 위치를 헷갈림. [i][5]=행합, [2][j]=열합, [2][5]=전체."},{"id":"10.6-4","week":10,"topic":"2차원 합계표","grade":"S","type":"blank","q":"각 열의 합을 마지막 행(인덱스 2)에 저장한다. 빈칸을 채우시오.","code":"for (int j = 0; j < 5; j++) {\n    int sum = 0;\n    for (int i = 0; i < ____; i++)  // (1)\n        sum += m[i][j];\n    m[____][j] = sum;               // (2)\n}","a":"(1) 2   (2) 2","ex":"데이터 행은 0,1 두 개(i<2). 열 합은 마지막 행 인덱스 2에 저장.","trap":"중첩 루프에서 i와 j 역할 혼동. 열 합은 같은 열 j를 고정하고 행 i를 돌린다."},{"id":"11.1-1","week":11,"topic":"문자열 길이","grade":"B","type":"blank","q":"직접 구현한 문자열 길이 함수다. 빈칸을 채우시오.","code":"int StringLength(char s[]) {\n    int length = 0;\n    for (int i = 0; s[i] != ______; i++) {  // (1)\n        length++;\n    }\n    return length;\n}","a":"(1) '\\0'","ex":"문자열의 끝은 널 문자 <code>'\\0'</code>. 이를 만나기 전까지 세면 길이가 된다.","trap":"<code>'\\0'</code>(널 문자, 값 0)과 <code>'0'</code>(문자 0, 값 48) 혼동. 후자로 쓰면 숫자 0 앞에서 멈춘다."},{"id":"11.1-2","week":11,"topic":"문자열 길이","grade":"B","type":"trace","q":"문자열 \"Hi!\"에 대해 StringLength의 반환값은?","code":"// s = \"Hi!\"  →  'H','i','!','\\0'\nint StringLength(char s[]);","a":"3","ex":"H,i,! 세 글자. 널 문자는 길이에 포함하지 않는다.","trap":"널 문자까지 세어 4로 답하는 실수."},{"id":"11.1-3","week":11,"topic":"문자열 길이","grade":"B","type":"concept","q":"문자열 \"Hi\" 가 char 배열에 저장될 때 실제로 차지하는 칸 수는?","code":"char str[] = \"Hi\";","a":"3칸. 'H','i' 와 끝을 표시하는 널 문자 '\\0' 까지 저장되므로 길이는 2지만 메모리는 3칸.","ex":"문자열 길이(2)와 저장에 필요한 크기(길이+1=3)는 다르다. 13주차 malloc(len+1)의 근거.","trap":"길이와 필요한 배열 크기를 같게 보는 실수."},{"id":"11.2-1","week":11,"topic":"문자열 복사","grade":"S","type":"blank","q":"문자열 복사 함수다. 빈칸을 채우시오.","code":"void StringCopy(char dst[], char src[]) {\n    int i = 0;\n    for (i = 0; src[i] != '\\0'; i++) {\n        dst[i] = src[i];\n    }\n    dst[i] = ______;   // (1) 가장 중요\n}","a":"(1) '\\0'","ex":"복사 루프는 '\\0' 직전까지만 돌기 때문에, 루프 종료 후 <b>마지막에 널 문자를 직접 붙여야</b> dst가 올바른 문자열이 된다.","trap":"<code>dst[i] = '\\0'</code> 누락이 이 문제 최대 함정. 없으면 dst 출력 시 쓰레기가 따라붙는다."},{"id":"11.2-2","week":11,"topic":"문자열 복사","grade":"S","type":"fix","q":"복사 함수에 치명적 누락이 있다. 고치시오.","code":"void StringCopy(char dst[], char src[]) {\n    int i = 0;\n    for (i = 0; src[i] != '\\0'; i++)\n        dst[i] = src[i];\n}","a":"루프 뒤에 dst[i] = '\\0'; 추가","ex":"널 문자가 복사되지 않아 dst의 끝이 표시되지 않는다. 루프 종료 후 dst[i]='\\0' 한 줄을 반드시 추가.","trap":"src의 '\\0'은 루프 조건에서 걸러져 복사되지 않으므로 수동으로 붙여야 함."},{"id":"11.2-3","week":11,"topic":"문자열 복사","grade":"S","type":"concept","q":"<code>StringCopy(str2, str1)</code> 호출에서 어느 것이 원본이고 어느 것이 목적지인가?","code":"void StringCopy(char dst[], char src[]);\nStringCopy(str2, str1);","a":"첫 번째 인자 str2 = dst(목적지), 두 번째 인자 str1 = src(원본). str1의 내용이 str2로 복사된다.","ex":"표준 strcpy(dst, src)와 같은 순서. 인자 순서를 바꾸면 복사 방향이 반대.","trap":"방향을 거꾸로 호출하면 원본이 덮어쓰여 사라진다."},{"id":"11.3-1","week":11,"topic":"문자열 연결","grade":"S","type":"blank","q":"s1 뒤에 s2를 이어붙인다. 빈칸을 채우시오.","code":"void StringConcat(char s1[], char s2[]) {\n    int i = 0, j = 0;\n    while (s1[i] != '\\0') i++;        // s1 끝 찾기\n    for (j = 0; s2[j] != '\\0'; j++)\n        s1[______] = s2[j];           // (1) 붙일 위치\n    s1[______] = '\\0';               // (2)\n}","a":"(1) i + j   (2) i + j","ex":"i는 s1의 끝 위치. 거기서부터 s2[j]를 s1[i+j]에 차례로 복사. 루프 종료 후 i+j 위치에 널 문자.","trap":"s1[j]에 쓰면 s1 앞부분을 덮어쓴다. 마지막 '\\0' 위치도 i+j."},{"id":"11.3-2","week":11,"topic":"문자열 연결","grade":"S","type":"trace","q":"s1=\"abc\", s2=\"de\" 로 StringConcat(s1, s2) 호출 후 s1의 내용은?","code":"while (s1[i] != '\\0') i++;     // i=3\nfor (j=0; s2[j]!='\\0'; j++)\n    s1[i+j] = s2[j];\ns1[i+j] = '\\0';","a":"abcde","ex":"i=3(abc의 끝). s1[3]='d', s1[4]='e', s1[5]='\\0'. 결과는 \"abcde\".","trap":"두 문자열 사이에 공백이 자동으로 들어간다고 착각. \"abcde\"이지 \"abc de\"가 아니다."},{"id":"11.3-3","week":11,"topic":"문자열 연결","grade":"S","type":"fix","q":"연결 함수가 s1을 망가뜨린다. 붙일 위치 오류를 고치시오.","code":"while (s1[i] != '\\0') i++;\nfor (j = 0; s2[j] != '\\0'; j++)\n    s1[j] = s2[j];\ns1[i + j] = '\\0';","a":"s1[j] = s2[j]; → s1[i + j] = s2[j];","ex":"s1[j]는 인덱스 0부터 덮어쓰므로 s1의 앞부분이 사라진다. s1의 끝 i에서 j만큼 떨어진 s1[i+j]에 써야 한다.","trap":"끝 위치 i를 더하지 않고 j만 쓰는 실수."},{"id":"11.4-1","week":11,"topic":"문자열 비교","grade":"S","type":"blank","q":"두 문자열을 비교해 같으면 0, 다르면 1을 반환한다. 빈칸을 채우시오.","code":"int StringComp(char s1[], char s2[]) {\n    int i = 0;\n    while (s1[i] != '\\0' ____ s2[i] != '\\0') {  // (1)\n        if (s1[i] != s2[i]) return ____;          // (2)\n        i++;\n    }\n    if (s1[i] == '\\0' && s2[i] == '\\0') return 0;\n    return ____;                                   // (3) 길이 다름\n}","a":"(1) &&   (2) 1   (3) 1","ex":"두 문자열이 모두 끝나지 않은 동안(&&) 문자 비교. 다르면 1. 루프 후 둘 다 끝났으면 같음(0), 한쪽만 끝났으면 길이가 달라 다름(1).","trap":"while 조건을 ||로 하면 한 문자열이 끝나도 다른 쪽 '\\0' 너머를 읽는다. 길이 다른 경우 마지막 return 1 누락."},{"id":"11.4-2","week":11,"topic":"문자열 비교","grade":"S","type":"trace","q":"StringComp(\"abc\", \"ab\")의 반환값은? (같으면 0, 다르면 1)","code":"while (s1[i]!='\\0' && s2[i]!='\\0') {\n    if (s1[i]!=s2[i]) return 1;\n    i++;\n}\nif (s1[i]=='\\0' && s2[i]=='\\0') return 0;\nreturn 1;","a":"1","ex":"a,b까지 같지만 i=2에서 s2[2]='\\0'이라 while 종료. s1[2]='c'(끝 아님), s2[2]='\\0'. 둘 다 끝난 게 아니므로 마지막 return 1 → \"다름\".","trap":"앞부분이 같다고 0으로 답하는 실수. 길이가 다르면 다른 문자열."},{"id":"11.4-3","week":11,"topic":"문자열 비교","grade":"S","type":"concept","q":"이 수업용 StringComp의 반환값 의미는 표준 <code>strcmp</code>와 어떻게 다른가?","code":"// 수업: 같으면 0, 다르면 1","a":"수업 함수는 같으면 0 / 다르면 1(단순 두 값)만 반환. 표준 strcmp는 같으면 0, s1이 사전순 앞이면 음수, 뒤면 양수를 반환해 대소 관계까지 알려준다.","ex":"두 함수 모두 '같으면 0'은 공통이지만, strcmp는 부호로 순서 정보를 준다.","trap":"수업 함수의 1을 strcmp의 양수 의미로 오해."},{"id":"11.4-4","week":11,"topic":"문자열 비교","grade":"S","type":"fix","q":"길이가 다른 경우 처리가 빠져 비교 결과가 틀린다. 고치시오.","code":"int StringComp(char s1[], char s2[]) {\n    int i = 0;\n    while (s1[i] != '\\0' && s2[i] != '\\0') {\n        if (s1[i] != s2[i]) return 1;\n        i++;\n    }\n    return 0;\n}","a":"마지막 return 0; 앞에\nif (s1[i] != '\\0' || s2[i] != '\\0') return 1;\n(또는: 둘 다 '\\0'일 때만 0, 아니면 1)","ex":"이 코드는 \"ab\"와 \"abc\"를 같다고 판정(앞부분만 같으면 0). 루프 종료 후 한쪽만 끝났는지 확인해 길이가 다르면 1을 반환해야 한다.","trap":"앞부분만 같으면 같다고 처리하는 버그. 길이 검사 필수."},{"id":"11.5-1","week":11,"topic":"대문자 변환","grade":"A","type":"blank","q":"소문자를 대문자로 변환한다. 빈칸을 채우시오.","code":"void ToUpperString(char s[]) {\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] >= 'a' ____ s[i] <= 'z') {   // (1)\n            s[i] = s[i] + ('A' - 'a');         // (2)\n        }\n    }\n}","a":"(1) &&   (2) (그대로 정답: 'A' - 'a')","ex":"소문자 범위는 'a' 이상 <b>그리고</b> 'z' 이하(&&). 변환은 'A'-'a'(= -32)를 더해 대문자로. 'a'+(-32)='A'.","trap":"<code>'a' &lt;= s[i] &lt;= 'z'</code> 같은 수학식은 C에서 동작하지 않음. 반드시 &&로 두 조건을 연결."},{"id":"11.5-2","week":11,"topic":"대문자 변환","grade":"A","type":"trace","q":"\"aB3z\" 를 ToUpperString에 넣으면 결과는?","code":"if (s[i] >= 'a' && s[i] <= 'z')\n    s[i] = s[i] + ('A' - 'a');","a":"AB3Z","ex":"a→A, B는 이미 대문자라 그대로, 3은 숫자라 그대로, z→Z. 결과 \"AB3Z\".","trap":"이미 대문자/숫자/기호는 건드리지 않음. 모든 문자를 변환한다고 착각."},{"id":"11.5-3","week":11,"topic":"소문자 변환으로 변형","grade":"A","type":"impl","q":"대문자를 <b>소문자</b>로 바꾸는 함수로 변형해 핵심 if 블록을 작성하시오.","code":"void ToLowerString(char s[]) {\n    for (int i = 0; s[i] != '\\0'; i++) {\n        // 여기를 작성\n    }\n}","a":"if (s[i] >= 'A' && s[i] <= 'Z') {\n    s[i] = s[i] + ('a' - 'A');\n}","ex":"대문자 범위 'A'~'Z'를 검사하고 'a'-'A'(=+32)를 더한다. 방향이 반대.","trap":"범위와 변환식 방향을 모두 반대로 바꿔야 함."},{"id":"11.6-1","week":11,"topic":"여러 문자열 연결","grade":"A","type":"blank","q":"공백 포함 문자열 5개를 하나로 연결한다. 빈칸을 채우시오. (StringConcat 재사용)","code":"char msg[50];\nchar buf[10];\nmsg[0] = ______;                  // (1) 빈 문자열로 초기화\nfor (int i = 0; i < 5; i++) {\n    scanf(\" %9[^\\n]\", buf);       // 공백 포함 입력\n    StringConcat(msg, ____);      // (2)\n}","a":"(1) '\\0'   (2) buf","ex":"msg를 빈 문자열('\\0')로 시작해야 첫 연결이 처음부터 붙는다. 매 입력 buf를 msg 뒤에 이어붙임.","trap":"msg 초기화를 안 하면 쓰레기값 뒤에 붙어 출력이 깨진다. msg[0]='\\0'이 핵심."},{"id":"11.6-2","week":11,"topic":"여러 문자열 연결","grade":"A","type":"concept","q":"<code>scanf(\" %9[^\\n]\", buf)</code> 의 각 부분(앞 공백, %9, [^\\n])이 하는 일을 설명하시오.","code":"scanf(\" %9[^\\n]\", buf);  // buf[10]","a":"앞 공백: 직전 입력에 남은 개행('\\n')/공백을 건너뜀. %9: 최대 9글자만 읽어 buf[10]에서 '\\0' 자리 확보(버퍼 오버플로 방지). [^\\n]: 개행 직전까지(공백 포함) 한 줄을 읽음.","ex":"일반 %s는 공백에서 끊기지만, [^\\n]은 공백을 포함해 줄 전체를 읽는다.","trap":"%s로 바꾸면 공백 포함 입력이 안 되고, 너비 9를 빼면 오버플로 위험."},{"id":"12.1-1","week":12,"topic":"시간 분할 포인터","grade":"S","type":"blank","q":"초를 시/분/초로 분할해 포인터로 호출측에 전달한다. 빈칸을 채우시오.","code":"void ConvertTimeToHMS(int time, int* hour, int* min, int* sec) {\n    ____ = time / 3600;          // (1)\n    int remain = time % 3600;\n    ____ = remain / 60;          // (2)\n    ____ = remain % 60;          // (3)\n}","a":"(1) *hour   (2) *min   (3) *sec","ex":"포인터 매개변수가 가리키는 곳에 값을 저장하려면 <code>*</code>(역참조)로 써야 한다. *hour는 호출측 변수 h를 직접 수정.","trap":"<code>hour = ...</code> (별표 없이)로 쓰면 호출측 변수가 아니라 지역 포인터만 바뀐다."},{"id":"12.1-2","week":12,"topic":"시간 분할 포인터","grade":"S","type":"blank","q":"main에서 위 함수를 올바르게 호출하려 한다. 빈칸을 채우시오.","code":"int h, m, s;\nConvertTimeToHMS(time, ____, ____, ____);  // h,m,s에 결과 받기","a":"&h, &m, &s","ex":"함수가 값을 써넣을 변수의 주소를 넘겨야 하므로 <code>&</code>를 붙인다.","trap":"h, m, s를 그대로 넘기면 값 복사라 결과가 main에 반영되지 않는다."},{"id":"12.1-3","week":12,"topic":"시간 분할 포인터","grade":"S","type":"trace","q":"time=3725 일 때 h, m, s 값은?","code":"*hour = time / 3600;\nint remain = time % 3600;\n*min = remain / 60;\n*sec = remain % 60;","a":"h=1, m=2, s=5","ex":"3725/3600=1(시). 남은 초 3725%3600=125. 125/60=2(분), 125%60=5(초).","trap":"나머지 계산 순서를 헷갈리거나, time을 60으로 먼저 나누는 실수."},{"id":"12.1-4","week":12,"topic":"포인터 개념","grade":"S","type":"concept","q":"함수가 값 3개를 한꺼번에 호출측에 돌려줘야 할 때, 왜 return 대신 포인터 매개변수를 쓰는가?","code":"void ConvertTimeToHMS(int time, int* h, int* m, int* s);","a":"return 문은 한 번에 값을 하나만 반환할 수 있다. 여러 값을 호출측 변수에 직접 써넣으려면, 그 변수들의 주소(포인터)를 받아 *로 저장해야 한다.","ex":"포인터 매개변수 = 함수 밖 변수를 함수 안에서 수정하는 통로(출력 매개변수).","trap":"return으로 3개를 동시에 돌려줄 수 있다고 오해."},{"id":"12.2-1","week":12,"topic":"날짜 포인터 입력","grade":"A","type":"fix","q":"함수 매개변수가 이미 포인터인데 scanf에 &를 또 붙였다. 고치시오.","code":"void InputDate(int* year, int* month, int* day) {\n    scanf(\"%d %d %d\", &year, &month, &day);\n}","a":"&year, &month, &day → year, month, day","ex":"year, month, day는 이미 주소(int*)이므로 scanf에 그대로 넘긴다. &를 붙이면 '포인터의 주소'(int**)가 되어 틀림.","trap":"포인터 매개변수에 &를 또 붙이는 이중 주소 실수."},{"id":"12.2-2","week":12,"topic":"날짜 포인터 입력","grade":"A","type":"concept","q":"main의 <code>scanf(\"%d\", &year)</code>와 함수 안의 <code>scanf(\"%d\", year)</code>에서 &의 유무가 다른 이유는?","code":"// main:  int year;        scanf(\"%d\", &year);\n// 함수:  int* year(매개변수); scanf(\"%d\", year);","a":"main의 year는 일반 int 변수라 주소를 만들려면 &가 필요. 함수의 year는 이미 그 변수의 주소를 담은 포인터라 그 자체가 주소이므로 &가 불필요.","ex":"scanf는 항상 '저장할 주소'를 받는다. 변수면 &로 주소를 만들고, 포인터면 이미 주소.","trap":"두 상황에서 & 규칙이 다르다는 점을 놓침."},{"id":"12.3-1","week":12,"topic":"인덱스 범위 합","grade":"B","type":"blank","q":"배열의 start~end 인덱스 합을 구한다(양 끝 포함). 빈칸을 채우시오.","code":"int sumRangeWithIndex(int* array, int start, int end) {\n    int sum = 0;\n    for (int i = start; i ____ end; i++) {  // (1)\n        sum += array[i];                     // (2)\n    }\n    return sum;\n}","a":"(1) <=   (2) array[i] (그대로)","ex":"양 끝을 포함하므로 <code>i &lt;= end</code>. 포인터로 받았어도 array[i] 표기로 배열처럼 접근 가능.","trap":"i < end로 하면 마지막 원소가 빠진다. 포인터라고 *array+i 같은 잘못된 표기를 쓰는 실수."},{"id":"12.3-2","week":12,"topic":"인덱스 범위 합","grade":"B","type":"trace","q":"score={10,20,30,40,50,...}, sumRangeWithIndex(score, 1, 3)의 결과는?","code":"for (int i = start; i <= end; i++)\n    sum += array[i];","a":"90","ex":"인덱스 1,2,3 → 20+30+40=90. 양 끝 포함.","trap":"end를 포함하지 않으면 50... 아니라 20+30=50으로 잘못 계산."},{"id":"12.3-3","week":12,"topic":"인덱스 범위 합","grade":"B","type":"concept","q":"<code>array[i]</code> 와 <code>*(array + i)</code> 는 같은가?","code":"int* array;\n// array[i]  vs  *(array + i)","a":"완전히 같다. array[i]는 *(array + i)의 문법적 표현(syntactic sugar). 둘 다 i번째 원소의 값을 가리킨다.","ex":"배열 인덱싱은 내부적으로 포인터 산술로 동작. 12.4의 포인터 이동과 연결되는 개념.","trap":"포인터와 배열 표기가 별개라고 오해."},{"id":"12.4-1","week":12,"topic":"포인터 범위 합","grade":"S","type":"blank","q":"두 주소 pStart~pEnd 사이의 합을 포인터 이동으로 구한다. 빈칸을 채우시오.","code":"int sumRangeWithPosition(int* pStart, int* pEnd) {\n    int sum = 0;\n    for (int* p = pStart; p ____ pEnd; p++) {  // (1)\n        sum += ____;                            // (2)\n    }\n    return sum;\n}","a":"(1) <=   (2) *p","ex":"포인터 p를 한 칸씩 이동(p++)하며 양 끝 포함(p &lt;= pEnd). 값은 역참조 <code>*p</code>.","trap":"sum += p (주소를 더함)는 틀림. 반드시 *p. p < pEnd면 마지막 원소 누락."},{"id":"12.4-2","week":12,"topic":"포인터 범위 합","grade":"S","type":"blank","q":"main에서 인덱스 start, end의 원소 주소를 넘긴다. 빈칸을 채우시오.","code":"int score[10] = {10,20,30,...};\nint sum = sumRangeWithPosition(________, ________);  // start, end 위치의 주소","a":"&score[start], &score[end]   (또는 score+start, score+end)","ex":"원소의 주소를 넘겨야 하므로 <code>&score[start]</code>. score+start도 동일한 의미.","trap":"score[start](값)를 넘기면 주소가 아니라 값이 전달되어 틀림."},{"id":"12.4-3","week":12,"topic":"포인터 범위 합","grade":"S","type":"concept","q":"<code>int* p</code>에서 <code>p++</code>를 하면 주소가 몇 바이트 움직이는가? 왜인가?","code":"int* p;\np++;","a":"int 한 개 크기(보통 4바이트)만큼 움직인다. 포인터 산술은 가리키는 자료형 크기 단위로 이동하므로, int*면 +1이 +4바이트, 다음 원소를 가리키게 된다.","ex":"이 자동 크기 조정 덕분에 p++만으로 다음 배열 원소로 정확히 이동.","trap":"무조건 1바이트 이동한다고 오해. 자료형 크기 단위로 움직인다."},{"id":"12.4-4","week":12,"topic":"인덱스 vs 포인터","grade":"S","type":"concept","q":"12.3(인덱스 방식)과 12.4(포인터 방식)의 핵심 차이를 설명하시오.","code":"// 12.3: sumRangeWithIndex(array, start, end)  → array[i]\n// 12.4: sumRangeWithPosition(&score[start], &score[end]) → *p, p++","a":"12.3은 배열 시작 주소 + 인덱스(정수)로 array[i]를 계산해 접근. 12.4는 시작/끝 '주소' 자체를 받아 포인터 p를 직접 이동(p++)하며 *p로 접근. 결과는 같지만 접근 방식이 인덱스냐 주소냐의 차이.","ex":"같은 합을 두 방식으로 구현 → 배열과 포인터가 본질적으로 연결됨을 보여주는 대비 문제.","trap":"두 함수의 인자 형태(인덱스 정수 vs 주소)를 혼동."},{"id":"13.1-1","week":13,"topic":"최대값 주소 찾기","grade":"S+","type":"blank","q":"최대값 원소의 주소를 이중 포인터로 전달한다. 빈칸을 채우시오.","code":"void FindMaxPos(int a[], int size, int** maxPtr) {\n    int* currentMax = &a[0];\n    for (int i = 1; i < size; i++) {\n        if (a[i] > ________)         // (1) 현재 최대값\n            currentMax = ________;    // (2) 더 큰 원소의 주소\n    }\n    ________ = currentMax;            // (3) 호출측에 주소 전달\n}","a":"(1) *currentMax   (2) &a[i]   (3) *maxPtr","ex":"currentMax는 '최대 원소의 주소'. 비교는 그 값 *currentMax. 갱신은 새 원소의 주소 &a[i]. 결과는 *maxPtr에 저장해 호출측 포인터를 채운다.","trap":"int* 변수(maxPointer)를 함수가 바꾸려면 그 주소 int**가 필요. *maxPtr=...로 써야 호출측이 갱신됨."},{"id":"13.1-2","week":13,"topic":"최대값 주소 찾기","grade":"S+","type":"blank","q":"main에서 FindMaxPos를 호출하고 결과로 원본을 수정한다. 빈칸을 채우시오.","code":"int* maxPointer = NULL;\nFindMaxPos(nums, size, ________);   // (1) 포인터의 주소 전달\nprintf(\"최대값: %d\\n\", ________);   // (2) 최대값 출력\n________ = 10;                      // (3) 원본 배열의 최대 원소를 10으로","a":"(1) &maxPointer   (2) *maxPointer   (3) *maxPointer","ex":"maxPointer(int*)를 함수가 채우게 하려면 그 주소 &maxPointer(int**)를 넘긴다. *maxPointer로 가리키는 값을 읽고, *maxPointer=10으로 원본을 직접 수정.","trap":"&maxPointer를 빼먹으면 함수가 호출측 포인터를 못 바꾼다."},{"id":"13.1-3","week":13,"topic":"최대값 주소 찾기","grade":"S+","type":"trace","q":"nums={7,3,9,1,4,6}에서 FindMaxPos 후 *maxPointer와 (maxPointer - nums)는?","code":"int* currentMax = &a[0];\nfor (i=1;i<size;i++)\n    if (a[i] > *currentMax) currentMax = &a[i];\n// 인덱스 = maxPointer - nums","a":"*maxPointer = 9, 인덱스(maxPointer - nums) = 2","ex":"최대값 9는 인덱스 2. 포인터끼리 빼면(maxPointer - nums) 원소 개수 단위 차이 → 2.","trap":"포인터 뺄셈이 바이트가 아니라 원소 개수 단위임. 8이 아니라 2."},{"id":"13.1-4","week":13,"topic":"최대값 주소 찾기","grade":"S+","type":"concept","q":"왜 매개변수가 <code>int*</code>가 아니라 <code>int**</code>여야 하는가?","code":"void FindMaxPos(int a[], int size, int** maxPtr);\nint* maxPointer = NULL;\nFindMaxPos(nums, size, &maxPointer);","a":"함수가 호출측의 포인터 변수(maxPointer 자체)를 바꿔야 하기 때문. int 변수를 바꾸려면 int*가 필요하듯, int* 변수를 바꾸려면 그 주소인 int**가 필요하다.","ex":"\"무엇을 수정하느냐\"가 한 단계 깊어지면 포인터 레벨도 한 단계 깊어진다. int→int*, int*→int**.","trap":"int*로 받으면 원소 주소는 알 수 있어도 호출측 포인터 변수 자체는 못 바꾼다."},{"id":"13.1-5","week":13,"topic":"최대값 주소 찾기","grade":"S+","type":"fix","q":"갱신 부분이 잘못돼 최대값 위치를 못 찾는다. 고치시오.","code":"int* currentMax = &a[0];\nfor (int i = 1; i < size; i++) {\n    if (a[i] > *currentMax)\n        currentMax = a[i];   // 오류\n}\n*maxPtr = currentMax;","a":"currentMax = a[i]; → currentMax = &a[i];","ex":"currentMax는 '주소'를 담는 포인터인데 값 a[i]를 넣으면 타입도 안 맞고 의미도 깨진다. 원소의 주소 &a[i]를 저장해야 한다.","trap":"포인터에 값(int)을 대입하는 실수. 주소 &가 필요."},{"id":"13.2-1","week":13,"topic":"동적 배열(분반 점수)","grade":"A","type":"blank","q":"학생 수보다 1 큰 배열을 동적 할당하고 첫 칸에 학생 수를 저장한다. 빈칸을 채우시오.","code":"int* CreateIntegerArray(int n) {\n    int* arr = (int*)malloc(sizeof(int) * ____);  // (1)\n    return arr;\n}\nvoid AllocateScores(int* s[], int size) {\n    int count;\n    for (int i = 0; i < size; i++) {\n        scanf(\"%d\", &count);\n        s[i] = CreateIntegerArray(count + 1);\n        s[i][0] = ________;    // (2) 첫 칸에 학생 수\n    }\n}","a":"(1) n   (2) count","ex":"호출 시 count+1을 넘기므로 CreateIntegerArray는 n칸 할당. 첫 칸 s[i][0]에 학생 수 count를 저장(헤더처럼 사용), 점수는 1번 칸부터.","trap":"malloc(n)이 아니라 malloc(sizeof(int)*n)이어야 바이트 단위로 정확. 첫 칸 용도(개수 저장)를 놓치면 점수 저장 인덱스가 어긋남."},{"id":"13.2-2","week":13,"topic":"동적 배열(분반 점수)","grade":"A","type":"blank","q":"각 분반의 점수를 입력받는다. 첫 칸(0)은 학생 수이므로 점수는 1번부터다. 빈칸을 채우시오.","code":"void InputScores(int* s[], int size) {\n    for (int i = 0; i < size; i++) {\n        int count = s[i][0];\n        for (int j = ____; j <= count; j++) {   // (1) 시작 인덱스\n            scanf(\"%d\", &s[i][____]);            // (2)\n        }\n    }\n}","a":"(1) 1   (2) j","ex":"0번 칸은 학생 수 저장용이라 점수는 1~count에 저장. scanf 대상은 &s[i][j].","trap":"j=0부터 시작하면 학생 수가 첫 점수로 덮어쓰여진다."},{"id":"13.2-3","week":13,"topic":"동적 배열(분반 점수)","grade":"A","type":"fix","q":"동적 할당한 메모리를 해제하는 함수다. 누락을 지적하고 고치시오.","code":"void FreeScores(int* s[], int size) {\n    // (비어 있음)\n}","a":"for (int i = 0; i < size; i++)\n    free(s[i]);","ex":"각 분반마다 malloc으로 할당한 배열을 분반 수만큼 free 해야 메모리 누수가 없다.","trap":"동적 할당 후 free 누락은 메모리 누수. 할당 횟수만큼 해제."},{"id":"13.2-4","week":13,"topic":"동적 배열","grade":"A","type":"concept","q":"<code>int* scores[3]</code> (포인터 배열)의 의미를 설명하시오.","code":"int* scores[3];","a":"int를 가리키는 포인터 3개를 담는 배열. 즉 분반 3개 각각에 대해 동적 할당한 정수 배열의 시작 주소를 하나씩 저장한다. scores[i]는 i번 분반 배열의 주소.","ex":"각 분반의 학생 수가 다르므로 길이가 제각각인 배열 3개를 가리키는 구조(가변 길이 2차원처럼).","trap":"int scores[3]과 int* scores[3]을 혼동. 후자는 '포인터들의 배열'."},{"id":"13.3-1","week":13,"topic":"동적 문자열 복사","grade":"A+","type":"blank","q":"원본 길이에 맞춰 동적 할당 후 복사하고 주소를 반환한다. 빈칸을 채우시오.","code":"char* StringCopy(char* src) {\n    int len = strlen(src);\n    char* dst = (char*)malloc(sizeof(char) * (________));  // (1)\n    strcpy(dst, src);\n    return ____;                                            // (2)\n}","a":"(1) len + 1   (2) dst","ex":"문자열 저장에는 널 문자 자리가 필요하므로 <code>len + 1</code>칸 할당. 복사한 새 배열의 시작 주소 dst를 반환.","trap":"len만 할당하면 '\\0' 자리가 없어 오버플로. 13주차 단골 함정."},{"id":"13.3-2","week":13,"topic":"동적 문자열 복사","grade":"A+","type":"fix","q":"할당 크기가 잘못돼 널 문자 자리가 없다. 고치시오.","code":"int len = strlen(src);\nchar* dst = (char*)malloc(sizeof(char) * len);\nstrcpy(dst, src);","a":"malloc(sizeof(char) * len) → malloc(sizeof(char) * (len + 1))","ex":"strlen은 '\\0'을 세지 않으므로, strcpy가 붙이는 널 문자까지 담으려면 len+1칸이 필요하다.","trap":"strlen 값 그대로 할당하면 1칸 부족. 항상 +1."},{"id":"13.3-3","week":13,"topic":"동적 문자열 복사","grade":"A+","type":"concept","q":"<code>dst = src;</code> (얕은 복사)와 strcpy를 이용한 깊은 복사의 차이는?","code":"char* src = \"Hello\";\n// (A) char* dst = src;\n// (B) dst = malloc(len+1); strcpy(dst, src);","a":"(A)는 같은 메모리를 두 포인터가 가리킬 뿐 새 데이터가 없음(얕은 복사). (B)는 새 메모리를 할당해 내용을 통째로 복사(깊은 복사)하므로 독립적이며 free로 해제 가능.","ex":"문자열 리터럴 \"Hello\"는 읽기 전용일 수 있어 free하면 안 됨. 깊은 복사한 dst만 free 대상.","trap":"얕은 복사한 포인터나 리터럴을 free하려다 오류."},{"id":"13.3-4","week":13,"topic":"동적 문자열 복사","grade":"A+","type":"fix","q":"해제 대상이 잘못됐다. main의 free 호출을 고치시오.","code":"char* src = \"Hello\";\nchar* dst = StringCopy(src);\nprintf(\"%s %s\\n\", src, dst);\nfree(src);","a":"free(src); → free(dst);","ex":"src는 문자열 리터럴(동적 할당 아님)이라 free하면 안 된다. malloc으로 받은 dst만 해제.","trap":"리터럴/정적 메모리를 free하면 정의되지 않은 동작(크래시)."},{"id":"13.4-1","week":13,"topic":"한 줄 동적 입력","grade":"S+","type":"blank","q":"한 글자씩 읽으며 버퍼를 키운다. 빈칸을 채우시오.","code":"char* GetLine(void) {\n    int ch, length = 0, capacity = 16;\n    char* line = (char*)malloc(sizeof(char) * capacity);\n    while ((ch = getchar()) != '\\n' ____ ch != EOF) {  // (1)\n        if (length + 1 >= capacity) {\n            int newCap = capacity * 2;\n            char* resized = realloc(line, newCap);\n            line = resized; capacity = newCap;\n        }\n        line[length] = (char)ch;\n        length++;\n    }\n    line[length] = ______;   // (2)\n    return line;\n}","a":"(1) &&   (2) '\\0'","ex":"개행<b>이고</b> EOF가 아닐 때까지 읽음(&&). 입력 종료 후 마지막에 널 문자를 붙여 문자열을 완성.","trap":"종료 조건을 ||로 하면 즉시 종료. 마지막 '\\0' 누락도 흔한 함정."},{"id":"13.4-2","week":13,"topic":"한 줄 동적 입력","grade":"S+","type":"fix","q":"getchar의 반환값을 char로 받아 EOF 판별이 깨진다. 고치시오.","code":"char ch;\nwhile ((ch = getchar()) != '\\n' && ch != EOF) {\n    ...\n}","a":"char ch; → int ch;","ex":"getchar는 EOF(보통 -1)를 포함한 값을 반환하므로 <code>int</code>로 받아야 한다. char로 받으면 EOF를 정상 문자와 구별 못 해 무한 루프 위험.","trap":"getchar 반환형은 int. char로 받는 것이 13.4 최대 함정."},{"id":"13.4-3","week":13,"topic":"한 줄 동적 입력","grade":"S+","type":"blank","q":"realloc을 안전하게 사용한다. 빈칸을 채우시오.","code":"char* resized = (char*)realloc(line, sizeof(char) * newCapacity);\nif (resized == NULL) {\n    ________;        // (1) 기존 메모리 정리\n    return NULL;\n}\nline = ________;     // (2) 성공 시 갱신","a":"(1) free(line)   (2) resized","ex":"realloc이 실패하면 NULL을 반환하되 원래 메모리는 그대로 살아 있으므로 free(line)으로 정리 후 NULL 반환. 성공하면 새 주소 resized로 line 갱신.","trap":"line = realloc(line, ...)로 직접 받으면 실패 시 기존 주소를 잃어 메모리 누수. 임시 포인터(resized) 사용이 정석."},{"id":"13.4-4","week":13,"topic":"한 줄 동적 입력","grade":"S+","type":"concept","q":"입력이 비어 있을 때(바로 개행/EOF) <code>length == 0</code>이면 왜 free 후 NULL을 반환하는가?","code":"if (length == 0) {\n    free(line);\n    return NULL;\n}","a":"아무 문자도 읽지 못한 빈 입력을 '입력 실패/없음'으로 처리하기 위함. 할당해 둔 line을 해제해 누수를 막고, 호출측이 NULL로 빈 입력을 판별하게 한다.","ex":"main에서 msg==NULL을 검사해 \"Input failed\"를 출력하는 흐름과 연결.","trap":"빈 입력에서 free 없이 NULL만 반환하면 메모리 누수."},{"id":"14.1-1","week":14,"topic":"구조체 선언/길이","grade":"A","type":"blank","q":"점(pointT) 두 개로 선분(lineT)을 구성하고 길이를 구한다. 빈칸을 채우시오.","code":"typedef struct { double x; double y; } pointT;\ntypedef struct { pointT start; pointT end; } lineT;\n\ndouble GetLineLength(lineT line) {\n    double dx = line.end.x - line.start.x;\n    double dy = line.end.y - line.start.y;\n    return ________;   // (1) 길이 공식\n}","a":"(1) sqrt(dx * dx + dy * dy)","ex":"두 점 사이 거리 = √(dx² + dy²). math.h의 sqrt 사용. 구조체 멤버는 <code>.</code>으로 접근(line.end.x).","trap":"중첩 구조체 접근(line.start.x)을 헷갈리거나, 제곱 대신 dx+dy로 더하는 실수."},{"id":"14.1-2","week":14,"topic":"구조체 입력","grade":"A","type":"fix","q":"선분 좌표를 입력받는 함수다. 구조체 멤버 scanf의 & 사용을 점검하고 고치시오.","code":"lineT InputLine(void) {\n    lineT line;\n    scanf(\"%lf %lf\", line.start.x, line.start.y);\n    scanf(\"%lf %lf\", &line.end.x, &line.end.y);\n    return line;\n}","a":"scanf(\"%lf %lf\", line.start.x, line.start.y);\n→ scanf(\"%lf %lf\", &line.start.x, &line.start.y);","ex":"scanf는 저장할 주소가 필요하므로 구조체 멤버에도 &를 붙인다(&line.start.x). 둘째 줄은 올바름.","trap":"구조체 멤버라고 & 규칙이 달라지지 않는다. 일반 변수와 동일."},{"id":"14.1-3","week":14,"topic":"구조체 개념","grade":"A","type":"concept","q":"<code>lineT</code>가 <code>pointT</code>를 멤버로 갖는 '중첩 구조체'에서 시작점의 x좌표는 어떻게 접근하는가?","code":"lineT line;\n// 시작점의 x?","a":"line.start.x. line의 멤버 start(pointT)에 접근한 뒤, 그 안의 멤버 x에 다시 .으로 접근한다.","ex":"점(.) 연산자를 단계별로 연결. 구조체 안에 구조체가 있으면 .을 거듭 사용.","trap":"line.x처럼 한 단계로 접근하려는 실수(존재하지 않는 멤버)."},{"id":"14.2-1","week":14,"topic":"구조체 포인터(자동차)","grade":"A+","type":"blank","q":"구조체 포인터로 멤버에 접근해 자동차 정보를 입력받는다. 빈칸을 채우시오.","code":"typedef struct { char model[100]; int year; double mileage; } Car;\n\nCar* InputCarInfo(Car* car) {\n    if (car == NULL) return NULL;\n    scanf(\"%99s\", car____model);     // (1) 포인터로 멤버 접근\n    scanf(\"%d\", &car____year);       // (2)\n    return car;\n}","a":"(1) -> (즉 car->model)   (2) -> (즉 &car->year)","ex":"구조체 <b>포인터</b>로 멤버에 접근할 때는 <code>-></code>를 쓴다. car->model은 (*car).model과 같다. model은 배열이라 & 불필요, year는 &car->year.","trap":"포인터인데 car.model(점)으로 접근하면 컴파일 에러. model(char 배열)에 &를 붙이는 실수."},{"id":"14.2-2","week":14,"topic":"구조체 포인터(자동차)","grade":"A+","type":"concept","q":"<code>car->year</code> 와 <code>(*car).year</code> 는 같은가? const Car* car의 const는 무슨 의미인가?","code":"void ShowCarInfo(const Car* car) {\n    printf(\"%d\", car->year);\n}","a":"car->year 와 (*car).year 는 완전히 동일(->는 역참조+멤버접근의 축약). const Car*는 함수 안에서 car가 가리키는 구조체의 멤버를 수정하지 못하게 막는다(읽기 전용 보장).","ex":"출력 함수는 데이터를 바꿀 필요가 없으므로 const로 안전성을 높인다.","trap":"const 포인터를 통해 멤버를 수정하려 하면 컴파일 에러."},{"id":"14.2-3","week":14,"topic":"구조체 포인터(자동차)","grade":"A+","type":"fix","q":"멤버 접근 연산자가 잘못됐다. 고치시오.","code":"void addMileage(Car* car) {\n    double add;\n    scanf(\"%lf\", &add);\n    if (add > 0)\n        car.mileage += add;\n}","a":"car.mileage → car->mileage","ex":"car는 포인터(Car*)이므로 멤버 접근은 화살표 <code>-></code>. 점(.)은 구조체 변수에만 쓴다.","trap":"포인터 vs 변수에 따라 -> 와 . 를 구분. 포인터는 ->."},{"id":"14.2-4","week":14,"topic":"구조체 포인터(자동차)","grade":"A+","type":"trace","q":"year=2020인 차에 대해 isOlderThanYear(car, 2)의 반환값은? (현재 기준 2026)","code":"int isOlderThanYear(const Car* car, int years) {\n    return 2026 - car->year > years;\n}","a":"1 (참)","ex":"2026-2020=6. 6 > 2 이므로 참(1)을 반환 → '2년보다 오래됨'.","trap":"부등호 방향과 기준 연도(2026) 확인. 6>2는 참."},{"id":"14.2-5","week":14,"topic":"구조체 배열","grade":"A+","type":"blank","q":"자동차 배열에서 각 원소의 주소를 함수에 넘긴다. 빈칸을 채우시오.","code":"Car cars[5];\nfor (int i = 0; i < count; i++) {\n    InputCarInfo(________);   // (1) i번 차의 주소\n}\n// 나중에 특정 차의 주행거리 추가\naddMileage(________);          // (2) index-1번 차의 주소","a":"(1) &cars[i]   (2) &cars[index - 1]","ex":"함수가 Car*를 받으므로 배열 원소의 주소 &cars[i]를 넘긴다. 사용자 입력 index(1부터)는 배열 인덱스 index-1로 변환.","trap":"cars[i](구조체 값)를 넘기면 타입 불일치. 1-기반 입력을 0-기반 인덱스로 변환 누락."},{"id":"9.1-6","week":9,"topic":"배열 출력 변형","grade":"C","type":"impl","q":"정수 배열을 <b>한 줄에 콤마로 구분</b>해 출력하시오. (예: 10, 20, 30)","code":"int a[3] = {10, 20, 30};\n// 10, 20, 30 형태로 출력 (끝에 콤마 없음)","a":"for (int i = 0; i < 3; i++) {\n    printf(\"%d\", a[i]);\n    if (i < 2) printf(\", \");\n}\nprintf(\"\\n\");","ex":"마지막 원소 뒤에는 구분자를 붙이지 않도록 조건(i < size-1)으로 처리.","trap":"무조건 콤마를 붙이면 마지막에 '30,'처럼 군더더기."},{"id":"9.2-6","week":9,"topic":"최솟값/최댓값 동시","grade":"A","type":"impl","q":"한 번의 루프로 <b>최솟값과 최댓값을 동시에</b> 구하시오.","code":"int a[5] = {3, 7, 1, 9, 4};\n// min, max 둘 다 구하기","a":"int min = a[0], max = a[0];\nfor (int i = 1; i < 5; i++) {\n    if (a[i] < min) min = a[i];\n    if (a[i] > max) max = a[i];\n}","ex":"두 후보 모두 a[0]로 초기화하고 한 루프 안에서 각각 비교. min=1, max=9.","trap":"min/max를 0이나 임의 값으로 초기화하는 실수."},{"id":"9.3-5","week":9,"topic":"배열 합/평균","grade":"B","type":"impl","q":"정수 배열의 <b>합과 평균</b>을 구해 출력하시오. (평균은 실수)","code":"int a[5] = {2, 4, 6, 8, 10};\n// 합과 평균 출력","a":"int sum = 0;\nfor (int i = 0; i < 5; i++) sum += a[i];\ndouble avg = (double)sum / 5;\nprintf(\"합=%d 평균=%.2f\\n\", sum, avg);","ex":"합 30, 평균 (double)30/5=6.00. 정수 나눗셈을 피하려 (double) 캐스팅.","trap":"sum/5를 그대로 쓰면 정수 나눗셈."},{"id":"9.4-5","week":9,"topic":"개수 세기","grade":"B","type":"impl","q":"배열에서 key와 일치하는 원소의 <b>개수</b>를 세시오.","code":"int a[6] = {3, 7, 3, 3, 7, 1};\nint key = 3;\n// 개수 세기","a":"int count = 0;\nfor (int i = 0; i < 6; i++)\n    if (a[i] == key) count++;\n// count = 3","ex":"break 없이 끝까지 돌며 일치할 때마다 count++. 검색(첫 위치)과 달리 전수 조사.","trap":"break를 넣으면 첫 일치에서 멈춰 개수가 1."},{"id":"10.1-5","week":10,"topic":"평균 함수 호출","grade":"A","type":"blank","q":"main의 함수 호출 흐름이다. 빈칸을 채우시오.","code":"int arr[100], count;\ndouble avg;\ncount = GetIntegerArray(arr, 100, -1);\nPrintIntegerArray(arr, ______);          // (1)\navg = AverageIntegerArray(arr, ______);  // (2)","a":"(1) count   (2) count","ex":"출력·평균 모두 실제 입력 개수 count를 넘겨야 한다. 최대크기 100을 넘기면 쓰레기칸까지 처리.","trap":"100을 넘기는 실수. 반환받은 count가 진짜 데이터 개수."},{"id":"10.2-4","week":10,"topic":"배열 비교 변형","grade":"B","type":"impl","q":"두 배열에서 <b>처음으로 다른 원소의 인덱스</b>를 반환하는 함수를 작성하시오(모두 같으면 -1).","code":"int FirstDiff(int a[], int b[], int n) {\n    // ...\n}","a":"int FirstDiff(int a[], int b[], int n) {\n    for (int i = 0; i < n; i++)\n        if (a[i] != b[i]) return i;\n    return -1;\n}","ex":"다른 순간 그 인덱스를 즉시 반환, 끝까지 같으면 -1. 비교 함수의 위치 반환형 변형.","trap":"같을 때 return하는 실수. 다를 때 return해야 첫 차이 위치."},{"id":"10.3-4","week":10,"topic":"인덱스 찾기 변형","grade":"B","type":"impl","q":"key가 <b>마지막으로</b> 나타나는 인덱스를 반환하는 함수로 변형하시오(없으면 -1).","code":"int FindLast(int a[], int n, int key) {\n    // ...\n}","a":"int FindLast(int a[], int n, int key) {\n    int idx = -1;\n    for (int i = 0; i < n; i++)\n        if (a[i] == key) idx = i;\n    return idx;\n}","ex":"return을 루프 안에서 하지 않고, 일치할 때마다 idx를 갱신해 마지막 위치를 남긴 뒤 반환.","trap":"즉시 return하면 첫 위치만 나온다. 갱신 후 끝에서 반환."},{"id":"10.4-6","week":10,"topic":"배열 삽입","grade":"S","type":"impl","q":"삭제의 반대로, 인덱스 p에 값 v를 <b>삽입</b>하고 새 크기를 반환하는 함수를 작성하시오(뒤로 밀기).","code":"int Insert(int a[], int s, int p, int v) {\n    // p 위치에 v 삽입, 기존 원소는 뒤로\n}","a":"int Insert(int a[], int s, int p, int v) {\n    if (p < 0 || p > s) return s;\n    for (int i = s; i > p; i--)\n        a[i] = a[i - 1];\n    a[p] = v;\n    return s + 1;\n}","ex":"삽입은 뒤에서부터 한 칸씩 뒤로 밀어 빈자리를 만든 뒤 a[p]=v. 크기는 +1. 방향이 삭제와 반대(i--, a[i]=a[i-1]).","trap":"앞에서부터 밀면 값이 덮어써진다. 삽입은 뒤에서부터."},{"id":"10.5-5","week":10,"topic":"히스토그램 범위검증","grade":"S","type":"impl","q":"점수가 0~100 범위를 벗어나면 무시하도록 BuildHistogram을 보강하시오.","code":"void BuildHistogram(int scores[], int n, int hist[]) {\n    for (int i = 0; i < n; i++) {\n        int s = scores[i];\n        // 범위 검증 추가\n        int idx = (s == 100) ? 10 : s / 10;\n        hist[idx]++;\n    }\n}","a":"for (int i = 0; i < n; i++) {\n    int s = scores[i];\n    if (s < 0 || s > 100) continue;   // 범위 밖 무시\n    int idx = (s == 100) ? 10 : s / 10;\n    hist[idx]++;\n}","ex":"음수나 101 이상이면 continue로 건너뛴다. 안 그러면 hist 인덱스가 음수/범위 초과가 되어 잘못된 메모리 접근.","trap":"검증 없이 s/10을 하면 음수 점수에서 hist[음수] 접근."},{"id":"10.6-5","week":10,"topic":"2차원 전체합","grade":"S","type":"blank","q":"전체 합을 (2,5) 위치에 저장한다. 빈칸을 채우시오.","code":"int sum = 0;\nfor (int i = 0; i < 2; i++)\n    for (int j = 0; j < 5; j++)\n        sum += m[i][j];\nm[____][____] = sum;   // 전체 합 위치","a":"m[2][5] = sum;","ex":"전체 합은 마지막 행·마지막 열이 만나는 (2,5)에 저장. 데이터 2×5의 모든 원소를 더한 값.","trap":"전체 합 위치를 (2,5)가 아닌 곳에 넣는 실수."},{"id":"10.6-6","week":10,"topic":"2차원 출력","grade":"A","type":"blank","q":"합계 포함 3×6 행렬을 출력한다. 빈칸을 채우시오.","code":"void PrintMatrix(int m[][6]) {\n    for (int i = 0; i < ____; i++) {      // (1)\n        for (int j = 0; j < ____; j++)    // (2)\n            printf(\"%5d \", m[i][j]);\n        printf(\"\\n\");\n    }\n}","a":"(1) 3   (2) 6","ex":"합계까지 포함하면 출력은 3행 6열 전체. 데이터(2×5)가 아니라 합계칸까지 본다.","trap":"데이터 범위 2×5로 출력하면 합계 행/열이 안 보인다."},{"id":"11.1-4","week":11,"topic":"문자 개수 세기","grade":"B","type":"impl","q":"문자열에서 특정 문자 c가 몇 번 나오는지 세는 함수를 작성하시오.","code":"int CountChar(char s[], char c) {\n    // ...\n}","a":"int CountChar(char s[], char c) {\n    int cnt = 0;\n    for (int i = 0; s[i] != '\\0'; i++)\n        if (s[i] == c) cnt++;\n    return cnt;\n}","ex":"널 문자 전까지 순회하며 c와 같으면 카운트. StringLength 패턴의 응용.","trap":"종료 조건을 '\\0'이 아닌 고정 길이로 잡는 실수."},{"id":"11.2-4","week":11,"topic":"문자열 역순 복사","grade":"S","type":"impl","q":"src를 <b>뒤집어서</b> dst에 저장하는 함수를 작성하시오.","code":"void ReverseCopy(char dst[], char src[]) {\n    // src를 역순으로 dst에 복사\n}","a":"void ReverseCopy(char dst[], char src[]) {\n    int len = 0;\n    while (src[len] != '\\0') len++;\n    int j = 0;\n    for (int i = len - 1; i >= 0; i--)\n        dst[j++] = src[i];\n    dst[j] = '\\0';\n}","ex":"먼저 길이를 구하고 마지막 문자부터 dst에 채운다. 끝에 '\\0' 필수. \"abc\"→\"cba\".","trap":"길이 구한 뒤 i=len부터 시작하면 '\\0'부터 복사. len-1부터."},{"id":"11.3-4","week":11,"topic":"문자열 연결 추적","grade":"S","type":"trace","q":"msg=\"\"(빈 문자열)에 \"AB\", \"CD\", \"EF\"를 차례로 StringConcat하면 최종 msg는?","code":"msg[0] = '\\0';\nStringConcat(msg, \"AB\");\nStringConcat(msg, \"CD\");\nStringConcat(msg, \"EF\");","a":"ABCDEF","ex":"빈 문자열로 시작 → AB → ABCD → ABCDEF. 매번 끝을 찾아 이어붙인다. 11.6의 동작 원리.","trap":"공백이 사이에 들어간다고 착각. 그냥 이어붙는다."},{"id":"11.4-5","week":11,"topic":"문자열 비교 추적","grade":"S","type":"trace","q":"StringComp(\"HI\", \"hi\")의 반환값은? (같으면 0, 다르면 1)","code":"while (s1[i]!='\\0' && s2[i]!='\\0') {\n    if (s1[i]!=s2[i]) return 1;\n    i++;\n}","a":"1 (다름)","ex":"'H'(72)와 'h'(104)는 다른 문자. 대소문자를 구분하므로 첫 글자에서 1 반환.","trap":"대소문자만 다르면 같다고 착각. ASCII 값이 다르면 다른 문자."},{"id":"11.5-4","week":11,"topic":"대소문자 토글","grade":"A","type":"impl","q":"문자열의 모든 알파벳에서 <b>대↔소문자를 서로 바꾸는</b>(toggle) 함수를 작성하시오.","code":"void ToggleCase(char s[]) {\n    // 소문자→대문자, 대문자→소문자\n}","a":"void ToggleCase(char s[]) {\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] >= 'a' && s[i] <= 'z')\n            s[i] = s[i] + ('A' - 'a');\n        else if (s[i] >= 'A' && s[i] <= 'Z')\n            s[i] = s[i] + ('a' - 'A');\n    }\n}","ex":"소문자면 대문자로, 대문자면 소문자로. 두 범위를 각각 검사. \"aB\"→\"Ab\".","trap":"if-else if로 분리하지 않으면 변환된 문자가 다시 변환될 수 있다."},{"id":"11.6-3","week":11,"topic":"여러 문자열 연결 추적","grade":"A","type":"trace","q":"입력이 \"hello\", \"world\" (5회 중 2회만 가정)일 때 msg 결과는? (StringConcat 연결)","code":"msg[0]='\\0';\n// \"hello\" 입력 → concat\n// \"world\" 입력 → concat","a":"helloworld","ex":"빈 문자열에 hello, world를 이어붙여 \"helloworld\". 단어 사이 공백 없음.","trap":"각 입력이 공백을 포함할 수 있으나(%9[^\\n]), 단어 사이 자동 공백은 없음."},{"id":"12.1-5","week":12,"topic":"swap 포인터","grade":"S","type":"impl","q":"포인터를 이용해 두 정수 값을 <b>교환(swap)</b>하는 함수를 작성하시오.","code":"void Swap(int* a, int* b) {\n    // *a 와 *b 교환\n}","a":"void Swap(int* a, int* b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}","ex":"호출측 변수를 바꾸려면 주소를 받아 *로 값을 교환. 임시변수 temp 필요. 호출은 Swap(&x, &y).","trap":"포인터 자체(a, b)를 바꾸면 호출측엔 반영 안 됨. *로 값을 교환해야 함."},{"id":"12.1-6","week":12,"topic":"포인터 값 변경 추적","grade":"S","type":"trace","q":"다음 실행 후 x의 값은?","code":"void addTen(int* p) { *p = *p + 10; }\nint main() {\n    int x = 5;\n    addTen(&x);\n    // x = ?\n}","a":"15","ex":"&x로 x의 주소를 넘기고, 함수가 *p로 x를 직접 +10. x는 15가 된다.","trap":"값 전달이라 x가 안 바뀐다고 착각. 주소를 넘겼으므로 원본이 바뀐다."},{"id":"12.2-3","week":12,"topic":"포인터 입력 변형","grade":"A","type":"impl","q":"두 정수를 입력받아 <b>합과 차를 포인터로 동시에</b> 돌려주는 함수를 작성하시오.","code":"void SumDiff(int a, int b, int* sum, int* diff) {\n    // ...\n}","a":"void SumDiff(int a, int b, int* sum, int* diff) {\n    *sum = a + b;\n    *diff = a - b;\n}","ex":"값 두 개를 동시에 돌려주므로 포인터 매개변수 사용. *sum, *diff로 호출측 변수에 저장.","trap":"return으로 둘을 동시에 못 돌려줌. 포인터 출력 매개변수 활용."},{"id":"12.3-4","week":12,"topic":"인덱스 범위 곱","grade":"B","type":"impl","q":"start~end 인덱스 원소의 <b>곱</b>을 구하는 함수로 변형하시오.","code":"int productRange(int* array, int start, int end) {\n    // ...\n}","a":"int productRange(int* array, int start, int end) {\n    int product = 1;\n    for (int i = start; i <= end; i++)\n        product *= array[i];\n    return product;\n}","ex":"합 대신 곱이므로 초기값을 1로(0이면 항상 0). i<=end로 양 끝 포함.","trap":"곱의 초기값을 0으로 두면 결과가 항상 0."},{"id":"12.4-5","week":12,"topic":"포인터 최댓값","grade":"S","type":"impl","q":"포인터 범위(pStart~pEnd)에서 <b>최댓값</b>을 찾는 함수를 작성하시오.","code":"int maxRange(int* pStart, int* pEnd) {\n    // p++로 순회하며 최댓값\n}","a":"int maxRange(int* pStart, int* pEnd) {\n    int max = *pStart;\n    for (int* p = pStart; p <= pEnd; p++)\n        if (*p > max) max = *p;\n    return max;\n}","ex":"첫 주소의 값 *pStart로 초기화, p++ 이동하며 *p 비교. 12.4의 합을 최댓값으로 변형.","trap":"max 초기화를 0으로 하면 음수 배열에서 오답. *p 역참조 필수."},{"id":"13.1-6","week":13,"topic":"최솟값 주소","grade":"S+","type":"impl","q":"FindMaxPos를 <b>최솟값 원소의 주소</b>를 찾는 FindMinPos로 변형하시오.","code":"void FindMinPos(int a[], int size, int** minPtr) {\n    // ...\n}","a":"void FindMinPos(int a[], int size, int** minPtr) {\n    int* cur = &a[0];\n    for (int i = 1; i < size; i++)\n        if (a[i] < *cur) cur = &a[i];\n    *minPtr = cur;\n}","ex":"비교 연산자만 > → <로. 구조는 동일. cur는 주소, *cur는 값, *minPtr로 전달.","trap":"포인터 레벨(int**)과 &a[i], *minPtr 구조를 그대로 유지해야 함."},{"id":"13.2-5","week":13,"topic":"동적 배열 기본","grade":"A","type":"blank","q":"정수 n개를 동적 할당해 입력받고 합을 구한 뒤 해제한다. 빈칸을 채우시오.","code":"int n;\nscanf(\"%d\", &n);\nint* arr = (int*)malloc(sizeof(int) * ____);  // (1)\nfor (int i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\nint sum = 0;\nfor (int i = 0; i < n; i++) sum += arr[i];\n________;   // (2) 메모리 해제","a":"(1) n   (2) free(arr)","ex":"n개 정수이므로 sizeof(int)*n 바이트 할당. 사용 후 반드시 free(arr).","trap":"malloc(n)은 n바이트뿐(정수 n개 아님). free 누락은 누수."},{"id":"13.2-6","week":13,"topic":"동적 메모리 개념","grade":"A","type":"concept","q":"<code>malloc</code>으로 받은 메모리를 <code>free</code>하지 않으면 어떤 문제가 생기는가?","code":"int* p = malloc(sizeof(int) * 100);\n// free(p) 없음","a":"메모리 누수(memory leak). 프로그램이 사용하지 않으면서도 반납하지 않은 메모리가 계속 쌓여, 오래 실행되면 가용 메모리가 고갈될 수 있다.","ex":"동적 할당한 만큼 반드시 free로 짝을 맞춰야 한다(malloc↔free).","trap":"지역 배열처럼 자동 회수된다고 착각. 힙 메모리는 수동 해제."},{"id":"13.3-5","week":13,"topic":"동적 문자열 연결","grade":"A+","type":"impl","q":"두 문자열을 이어붙인 <b>새 문자열을 동적 할당</b>해 반환하는 함수를 작성하시오.","code":"char* Concat(char* a, char* b) {\n    // a+b 길이의 새 메모리 할당 후 복사\n}","a":"char* Concat(char* a, char* b) {\n    int la = strlen(a), lb = strlen(b);\n    char* r = (char*)malloc(sizeof(char) * (la + lb + 1));\n    strcpy(r, a);\n    strcat(r, b);\n    return r;\n}","ex":"두 길이 합 + 널 문자 1칸 = la+lb+1 할당. strcpy로 a 복사 후 strcat로 b 이어붙임.","trap":"+1(널 자리) 누락. la+lb만 할당하면 오버플로."},{"id":"13.4-5","week":13,"topic":"동적 입력 추적","grade":"S+","type":"trace","q":"capacity=16에서 시작해 17글자를 입력하면 realloc이 몇 번, 최종 capacity는?","code":"int capacity = 16;\n// length+1 >= capacity 일 때 capacity *= 2","a":"realloc 1번, 최종 capacity = 32","ex":"length가 15가 되어 16번째 저장 직전(length+1=16>=16) 한 번 확장 → capacity 32. 17글자는 32칸 안에 충분.","trap":"확장 조건(length+1>=capacity)과 2배 증가 시점을 정확히 추적."},{"id":"13.4-6","week":13,"topic":"동적 입력 개념","grade":"S+","type":"concept","q":"왜 처음부터 큰 배열을 잡지 않고 capacity를 2배씩 키우는 방식을 쓰는가?","code":"if (length + 1 >= capacity) capacity *= 2;","a":"입력 길이를 미리 알 수 없기 때문. 너무 작게 잡으면 넘치고, 너무 크게 잡으면 메모리 낭비. 2배씩 늘리면 재할당 횟수를 적게 유지하면서(평균 효율적) 필요한 만큼만 메모리를 쓴다.","ex":"동적 크기 조정(dynamic resizing). 한 글자씩 +1 늘리면 재할당이 너무 잦아 비효율적.","trap":"고정 크기로 충분하다고 보거나, 매번 +1 확장이 효율적이라 오해."},{"id":"14.1-4","week":14,"topic":"구조체 반환","grade":"A","type":"concept","q":"<code>InputLine</code>이 지역 구조체 변수 <code>line</code>을 return하는데, 함수가 끝나면 그 메모리가 사라지지 않는가?","code":"lineT InputLine(void) {\n    lineT line;\n    // ...\n    return line;\n}","a":"괜찮다. 구조체를 값으로 반환하면 내용 전체가 복사되어 호출측으로 전달된다. 지역 변수 자체는 사라지지만 그 값의 복사본이 넘어가므로 문제없다.","ex":"구조체 값 반환 = 멤버 전체 복사. 포인터를 반환했다면 위험하지만 값 반환은 안전.","trap":"지역 변수의 주소를 반환하는 것과 값을 반환하는 것을 혼동."},{"id":"14.2-6","week":14,"topic":"구조체 배열 순회","grade":"A+","type":"blank","q":"자동차 배열을 순회하며 정보를 출력한다. 빈칸을 채우시오.","code":"void ShowCarsInfo(const Car cars[], int size) {\n    for (int i = 0; i < size; i++) {\n        printf(\"[%d] \", i + 1);\n        ShowCarInfo(________);   // i번 차의 주소\n    }\n}","a":"&cars[i]","ex":"ShowCarInfo가 const Car*를 받으므로 원소 주소 &cars[i]를 넘긴다.","trap":"cars[i] 값을 넘기면 타입 불일치."},{"id":"14.2-7","week":14,"topic":"구조체 멤버 접근 종합","grade":"A+","type":"fix","q":"구조체 변수와 포인터의 멤버 접근이 섞여 틀렸다. 두 곳을 고치시오.","code":"Car c1;\nCar* p = &c1;\nc1->year = 2020;     // (1)\np.mileage = 1000;    // (2)","a":"(1) c1->year → c1.year   (2) p.mileage → p->mileage","ex":"c1은 구조체 변수라 점(.), p는 포인터라 화살표(->). 변수↔. / 포인터↔->.","trap":"변수에 ->, 포인터에 .를 쓰는 정반대 실수."},{"id":"MIX-1","week":11,"topic":"문자열+검색 통합","grade":"S","type":"impl","q":"문자열에서 특정 문자가 처음 나오는 <b>인덱스</b>를 반환하는 함수를 작성하시오(없으면 -1).","code":"int IndexOf(char s[], char c) {\n    // ...\n}","a":"int IndexOf(char s[], char c) {\n    for (int i = 0; s[i] != '\\0'; i++)\n        if (s[i] == c) return i;\n    return -1;\n}","ex":"9.4 검색 + 11.1 문자열 순회의 결합. '\\0' 전까지 보며 첫 일치 위치 반환.","trap":"고정 길이 루프 대신 '\\0' 종료 조건 사용. 못 찾으면 -1."},{"id":"MIX-2","week":13,"topic":"동적+최댓값 통합","grade":"S+","type":"impl","q":"n개를 동적 할당해 입력받고 <b>최댓값의 인덱스</b>를 반환한 뒤 메모리를 해제하시오.","code":"int n;\nscanf(\"%d\", &n);\nint* arr = (int*)malloc(sizeof(int) * n);\n// 입력, 최댓값 인덱스 maxIdx 구하기, free","a":"for (int i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\nint maxIdx = 0;\nfor (int i = 1; i < n; i++)\n    if (arr[i] > arr[maxIdx]) maxIdx = i;\nprintf(\"최댓값 인덱스: %d\\n\", maxIdx);\nfree(arr);","ex":"13.2 동적 배열 + 9.2 최댓값 인덱스 결합. maxIdx를 0으로 초기화하고 arr[maxIdx]와 비교. free 필수.","trap":"free 누락, 또는 max 값/인덱스 혼동."},{"id":"MIX-3","week":12,"topic":"포인터+배열 통합","grade":"S","type":"trace","q":"다음 실행 후 arr의 내용은?","code":"void doubleAll(int* a, int n) {\n    for (int i = 0; i < n; i++)\n        a[i] = a[i] * 2;\n}\nint arr[3] = {1, 2, 3};\ndoubleAll(arr, 3);","a":"2 4 6","ex":"배열 이름 arr는 첫 원소 주소. 함수가 a[i]로 원본을 직접 수정하므로 모두 2배. 배열은 항상 주소로 전달됨.","trap":"배열도 값 복사라 원본이 안 바뀐다고 착각. 배열은 주소 전달이라 원본이 바뀐다."},{"id":"MIX-4","week":11,"topic":"문자열 회문 판별","grade":"S","type":"impl","q":"문자열이 <b>회문(palindrome)</b>인지 판별하는 함수를 작성하시오(회문이면 1).","code":"int IsPalindrome(char s[]) {\n    // 앞뒤가 같으면 회문 (예: \"level\")\n}","a":"int IsPalindrome(char s[]) {\n    int len = 0;\n    while (s[len] != '\\0') len++;\n    for (int i = 0; i < len / 2; i++)\n        if (s[i] != s[len - 1 - i]) return 0;\n    return 1;\n}","ex":"길이를 구한 뒤 양 끝에서 안쪽으로 짝지어 비교. 하나라도 다르면 0, 절반까지 같으면 1. \"level\"→1.","trap":"len/2까지만 비교하면 충분(전체를 비교하면 중복). s[len-1-i]가 대칭 위치."},{"id":"MIX-5","week":10,"topic":"배열 역순 뒤집기","grade":"A","type":"impl","q":"정수 배열을 <b>제자리에서(in-place) 역순</b>으로 뒤집는 함수를 작성하시오.","code":"void Reverse(int a[], int n) {\n    // 추가 배열 없이 뒤집기\n}","a":"void Reverse(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}","ex":"양 끝을 swap하며 가운데로. n/2번 교환. {1,2,3,4}→{4,3,2,1}.","trap":"n번 전부 돌면 두 번 뒤집혀 원상복구. 절반만 돌아야 함."},{"id":"MIX-6","week":9,"topic":"버블 정렬 기초","grade":"A","type":"blank","q":"버블 정렬로 오름차순 정렬한다. 빈칸을 채우시오.","code":"int a[5] = {5, 2, 8, 1, 9};\nfor (int i = 0; i < 4; i++)\n    for (int j = 0; j < 4 - i; j++)\n        if (a[j] ____ a[j + 1]) {   // (1) 오름차순\n            int t = a[j];\n            a[j] = a[j + 1];\n            a[j + 1] = t;\n        }","a":"(1) >","ex":"인접한 두 원소를 비교해 앞이 더 크면(>) 교환 → 큰 값이 뒤로. 오름차순 정렬. <로 바꾸면 내림차순.","trap":"부등호 방향이 정렬 방향을 결정. 오름차순은 >."},{"id":"MIX-7","week":13,"topic":"2차원 동적 할당","grade":"S+","type":"concept","q":"<code>int** matrix</code>로 m×n 2차원 배열을 동적 할당하는 큰 흐름을 설명하시오.","code":"int** matrix;\n// m행 n열 동적 할당","a":"먼저 행 포인터 배열을 할당(matrix = malloc(sizeof(int*) * m)), 그다음 각 행마다 정수 배열을 할당(matrix[i] = malloc(sizeof(int) * n)). 해제는 역순으로 각 matrix[i]를 free한 뒤 matrix를 free.","ex":"포인터의 배열(13.2 분반 점수와 같은 구조) + 각 행 할당. 2단계 할당/2단계 해제.","trap":"한 번의 malloc으로 끝난다고 착각. 행 배열과 각 행을 따로 할당."},{"id":"MIX-8","week":11,"topic":"공백 제거","grade":"A","type":"impl","q":"문자열에서 <b>공백을 모두 제거</b>하는 함수를 작성하시오(제자리).","code":"void RemoveSpaces(char s[]) {\n    // \"a b c\" -> \"abc\"\n}","a":"void RemoveSpaces(char s[]) {\n    int j = 0;\n    for (int i = 0; s[i] != '\\0'; i++)\n        if (s[i] != ' ')\n            s[j++] = s[i];\n    s[j] = '\\0';\n}","ex":"읽기 인덱스 i와 쓰기 인덱스 j를 분리. 공백이 아닐 때만 j 위치에 쓰고 j 증가. 끝에 '\\0'.","trap":"두 인덱스를 같게 쓰면 제거가 안 됨. 끝 '\\0' 갱신 필수."},{"id":"MIX-9","week":12,"topic":"포인터 NULL 안전","grade":"A","type":"concept","q":"포인터를 역참조하기 전에 <code>if (p != NULL)</code>를 검사하는 이유는?","code":"if (p != NULL)\n    *p = 10;","a":"NULL(또는 잘못된) 주소를 역참조하면 정의되지 않은 동작/크래시(segfault)가 발생하기 때문. 유효한 주소일 때만 *p로 접근하도록 방어한다.","ex":"13.1 FindMaxPos, 14.2 InputCarInfo 등에서 NULL 검사를 두는 이유.","trap":"NULL 포인터 역참조는 대표적 런타임 오류."},{"id":"MIX-10","week":10,"topic":"함수 매개변수 배열","grade":"A","type":"concept","q":"함수 매개변수 <code>int a[]</code>와 <code>int* a</code>는 같은가? 배열을 함수에 넘기면 크기 정보는 어떻게 되는가?","code":"void f(int a[], int n);   // vs void f(int* a, int n)","a":"매개변수에서 int a[]와 int* a는 완전히 같다(둘 다 첫 원소의 주소를 받음). 배열을 넘기면 크기 정보는 사라지므로(주소만 전달), 크기 n을 별도 인자로 함께 넘겨야 한다.","ex":"이것이 거의 모든 배열 처리 함수가 (배열, 크기) 형태인 이유. sizeof로 함수 안에서 크기를 못 구한다.","trap":"함수 안에서 sizeof(a)로 배열 크기를 구하려는 실수(포인터 크기만 나옴)."},{"id":"MIX-11","week":13,"topic":"calloc vs malloc","grade":"A","type":"concept","q":"<code>malloc</code>과 <code>calloc</code>의 차이는?","code":"int* a = malloc(sizeof(int) * n);\nint* b = calloc(n, sizeof(int));","a":"둘 다 동적 할당이지만, malloc은 메모리를 초기화하지 않아 쓰레기값이 들어 있고, calloc은 할당과 동시에 모든 바이트를 0으로 초기화한다. calloc은 (개수, 크기) 두 인자를 받는다.","ex":"카운트 배열처럼 0으로 시작해야 할 때 calloc이 편리(malloc + 수동 0 초기화 = calloc).","trap":"malloc 직후 값이 0이라고 가정하는 실수."},{"id":"MIX-12","week":9,"topic":"2차원 배열 순회","grade":"B","type":"trace","q":"다음 코드의 출력 순서(접근하는 원소)는?","code":"int m[2][3] = {{1,2,3},{4,5,6}};\nfor (int i = 0; i < 2; i++)\n    for (int j = 0; j < 3; j++)\n        printf(\"%d \", m[i][j]);","a":"1 2 3 4 5 6","ex":"바깥 i가 행, 안쪽 j가 열. 행 우선으로 1행(1,2,3) 후 2행(4,5,6).","trap":"i와 j의 역할(행/열)을 바꾸면 순서가 달라진다."},{"id":"MIX-13","week":11,"topic":"단어 개수 세기","grade":"A","type":"impl","q":"공백으로 구분된 <b>단어의 개수</b>를 세는 함수를 작성하시오.","code":"int CountWords(char s[]) {\n    // \"hi there world\" -> 3\n}","a":"int CountWords(char s[]) {\n    int count = 0, inWord = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ') {\n            if (!inWord) { count++; inWord = 1; }\n        } else inWord = 0;\n    }\n    return count;\n}","ex":"단어의 시작(공백 다음 첫 글자)에서만 count++. inWord 플래그로 단어 안/밖 상태를 추적.","trap":"공백 개수를 세면 연속 공백에서 틀림. 단어의 '시작'을 세야 함."},{"id":"MIX-14","week":13,"topic":"dangling pointer","grade":"S+","type":"concept","q":"free 후에도 그 포인터를 사용하면(dangling pointer) 왜 위험한가? 어떻게 방지하는가?","code":"free(p);\n*p = 10;   // 위험","a":"free 후 그 메모리는 반납되어 다른 용도로 재사용될 수 있으므로, 그 주소에 접근하면 정의되지 않은 동작이 발생한다. 방지법은 free 직후 p = NULL로 설정해 실수로 접근 시 명확히 NULL 참조가 되도록 하는 것.","ex":"free한 포인터(dangling)는 더 이상 유효하지 않다. free 후 NULL 대입이 안전 관행.","trap":"free는 포인터 값을 NULL로 바꾸지 않는다(메모리만 반납). 수동으로 NULL 처리."},{"id":"MIX-15","week":10,"topic":"선택 정렬","grade":"S","type":"impl","q":"<b>선택 정렬</b>로 배열을 오름차순 정렬하는 함수를 작성하시오.","code":"void SelectionSort(int a[], int n) {\n    // 매 단계 최솟값을 앞으로\n}","a":"void SelectionSort(int a[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        int minIdx = i;\n        for (int j = i + 1; j < n; j++)\n            if (a[j] < a[minIdx]) minIdx = j;\n        int t = a[i]; a[i] = a[minIdx]; a[minIdx] = t;\n    }\n}","ex":"i 이후 구간에서 최솟값 위치 minIdx를 찾아 a[i]와 교환. 9.2(최솟값 인덱스) + 교환의 결합.","trap":"minIdx 초기값을 i로, 안쪽 루프는 i+1부터. swap 누락."},{"id":"MIX-16","week":9,"topic":"짝수 개수","grade":"B","type":"impl","q":"정수 배열에서 짝수의 개수를 세는 함수를 작성하시오.","code":"int CountEven(int a[], int n) {\n    // ...\n}","a":"int CountEven(int a[], int n) {\n    int cnt = 0;\n    for (int i = 0; i < n; i++)\n        if (a[i] % 2 == 0) cnt++;\n    return cnt;\n}","ex":"2로 나눈 나머지가 0이면 짝수. 음수도 % 2 == 0이면 짝수로 처리됨.","trap":"홀수 판별을 a[i]%2==1로 하면 음수 홀수(-3%2=-1)에서 누락될 수 있음. 짝수는 ==0이 안전."},{"id":"MIX-17","week":11,"topic":"문자열 대문자 개수","grade":"B","type":"impl","q":"문자열에서 대문자 알파벳의 개수를 세는 함수를 작성하시오.","code":"int CountUpper(char s[]) {\n    // ...\n}","a":"int CountUpper(char s[]) {\n    int cnt = 0;\n    for (int i = 0; s[i] != '\\0'; i++)\n        if (s[i] >= 'A' && s[i] <= 'Z') cnt++;\n    return cnt;\n}","ex":"'A'~'Z' 범위(&&)에 들면 대문자. 11.5 대문자 변환의 조건 재사용.","trap":"범위 조건을 || 로 쓰거나 수학식으로 쓰는 실수."},{"id":"MIX-18","week":12,"topic":"포인터 3개 정렬","grade":"S","type":"impl","q":"포인터로 세 정수를 받아 오름차순이 되도록 값을 정렬하는 함수를 작성하시오.","code":"void Sort3(int* a, int* b, int* c) {\n    // *a <= *b <= *c 가 되도록\n}","a":"void Sort3(int* a, int* b, int* c) {\n    int t;\n    if (*a > *b) { t=*a; *a=*b; *b=t; }\n    if (*b > *c) { t=*b; *b=*c; *c=t; }\n    if (*a > *b) { t=*a; *a=*b; *b=t; }\n}","ex":"세 번의 비교-교환으로 정렬. 각 교환은 *로 호출측 값을 직접 바꾼다. Swap 패턴의 확장.","trap":"포인터 자체가 아니라 *로 값을 교환해야 호출측에 반영."},{"id":"MIX-19","week":13,"topic":"동적 배열 복사","grade":"A+","type":"impl","q":"int 배열을 같은 크기의 새 동적 메모리에 복사해 반환하는 함수를 작성하시오.","code":"int* CopyArray(int* src, int n) {\n    // ...\n}","a":"int* CopyArray(int* src, int n) {\n    int* dst = (int*)malloc(sizeof(int) * n);\n    for (int i = 0; i < n; i++) dst[i] = src[i];\n    return dst;\n}","ex":"n개 정수 크기를 할당하고 원소를 하나씩 복사. 깊은 복사라 독립적이며 호출측이 free 해야 함.","trap":"dst = src(얕은 복사)로 하면 같은 메모리를 가리킴. 새로 할당해야 깊은 복사."},{"id":"MIX-20","week":10,"topic":"두 배열 합치기","grade":"A","type":"impl","q":"배열 a(n개)와 b(m개)를 result에 순서대로 합치는 함수를 작성하시오.","code":"void Merge(int a[], int n, int b[], int m, int result[]) {\n    // ...\n}","a":"void Merge(int a[], int n, int b[], int m, int result[]) {\n    int k = 0;\n    for (int i = 0; i < n; i++) result[k++] = a[i];\n    for (int i = 0; i < m; i++) result[k++] = b[i];\n}","ex":"쓰기 인덱스 k를 이어서 사용. a를 다 넣은 뒤 b를 이어 넣는다. result는 n+m 크기여야 함.","trap":"두 번째 루프에서 k를 0으로 리셋하면 a를 덮어쓴다. k는 계속 이어져야 함."},{"id":"MIX-21","week":11,"topic":"문자열 길이 비교","grade":"A","type":"impl","q":"두 문자열 중 더 긴 쪽의 주소를 반환하는 함수를 작성하시오(같으면 s1).","code":"char* Longer(char* s1, char* s2) {\n    // ...\n}","a":"char* Longer(char* s1, char* s2) {\n    int l1 = strlen(s1), l2 = strlen(s2);\n    return (l1 >= l2) ? s1 : s2;\n}","ex":"각 길이를 strlen으로 구해 비교, 더 긴 문자열의 시작 주소(char*)를 반환. 11.1 + 포인터 반환.","trap":"문자열을 값으로 반환할 수 없으므로 주소(char*)를 반환."},{"id":"MIX-22","week":14,"topic":"구조체 배열 최댓값","grade":"A+","type":"impl","q":"Car 배열에서 주행거리(mileage)가 가장 큰 차의 인덱스를 반환하는 함수를 작성하시오.","code":"int MaxMileageIndex(const Car cars[], int n) {\n    // ...\n}","a":"int MaxMileageIndex(const Car cars[], int n) {\n    int idx = 0;\n    for (int i = 1; i < n; i++)\n        if (cars[i].mileage > cars[idx].mileage)\n            idx = i;\n    return idx;\n}","ex":"9.2 최댓값 인덱스 + 구조체 멤버 접근(cars[i].mileage). 배열 원소는 변수라 점(.) 사용.","trap":"cars[i]는 구조체 변수이므로 ->가 아니라 .로 멤버 접근."},{"id":"MIX-23","week":13,"topic":"메모리 누수 진단","grade":"S+","type":"fix","q":"이 코드에는 메모리 누수가 있다. 원인을 지적하고 고치시오.","code":"int* p = malloc(sizeof(int) * 10);\np = malloc(sizeof(int) * 20);  // 재할당 의도\nfree(p);","a":"두 번째 malloc 전에 첫 번째 메모리를 잃어버려 누수.\n→ 첫 줄의 메모리를 free 하거나, realloc(p, sizeof(int)*20) 사용","ex":"p가 새 주소로 덮어써지면 처음 할당한 10칸의 주소를 잃어 영영 해제 못 한다. 크기를 바꾸려면 realloc, 아니면 기존 것을 free.","trap":"같은 포인터에 malloc을 두 번 하면 첫 할당이 누수됨."}];
+
+/* ===== 상태 / 영구저장 ===== */
+const LS_KEY = 'c_bank_marks_v1';
+let marks = {};               // { id: 'r'|'y'|'g'|'s' }
+try { marks = JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch(e){ marks = {}; }
+function saveMarks(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(marks)); }catch(e){} }
+
+let filterWk='all', filterTy='all', filterGr='all', filterMk='all', searchTerm='';
+let deck = [];                // 현재 필터된 문제 배열
+let idx = 0;                  // deck 내 위치
+let revealed = false;
+
+/* ===== 유틸: 코드 하이라이트 ===== */
+function escapeHTML(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function renderCode(code){
+  let h = escapeHTML(code);
+  h = h.split('\n').map(line=>{
+    const i = line.indexOf('//');
+    return i>=0 ? line.slice(0,i)+'<span class="cmt">'+line.slice(i)+'</span>' : line;
+  }).join('\n');
+  h = h.replace(/_{3,}/g, m=>'<span class="blank">'+m+'</span>');
+  return h;
+}
+function gradeClass(g){return 'g-'+g.replace('+','plus');}
+const TYPE_LABEL={blank:'빈칸',fix:'오류수정',trace:'실행추적',impl:'변형구현',concept:'개념'};
+const WEEK_SHORT={9:'배열',10:'배열·함수',11:'문자열',12:'포인터',13:'포인터심화',14:'구조체'};
+
+/* ===== 덱 구성 ===== */
+function buildDeck(keepId){
+  const prevId = keepId || (deck[idx] && deck[idx].id);
+  deck = PROBLEMS.filter(p=>{
+    if(filterWk!=='all' && String(p.week)!==filterWk) return false;
+    if(filterTy!=='all' && p.type!==filterTy) return false;
+    if(filterGr!=='all' && p.grade!==filterGr) return false;
+    if(filterMk!=='all'){
+      const m = marks[p.id];
+      if(filterMk==='none'){ if(m) return false; }
+      else if(m!==filterMk) return false;
+    }
+    if(searchTerm){
+      const hay=(p.id+' '+p.topic+' '+p.q).replace(/<[^>]+>/g,'').toLowerCase();
+      if(!hay.includes(searchTerm)) return false;
+    }
+    return true;
+  });
+  // 이전 위치 유지 시도
+  const np = deck.findIndex(p=>p.id===prevId);
+  idx = np>=0 ? np : 0;
+  render();
+}
+
+/* ===== 렌더 ===== */
+const stage = document.getElementById('stage');
+function render(){
+  document.getElementById('totNum').textContent = deck.length;
+  if(deck.length===0){
+    stage.innerHTML = `<div class="empty"><div class="big">∅</div>조건에 맞는 문제가 없습니다.<br>필터를 바꾸거나 검색어를 지워보세요.</div>`;
+    document.getElementById('curNum').textContent = 0;
+    document.getElementById('progFill').style.width='0%';
+    syncMarkBar(null);
+    return;
+  }
+  if(idx>=deck.length) idx=deck.length-1;
+  if(idx<0) idx=0;
+  const p = deck[idx];
+  revealed=false;
+
+  const trapHTML = p.trap ? `
+        <div class="ans-label trap"><span class="dot"></span>함정 / 주의</div>
+        <div class="trap-text">${p.trap}</div>` : '';
+
+  stage.innerHTML = `
+  <div class="card" id="card">
+    <div class="pane pane-q">
+      <div class="meta-row">
+        <span class="id-badge">${p.id}</span>
+        <span class="grade-badge ${gradeClass(p.grade)}">${p.grade}</span>
+        <span class="type-badge t-${p.type}">${TYPE_LABEL[p.type]}</span>
+        <span class="topic">W${p.week} · ${p.topic}</span>
+      </div>
+      <div class="pane-label"><span class="dot"></span>문제</div>
+      <div class="q-text">${p.q}</div>
+      <pre>${renderCode(p.code)}</pre>
+    </div>
+    <div class="pane pane-a">
+      <div class="answer-content">
+        <div class="ans-label answer"><span class="dot"></span>정답</div>
+        <pre>${renderCode(p.a)}</pre>
+        <div class="ans-label explain"><span class="dot"></span>해설</div>
+        <div class="explain-text">${p.ex}</div>
+        ${trapHTML}
+      </div>
+      <div class="cover" id="cover">
+        <div class="cover-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="cover-text">정답 보기</div>
+        <div class="cover-key">클릭 · <b>Space</b> · <b>↓</b></div>
+      </div>
+    </div>
+  </div>`;
+
+  document.getElementById('cover').addEventListener('click', reveal);
+  document.getElementById('curNum').textContent = idx+1;
+  document.getElementById('progFill').style.width = ((idx+1)/deck.length*100)+'%';
+  document.getElementById('prevBtn').disabled = (idx===0);
+  document.getElementById('nextBtn').disabled = (idx===deck.length-1);
+  syncMarkBar(p.id);
+}
+
+function reveal(){
+  const card=document.getElementById('card');
+  if(card){ card.classList.add('revealed'); revealed=true; }
+}
+
+/* 카드 전환 (슬라이드) */
+function go(delta){
+  if(deck.length===0) return;
+  const ni = idx+delta;
+  if(ni<0 || ni>=deck.length) return;
+  const card=document.getElementById('card');
+  if(card){
+    card.style.setProperty('--slidedir', delta>0 ? '-24px':'24px');
+    card.classList.add('swapping');
+  }
+  setTimeout(()=>{ idx=ni; render(); }, 150);
+}
+
+/* ===== 표시(자기평가) ===== */
+function syncMarkBar(id){
+  const cur = id ? marks[id] : null;
+  document.querySelectorAll('.mark-btn').forEach(b=>{
+    b.className='mark-btn'+(cur===b.dataset.m ? ' sel-'+b.dataset.m : '');
+  });
+}
+function setMark(m){
+  if(deck.length===0) return;
+  const p=deck[idx];
+  if(marks[p.id]===m) delete marks[p.id];   // 같은 거 누르면 해제
+  else marks[p.id]=m;
+  saveMarks();
+  syncMarkBar(p.id);
+  // 표시 필터가 켜져 있으면 덱에서 빠질 수 있으니 재구성
+  if(filterMk!=='all') buildDeck();
+}
+document.querySelectorAll('.mark-btn').forEach(b=>{
+  b.addEventListener('click',()=>setMark(b.dataset.m));
+});
+
+/* ===== 네비 버튼 ===== */
+document.getElementById('prevBtn').addEventListener('click',()=>go(-1));
+document.getElementById('nextBtn').addEventListener('click',()=>{
+  if(!revealed){ reveal(); } else { go(1); }
+});
+
+/* ===== 필터 ===== */
+function bindChips(cls, setter){
+  document.querySelectorAll('.chip.'+cls).forEach(c=>c.addEventListener('click',()=>{
+    document.querySelectorAll('.chip.'+cls).forEach(x=>x.classList.remove('active'));
+    c.classList.add('active'); setter(c); buildDeck();
+  }));
+}
+bindChips('wk', c=>filterWk=c.dataset.wk);
+bindChips('ty', c=>filterTy=c.dataset.ty);
+bindChips('gr', c=>filterGr=c.dataset.gr);
+bindChips('mk', c=>filterMk=c.dataset.mk);
+document.getElementById('search').addEventListener('input',e=>{
+  searchTerm=e.target.value.trim().toLowerCase(); buildDeck();
+});
+document.getElementById('filterToggle').addEventListener('click',function(){
+  const fp=document.getElementById('filterPanel');
+  fp.classList.toggle('open'); this.classList.toggle('on');
+});
+document.getElementById('shuffleBtn').addEventListener('click',()=>{
+  for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]];}
+  idx=0; render();
+});
+document.getElementById('resetMarks').addEventListener('click',()=>{
+  if(confirm('모든 표시(🔴🟡🟢⭐)를 지울까요?')){ marks={}; saveMarks(); buildDeck(); }
+});
+
+/* ===== 단축키 ===== */
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT') return;
+  switch(e.key){
+    case 'ArrowRight': case 'Enter': e.preventDefault(); if(!revealed) reveal(); else go(1); break;
+    case 'ArrowLeft': e.preventDefault(); go(-1); break;
+    case ' ': case 'ArrowDown': e.preventDefault(); reveal(); break;
+    case '1': setMark('r'); break;
+    case '2': setMark('y'); break;
+    case '3': setMark('g'); break;
+    case '4': setMark('s'); break;
+    case 'f': e.preventDefault();
+      document.getElementById('filterPanel').classList.add('open');
+      document.getElementById('filterToggle').classList.add('on');
+      document.getElementById('search').focus(); break;
+    case 'Escape':
+      document.getElementById('filterPanel').classList.remove('open');
+      document.getElementById('filterToggle').classList.remove('on'); break;
+  }
+});
+
+/* ===== 시작 ===== */
+document.getElementById('totNum').textContent = PROBLEMS.length;
+buildDeck();
+</script>
+</body>
+</html>
