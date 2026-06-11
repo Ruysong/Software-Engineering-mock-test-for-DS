@@ -4,27 +4,52 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>소프트웨어공학 OX 퀴즈</title>
 <style>
-:root{--bg:#f5f2eb;--paper:#fffefa;--ink:#24231f;--muted:#77746b;--line:#e4dfd4;--accent:#7259d6;--green:#26875a;--red:#c44c45}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,"Malgun Gothic",sans-serif}
-header{position:sticky;top:0;z-index:2;background:rgba(255,254,250,.96);border-bottom:1px solid var(--line);padding:14px 20px;display:flex;align-items:center;gap:12px}
+:root{--bg:#f5f2eb;--paper:#fffefa;--ink:#24231f;--muted:#77746b;--line:#e4dfd4;--accent:#7259d6;--green:#26875a;--red:#c44c45;--amber:#d39a1e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,"Malgun Gothic",sans-serif;overflow:hidden}button,select{font:inherit}
+header{height:68px;background:rgba(255,254,250,.96);border-bottom:1px solid var(--line);padding:12px 20px;display:flex;align-items:center;gap:12px}
 h1{font-size:19px;margin:0}.back{color:var(--accent);text-decoration:none;font-weight:700}.spacer{flex:1}select{padding:9px;border:1px solid var(--line);border-radius:9px;background:white}
-main{max-width:760px;margin:28px auto;padding:0 16px}.status{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:12px}.bar{height:7px;background:#e7e2d8;border-radius:10px;overflow:hidden;margin-bottom:20px}.bar i{display:block;height:100%;background:var(--accent)}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 15px 45px rgba(52,45,32,.1)}.num{color:var(--accent);font-weight:800}.statement{font-size:23px;line-height:1.65;margin:20px 0 28px;word-break:keep-all}
-.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answers button{border:2px solid var(--line);background:white;border-radius:15px;padding:22px;font-size:25px;font-weight:900;cursor:pointer}.answers button:hover{border-color:var(--accent)}
-.result{display:none;margin-top:22px;padding:18px;border-radius:13px;line-height:1.65}.result.show{display:block}.result.correct{background:#e8f6ee;color:#176b44}.result.wrong{background:#fbecea;color:#9e3832}.result strong{display:block;margin-bottom:5px}
-.next{display:none;width:100%;margin-top:15px;border:0;border-radius:12px;background:var(--ink);color:white;padding:14px;font-weight:800;cursor:pointer}.next.show{display:block}.empty{text-align:center;padding:60px;color:var(--muted)}
-@media(max-width:600px){header{flex-wrap:wrap}.spacer{display:none}select{width:100%}.card{padding:22px}.statement{font-size:19px}.answers button{padding:18px}}
+.layout{height:calc(100vh - 68px);display:grid;grid-template-columns:250px minmax(0,1fr)}aside{background:var(--paper);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.side-head{padding:16px;border-bottom:1px solid var(--line)}.filters{display:grid;grid-template-columns:1fr 1fr;gap:6px}.filter{border:1px solid var(--line);background:white;border-radius:9px;padding:8px;cursor:pointer;color:var(--muted)}.filter.active{background:var(--accent);color:white;border-color:var(--accent)}
+.legend{font-size:12px;color:var(--muted);margin-top:10px}.question-nav{overflow:auto;padding:10px;display:grid;gap:5px}.nav-item{border:1px solid var(--line);background:white;border-radius:9px;padding:8px 9px;display:flex;align-items:center;gap:7px;text-align:left;cursor:pointer}.nav-item.active{border-color:var(--accent);box-shadow:0 0 0 2px #eeeafd}.nav-item.correct{color:var(--green)}.nav-item.wrong{color:var(--red)}.nav-item .mark{margin-left:auto;color:var(--amber)}
+main{overflow:auto;padding:28px 16px}.content{max-width:760px;margin:auto}.status{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:12px}.bar{height:7px;background:#e7e2d8;border-radius:10px;overflow:hidden;margin-bottom:20px}.bar i{display:block;height:100%;background:var(--accent)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 15px 45px rgba(52,45,32,.1)}.card-top{display:flex;align-items:center}.num{color:var(--accent);font-weight:800}.star{margin-left:auto;border:0;background:transparent;color:#c9c5bb;font-size:30px;cursor:pointer}.star.on{color:var(--amber)}.statement{font-size:23px;line-height:1.65;margin:20px 0 28px;word-break:keep-all}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answers button{border:2px solid var(--line);background:white;border-radius:15px;padding:22px;font-size:25px;font-weight:900;cursor:pointer}.answers button:hover,.answers button.focus{border-color:var(--accent);background:#f5f2ff}.answers button.answer{border-color:var(--green);background:#e8f6ee}.answers button.incorrect{border-color:var(--red);background:#fbecea}
+.result{display:none;margin-top:22px;padding:18px;border-radius:13px;line-height:1.65}.result.show{display:block}.result.correct{background:#e8f6ee;color:#176b44}.result.wrong{background:#fbecea;color:#9e3832}.result strong{display:block;margin-bottom:5px}.next{display:none;width:100%;margin-top:15px;border:0;border-radius:12px;background:var(--ink);color:white;padding:14px;font-weight:800;cursor:pointer}.next.show{display:block}.keys{text-align:center;color:var(--muted);font-size:12px;margin-top:14px}
+@media(max-width:760px){body{overflow:auto}header{height:auto;flex-wrap:wrap}.layout{height:auto;display:block}aside{border-right:0;border-bottom:1px solid var(--line)}.question-nav{max-height:180px;grid-template-columns:repeat(5,1fr)}.nav-item{justify-content:center}.nav-item span:not(.mark){display:none}main{overflow:visible}.card{padding:22px}.statement{font-size:19px}}
 </style>
 </head>
 <body>
-<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select id="week"><option value="7">7주차 설계 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
-<main id="app"></main>
+<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select><option>7주차 설계 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
+<div class="layout">
+<aside><div class="side-head"><div class="filters"><button class="filter active" data-filter="all">전체 70</button><button class="filter" data-filter="star">★ 별표 0</button></div><div class="legend">✓ 정답 · ✕ 오답 · ★ 별표</div></div><nav class="question-nav" id="questionNav"></nav></aside>
+<main><div class="content" id="app"></div></main>
+</div>
 <script src="ox-data.js"></script>
 <script>
-const app=document.querySelector("#app"), section=OX_SECTIONS[0];let index=0,correct=0,answered=false;
-function render(){const q=section.questions[index];answered=false;app.innerHTML=`<div class="status"><b>${section.title}</b><span>${index+1} / ${section.questions.length} · 정답 ${correct}</span></div><div class="bar"><i style="width:${(index/section.questions.length)*100}%"></i></div><article class="card"><span class="num">OX ${String(index+1).padStart(2,"0")}</span><div class="statement">${q.statement}</div><div class="answers"><button data-value="true">O</button><button data-value="false">X</button></div><div class="result" id="result"></div><button class="next" id="next">${index===section.questions.length-1?"결과 보기":"다음 문제"}</button></article>`;document.querySelectorAll("[data-value]").forEach(b=>b.onclick=()=>answer(b.dataset.value==="true"));document.querySelector("#next").onclick=next}
-function answer(value){if(answered)return;answered=true;const q=section.questions[index],ok=value===q.answer;if(ok)correct++;const box=document.querySelector("#result");box.className=`result show ${ok?"correct":"wrong"}`;box.innerHTML=`<strong>${ok?"정답입니다.":"틀렸습니다. 정답은 "+(q.answer?"O":"X")+"입니다."}</strong>${q.explanation}`;document.querySelector("#next").classList.add("show");document.querySelectorAll("[data-value]").forEach(b=>b.disabled=true)}
-function next(){if(index<section.questions.length-1){index++;render()}else app.innerHTML=`<div class="card empty"><h2>7주차 완료</h2><p>${section.questions.length}문제 중 ${correct}문제를 맞혔습니다.</p><button class="next show" onclick="index=0;correct=0;render()">다시 풀기</button></div>`}
+const section=OX_SECTIONS[0],app=document.querySelector("#app"),questionNav=document.querySelector("#questionNav"),KEY="softwareEngineeringOxV1";
+let index=0,focusChoice=0,filter="all",state=loadState();
+function loadState(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch{return {}}}
+function saveState(){localStorage.setItem(KEY,JSON.stringify(state))}
+function item(q){return state[q.id]||(state[q.id]={})}
+function visibleIndexes(){return section.questions.map((q,i)=>({q,i})).filter(x=>filter==="all"||item(x.q).star).map(x=>x.i)}
+function renderNav(){
+ const visible=visibleIndexes();questionNav.innerHTML=visible.length?visible.map(i=>{const q=section.questions[i],s=item(q);return `<button class="nav-item ${i===index?"active":""} ${s.ok===true?"correct":s.ok===false?"wrong":""}" data-index="${i}"><b>${i+1}</b><span>${s.ok===true?"✓ 정답":s.ok===false?"✕ 오답":"미응답"}</span>${s.star?'<span class="mark">★</span>':""}</button>`}).join(""):'<p class="legend">별표 문제가 없습니다.</p>';
+ questionNav.querySelectorAll("[data-index]").forEach(b=>b.onclick=()=>go(Number(b.dataset.index)));
+ document.querySelector('[data-filter="all"]').textContent=`전체 ${section.questions.length}`;document.querySelector('[data-filter="star"]').textContent=`★ 별표 ${section.questions.filter(q=>item(q).star).length}`;
+ questionNav.querySelector(".active")?.scrollIntoView({block:"nearest"});
+}
+function render(){
+ const q=section.questions[index],s=item(q),answered=s.ok!==undefined,answeredCount=section.questions.filter(q=>item(q).ok!==undefined).length,correct=section.questions.filter(q=>item(q).ok).length;
+ app.innerHTML=`<div class="status"><b>${section.title}</b><span>${index+1} / ${section.questions.length} · 풀이 ${answeredCount} · 정답 ${correct}</span></div><div class="bar"><i style="width:${answeredCount/section.questions.length*100}%"></i></div><article class="card"><div class="card-top"><span class="num">OX ${String(index+1).padStart(2,"0")}</span><button class="star ${s.star?"on":""}" aria-label="별표">★</button></div><div class="statement">${q.statement}</div><div class="answers"><button data-value="true">O</button><button data-value="false">X</button></div><div class="result ${answered?"show "+(s.ok?"correct":"wrong"):""}"><strong>${answered?(s.ok?"정답입니다.":"틀렸습니다. 정답은 "+(q.answer?"O":"X")+"입니다."):""}</strong>${answered?q.explanation:""}</div><button class="next ${answered?"show":""}">다음 문제</button><div class="keys">← O · → X · Space/Enter 다음 · S 별표 · ↑/↓ 문제 이동</div></article>`;
+ const buttons=[...document.querySelectorAll("[data-value]")];buttons.forEach((b,i)=>{b.onclick=()=>answer(b.dataset.value==="true");b.classList.toggle("focus",!answered&&i===focusChoice);if(answered){b.disabled=true;if((b.dataset.value==="true")===q.answer)b.classList.add("answer");if((b.dataset.value==="true")===s.choice&&!s.ok)b.classList.add("incorrect")}});
+ document.querySelector(".star").onclick=toggleStar;document.querySelector(".next").onclick=next;renderNav();
+}
+function answer(value){const q=section.questions[index],s=item(q);if(s.ok!==undefined)return;s.choice=value;s.ok=value===q.answer;saveState();render()}
+function toggleStar(){const s=item(section.questions[index]);s.star=!s.star;saveState();render()}
+function go(i){index=i;focusChoice=0;render()}
+function next(){const visible=visibleIndexes(),position=visible.indexOf(index);go(visible[position+1]??visible[0]??index)}
+document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));const visible=visibleIndexes();if(!visible.includes(index)&&visible.length)index=visible[0];render()});
+document.addEventListener("keydown",e=>{if(["INPUT","SELECT","TEXTAREA"].includes(e.target.tagName))return;const q=section.questions[index],answered=item(q).ok!==undefined,visible=visibleIndexes(),pos=visible.indexOf(index);if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();focusChoice=e.key==="ArrowLeft"?0:1;if(!answered)answer(focusChoice===0)}else if(e.key===" "||e.key==="Enter"){e.preventDefault();if(answered)next();else answer(focusChoice===0)}else if(e.key.toLowerCase()==="s"){e.preventDefault();toggleStar()}else if(e.key==="ArrowUp"&&visible[pos-1]!==undefined){e.preventDefault();go(visible[pos-1])}else if(e.key==="ArrowDown"&&visible[pos+1]!==undefined){e.preventDefault();go(visible[pos+1])}});
 render();
 </script>
 </body></html>
