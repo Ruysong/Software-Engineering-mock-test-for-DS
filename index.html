@@ -23,6 +23,7 @@
   .brand{min-width:265px}.brand strong{display:block;font-size:19px}.brand span{font-size:12px;color:var(--muted)}
   .modes{display:flex;gap:7px}
   .mode-btn,.utility-btn{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:9px 13px;color:var(--muted);transition:.15s}
+  .ox-link{text-decoration:none;border:1px solid var(--accent);background:var(--accent-soft);border-radius:10px;padding:9px 13px;color:var(--accent);font-weight:700}
   .mode-btn:hover,.utility-btn:hover{border-color:var(--accent);color:var(--accent)}
   .mode-btn.active{background:var(--accent);border-color:var(--accent);color:white}
   .mode-btn b{font-family:'JetBrains Mono',monospace;font-size:11px;margin-left:4px}
@@ -111,6 +112,7 @@
     <button class="mode-btn" data-mode="wrong">오답 <b id="wrongCount">0</b></button>
     <button class="mode-btn" data-mode="star">별표 <b id="starCount">0</b></button>
   </nav>
+  <a class="ox-link" href="ox.html">OX 퀴즈</a>
   <div class="section-nav">
     <button class="icon-btn" id="prevBtn" aria-label="이전 지문">‹</button>
     <select id="sectionSelect" aria-label="지문 선택"></select>
