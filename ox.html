@@ -19,14 +19,14 @@ main{overflow:auto;padding:28px 16px}.content{max-width:760px;margin:auto}.statu
 </style>
 </head>
 <body>
-<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select><option>7주차 설계 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
+<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select id="sectionSelect"><option value="0">7주차 설계 · 1세트 · 70문제</option><option value="1">7주차 설계 · 2세트 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
 <div class="layout">
 <aside><div class="side-head"><div class="filters"><button class="filter active" data-filter="all">전체 70</button><button class="filter" data-filter="star">★ 별표 0</button></div><div class="legend">✓ 정답 · ✕ 오답 · ★ 별표</div></div><nav class="question-nav" id="questionNav"></nav></aside>
 <main><div class="content" id="app"></div></main>
 </div>
 <script src="ox-data.js"></script>
 <script>
-const section=OX_SECTIONS[0],app=document.querySelector("#app"),questionNav=document.querySelector("#questionNav"),KEY="softwareEngineeringOxV1";
+let section=OX_SECTIONS[0];const app=document.querySelector("#app"),questionNav=document.querySelector("#questionNav"),sectionSelect=document.querySelector("#sectionSelect"),KEY="softwareEngineeringOxV1";
 let index=0,focusChoice=0,filter="all",state=loadState();
 function loadState(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch{return {}}}
 function saveState(){localStorage.setItem(KEY,JSON.stringify(state))}
@@ -49,6 +49,7 @@ function toggleStar(){const s=item(section.questions[index]);s.star=!s.star;save
  function go(i){index=i;render()}
 function next(){const visible=visibleIndexes(),position=visible.indexOf(index);go(visible[position+1]??visible[0]??index)}
 document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));const visible=visibleIndexes();if(!visible.includes(index)&&visible.length)index=visible[0];render()});
+sectionSelect.addEventListener("change",()=>{section=OX_SECTIONS[Number(sectionSelect.value)];index=0;focusChoice=0;filter="all";document.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter==="all"));render()});
 document.addEventListener("keydown",e=>{if(["INPUT","SELECT","TEXTAREA"].includes(e.target.tagName))return;const q=section.questions[index],answered=item(q).ok!==undefined,key=e.key.toLowerCase();if(e.key==="ArrowLeft"||e.key==="ArrowRight"||e.key==="ArrowUp"||e.key==="ArrowDown"){e.preventDefault();if(answered)next();else{focusChoice=(e.key==="ArrowLeft"||e.key==="ArrowUp")?0:1;render()}}else if(e.key===" "||e.key==="Enter"){e.preventDefault();if(answered)next();else answer(focusChoice===0)}else if(key==="s"){e.preventDefault();toggleStar()}});
 render();
 </script>
