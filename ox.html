@@ -9,7 +9,7 @@
 header{height:68px;background:rgba(255,254,250,.96);border-bottom:1px solid var(--line);padding:12px 20px;display:flex;align-items:center;gap:12px}
 h1{font-size:19px;margin:0}.back{color:var(--accent);text-decoration:none;font-weight:700}.spacer{flex:1}select{padding:9px;border:1px solid var(--line);border-radius:9px;background:white}
 .layout{height:calc(100vh - 68px);display:grid;grid-template-columns:250px minmax(0,1fr)}aside{background:var(--paper);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
-.side-head{padding:16px;border-bottom:1px solid var(--line)}.filters{display:grid;grid-template-columns:1fr 1fr;gap:6px}.filter{border:1px solid var(--line);background:white;border-radius:9px;padding:8px;cursor:pointer;color:var(--muted)}.filter.active{background:var(--accent);color:white;border-color:var(--accent)}
+.side-head{padding:16px;border-bottom:1px solid var(--line)}.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.filter{border:1px solid var(--line);background:white;border-radius:9px;padding:8px 4px;cursor:pointer;color:var(--muted)}.filter.active{background:var(--accent);color:white;border-color:var(--accent)}
 .legend{font-size:12px;color:var(--muted);margin-top:10px}.question-nav{overflow:auto;padding:10px;display:grid;gap:5px}.nav-item{border:1px solid var(--line);background:white;border-radius:9px;padding:8px 9px;display:flex;align-items:center;gap:7px;text-align:left;cursor:pointer}.nav-item.active{border-color:var(--accent);box-shadow:0 0 0 2px #eeeafd}.nav-item.correct{color:var(--green)}.nav-item.wrong{color:var(--red)}.nav-item .mark{margin-left:auto;color:var(--amber)}
 main{overflow:auto;padding:28px 16px}.content{max-width:760px;margin:auto}.status{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:12px}.bar{height:7px;background:#e7e2d8;border-radius:10px;overflow:hidden;margin-bottom:20px}.bar i{display:block;height:100%;background:var(--accent)}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 15px 45px rgba(52,45,32,.1)}.card-top{display:flex;align-items:center}.num{color:var(--accent);font-weight:800}.star{margin-left:auto;border:0;background:transparent;color:#c9c5bb;font-size:30px;cursor:pointer}.star.on{color:var(--amber)}.statement{font-size:23px;line-height:1.65;margin:20px 0 28px;word-break:keep-all}
@@ -19,9 +19,9 @@ main{overflow:auto;padding:28px 16px}.content{max-width:760px;margin:auto}.statu
 </style>
 </head>
 <body>
-<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select id="sectionSelect"><option value="0">7주차 설계 · 1세트 · 70문제</option><option value="1">7주차 설계 · 2세트 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
+<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select id="sectionSelect"><option value="0">7주차 설계 · 1세트 · 70문제</option><option value="1">7주차 설계 · 2세트 · 70문제</option><option value="2">7주차 설계 · 3세트 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
 <div class="layout">
-<aside><div class="side-head"><div class="filters"><button class="filter active" data-filter="all">전체 70</button><button class="filter" data-filter="star">★ 별표 0</button></div><div class="legend">✓ 정답 · ✕ 오답 · ★ 별표</div></div><nav class="question-nav" id="questionNav"></nav></aside>
+<aside><div class="side-head"><div class="filters"><button class="filter active" data-filter="all">전체 70</button><button class="filter" data-filter="wrong">✕ 오답 0</button><button class="filter" data-filter="star">★ 별표 0</button></div><div class="legend">✓ 정답 · ✕ 오답 · ★ 별표</div></div><nav class="question-nav" id="questionNav"></nav></aside>
 <main><div class="content" id="app"></div></main>
 </div>
 <script src="ox-data.js"></script>
@@ -31,11 +31,11 @@ let index=0,focusChoice=0,filter="all",state=loadState();
 function loadState(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch{return {}}}
 function saveState(){localStorage.setItem(KEY,JSON.stringify(state))}
 function item(q){return state[q.id]||(state[q.id]={})}
-function visibleIndexes(){return section.questions.map((q,i)=>({q,i})).filter(x=>filter==="all"||item(x.q).star).map(x=>x.i)}
+function visibleIndexes(){return section.questions.map((q,i)=>({q,i})).filter(x=>filter==="all"||(filter==="star"&&item(x.q).star)||(filter==="wrong"&&item(x.q).ok===false)).map(x=>x.i)}
 function renderNav(){
- const visible=visibleIndexes();questionNav.innerHTML=visible.length?visible.map(i=>{const q=section.questions[i],s=item(q);return `<button class="nav-item ${i===index?"active":""} ${s.ok===true?"correct":s.ok===false?"wrong":""}" data-index="${i}"><b>${i+1}</b><span>${s.ok===true?"✓ 정답":s.ok===false?"✕ 오답":"미응답"}</span>${s.star?'<span class="mark">★</span>':""}</button>`}).join(""):'<p class="legend">별표 문제가 없습니다.</p>';
+ const visible=visibleIndexes();questionNav.innerHTML=visible.length?visible.map(i=>{const q=section.questions[i],s=item(q);return `<button class="nav-item ${i===index?"active":""} ${s.ok===true?"correct":s.ok===false?"wrong":""}" data-index="${i}"><b>${i+1}</b><span>${s.ok===true?"✓ 정답":s.ok===false?"✕ 오답":"미응답"}</span>${s.star?'<span class="mark">★</span>':""}</button>`}).join(""):`<p class="legend">${filter==="wrong"?"오답":"별표"} 문제가 없습니다.</p>`;
  questionNav.querySelectorAll("[data-index]").forEach(b=>b.onclick=()=>go(Number(b.dataset.index)));
- document.querySelector('[data-filter="all"]').textContent=`전체 ${section.questions.length}`;document.querySelector('[data-filter="star"]').textContent=`★ 별표 ${section.questions.filter(q=>item(q).star).length}`;
+ document.querySelector('[data-filter="all"]').textContent=`전체 ${section.questions.length}`;document.querySelector('[data-filter="wrong"]').textContent=`✕ 오답 ${section.questions.filter(q=>item(q).ok===false).length}`;document.querySelector('[data-filter="star"]').textContent=`★ 별표 ${section.questions.filter(q=>item(q).star).length}`;
  questionNav.querySelector(".active")?.scrollIntoView({block:"nearest"});
 }
 function render(){
