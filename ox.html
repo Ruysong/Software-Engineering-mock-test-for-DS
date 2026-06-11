@@ -19,7 +19,7 @@ main{overflow:auto;padding:28px 16px}.content{max-width:760px;margin:auto}.statu
 </style>
 </head>
 <body>
-<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select id="sectionSelect"><option value="0">7주차 설계 · 1세트 · 70문제</option><option value="1">7주차 설계 · 2세트 · 70문제</option><option value="2">7주차 설계 · 3세트 · 70문제</option><option disabled>9주차 · 준비 중</option><option disabled>10주차 · 준비 중</option><option disabled>11주차 · 준비 중</option><option disabled>12주차 · 준비 중</option></select></header>
+<header><a class="back" href="index.html">← 객관식으로</a><h1>OX 퀴즈</h1><span class="spacer"></span><select id="sectionSelect"></select></header>
 <div class="layout">
 <aside><div class="side-head"><div class="filters"><button class="filter active" data-filter="all">전체 70</button><button class="filter" data-filter="wrong">✕ 오답 0</button><button class="filter" data-filter="star">★ 별표 0</button></div><div class="legend">✓ 정답 · ✕ 오답 · ★ 별표</div></div><nav class="question-nav" id="questionNav"></nav></aside>
 <main><div class="content" id="app"></div></main>
@@ -27,6 +27,7 @@ main{overflow:auto;padding:28px 16px}.content{max-width:760px;margin:auto}.statu
 <script src="ox-data.js"></script>
 <script>
 let section=OX_SECTIONS[0];const app=document.querySelector("#app"),questionNav=document.querySelector("#questionNav"),sectionSelect=document.querySelector("#sectionSelect"),KEY="softwareEngineeringOxV1";
+sectionSelect.innerHTML=OX_SECTIONS.map((s,i)=>`<option value="${i}">${s.title} · ${s.questions.length}문제</option>`).join("");
 let index=0,focusChoice=0,filter="all",state=loadState();
 function loadState(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch{return {}}}
 function saveState(){localStorage.setItem(KEY,JSON.stringify(state))}
