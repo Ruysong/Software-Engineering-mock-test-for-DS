@@ -3110,3 +3110,6603 @@ window.OX_SECTIONS.push({
 ]
 });
 
+
+window.OX_SECTIONS.push({
+  week: 10,
+  set: 1,
+  title: "10주차 구현 · ",
+  questions:
+[
+    {
+        "id":  "10-1-1",
+        "statement":  "포트란은 FORmula TRANslation에서 유래한 이름이다.",
+        "answer":  true,
+        "explanation":  "포트란은 수식 변환이라는 의미의 초기 고급 언어로 설명된다."
+    },
+    {
+        "id":  "10-1-2",
+        "statement":  "포트란은 사람이 이해하기 쉬운 형태로 만들어진 초창기 고급 언어이다.",
+        "answer":  true,
+        "explanation":  "교안은 포트란을 초창기 고급 언어로 소개한다."
+    },
+    {
+        "id":  "10-1-3",
+        "statement":  "포트란은 교육용 쉬운 문법을 목적으로 만든 언어이다.",
+        "answer":  false,
+        "explanation":  "교육용 쉬운 문법을 목적으로 만든 언어는 베이직이다."
+    },
+    {
+        "id":  "10-1-4",
+        "statement":  "베이직은 Beginner\u0027s All-purpose Symbolic Instruction Code의 약자이다.",
+        "answer":  true,
+        "explanation":  "BASIC의 풀네임에 해당한다."
+    },
+    {
+        "id":  "10-1-5",
+        "statement":  "베이직은 주로 교육용으로 사용하기 쉽게 만든 언어이다.",
+        "answer":  true,
+        "explanation":  "교안은 베이직을 쉬운 문법의 교육용 언어로 설명한다."
+    },
+    {
+        "id":  "10-1-6",
+        "statement":  "C 언어는 현재 널리 쓰이는 명령형 언어로 소개된다.",
+        "answer":  true,
+        "explanation":  "교안은 C 언어를 널리 쓰이는 명령형 언어라고 설명한다."
+    },
+    {
+        "id":  "10-1-7",
+        "statement":  "C++은 C 언어에 객체지향 개념을 더한 언어이다.",
+        "answer":  true,
+        "explanation":  "C++은 C 기반에 객체지향 개념을 추가한 언어로 제시된다."
+    },
+    {
+        "id":  "10-1-8",
+        "statement":  "C#은 선 마이크로시스템즈가 개발한 언어이다.",
+        "answer":  false,
+        "explanation":  "C#은 마이크로소프트가 닷넷 프레임워크 일부로 만든 언어이다."
+    },
+    {
+        "id":  "10-1-9",
+        "statement":  "C#은 닷넷 프레임워크와 관련된 객체지향 프로그래밍 언어이다.",
+        "answer":  true,
+        "explanation":  "교안에서 C#은 마이크로소프트의 닷넷 기반 객체지향 언어로 설명된다."
+    },
+    {
+        "id":  "10-1-10",
+        "statement":  "자바는 제임스 고슬링이 개발한 객체지향 언어로 설명된다.",
+        "answer":  true,
+        "explanation":  "교안은 자바를 선 마이크로시스템즈의 제임스 고슬링이 개발했다고 설명한다."
+    },
+    {
+        "id":  "10-1-11",
+        "statement":  "자바는 JVM을 사용하므로 컴파일된 코드가 플랫폼에 대해 독립적일 수 있다.",
+        "answer":  true,
+        "explanation":  "JVM 덕분에 플랫폼 독립성이 강조된다."
+    },
+    {
+        "id":  "10-1-12",
+        "statement":  "자바는 닷넷 프레임워크의 일부로 만들어진 언어이다.",
+        "answer":  false,
+        "explanation":  "닷넷 프레임워크와 직접 연결된 것은 C#이다."
+    },
+    {
+        "id":  "10-1-13",
+        "statement":  "표준 코딩 규칙은 프로그램의 가독성을 높이는 데 도움이 된다.",
+        "answer":  true,
+        "explanation":  "가독성 향상은 표준 코딩 규칙의 대표 장점이다."
+    },
+    {
+        "id":  "10-1-14",
+        "statement":  "프로그래밍에서 가독성은 프로그램을 읽기 쉬운 정도를 의미한다.",
+        "answer":  true,
+        "explanation":  "교안은 프로그래밍 가독성을 읽기 쉬운 정도로 설명한다."
+    },
+    {
+        "id":  "10-1-15",
+        "statement":  "주석, 줄 바꿈, 들여쓰기, 공백 사용은 가독성을 높이는 방법이다.",
+        "answer":  true,
+        "explanation":  "교안에서 제시한 가독성 향상 방법이다."
+    },
+    {
+        "id":  "10-1-16",
+        "statement":  "표준 코딩 규칙을 따르면 코드가 반드시 더 길어져 유지보수가 어려워진다.",
+        "answer":  false,
+        "explanation":  "표준 코딩 규칙은 유지보수를 쉽게 하는 방향이다."
+    },
+    {
+        "id":  "10-1-17",
+        "statement":  "간결하고 명확한 코딩은 특정 부분을 찾아 변경하기 쉽게 한다.",
+        "answer":  true,
+        "explanation":  "명확한 코드는 이해와 변경을 쉽게 만든다."
+    },
+    {
+        "id":  "10-1-18",
+        "statement":  "표준 코딩 규칙은 유지보수 향상과 관련이 있다.",
+        "answer":  true,
+        "explanation":  "코드를 읽고 이해하고 수정하기 쉬워져 유지보수성이 오른다."
+    },
+    {
+        "id":  "10-1-19",
+        "statement":  "표준 코딩 규칙은 개발 과정의 정확도와 효율을 높여 개발 시간을 단축할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 개발 시간 단축을 장점으로 제시한다."
+    },
+    {
+        "id":  "10-1-20",
+        "statement":  "표준 코딩 규칙은 개인이 혼자 개발할 때는 전혀 의미가 없다.",
+        "answer":  false,
+        "explanation":  "혼자 개발해도 가독성과 유지보수 측면에서 의미가 있다."
+    },
+    {
+        "id":  "10-1-21",
+        "statement":  "명칭은 31자 이내로 작성하는 것이 규칙이다.",
+        "answer":  true,
+        "explanation":  "교안의 명칭 규칙에서 31자 이내가 제시된다."
+    },
+    {
+        "id":  "10-1-22",
+        "statement":  "변수명과 함수명은 혼란을 줄이기 위해 다르게 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "같은 이름은 개발 중 혼란을 유발할 수 있다."
+    },
+    {
+        "id":  "10-1-23",
+        "statement":  "매크로명은 대문자를 사용하는 것이 규칙이다.",
+        "answer":  true,
+        "explanation":  "매크로명은 대문자 사용이 좋은 예로 제시된다."
+    },
+    {
+        "id":  "10-1-24",
+        "statement":  "상수명은 대문자를 사용하는 것이 규칙이다.",
+        "answer":  true,
+        "explanation":  "상수명도 대문자로 작성하는 규칙이 제시된다."
+    },
+    {
+        "id":  "10-1-25",
+        "statement":  "변수명은 소문자로 시작하는 것이 규칙이다.",
+        "answer":  true,
+        "explanation":  "교안에서 변수명은 소문자로 시작한다고 정리된다."
+    },
+    {
+        "id":  "10-1-26",
+        "statement":  "함수명은 소문자로 시작하고 첫 번째 단어는 동사로 작성한다.",
+        "answer":  true,
+        "explanation":  "getData처럼 동사로 시작하는 함수명이 좋은 예이다."
+    },
+    {
+        "id":  "10-1-27",
+        "statement":  "함수명은 대문자로 시작해야 하며 명사로 작성해야 한다.",
+        "answer":  false,
+        "explanation":  "함수명은 소문자로 시작하고 동사로 시작하는 것이 원칙이다."
+    },
+    {
+        "id":  "10-1-28",
+        "statement":  "허용되는 특수 문자는 언더바(_)만 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "다른 언어와의 호환을 위해 특수 문자는 언더바만 사용한다."
+    },
+    {
+        "id":  "10-1-29",
+        "statement":  "포인터 변수명은 앞에 p를 붙이는 규칙이 있다.",
+        "answer":  true,
+        "explanation":  "예: pSum처럼 포인터임을 표시한다."
+    },
+    {
+        "id":  "10-1-30",
+        "statement":  "포인터 변수명은 반드시 대문자 P가 아니라 숫자 0으로 시작해야 한다.",
+        "answer":  false,
+        "explanation":  "교안의 규칙은 앞에 p를 붙이는 것이다."
+    },
+    {
+        "id":  "10-1-31",
+        "statement":  "소스 파일 하나는 200줄 이내로 작성하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "200줄 이상이면 문맥 파악과 파일 관리가 어려워질 수 있다."
+    },
+    {
+        "id":  "10-1-32",
+        "statement":  "한 줄의 길이는 80자 이내로 작성하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "긴 줄은 가독성을 떨어뜨린다."
+    },
+    {
+        "id":  "10-1-33",
+        "statement":  "함수의 내용은 70줄 이내로 작성하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "한 화면에 함수 전체가 보이도록 하기 위한 규칙이다."
+    },
+    {
+        "id":  "10-1-34",
+        "statement":  "함수가 너무 길면 화면이 분할되어 문맥 파악이 어려워질 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 긴 함수가 가독성을 떨어뜨린다고 설명한다."
+    },
+    {
+        "id":  "10-1-35",
+        "statement":  "여는 중괄호는 문장의 끝에 두는 방식으로 통일한다.",
+        "answer":  true,
+        "explanation":  "교안의 좋은 예는 if(a\u003eb){ 형태이다."
+    },
+    {
+        "id":  "10-1-36",
+        "statement":  "닫는 중괄호는 문장의 시작 위치에 두는 방식으로 통일한다.",
+        "answer":  true,
+        "explanation":  "중괄호 위치를 통일해 가독성을 높인다."
+    },
+    {
+        "id":  "10-1-37",
+        "statement":  "중괄호 하나가 한 줄을 차지하면 코드가 길어져 가독성이 떨어질 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 스크롤 증가와 가독성 저하를 언급한다."
+    },
+    {
+        "id":  "10-1-38",
+        "statement":  "수준이 동일한 문장은 시작 위치를 동일하게 맞추는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "같은 수준의 문장은 같은 들여쓰기를 사용한다."
+    },
+    {
+        "id":  "10-1-39",
+        "statement":  "들여쓰기는 코드 의미와 무관하므로 파일마다 다르게 작성해도 표준 코딩 규칙에는 영향이 없다.",
+        "answer":  false,
+        "explanation":  "들여쓰기 통일은 소스 형식 규칙의 중요한 부분이다."
+    },
+    {
+        "id":  "10-1-40",
+        "statement":  "파일 또는 클래스 주석에는 최초 작성자와 최초 작성일을 포함할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 주석 내용에는 최초 작성자와 최초 작성일이 포함된다."
+    },
+    {
+        "id":  "10-1-41",
+        "statement":  "주석에는 목적과 개정 이력을 기록할 수 있다.",
+        "answer":  true,
+        "explanation":  "목적, 변경자, 변경 일자, 변경 내용 등이 포함된다."
+    },
+    {
+        "id":  "10-1-42",
+        "statement":  "저작권 정보도 주석에 포함될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 좋은 예에는 저작권이 포함된다."
+    },
+    {
+        "id":  "10-1-43",
+        "statement":  "메서드 정의 앞에는 함수의 목적을 주석으로 작성하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "메서드 주석에는 목적이 포함된다."
+    },
+    {
+        "id":  "10-1-44",
+        "statement":  "메서드 주석에는 매개변수 설명과 반환 값 설명을 포함하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "함수 인자와 반환 값을 설명해야 사용자가 이해하기 쉽다."
+    },
+    {
+        "id":  "10-1-45",
+        "statement":  "메서드의 변경 이력은 주석에서 다룰 수 없다.",
+        "answer":  false,
+        "explanation":  "메서드 주석에도 변경자, 변경 일자, 변경 내용 등을 기록할 수 있다."
+    },
+    {
+        "id":  "10-1-46",
+        "statement":  "원시 코드와 주석은 명확히 구분되도록 공백이나 탭을 둘 수 있다.",
+        "answer":  true,
+        "explanation":  "코드와 주석을 구분하면 읽기 쉽다."
+    },
+    {
+        "id":  "10-1-47",
+        "statement":  "원시 코드가 변경되어도 기존 주석은 그대로 두는 것이 원칙이다.",
+        "answer":  false,
+        "explanation":  "코드가 바뀌면 주석도 일치하도록 수정해야 한다."
+    },
+    {
+        "id":  "10-1-48",
+        "statement":  "복잡한 논리식이나 간단하지 않은 자료구조에는 주석을 다는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "이해가 어려운 부분에는 설명 주석이 필요하다."
+    },
+    {
+        "id":  "10-1-49",
+        "statement":  "용도가 같은 변수는 한 줄에 작성할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 용도가 같은 변수를 한 줄에 작성하는 예를 제시한다."
+    },
+    {
+        "id":  "10-1-50",
+        "statement":  "필요하지 않은 변수는 선언하지 않는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "사용하지 않는 변수 선언은 피해야 한다."
+    },
+    {
+        "id":  "10-1-51",
+        "statement":  "배열 선언 시 요소 수를 명시하거나 초기화하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "배열 크기 또는 초기값을 명확히 해야 한다."
+    },
+    {
+        "id":  "10-1-52",
+        "statement":  "배열을 초기화할 때는 중괄호를 적절히 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "다차원 배열 초기화에서는 구조를 알 수 있게 중괄호를 사용한다."
+    },
+    {
+        "id":  "10-1-53",
+        "statement":  "지역 변수는 선언할 때 초기화하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "초기화하지 않으면 쓰레기 값이 들어갈 수 있다."
+    },
+    {
+        "id":  "10-1-54",
+        "statement":  "초기화하지 않은 지역 변수는 항상 0으로 자동 초기화된다.",
+        "answer":  false,
+        "explanation":  "지역 변수는 쓰레기 값으로 초기화될 수 있다."
+    },
+    {
+        "id":  "10-1-55",
+        "statement":  "부호 없는 자료형 상수에는 u를 붙이는 규칙이 있다.",
+        "answer":  true,
+        "explanation":  "unsigned 값을 명확히 표시하기 위한 규칙이다."
+    },
+    {
+        "id":  "10-1-56",
+        "statement":  "포인터 변수에 주소를 저장할 때는 자료형이 일치해야 한다.",
+        "answer":  true,
+        "explanation":  "포인터가 가리키는 자료형과 대상 변수의 자료형이 맞아야 한다."
+    },
+    {
+        "id":  "10-1-57",
+        "statement":  "비트 필드는 unsigned int 또는 signed int형으로 선언하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "다른 자료형은 동작이 정의되지 않을 수 있다고 설명된다."
+    },
+    {
+        "id":  "10-1-58",
+        "statement":  "비트 필드는 char형으로 선언하는 것이 가장 안전하다.",
+        "answer":  false,
+        "explanation":  "교안은 비트 필드를 unsigned/signed int형으로 선언하라고 한다."
+    },
+    {
+        "id":  "10-1-59",
+        "statement":  "상수는 10진수 또는 16진수로 표현하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "8진수 표현은 가독성이 떨어진다고 설명된다."
+    },
+    {
+        "id":  "10-1-60",
+        "statement":  "8진수 표현은 가독성이 좋으므로 상수 표현에 적극 권장된다.",
+        "answer":  false,
+        "explanation":  "교안은 8진수보다 10진수나 16진수를 권장한다."
+    },
+    {
+        "id":  "10-1-61",
+        "statement":  "C 언어에서는 숫자 리터럴을 직접 하드 코딩하기보다 const 변수를 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "숫자의 의미를 명확히 하기 위해 const 변수를 사용한다."
+    },
+    {
+        "id":  "10-1-62",
+        "statement":  "원시 코드에 직접 작성한 숫자 리터럴은 의미 파악을 어렵게 할 수 있다.",
+        "answer":  true,
+        "explanation":  "매직 넘버는 코드 이해를 어렵게 한다."
+    },
+    {
+        "id":  "10-1-63",
+        "statement":  "삼각형 면적 계산에서 밑변과 높이를 const 변수로 두면 의미가 더 명확해진다.",
+        "answer":  true,
+        "explanation":  "상수 이름이 숫자의 의미를 설명한다."
+    },
+    {
+        "id":  "10-1-64",
+        "statement":  "상수 규칙에서는 숫자 리터럴의 의미를 드러내는 이름 사용이 중요하다.",
+        "answer":  true,
+        "explanation":  "하드 코딩 숫자보다 의미 있는 상수명이 좋다."
+    },
+    {
+        "id":  "10-1-65",
+        "statement":  "단항 연산자 ++, --는 피연산자와 붙여 쓰는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "피연산자를 바로 파악할 수 있게 하기 위한 규칙이다."
+    },
+    {
+        "id":  "10-1-66",
+        "statement":  "이항 연산자 +, -, *, /는 전후에 공백을 넣는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "공백은 수식의 가독성을 높인다."
+    },
+    {
+        "id":  "10-1-67",
+        "statement":  "삼항 연산자는 알아보기 쉽게 맨 앞의 조건식을 괄호로 묶는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "조건 부분을 명확히 하기 위한 규칙이다."
+    },
+    {
+        "id":  "10-1-68",
+        "statement":  "증감 연산자는 다른 연산자와 섞어 사용하지 않는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "예측하기 어려운 수식을 피하기 위한 규칙이다."
+    },
+    {
+        "id":  "10-1-69",
+        "statement":  "sum = kor + (++eng);처럼 증감 연산자를 다른 연산과 섞는 것이 좋은 예이다.",
+        "answer":  false,
+        "explanation":  "증감 연산은 따로 분리하는 것이 좋다."
+    },
+    {
+        "id":  "10-1-70",
+        "statement":  "연산자가 3개 이상이면 우선순위를 쉽게 알 수 있도록 괄호를 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "복잡한 수식은 괄호로 우선순위를 명확히 한다."
+    },
+    {
+        "id":  "10-1-71",
+        "statement":  "sizeof의 인자에는 복잡한 수식을 넣지 않는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "교안은 sizeof(a = b + c) 같은 사용을 피하라고 한다."
+    },
+    {
+        "id":  "10-1-72",
+        "statement":  "복잡한 수식은 항상 한 줄에 몰아넣어야 가독성이 좋아진다.",
+        "answer":  false,
+        "explanation":  "복잡한 수식은 분리하거나 괄호로 명확히 하는 것이 좋다."
+    },
+    {
+        "id":  "10-1-73",
+        "statement":  "switch 문에서 case를 빠져나오기 위해 break 문을 사용한다.",
+        "answer":  true,
+        "explanation":  "break가 없으면 다음 case로 제어가 넘어갈 수 있다."
+    },
+    {
+        "id":  "10-1-74",
+        "statement":  "break 문이 없어 다음 case로 넘어가는 경우에는 그 사실을 주석으로 남기는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "의도적인 fall-through라면 주석으로 명확히 해야 한다."
+    },
+    {
+        "id":  "10-1-75",
+        "statement":  "switch 문에서 모든 case가 끝나면 default 문을 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "만족하는 case가 없을 때 후속 처리를 하기 위함이다."
+    },
+    {
+        "id":  "10-1-76",
+        "statement":  "goto 문은 사용을 자제하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "goto는 흐름을 복잡하게 만들 수 있다."
+    },
+    {
+        "id":  "10-1-77",
+        "statement":  "for 문을 제어하는 수식에 실수 값을 사용하는 것은 허용하지 않는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "반복 횟수 예측이 어려워질 수 있다."
+    },
+    {
+        "id":  "10-1-78",
+        "statement":  "for 문의 제어 변수는 반복 횟수 예측을 어렵게 하는 방식으로 계산에 섞어 쓰는 것이 좋다.",
+        "answer":  false,
+        "explanation":  "제어 변수는 반복 흐름을 명확히 유지해야 한다."
+    },
+    {
+        "id":  "10-1-79",
+        "statement":  "반복 중단을 위한 break 문은 가능하면 한 번만 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "여러 곳에서 break를 쓰면 동작 예측이 어려워진다."
+    },
+    {
+        "id":  "10-1-80",
+        "statement":  "if~else 문은 가능하면 else 문으로 종료하여 누락 처리를 줄이는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "else가 없으면 원하는 처리가 빠질 수 있다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 10,
+  set: 2,
+  title: "10주차 구현 · ",
+  questions:
+[
+    {
+        "id":  "10-2-1",
+        "statement":  "포트란과 베이직은 모두 초기 언어이지만, 포트란은 수식 계산·고급 언어 맥락, 베이직은 교육용 쉬운 문법 맥락으로 구분된다.",
+        "answer":  true,
+        "explanation":  "포트란은 FORmula TRANslation, 베이직은 교육용 언어로 정리된다."
+    },
+    {
+        "id":  "10-2-2",
+        "statement":  "FORTRAN의 핵심 설명을 BASIC에 적용하면 더 정확하다.",
+        "answer":  false,
+        "explanation":  "FORTRAN은 수식 변환 계열 설명이고 BASIC은 교육용 쉬운 문법이 핵심이다."
+    },
+    {
+        "id":  "10-2-3",
+        "statement":  "C와 C++의 차이를 묻는다면, C++은 C에 객체지향 개념이 더해졌다는 점이 핵심이다.",
+        "answer":  true,
+        "explanation":  "교안은 C++을 C 언어에 객체지향 개념을 더한 언어로 설명한다."
+    },
+    {
+        "id":  "10-2-4",
+        "statement":  "C#과 자바는 모두 객체지향 언어로 설명되지만, C#은 마이크로소프트 닷넷, 자바는 JVM과 플랫폼 독립성이 핵심이다.",
+        "answer":  true,
+        "explanation":  "두 언어의 출처와 특징을 구분해야 한다."
+    },
+    {
+        "id":  "10-2-5",
+        "statement":  "자바의 플랫폼 독립성은 JVM과 연결되므로, 컴파일된 코드가 각 플랫폼에 대해 독립적이라는 설명과 맞다.",
+        "answer":  true,
+        "explanation":  "JVM은 자바의 플랫폼 독립성을 설명하는 핵심 요소이다."
+    },
+    {
+        "id":  "10-2-6",
+        "statement":  "C#은 JVM을 사용하기 때문에 플랫폼 독립성이 교안의 핵심 설명으로 제시된다.",
+        "answer":  false,
+        "explanation":  "JVM은 자바 설명에 해당한다."
+    },
+    {
+        "id":  "10-2-7",
+        "statement":  "베이직은 Beginner\u0027s All-purpose Symbolic Instruction Code라는 이름처럼 초보자·교육용 성격이 강하다.",
+        "answer":  true,
+        "explanation":  "BASIC의 이름과 교안 설명이 연결된다."
+    },
+    {
+        "id":  "10-2-8",
+        "statement":  "C 언어는 객체지향 개념을 더한 언어라고 설명되며, C++은 순수 명령형 언어로만 설명된다.",
+        "answer":  false,
+        "explanation":  "반대다. C는 명령형 언어, C++은 객체지향 개념이 더해진 언어로 설명된다."
+    },
+    {
+        "id":  "10-2-9",
+        "statement":  "포트란은 IBM이 우주항공 분야에서 사용하기 위해 만들었다고 설명된다.",
+        "answer":  true,
+        "explanation":  "교안의 포트란 설명에 포함된다."
+    },
+    {
+        "id":  "10-2-10",
+        "statement":  "베이직은 C 언어 이후에 객체지향 확장을 목적으로 만들어진 언어이다.",
+        "answer":  false,
+        "explanation":  "베이직은 교육용 쉬운 문법의 언어로 설명된다."
+    },
+    {
+        "id":  "10-2-11",
+        "statement":  "프로그래밍 언어 역사 파트는 각 언어의 세부 문법보다 등장 배경과 대표 특징을 구분하는 데 초점이 있다.",
+        "answer":  true,
+        "explanation":  "교안은 각 언어의 역사와 핵심 특징을 간단히 제시한다."
+    },
+    {
+        "id":  "10-2-12",
+        "statement":  "자바와 C#을 구분할 때 개발 주체와 실행 환경 관련 설명이 시험 포인트가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "자바는 선/제임스 고슬링/JVM, C#은 마이크로소프트/.NET이 핵심이다."
+    },
+    {
+        "id":  "10-2-13",
+        "statement":  "표준 코딩 규칙의 효과를 묻는 문제에서 가독성, 유지보수, 개발 시간 단축은 모두 정답 후보가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "세 요소 모두 교안의 장점에 포함된다."
+    },
+    {
+        "id":  "10-2-14",
+        "statement":  "가독성이 높다는 것은 코드가 실행 속도만 빠르다는 뜻이다.",
+        "answer":  false,
+        "explanation":  "가독성은 프로그램을 읽기 쉬운 정도를 의미한다."
+    },
+    {
+        "id":  "10-2-15",
+        "statement":  "주석과 들여쓰기는 실행 결과 자체보다 사람이 코드를 이해하는 데 직접적인 영향을 준다.",
+        "answer":  true,
+        "explanation":  "표준 코딩 규칙은 사람이 읽고 유지보수하기 쉬운 코드를 지향한다."
+    },
+    {
+        "id":  "10-2-16",
+        "statement":  "명확한 코드는 특정 부분을 찾아 변경하기 쉽게 하므로 유지보수 향상과 연결된다.",
+        "answer":  true,
+        "explanation":  "읽기와 이해, 변경이 쉬워진다."
+    },
+    {
+        "id":  "10-2-17",
+        "statement":  "표준 코딩 규칙은 개발 시간이 반드시 증가한다는 단점만 있다.",
+        "answer":  false,
+        "explanation":  "정확도와 효율 향상을 통해 개발 시간 단축에 도움이 된다."
+    },
+    {
+        "id":  "10-2-18",
+        "statement":  "가독성 향상 방법에는 적절한 공백 사용도 포함된다.",
+        "answer":  true,
+        "explanation":  "주석, 줄 바꿈, 들여쓰기, 공백 사용이 제시된다."
+    },
+    {
+        "id":  "10-2-19",
+        "statement":  "표준 코딩 규칙을 따르는 목적은 코드의 의미를 일부러 숨기는 데 있다.",
+        "answer":  false,
+        "explanation":  "목적은 명확하고 읽기 쉬운 코드를 만드는 데 있다."
+    },
+    {
+        "id":  "10-2-20",
+        "statement":  "표준 코딩 규칙은 코드 작성자뿐 아니라 이후 유지보수자에게도 영향을 준다.",
+        "answer":  true,
+        "explanation":  "코드를 읽고 고치는 사람 모두에게 중요하다."
+    },
+    {
+        "id":  "10-2-21",
+        "statement":  "명칭이 31자를 넘으면 문맥상 의미가 길게 표현될 수 있어도 교안의 규칙에는 맞지 않는다.",
+        "answer":  true,
+        "explanation":  "교안은 명칭 31자 이내를 제시한다."
+    },
+    {
+        "id":  "10-2-22",
+        "statement":  "변수명 sum과 함수명 sum()을 함께 쓰면 혼란이 생길 수 있으므로 구분하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "변수명과 함수명은 별도로 구별해야 한다."
+    },
+    {
+        "id":  "10-2-23",
+        "statement":  "#define size 10은 매크로명 대문자 규칙에 맞지 않는다.",
+        "answer":  true,
+        "explanation":  "매크로명은 SIZE처럼 대문자가 좋다."
+    },
+    {
+        "id":  "10-2-24",
+        "statement":  "const int hight = 20은 상수명 대문자 규칙에 맞지 않는다.",
+        "answer":  true,
+        "explanation":  "상수명은 HIGHT처럼 대문자로 작성하는 규칙이다."
+    },
+    {
+        "id":  "10-2-25",
+        "statement":  "intSum처럼 변수명이 대문자로 시작하면 변수명 규칙에 어긋날 수 있다.",
+        "answer":  true,
+        "explanation":  "변수명은 소문자로 시작한다."
+    },
+    {
+        "id":  "10-2-26",
+        "statement":  "Data()처럼 대문자로 시작하고 동사가 아닌 함수명은 교안의 함수명 규칙에 맞지 않는다.",
+        "answer":  true,
+        "explanation":  "함수명은 소문자 시작, 첫 단어는 동사로 작성한다."
+    },
+    {
+        "id":  "10-2-27",
+        "statement":  "getData()는 함수명이 소문자로 시작하고 동사로 시작하는 좋은 예이다.",
+        "answer":  true,
+        "explanation":  "get이 동사 역할을 한다."
+    },
+    {
+        "id":  "10-2-28",
+        "statement":  "num\u0026sum처럼 \u0026를 이름에 사용하는 것은 허용된 특수 문자 사용의 좋은 예이다.",
+        "answer":  false,
+        "explanation":  "특수 문자는 언더바(_)만 사용하는 것이 좋다."
+    },
+    {
+        "id":  "10-2-29",
+        "statement":  "num_sum처럼 언더바를 사용하는 것은 허용된 특수 문자 사용 예로 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 언더바만 사용하도록 제시한다."
+    },
+    {
+        "id":  "10-2-30",
+        "statement":  "int *pSum처럼 포인터 변수명에 p를 붙이는 것은 포인터임을 드러내는 방식이다.",
+        "answer":  true,
+        "explanation":  "포인터 변수명 규칙에 해당한다."
+    },
+    {
+        "id":  "10-2-31",
+        "statement":  "소스 파일이 200줄을 넘으면 문맥 파악과 파일 관리가 어려워질 수 있으므로 분리하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "200줄 이내 작성 규칙의 이유이다."
+    },
+    {
+        "id":  "10-2-32",
+        "statement":  "한 줄이 80자를 넘는 경우 쉼표 뒤에서 줄을 나누고 다음 줄의 시작을 이전 표현식과 맞추는 방식이 좋다.",
+        "answer":  true,
+        "explanation":  "교안의 줄 나눔 규칙이다."
+    },
+    {
+        "id":  "10-2-33",
+        "statement":  "함수는 한 화면에 전체 내용이 보이도록 70줄 이내로 작성하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "함수 길이 제한의 이유이다."
+    },
+    {
+        "id":  "10-2-34",
+        "statement":  "여는 중괄호를 항상 단독 줄에 두면 교안의 좋은 예와 완전히 일치한다.",
+        "answer":  false,
+        "explanation":  "교안은 여는 중괄호를 문장의 끝에 두는 예를 제시한다."
+    },
+    {
+        "id":  "10-2-35",
+        "statement":  "if(a\u003eb){ 형태는 교안의 중괄호 위치 규칙에 맞는 예이다.",
+        "answer":  true,
+        "explanation":  "여는 중괄호가 문장의 끝에 있다."
+    },
+    {
+        "id":  "10-2-36",
+        "statement":  "닫는 중괄호의 위치도 통일되어야 코드 블록의 끝을 파악하기 쉽다.",
+        "answer":  true,
+        "explanation":  "형식 통일은 가독성을 높인다."
+    },
+    {
+        "id":  "10-2-37",
+        "statement":  "수준이 같은 문장인데 시작 위치가 다르면 코드 구조를 파악하기 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "동일 수준 문장은 동일 들여쓰기가 좋다."
+    },
+    {
+        "id":  "10-2-38",
+        "statement":  "함수 길이 제한은 실행 속도를 보장하기 위한 규칙이지 가독성과는 무관하다.",
+        "answer":  false,
+        "explanation":  "함수 길이 제한은 주로 가독성과 문맥 파악을 위한 규칙이다."
+    },
+    {
+        "id":  "10-2-39",
+        "statement":  "소스 형식 규칙은 줄 수, 줄 길이, 함수 길이, 중괄호, 들여쓰기처럼 눈에 보이는 구조를 다룬다.",
+        "answer":  true,
+        "explanation":  "소스 형식 규칙의 범위에 해당한다."
+    },
+    {
+        "id":  "10-2-40",
+        "statement":  "파일 주석에는 최초 작성자, 최초 작성일, 최초 변경일처럼 이력 파악에 필요한 정보가 들어갈 수 있다.",
+        "answer":  true,
+        "explanation":  "주석의 내용 항목에 포함된다."
+    },
+    {
+        "id":  "10-2-41",
+        "statement":  "목적과 저작권은 주석에 넣을 수 있지만 개정 이력은 넣지 않는다.",
+        "answer":  false,
+        "explanation":  "개정 이력도 포함된다."
+    },
+    {
+        "id":  "10-2-42",
+        "statement":  "메서드 정의 앞 주석은 함수의 목적, 매개변수, 반환 값을 설명하는 데 유용하다.",
+        "answer":  true,
+        "explanation":  "교안의 메서드 주석 규칙이다."
+    },
+    {
+        "id":  "10-2-43",
+        "statement":  "반환 값 설명은 함수가 값을 반환하는 경우 호출자가 결과 의미를 이해하는 데 도움을 준다.",
+        "answer":  true,
+        "explanation":  "반환 값 주석의 목적이다."
+    },
+    {
+        "id":  "10-2-44",
+        "statement":  "변경 이력에는 변경자, 변경 일자, 변경 내용을 기록할 수 있다.",
+        "answer":  true,
+        "explanation":  "개정 이력의 구성 요소이다."
+    },
+    {
+        "id":  "10-2-45",
+        "statement":  "원시 코드와 주석 사이에 공백을 두는 것은 코드를 더 읽기 어렵게 하므로 금지된다.",
+        "answer":  false,
+        "explanation":  "공백이나 탭으로 코드와 주석을 구분하는 것이 좋다."
+    },
+    {
+        "id":  "10-2-46",
+        "statement":  "코드와 주석이 불일치하면 주석이 오히려 혼란을 줄 수 있다.",
+        "answer":  true,
+        "explanation":  "원시 코드와 주석은 항상 일치하도록 관리해야 한다."
+    },
+    {
+        "id":  "10-2-47",
+        "statement":  "복잡한 논리식에는 주석이 필요할 수 있지만, 간단하지 않은 자료구조에는 주석이 필요 없다.",
+        "answer":  false,
+        "explanation":  "간단하지 않은 자료구조도 주석 대상이다."
+    },
+    {
+        "id":  "10-2-48",
+        "statement":  "주석 규칙은 주석의 존재 여부뿐 아니라 주석의 최신성도 다룬다.",
+        "answer":  true,
+        "explanation":  "코드 변경 시 주석도 수정해야 한다."
+    },
+    {
+        "id":  "10-2-49",
+        "statement":  "같은 용도의 변수 a와 b를 각각 따로 선언하는 것보다 int a=0, b=0처럼 묶는 방식이 적절할 수 있다.",
+        "answer":  true,
+        "explanation":  "용도가 같은 변수는 한 줄에 작성할 수 있다."
+    },
+    {
+        "id":  "10-2-50",
+        "statement":  "사용하지 않는 변수는 선언해 두면 나중에 편하므로 좋은 예에 해당한다.",
+        "answer":  false,
+        "explanation":  "필요한 변수만 선언해야 한다."
+    },
+    {
+        "id":  "10-2-51",
+        "statement":  "int score[]처럼 요소 수도 초기값도 없는 배열 선언은 좋은 예로 보기 어렵다.",
+        "answer":  true,
+        "explanation":  "배열 선언 시 요소 수 명시 또는 초기화가 필요하다."
+    },
+    {
+        "id":  "10-2-52",
+        "statement":  "다차원 배열 초기화에서는 {{1, 4}, {7, 9}}처럼 구조를 드러내는 중괄호가 좋다.",
+        "answer":  true,
+        "explanation":  "중괄호를 적절히 사용해야 한다."
+    },
+    {
+        "id":  "10-2-53",
+        "statement":  "지역 변수를 선언만 하고 초기화하지 않으면 쓰레기 값이 들어갈 수 있다.",
+        "answer":  true,
+        "explanation":  "초기화 규칙의 핵심 이유이다."
+    },
+    {
+        "id":  "10-2-54",
+        "statement":  "부호 없는 값을 나타낼 때 10u처럼 u를 붙이는 방식이 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "unsigned 값을 표시하는 규칙이다."
+    },
+    {
+        "id":  "10-2-55",
+        "statement":  "int 포인터에 char 변수의 주소를 저장하는 것은 자료형 일치 규칙에 맞는 좋은 예이다.",
+        "answer":  false,
+        "explanation":  "포인터와 대상 변수의 자료형이 맞아야 한다."
+    },
+    {
+        "id":  "10-2-56",
+        "statement":  "int *pKim에는 int형 변수의 주소를 저장하는 것이 자료형 일치 측면에서 적절하다.",
+        "answer":  true,
+        "explanation":  "포인터가 가리키는 자료형과 저장할 주소의 자료형이 맞다."
+    },
+    {
+        "id":  "10-2-57",
+        "statement":  "비트 필드를 char형으로 선언하면 동작이 정의되지 않을 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 unsigned/signed int형 사용을 제시한다."
+    },
+    {
+        "id":  "10-2-58",
+        "statement":  "변수·자료형 규칙은 초기화, 배열 크기, 포인터 자료형, 비트 필드 자료형처럼 오류 가능성이 있는 부분을 다룬다.",
+        "answer":  true,
+        "explanation":  "해당 파트의 핵심 주제이다."
+    },
+    {
+        "id":  "10-2-59",
+        "statement":  "0377처럼 8진수로 표현한 상수는 가독성 측면에서 좋지 않은 예로 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 8진수 표현을 피하라고 한다."
+    },
+    {
+        "id":  "10-2-60",
+        "statement":  "0xFF처럼 16진수 표현은 상수 표현의 좋은 예로 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "10진수와 16진수 표기를 권장한다."
+    },
+    {
+        "id":  "10-2-61",
+        "statement":  "숫자 10과 5를 직접 삼각형 면적 계산식에 넣으면 그 숫자의 의미를 즉시 알기 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "하드 코딩 숫자 리터럴은 의미 파악을 어렵게 한다."
+    },
+    {
+        "id":  "10-2-62",
+        "statement":  "base_line, HIGHT 같은 이름을 붙인 const 변수는 숫자의 의미를 드러낼 수 있다.",
+        "answer":  true,
+        "explanation":  "숫자 리터럴보다 의미 있는 상수명이 좋다."
+    },
+    {
+        "id":  "10-2-63",
+        "statement":  "상수 규칙의 핵심은 숫자를 무조건 숨겨서 계산식을 이해하지 못하게 만드는 것이다.",
+        "answer":  false,
+        "explanation":  "숫자의 의미를 명확히 드러내는 것이 핵심이다."
+    },
+    {
+        "id":  "10-2-64",
+        "statement":  "상수 표현은 가독성과 의미 명확성을 동시에 고려해야 한다.",
+        "answer":  true,
+        "explanation":  "진법 표기와 이름 있는 상수 사용 모두 가독성을 위한 규칙이다."
+    },
+    {
+        "id":  "10-2-65",
+        "statement":  "a ++처럼 단항 연산자와 피연산자를 띄어 쓰면 피연산자 파악이 늦어질 수 있다.",
+        "answer":  true,
+        "explanation":  "++와 --는 피연산자와 붙여 쓰는 것이 좋다."
+    },
+    {
+        "id":  "10-2-66",
+        "statement":  "a = b + c + d처럼 이항 연산자 주변 공백을 쓰면 수식 구분이 쉬워진다.",
+        "answer":  true,
+        "explanation":  "이항 연산자 전후 공백은 가독성을 높인다."
+    },
+    {
+        "id":  "10-2-67",
+        "statement":  "삼항 연산자에서 조건식을 괄호로 묶으면 조건 부분을 알아보기 쉽다.",
+        "answer":  true,
+        "explanation":  "삼항 연산자 규칙에 해당한다."
+    },
+    {
+        "id":  "10-2-68",
+        "statement":  "++eng; sum = kor + eng;처럼 증감과 덧셈을 분리하면 수식의 의미가 명확해진다.",
+        "answer":  true,
+        "explanation":  "증감 연산자는 다른 연산자와 섞지 않는 것이 좋다."
+    },
+    {
+        "id":  "10-2-69",
+        "statement":  "증감 연산자는 복잡할수록 좋은 코드이므로 다른 연산과 한 줄에 합치는 것이 좋다.",
+        "answer":  false,
+        "explanation":  "예측하기 어렵기 때문에 분리하는 것이 좋다."
+    },
+    {
+        "id":  "10-2-70",
+        "statement":  "연산자가 여러 개 섞이면 괄호로 우선순위를 드러내는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "수식의 의도를 명확히 한다."
+    },
+    {
+        "id":  "10-2-71",
+        "statement":  "sizeof(a = b + c)는 sizeof 인자에 수식을 넣은 형태라 좋은 예로 보기 어렵다.",
+        "answer":  true,
+        "explanation":  "sizeof에는 단순 인자를 쓰는 것이 좋다."
+    },
+    {
+        "id":  "10-2-72",
+        "statement":  "수식 규칙은 컴파일 가능 여부보다 사람이 의도를 쉽게 읽는 데도 초점이 있다.",
+        "answer":  true,
+        "explanation":  "공백, 괄호, 분리 규칙은 가독성과 이해도를 위한 것이다."
+    },
+    {
+        "id":  "10-2-73",
+        "statement":  "switch 문에서 break를 생략하면 다음 case로 넘어갈 수 있으므로 의도라면 주석이 필요하다.",
+        "answer":  true,
+        "explanation":  "fall-through를 명확히 해야 한다."
+    },
+    {
+        "id":  "10-2-74",
+        "statement":  "default 문은 어떤 case도 만족하지 않을 때 후속 처리를 위해 사용할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 switch 끝에 default 사용을 제시한다."
+    },
+    {
+        "id":  "10-2-75",
+        "statement":  "goto 문은 프로그램 흐름을 단순하게만 만들기 때문에 적극 권장된다.",
+        "answer":  false,
+        "explanation":  "교안은 goto 사용 자제를 제시한다."
+    },
+    {
+        "id":  "10-2-76",
+        "statement":  "for문의 제어 수식에 실수를 사용하면 반복 횟수 예측이 어려워질 수 있다.",
+        "answer":  true,
+        "explanation":  "실수 제어 변수는 오차와 예측 문제를 만들 수 있다."
+    },
+    {
+        "id":  "10-2-77",
+        "statement":  "for문의 제어 변수는 반복 횟수를 예측하기 쉽도록 사용해야 한다.",
+        "answer":  true,
+        "explanation":  "제어 변수의 바른 사용과 관련된다."
+    },
+    {
+        "id":  "10-2-78",
+        "statement":  "반복문 안에서 여러 위치에 break를 흩뿌리면 동작 예측이 어려워질 수 있다.",
+        "answer":  true,
+        "explanation":  "break는 가능하면 한 번만 사용하는 것이 좋다."
+    },
+    {
+        "id":  "10-2-79",
+        "statement":  "if(score \u003e= 70)만 있고 else가 없으면 실패 처리 누락 가능성이 있다.",
+        "answer":  true,
+        "explanation":  "if~else는 else로 종료하는 것이 좋다."
+    },
+    {
+        "id":  "10-2-80",
+        "statement":  "문장 규칙은 switch, goto, for, break, if~else처럼 제어 흐름의 명확성과 관련된다.",
+        "answer":  true,
+        "explanation":  "문장 규칙의 핵심 범위이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 10,
+  set: 3,
+  title: "10주차 구현 · ",
+  questions:
+[
+    {
+        "id":  "10-3-1",
+        "statement":  "포트란은 Beginner\u0027s All-purpose Symbolic Instruction Code의 약자이다.",
+        "answer":  false,
+        "explanation":  "그 약자는 BASIC이다. 포트란은 FORmula TRANslation이다."
+    },
+    {
+        "id":  "10-3-2",
+        "statement":  "베이직은 IBM이 우주항공 분야에서 사용하기 위해 만든 초창기 고급 언어이다.",
+        "answer":  false,
+        "explanation":  "그 설명은 포트란 쪽이다. 베이직은 교육용 쉬운 문법이 핵심이다."
+    },
+    {
+        "id":  "10-3-3",
+        "statement":  "C 언어는 현재 널리 쓰이는 명령형 언어로, 교안에서 C++보다 먼저 소개된다.",
+        "answer":  true,
+        "explanation":  "교안은 C를 명령형 언어로 소개한 뒤 C++을 설명한다."
+    },
+    {
+        "id":  "10-3-4",
+        "statement":  "C++은 C 언어에서 객체지향 개념을 제거한 절차지향 언어이다.",
+        "answer":  false,
+        "explanation":  "C++은 C에 객체지향 개념을 더한 언어이다."
+    },
+    {
+        "id":  "10-3-5",
+        "statement":  "C#은 마이크로소프트가 닷넷 프레임워크의 일부로 만든 객체지향 언어이다.",
+        "answer":  true,
+        "explanation":  "교안의 C# 설명이다."
+    },
+    {
+        "id":  "10-3-6",
+        "statement":  "자바는 C#과 동일하게 닷넷 프레임워크 일부로 만들어졌다.",
+        "answer":  false,
+        "explanation":  "자바는 JVM과 플랫폼 독립성이 핵심이며 C#과 구분된다."
+    },
+    {
+        "id":  "10-3-7",
+        "statement":  "자바는 JVM 때문에 컴파일된 코드가 플랫폼에 대해 독립적일 수 있다는 설명과 연결된다.",
+        "answer":  true,
+        "explanation":  "JVM은 자바의 핵심 특징으로 제시된다."
+    },
+    {
+        "id":  "10-3-8",
+        "statement":  "C#의 대표 특징을 물을 때 JVM을 답하면 교안 기준으로 맞다.",
+        "answer":  false,
+        "explanation":  "JVM은 자바의 특징이다."
+    },
+    {
+        "id":  "10-3-9",
+        "statement":  "베이직은 쉬운 문법을 사용하여 교육용으로 만든 언어라는 설명이 핵심이다.",
+        "answer":  true,
+        "explanation":  "교안의 베이직 설명이다."
+    },
+    {
+        "id":  "10-3-10",
+        "statement":  "포트란, 베이직, C, C++, C#, 자바는 모두 교안의 프로그래밍 언어 역사 파트에서 다뤄진다.",
+        "answer":  true,
+        "explanation":  "10주차 언어 역사 파트의 대상이다."
+    },
+    {
+        "id":  "10-3-11",
+        "statement":  "자바는 제임스 고슬링이 개발했다는 설명이 교안에 포함된다.",
+        "answer":  true,
+        "explanation":  "자바 설명에서 개발자가 언급된다."
+    },
+    {
+        "id":  "10-3-12",
+        "statement":  "언어 역사 파트에서는 모든 언어의 최신 문법 규칙을 자세히 비교하는 것이 핵심이다.",
+        "answer":  false,
+        "explanation":  "교안은 각 언어의 역사와 대표 특징을 간단히 다룬다."
+    },
+    {
+        "id":  "10-3-13",
+        "statement":  "표준 코딩 규칙의 목적은 가독성을 낮춰 작성자의 의도를 숨기는 것이다.",
+        "answer":  false,
+        "explanation":  "목적은 가독성, 명확성, 유지보수성을 높이는 것이다."
+    },
+    {
+        "id":  "10-3-14",
+        "statement":  "프로그래밍에서 가독성은 프로그램을 읽기 쉬운 정도이다.",
+        "answer":  true,
+        "explanation":  "교안의 정의와 맞다."
+    },
+    {
+        "id":  "10-3-15",
+        "statement":  "적절한 줄 바꿈과 들여쓰기는 실행 결과를 바꾸기 때문에 표준 코딩 규칙의 핵심이다.",
+        "answer":  false,
+        "explanation":  "주로 실행 결과가 아니라 사람이 읽기 쉬운 정도에 영향을 준다."
+    },
+    {
+        "id":  "10-3-16",
+        "statement":  "표준 코딩 규칙을 따르면 유지보수 시 특정 부분을 찾아 변경하기 쉬워질 수 있다.",
+        "answer":  true,
+        "explanation":  "명확한 코딩은 유지보수 향상과 연결된다."
+    },
+    {
+        "id":  "10-3-17",
+        "statement":  "표준 코딩 규칙은 코드가 길어지더라도 개발 시간은 반드시 늘리는 방향으로만 작용한다.",
+        "answer":  false,
+        "explanation":  "정확도와 효율 향상으로 개발 시간 단축에 도움이 된다."
+    },
+    {
+        "id":  "10-3-18",
+        "statement":  "공백 사용은 사소해 보이지만 가독성 향상 방법에 포함된다.",
+        "answer":  true,
+        "explanation":  "교안은 공백 사용도 가독성 향상 방법으로 제시한다."
+    },
+    {
+        "id":  "10-3-19",
+        "statement":  "표준 코딩 규칙을 따른 코드는 읽기, 이해하기, 변경하기가 쉬워질 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 장점 설명과 일치한다."
+    },
+    {
+        "id":  "10-3-20",
+        "statement":  "표준 코딩 규칙은 유지보수성과 무관하고 컴파일러 최적화만을 위한 규칙이다.",
+        "answer":  false,
+        "explanation":  "유지보수 향상은 핵심 장점이다."
+    },
+    {
+        "id":  "10-3-21",
+        "statement":  "명칭은 길수록 무조건 좋으므로 31자 제한은 없다.",
+        "answer":  false,
+        "explanation":  "교안은 명칭 31자 이내를 제시한다."
+    },
+    {
+        "id":  "10-3-22",
+        "statement":  "변수명과 함수명을 같은 이름으로 쓰면 개발자가 혼란스러울 수 있다.",
+        "answer":  true,
+        "explanation":  "변수명과 함수명은 구별하는 것이 좋다."
+    },
+    {
+        "id":  "10-3-23",
+        "statement":  "매크로명은 소문자, 변수명은 대문자로 시작하는 것이 교안의 규칙이다.",
+        "answer":  false,
+        "explanation":  "매크로명은 대문자, 변수명은 소문자 시작이다."
+    },
+    {
+        "id":  "10-3-24",
+        "statement":  "상수명은 대문자 사용이 규칙이다.",
+        "answer":  true,
+        "explanation":  "상수명은 대문자를 사용하는 것으로 정리된다."
+    },
+    {
+        "id":  "10-3-25",
+        "statement":  "함수명은 소문자로 시작하되 첫 번째 단어는 동사로 작성한다.",
+        "answer":  true,
+        "explanation":  "getData가 좋은 예이다."
+    },
+    {
+        "id":  "10-3-26",
+        "statement":  "Data()는 대문자로 시작하므로 함수명 규칙에 맞는 좋은 예이다.",
+        "answer":  false,
+        "explanation":  "함수명은 소문자로 시작해야 한다."
+    },
+    {
+        "id":  "10-3-27",
+        "statement":  "num\u0026sum은 특수 문자 \u0026를 사용했으므로 허용된 좋은 이름이다.",
+        "answer":  false,
+        "explanation":  "특수 문자는 언더바만 사용하는 것이 좋다."
+    },
+    {
+        "id":  "10-3-28",
+        "statement":  "num_sum은 언더바를 사용하므로 허용된 특수 문자 사용 예로 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "언더바는 허용된다."
+    },
+    {
+        "id":  "10-3-29",
+        "statement":  "포인터 변수명 앞의 p는 포인터임을 나타내는 표기이다.",
+        "answer":  true,
+        "explanation":  "pSum 같은 이름이 좋은 예이다."
+    },
+    {
+        "id":  "10-3-30",
+        "statement":  "포인터 변수명은 참조하는 변수명과 무관하게 항상 함수명처럼 동사로 시작해야 한다.",
+        "answer":  false,
+        "explanation":  "포인터 변수명은 앞에 p를 붙이는 규칙이 핵심이다."
+    },
+    {
+        "id":  "10-3-31",
+        "statement":  "소스 파일 하나는 2,000줄 이내면 충분하다고 교안에서 제시한다.",
+        "answer":  false,
+        "explanation":  "교안은 200줄 이내를 제시한다."
+    },
+    {
+        "id":  "10-3-32",
+        "statement":  "한 줄 길이는 80자 이내로 작성하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "한 줄이 너무 길면 가독성이 떨어진다."
+    },
+    {
+        "id":  "10-3-33",
+        "statement":  "함수의 내용은 700줄 이내면 한 화면에 보이므로 좋다.",
+        "answer":  false,
+        "explanation":  "교안은 70줄 이내를 제시한다."
+    },
+    {
+        "id":  "10-3-34",
+        "statement":  "여는 중괄호를 문장의 끝에 두는 방식은 교안의 좋은 예와 맞다.",
+        "answer":  true,
+        "explanation":  "if(a\u003eb){ 형태가 제시된다."
+    },
+    {
+        "id":  "10-3-35",
+        "statement":  "중괄호 하나가 한 줄을 차지하면 코드가 길어지고 스크롤이 늘 수 있다.",
+        "answer":  true,
+        "explanation":  "가독성 저하 이유로 설명된다."
+    },
+    {
+        "id":  "10-3-36",
+        "statement":  "80자가 넘어 쉼표가 나오면 다음 문자는 새 줄로 시작할 수 있다.",
+        "answer":  true,
+        "explanation":  "줄 나눔 규칙에 해당한다."
+    },
+    {
+        "id":  "10-3-37",
+        "statement":  "줄을 나눈 둘째 줄은 아무 위치에서나 시작해도 표준 코딩 규칙상 더 좋다.",
+        "answer":  false,
+        "explanation":  "이전 줄의 표현식과 맞추는 것이 좋다."
+    },
+    {
+        "id":  "10-3-38",
+        "statement":  "수준이 같은 문장은 동일한 시작 위치에 맞추는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "동일 들여쓰기 규칙이다."
+    },
+    {
+        "id":  "10-3-39",
+        "statement":  "소스 형식 규칙은 가독성과 직접 관련이 없다.",
+        "answer":  false,
+        "explanation":  "소스 형식 규칙은 가독성과 밀접하다."
+    },
+    {
+        "id":  "10-3-40",
+        "statement":  "주석에는 작성자, 작성일, 변경일, 목적, 개정 이력, 저작권을 포함할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 주석 내용 항목이다."
+    },
+    {
+        "id":  "10-3-41",
+        "statement":  "주석은 많을수록 좋으므로 코드와 일치하지 않아도 수정하지 않는 것이 원칙이다.",
+        "answer":  false,
+        "explanation":  "주석은 코드와 항상 일치하도록 수정해야 한다."
+    },
+    {
+        "id":  "10-3-42",
+        "statement":  "메서드 정의 앞 주석에는 목적, 매개변수, 반환 값, 변경 이력을 적을 수 있다.",
+        "answer":  true,
+        "explanation":  "메서드 주석 규칙과 일치한다."
+    },
+    {
+        "id":  "10-3-43",
+        "statement":  "매개변수 설명은 함수 인자로 사용되는 변수에 대한 설명이다.",
+        "answer":  true,
+        "explanation":  "교안의 매개변수 주석 설명이다."
+    },
+    {
+        "id":  "10-3-44",
+        "statement":  "반환 값 설명은 함수 결과 값에 대한 설명이다.",
+        "answer":  true,
+        "explanation":  "교안의 반환 값 주석 설명이다."
+    },
+    {
+        "id":  "10-3-45",
+        "statement":  "원시 코드와 주석을 붙여 써서 구분이 안 되게 하는 것이 좋은 주석 작성법이다.",
+        "answer":  false,
+        "explanation":  "공백이나 탭으로 명확히 구분하는 것이 좋다."
+    },
+    {
+        "id":  "10-3-46",
+        "statement":  "복잡한 논리식은 주석에 담을 내용으로 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "주석 대상에 포함된다."
+    },
+    {
+        "id":  "10-3-47",
+        "statement":  "간단하지 않은 자료구조는 주석이 없어야 더 좋은 코드이다.",
+        "answer":  false,
+        "explanation":  "간단하지 않은 자료구조에는 주석이 필요할 수 있다."
+    },
+    {
+        "id":  "10-3-48",
+        "statement":  "주석이 없는 코드는 교안의 좋은 예로 제시된다.",
+        "answer":  false,
+        "explanation":  "주석 없는 예는 나쁜 예로 제시된다."
+    },
+    {
+        "id":  "10-3-49",
+        "statement":  "용도가 같은 변수는 한 줄에 작성할 수 있다.",
+        "answer":  true,
+        "explanation":  "변수 선언 규칙과 일치한다."
+    },
+    {
+        "id":  "10-3-50",
+        "statement":  "사용하지 않는 변수도 미리 많이 선언하는 것이 좋은 예이다.",
+        "answer":  false,
+        "explanation":  "필요한 변수만 선언해야 한다."
+    },
+    {
+        "id":  "10-3-51",
+        "statement":  "배열 선언 시 요소 수를 명시하거나 초기화해야 한다.",
+        "answer":  true,
+        "explanation":  "배열 크기 또는 초기값이 명확해야 한다."
+    },
+    {
+        "id":  "10-3-52",
+        "statement":  "다차원 배열 초기화에서 중괄호를 적절히 쓰면 구조가 더 명확해진다.",
+        "answer":  true,
+        "explanation":  "배열 초기화 규칙과 일치한다."
+    },
+    {
+        "id":  "10-3-53",
+        "statement":  "지역 변수는 선언 시 초기화하지 않는 것이 쓰레기 값을 막는 방법이다.",
+        "answer":  false,
+        "explanation":  "초기화해야 쓰레기 값 문제를 줄일 수 있다."
+    },
+    {
+        "id":  "10-3-54",
+        "statement":  "지역 변수를 초기화하지 않으면 쓰레기 값으로 초기화될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 설명과 맞다."
+    },
+    {
+        "id":  "10-3-55",
+        "statement":  "부호 없는 자료형에는 u를 붙이는 규칙이 있다.",
+        "answer":  true,
+        "explanation":  "unsigned 표시 규칙이다."
+    },
+    {
+        "id":  "10-3-56",
+        "statement":  "포인터 변수에는 주소나 정수 값을 저장할 때 자료형이 달라도 상관없다.",
+        "answer":  false,
+        "explanation":  "자료형 일치가 중요하다."
+    },
+    {
+        "id":  "10-3-57",
+        "statement":  "비트 필드는 unsigned/signed int형으로 선언하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "교안의 비트 필드 규칙이다."
+    },
+    {
+        "id":  "10-3-58",
+        "statement":  "비트 필드를 char형으로 선언하는 것은 교안의 좋은 예이다.",
+        "answer":  false,
+        "explanation":  "char형 비트 필드는 나쁜 예로 제시된다."
+    },
+    {
+        "id":  "10-3-59",
+        "statement":  "상수는 8진수로 표현해야 가독성이 가장 좋다.",
+        "answer":  false,
+        "explanation":  "8진수는 가독성이 떨어져 10진수나 16진수를 권장한다."
+    },
+    {
+        "id":  "10-3-60",
+        "statement":  "상수 표현에는 10진수 또는 16진수를 사용하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "교안의 상수 표현 규칙이다."
+    },
+    {
+        "id":  "10-3-61",
+        "statement":  "숫자 리터럴을 코드에 직접 쓰면 의미 파악이 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "하드 코딩 숫자는 매직 넘버가 될 수 있다."
+    },
+    {
+        "id":  "10-3-62",
+        "statement":  "const 변수는 숫자 리터럴의 의미를 명확히 하는 데 도움이 된다.",
+        "answer":  true,
+        "explanation":  "C 언어의 경우 const 변수 사용이 제시된다."
+    },
+    {
+        "id":  "10-3-63",
+        "statement":  "삼각형 면적 계산에서 10과 5를 그대로 쓰면 밑변과 높이라는 의미가 자동으로 드러난다.",
+        "answer":  false,
+        "explanation":  "의미 있는 상수명을 쓰는 것이 더 명확하다."
+    },
+    {
+        "id":  "10-3-64",
+        "statement":  "상수 규칙은 진법 표기와 숫자 리터럴의 의미 표현을 함께 다룬다.",
+        "answer":  true,
+        "explanation":  "10/16진수와 const 변수 사용이 핵심이다."
+    },
+    {
+        "id":  "10-3-65",
+        "statement":  "단항 연산자 ++는 피연산자와 띄어 써야 가장 명확하다.",
+        "answer":  false,
+        "explanation":  "++와 --는 피연산자와 붙여 쓴다."
+    },
+    {
+        "id":  "10-3-66",
+        "statement":  "이항 연산자는 전후 공백을 넣는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "a = b + c처럼 쓰면 읽기 쉽다."
+    },
+    {
+        "id":  "10-3-67",
+        "statement":  "삼항 연산자의 조건식은 괄호로 묶으면 알아보기 쉽다.",
+        "answer":  true,
+        "explanation":  "교안의 삼항 연산자 규칙이다."
+    },
+    {
+        "id":  "10-3-68",
+        "statement":  "증감 연산자는 다른 연산자와 섞어 쓸수록 코드 의도가 명확해진다.",
+        "answer":  false,
+        "explanation":  "증감 연산자는 다른 연산자와 섞지 않는 것이 좋다."
+    },
+    {
+        "id":  "10-3-69",
+        "statement":  "++eng; sum = kor + eng;처럼 두 문장으로 나누는 것은 좋은 예로 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "증감과 덧셈을 분리해 의도가 명확하다."
+    },
+    {
+        "id":  "10-3-70",
+        "statement":  "연산자가 3개 이상이면 괄호로 우선순위를 명확히 하는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "복잡한 수식의 가독성을 위한 규칙이다."
+    },
+    {
+        "id":  "10-3-71",
+        "statement":  "sizeof(a = b + c)는 sizeof 인자에 수식을 넣지 말라는 규칙과 충돌한다.",
+        "answer":  true,
+        "explanation":  "sizeof에는 수식을 인자로 사용하지 않는 것이 좋다."
+    },
+    {
+        "id":  "10-3-72",
+        "statement":  "수식 규칙은 공백, 괄호, 증감 연산 분리처럼 가독성 중심 규칙이다.",
+        "answer":  true,
+        "explanation":  "수식의 의미를 쉽게 읽게 하는 것이 핵심이다."
+    },
+    {
+        "id":  "10-3-73",
+        "statement":  "switch 문에서 break가 없으면 다음 case로 제어가 넘어갈 수 있다.",
+        "answer":  true,
+        "explanation":  "의도적인 경우 주석을 남겨야 한다."
+    },
+    {
+        "id":  "10-3-74",
+        "statement":  "switch 문에는 어떤 case도 맞지 않을 경우를 위해 default 문을 두는 것이 좋다.",
+        "answer":  true,
+        "explanation":  "후속 처리를 위한 규칙이다."
+    },
+    {
+        "id":  "10-3-75",
+        "statement":  "goto 문은 코드 흐름을 명확하게 하므로 사용을 적극 권장한다.",
+        "answer":  false,
+        "explanation":  "goto는 사용을 자제한다."
+    },
+    {
+        "id":  "10-3-76",
+        "statement":  "for 문 제어 수식에 실수 값을 사용하면 반복 횟수 예측이 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 for 문 규칙이다."
+    },
+    {
+        "id":  "10-3-77",
+        "statement":  "for 문 제어 변수는 계산에 복잡하게 섞어 쓰는 것이 반복 횟수 예측에 좋다.",
+        "answer":  false,
+        "explanation":  "반복 횟수를 예측하기 어렵게 만들 수 있다."
+    },
+    {
+        "id":  "10-3-78",
+        "statement":  "반복문에서 여러 위치에 break를 사용하면 프로그램 동작을 예측하기 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "break는 가능하면 한 번만 사용하는 것이 좋다."
+    },
+    {
+        "id":  "10-3-79",
+        "statement":  "if~else 문의 끝을 else로 종료하면 처리 누락 가능성을 줄일 수 있다.",
+        "answer":  true,
+        "explanation":  "else 종료 규칙의 이유이다."
+    },
+    {
+        "id":  "10-3-80",
+        "statement":  "if 문에 else가 없어도 문법 오류가 아니지만 원하는 결과가 나오지 않을 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 설명과 일치한다."
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 1,
+  title: "11주차 디자인패턴 · ",
+  questions:
+[
+    {
+        "id":  "11-pattern-1-1",
+        "statement":  "GoF 디자인 패턴은 소프트웨어 설계를 위한 지식과 노하우를 공유하는 방법 중 하나이다.",
+        "answer":  true,
+        "explanation":  "설계 지식과 노하우를 패턴 형태로 일반화한 것이다."
+    },
+    {
+        "id":  "11-pattern-1-2",
+        "statement":  "디자인 패턴은 한 번만 쓰이는 임시 해결책을 그대로 저장한 것이다.",
+        "answer":  false,
+        "explanation":  "반복 재사용 가능한 설계 해결책이어야 한다."
+    },
+    {
+        "id":  "11-pattern-1-3",
+        "statement":  "디자인 패턴은 동일한 유형의 문제를 해결하는 방법을 문제 유형별로 구체화한다.",
+        "answer":  true,
+        "explanation":  "문제 유형별 설계 해결책을 구체화한 것이다."
+    },
+    {
+        "id":  "11-pattern-1-4",
+        "statement":  "GoF 디자인 패턴은 쉽게 재사용할 수 있도록 객체지향 개념에 따른 설계를 패턴으로 지정한다.",
+        "answer":  true,
+        "explanation":  "객체지향 설계 재사용이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-1-5",
+        "statement":  "디자인 패턴은 충분히 일반화된 설계 노하우를 다룬다.",
+        "answer":  true,
+        "explanation":  "패턴은 반복 적용 가능한 일반화가 필요하다."
+    },
+    {
+        "id":  "11-pattern-1-6",
+        "statement":  "디자인 패턴 이름은 의사소통과 무관하며 오직 컴파일러 명령어이다.",
+        "answer":  false,
+        "explanation":  "패턴 이름은 설계 구조를 간결하게 공유하게 한다."
+    },
+    {
+        "id":  "11-pattern-1-7",
+        "statement":  "디자인 패턴은 코드 복사본보다 설계 구조와 역할을 설명하는 개념에 가깝다.",
+        "answer":  true,
+        "explanation":  "패턴은 구체 코드보다 구조와 책임 배치가 중요하다."
+    },
+    {
+        "id":  "11-pattern-1-8",
+        "statement":  "행위 패턴은 반복적으로 사용되는 객체의 상호작용을 패턴화한 것이다.",
+        "answer":  true,
+        "explanation":  "행위 패턴은 객체 간 상호작용과 책임 분산을 다룬다."
+    },
+    {
+        "id":  "11-pattern-1-9",
+        "statement":  "행위 패턴은 데이터베이스 테이블 물리 배치만 정의한다.",
+        "answer":  false,
+        "explanation":  "상호작용 방식과 책임 분산이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-1-10",
+        "statement":  "행위 패턴은 메시지 교환과 객체 간 행위나 알고리즘과 관련된다.",
+        "answer":  true,
+        "explanation":  "교안은 메시지 교환·행위·알고리즘을 언급한다."
+    },
+    {
+        "id":  "11-pattern-1-11",
+        "statement":  "strategy, state, observer, command, memento는 행위 패턴 목록에 포함된다.",
+        "answer":  true,
+        "explanation":  "factory method와 singleton은 생성 패턴이다."
+    },
+    {
+        "id":  "11-pattern-1-12",
+        "statement":  "Strategy 패턴은 자주 바뀌는 기능을 메서드에서 클래스로 바꾸고 인터페이스 타입의 상속 구조로 만든다.",
+        "answer":  true,
+        "explanation":  "기능 변화는 Strategy, 상태 변화는 State의 초점이다."
+    },
+    {
+        "id":  "11-pattern-1-13",
+        "statement":  "포켓몬 예제에서 자주 바뀌는 것은 데이터베이스 서버 주소뿐이다.",
+        "answer":  false,
+        "explanation":  "공격과 패시브 기술이 수정·추가되는 상황이다."
+    },
+    {
+        "id":  "11-pattern-1-14",
+        "statement":  "일반 설계에서 attack()과 passive()를 Pokemon 상위 클래스의 메서드로 두면 기능 변화에 취약할 수 있다.",
+        "answer":  true,
+        "explanation":  "기능 교체 때 기존 클래스 수정이 반복될 수 있다."
+    },
+    {
+        "id":  "11-pattern-1-15",
+        "statement":  "Strategy 패턴은 attack()과 passive()를 별도의 상속 구조로 분리해 변경 영향을 줄인다.",
+        "answer":  true,
+        "explanation":  "변화하는 기능을 별도 전략 클래스로 분리한다."
+    },
+    {
+        "id":  "11-pattern-1-16",
+        "statement":  "Attack 인터페이스는 motion() 같은 공격 동작 메서드를 제공할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안에서 Attack은 motion()을 가진다."
+    },
+    {
+        "id":  "11-pattern-1-17",
+        "statement":  "Passive 인터페이스는 공격 motion()만 제공해야 한다.",
+        "answer":  false,
+        "explanation":  "교안에서 Passive는 detail()을 가진다."
+    },
+    {
+        "id":  "11-pattern-1-18",
+        "statement":  "Sing, Flame, millionVolt는 공격 전략 클래스의 예이다.",
+        "answer":  true,
+        "explanation":  "이들은 Attack 인터페이스 구현체다."
+    },
+    {
+        "id":  "11-pattern-1-19",
+        "statement":  "Defensibility, Avoidability, Speedability는 패시브 전략 클래스의 예이다.",
+        "answer":  true,
+        "explanation":  "이들은 Passive 인터페이스 구현체다."
+    },
+    {
+        "id":  "11-pattern-1-20",
+        "statement":  "Purin은 생성자에서 Sing과 Avoidability 같은 전략 객체를 설정할 수 있다.",
+        "answer":  true,
+        "explanation":  "Strategy 적용 후 포켓몬은 전략 객체를 조합한다."
+    },
+    {
+        "id":  "11-pattern-1-21",
+        "statement":  "setAttack()과 setPassive()는 객체 생성을 하나로 제한하기 위한 Singleton 전용 메서드다.",
+        "answer":  false,
+        "explanation":  "교안 예제에서 푸린의 전략을 변경한다."
+    },
+    {
+        "id":  "11-pattern-1-22",
+        "statement":  "Strategy 패턴은 기능 추가를 기존 클래스 수정이 아니라 새 전략 클래스 추가로 처리하는 데 유리하다.",
+        "answer":  true,
+        "explanation":  "전략 분리는 OCP 위반 가능성을 낮춘다."
+    },
+    {
+        "id":  "11-pattern-1-23",
+        "statement":  "Strategy 패턴은 알고리즘이나 기능 교체가 잦은 상황에 적합하다.",
+        "answer":  true,
+        "explanation":  "토핑 조합은 Decorator의 핵심 사례다."
+    },
+    {
+        "id":  "11-pattern-1-24",
+        "statement":  "Pokemon이 Attack과 Passive 필드를 가지면 기능을 객체 조합으로 선택할 수 있다.",
+        "answer":  true,
+        "explanation":  "전략 객체를 필드로 보관해 조합할 수 있다."
+    },
+    {
+        "id":  "11-pattern-1-25",
+        "statement":  "Strategy와 State는 이름만 다르고 둘 다 객체 생성을 하나로 제한한다.",
+        "answer":  false,
+        "explanation":  "Strategy는 기능, State는 상태 변화가 초점이다."
+    },
+    {
+        "id":  "11-pattern-1-26",
+        "statement":  "State 패턴은 자주 바뀌는 상태를 클래스로 바꾸고 인터페이스 타입의 상속 구조로 만든다.",
+        "answer":  true,
+        "explanation":  "상태 변화는 State의 핵심이고 공격 기능은 Strategy의 예다."
+    },
+    {
+        "id":  "11-pattern-1-27",
+        "statement":  "선풍기 예제에서 상태는 토스트 칼로리 계산만 의미한다.",
+        "answer":  false,
+        "explanation":  "Stop, Wind, Sleep 같은 상태가 등장한다."
+    },
+    {
+        "id":  "11-pattern-1-28",
+        "statement":  "일반적인 ElecFan 설계는 문자열 State와 if~else if 조건문으로 상태 변화를 처리한다.",
+        "answer":  true,
+        "explanation":  "초기 코드는 조건문과 문자열 상태를 사용한다."
+    },
+    {
+        "id":  "11-pattern-1-29",
+        "statement":  "상태가 추가될 때 on_button(), off_button()을 계속 수정해야 한다면 OCP 위반 문제가 생길 수 있다.",
+        "answer":  true,
+        "explanation":  "상태 추가·삭제 때 주 클래스 수정이 반복된다."
+    },
+    {
+        "id":  "11-pattern-1-30",
+        "statement":  "State 패턴을 적용하면 ElectricFan은 현재 상태 객체에게 버튼 처리를 위임할 수 있다.",
+        "answer":  true,
+        "explanation":  "state.on_button(this)처럼 위임한다."
+    },
+    {
+        "id":  "11-pattern-1-31",
+        "statement":  "State 인터페이스는 Name()과 Kcal()만 가져야 한다.",
+        "answer":  false,
+        "explanation":  "Name/Kcal은 Decorator 토핑 쪽이다."
+    },
+    {
+        "id":  "11-pattern-1-32",
+        "statement":  "Stop, Wind, Sleep은 State를 구현하는 상태 클래스가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "선풍기 상태를 클래스화한 예다."
+    },
+    {
+        "id":  "11-pattern-1-33",
+        "statement":  "Stop 상태에서 on 버튼을 누르면 Wind 상태로 전환될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 Stop 클래스의 on_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-1-34",
+        "statement":  "Wind 상태에서 on 버튼을 누르면 Sleep 상태로 전환될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 Wind 클래스의 on_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-1-35",
+        "statement":  "Sleep 상태에서 off 버튼을 누르면 AirPods가 재생된다.",
+        "answer":  false,
+        "explanation":  "교안 Sleep 클래스의 off_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-1-36",
+        "statement":  "State 패턴은 상태 추가·삭제가 ElectricFan에 미치는 영향을 줄이는 데 목적이 있다.",
+        "answer":  true,
+        "explanation":  "상태 변화가 상태 클래스 내부에서 이루어지도록 한다."
+    },
+    {
+        "id":  "11-pattern-1-37",
+        "statement":  "상태별 동작 차이는 State 인터페이스 구현체의 다형성으로 처리할 수 있다.",
+        "answer":  true,
+        "explanation":  "각 상태 클래스가 같은 메서드를 다르게 구현한다."
+    },
+    {
+        "id":  "11-pattern-1-38",
+        "statement":  "State 패턴은 상태 변화가 잦을수록 장점이 커진다.",
+        "answer":  true,
+        "explanation":  "변화 지점을 상태 클래스로 격리하기 때문이다."
+    },
+    {
+        "id":  "11-pattern-1-39",
+        "statement":  "State와 Strategy는 모두 정적 테스트 기법이다.",
+        "answer":  false,
+        "explanation":  "둘은 디자인 패턴이며 변화 대상이 다르다."
+    },
+    {
+        "id":  "11-pattern-1-40",
+        "statement":  "구조 패턴은 데이터나 인터페이스의 구조 설계에 활용될 수 있다.",
+        "answer":  true,
+        "explanation":  "구조 패턴은 구조 설계가 핵심이다."
+    },
+    {
+        "id":  "11-pattern-1-41",
+        "statement":  "구조 패턴은 클래스와 객체의 조합을 금지한다.",
+        "answer":  false,
+        "explanation":  "구성·합성으로 큰 구조를 만든다."
+    },
+    {
+        "id":  "11-pattern-1-42",
+        "statement":  "decorator와 adapter는 구조 패턴에 포함된다.",
+        "answer":  true,
+        "explanation":  "교안은 두 패턴을 구조 패턴으로 다룬다."
+    },
+    {
+        "id":  "11-pattern-1-43",
+        "statement":  "composite, bridge, facade, flyweight, proxy도 구조 패턴 목록에 포함된다.",
+        "answer":  true,
+        "explanation":  "singleton과 factory method는 생성 패턴이다."
+    },
+    {
+        "id":  "11-pattern-1-44",
+        "statement":  "Decorator 패턴은 기본 클래스를 조합해서 만들어야 할 클래스가 많아지는 문제를 줄인다.",
+        "answer":  true,
+        "explanation":  "이어폰 호환은 Adapter 사례다."
+    },
+    {
+        "id":  "11-pattern-1-45",
+        "statement":  "Decorator 패턴에서 장식은 반드시 본체보다 먼저 생성되어야 하는 필수 객체이다.",
+        "answer":  false,
+        "explanation":  "장식은 없어도 되는 부가 요소로 설명된다."
+    },
+    {
+        "id":  "11-pattern-1-46",
+        "statement":  "토스트 예제에서 재료 조합마다 클래스를 만들면 클래스 수가 폭증할 수 있다.",
+        "answer":  true,
+        "explanation":  "조합 폭발이 Decorator 적용 배경이다."
+    },
+    {
+        "id":  "11-pattern-1-47",
+        "statement":  "Toast는 식빵 종류의 상위 클래스 역할을 할 수 있다.",
+        "answer":  true,
+        "explanation":  "토스트 본체의 상위 개념이다."
+    },
+    {
+        "id":  "11-pattern-1-48",
+        "statement":  "NormalBread, WheatBread, MilkBread, ButterBread는 식빵 종류이다.",
+        "answer":  true,
+        "explanation":  "식빵 하위 클래스다."
+    },
+    {
+        "id":  "11-pattern-1-49",
+        "statement":  "ToppingDecorator는 게임 서버 국가별 선택 메서드이다.",
+        "answer":  false,
+        "explanation":  "토핑 장식의 공통 부모다."
+    },
+    {
+        "id":  "11-pattern-1-50",
+        "statement":  "Cheese, Ham, Egg, Vegetable은 토핑 클래스의 예이다.",
+        "answer":  true,
+        "explanation":  "토스트에 붙는 기본 재료다."
+    },
+    {
+        "id":  "11-pattern-1-51",
+        "statement":  "addTopping()은 토핑 이름과 칼로리를 누적하는 데 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "토핑 조합 결과를 누적한다."
+    },
+    {
+        "id":  "11-pattern-1-52",
+        "statement":  "serve()는 누적된 토스트 이름과 칼로리를 출력하는 흐름으로 이해할 수 있다.",
+        "answer":  true,
+        "explanation":  "토스트 제공 결과를 보여준다."
+    },
+    {
+        "id":  "11-pattern-1-53",
+        "statement":  "Decorator는 동적 확장을 금지하고 컴파일 전 조합만 허용한다.",
+        "answer":  false,
+        "explanation":  "구성은 동적 확장에 유리하다."
+    },
+    {
+        "id":  "11-pattern-1-54",
+        "statement":  "상속 구조는 상위·하위 클래스 사이에 강한 결합을 만들 수 있다.",
+        "answer":  true,
+        "explanation":  "상속은 강한 결합으로 묶일 수 있다."
+    },
+    {
+        "id":  "11-pattern-1-55",
+        "statement":  "Decorator는 혼합 재료 수만큼 클래스를 만들지 않고 기본 재료 조합으로 해결하려 한다.",
+        "answer":  true,
+        "explanation":  "복합 클래스 폭증을 피한다."
+    },
+    {
+        "id":  "11-pattern-1-56",
+        "statement":  "Ham을 여러 번 추가하는 것도 Decorator 조합으로 표현할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제는 Ham 반복 추가를 보여준다."
+    },
+    {
+        "id":  "11-pattern-1-57",
+        "statement":  "Decorator는 객체 하나만 생성해야 하는 로그 객체 전용 패턴이다.",
+        "answer":  false,
+        "explanation":  "단일 객체 보장은 Singleton이다."
+    },
+    {
+        "id":  "11-pattern-1-58",
+        "statement":  "Adapter 패턴은 호환되지 않는 두 인터페이스를 작동시킬 수 있도록 맞춰 준다.",
+        "answer":  true,
+        "explanation":  "단일 객체 보장은 Singleton이다."
+    },
+    {
+        "id":  "11-pattern-1-59",
+        "statement":  "Adapter는 순환 복잡도 계산 공식의 이름이다.",
+        "answer":  false,
+        "explanation":  "교안은 어댑터의 의미를 설명한다."
+    },
+    {
+        "id":  "11-pattern-1-60",
+        "statement":  "클래스 adapter는 상속을 이용한 어댑터 패턴이다.",
+        "answer":  true,
+        "explanation":  "교안의 구분이다."
+    },
+    {
+        "id":  "11-pattern-1-61",
+        "statement":  "인스턴스 adapter는 위임을 이용한 어댑터 패턴이다.",
+        "answer":  true,
+        "explanation":  "교안의 구분이다."
+    },
+    {
+        "id":  "11-pattern-1-62",
+        "statement":  "Buds는 play(), stop() 메서드를 사용한다.",
+        "answer":  true,
+        "explanation":  "교안에서 Buds 표준 API는 play/stop이다."
+    },
+    {
+        "id":  "11-pattern-1-63",
+        "statement":  "AirPods는 play(), stop()만 사용한다고 설명된다.",
+        "answer":  false,
+        "explanation":  "교안에서 AirPods 메서드 이름은 다르다."
+    },
+    {
+        "id":  "11-pattern-1-64",
+        "statement":  "AirPodsInterface는 play(), stop()을 제공해 Buds와 같은 형태로 맞춘다.",
+        "answer":  true,
+        "explanation":  "Kcal/Name은 Decorator 토핑 쪽이다."
+    },
+    {
+        "id":  "11-pattern-1-65",
+        "statement":  "AirPodsAdapter의 play()는 AirPods의 playing()을 호출할 수 있다.",
+        "answer":  true,
+        "explanation":  "재생은 playing과 연결된다."
+    },
+    {
+        "id":  "11-pattern-1-66",
+        "statement":  "AirPodsAdapter의 stop()은 AirPods의 stopping()을 호출할 수 있다.",
+        "answer":  true,
+        "explanation":  "정지는 stopping과 연결된다."
+    },
+    {
+        "id":  "11-pattern-1-67",
+        "statement":  "Adapter는 기존 컴포넌트 코드를 반드시 직접 수정해야 한다.",
+        "answer":  false,
+        "explanation":  "중간 어댑터가 차이를 흡수한다."
+    },
+    {
+        "id":  "11-pattern-1-68",
+        "statement":  "SamsungPhone은 어댑터를 통해 Buds와 AirPods를 유사한 방식으로 사용할 수 있다.",
+        "answer":  true,
+        "explanation":  "어댑터는 호환성을 높인다."
+    },
+    {
+        "id":  "11-pattern-1-69",
+        "statement":  "생성 패턴은 객체의 생성과 참조 과정을 추상화한다.",
+        "answer":  true,
+        "explanation":  "객체 생성 과정 분리가 핵심이다."
+    },
+    {
+        "id":  "11-pattern-1-70",
+        "statement":  "생성 패턴은 생성 과정을 한 클래스에 무조건 고정한다.",
+        "answer":  false,
+        "explanation":  "변경 영향 최소화를 위해 생성 과정을 분리한다."
+    },
+    {
+        "id":  "11-pattern-1-71",
+        "statement":  "factory method, singleton, prototype, builder, abstract factory는 생성 패턴 목록에 포함된다.",
+        "answer":  true,
+        "explanation":  "decorator와 adapter는 구조 패턴이다."
+    },
+    {
+        "id":  "11-pattern-1-72",
+        "statement":  "생성 패턴은 코드의 유연성과 유지관리를 쉽게 만드는 데 기여한다.",
+        "answer":  true,
+        "explanation":  "생성 책임 분리로 유연성을 높인다."
+    },
+    {
+        "id":  "11-pattern-1-73",
+        "statement":  "Factory Method 패턴은 객체 생성을 직접 하지 않고 누군가에게 맡기고 싶을 때 고려한다.",
+        "answer":  true,
+        "explanation":  "단일 객체는 Singleton, 생성 위임은 Factory Method다."
+    },
+    {
+        "id":  "11-pattern-1-74",
+        "statement":  "직접 new를 사용하면 두 클래스 사이 의존 관계가 항상 사라진다.",
+        "answer":  false,
+        "explanation":  "직접 생성은 결합을 높일 수 있다."
+    },
+    {
+        "id":  "11-pattern-1-75",
+        "statement":  "GameServer가 SuperMario와 Tetris를 직접 new로 만들면 게임 클래스에 의존한다.",
+        "answer":  true,
+        "explanation":  "게임 추가 때 수정 부담이 생긴다."
+    },
+    {
+        "id":  "11-pattern-1-76",
+        "statement":  "게임이 추가될 때마다 GameServer를 수정하면 OCP 위반 문제가 생길 수 있다.",
+        "answer":  true,
+        "explanation":  "OCP는 확장에는 열리고 변경에는 닫혀야 한다."
+    },
+    {
+        "id":  "11-pattern-1-77",
+        "statement":  "Factory Method 1단계는 객체 생성을 담당하는 factory 클래스를 만든다.",
+        "answer":  true,
+        "explanation":  "삭제는 2단계 차이점이다."
+    },
+    {
+        "id":  "11-pattern-1-78",
+        "statement":  "GameServerFactory는 토핑 칼로리만 계산한다.",
+        "answer":  false,
+        "explanation":  "게임 선택과 생성 책임을 맡는다."
+    },
+    {
+        "id":  "11-pattern-1-79",
+        "statement":  "1단계 적용 후 게임 추가·삭제 변화는 GameServer보다 GameServerFactory에 집중된다.",
+        "answer":  true,
+        "explanation":  "생성 책임을 팩토리로 옮긴다."
+    },
+    {
+        "id":  "11-pattern-1-80",
+        "statement":  "Factory Method 2단계에서는 GameServer를 확장해 KRGameServer와 JPGameServer를 만들 수 있다.",
+        "answer":  true,
+        "explanation":  "국가별 서버 확장을 고려한다."
+    },
+    {
+        "id":  "11-pattern-1-81",
+        "statement":  "2단계에서는 factory 클래스 역할을 객체 생성 메서드가 맡고 구현은 하위 클래스에게 위임된다.",
+        "answer":  true,
+        "explanation":  "교안은 factory 클래스가 사라진다고 설명한다."
+    },
+    {
+        "id":  "11-pattern-1-82",
+        "statement":  "chooseGame()은 반드시 private 생성자로 선언해야 한다.",
+        "answer":  false,
+        "explanation":  "하위 클래스가 생성 규칙을 구현한다."
+    },
+    {
+        "id":  "11-pattern-1-83",
+        "statement":  "KRSuperMario와 KRTetris는 나라별 게임 증가를 고려한 클래스가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "국가별 게임 클래스를 나타낸다."
+    },
+    {
+        "id":  "11-pattern-1-84",
+        "statement":  "Games 추상 클래스는 BootingGame(), RunGame() 같은 공통 동작을 제공할 수 있다.",
+        "answer":  true,
+        "explanation":  "게임 실행 공통 기능을 제공한다."
+    },
+    {
+        "id":  "11-pattern-1-85",
+        "statement":  "Factory Method는 생성 책임 분리로 유지보수성을 높이는 생성 패턴이다.",
+        "answer":  true,
+        "explanation":  "객체 생성 위임이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-1-86",
+        "statement":  "2단계의 차이점은 GameServerFactory 클래스를 반드시 유지하는 것이다.",
+        "answer":  false,
+        "explanation":  "교안의 2단계 차이점이다."
+    },
+    {
+        "id":  "11-pattern-1-87",
+        "statement":  "Singleton 패턴은 의도적으로 단 하나의 객체만 생성하도록 하는 경우 사용한다.",
+        "answer":  true,
+        "explanation":  "단일 객체 보장이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-1-88",
+        "statement":  "Singleton은 객체 수와 무관하고 오직 토핑 조합만 다룬다.",
+        "answer":  false,
+        "explanation":  "생성 패턴 중 단일 인스턴스 패턴이다."
+    },
+    {
+        "id":  "11-pattern-1-89",
+        "statement":  "스레드 풀, 캐시, 로그 기록용 객체는 Singleton이 유용할 수 있는 예이다.",
+        "answer":  true,
+        "explanation":  "교안의 Singleton 활용 예시다."
+    },
+    {
+        "id":  "11-pattern-1-90",
+        "statement":  "Singleton 구현에서는 생성자를 private으로 선언할 수 있다.",
+        "answer":  true,
+        "explanation":  "외부 new 호출을 막기 위함이다."
+    },
+    {
+        "id":  "11-pattern-1-91",
+        "statement":  "Singleton 구현에서는 객체 참조를 static으로 선언할 수 있다.",
+        "answer":  true,
+        "explanation":  "클래스 수준에서 단일 객체를 보관한다."
+    },
+    {
+        "id":  "11-pattern-1-92",
+        "statement":  "getInstance()는 객체를 매번 새로 여러 개 생성해야 하는 메서드다.",
+        "answer":  false,
+        "explanation":  "단일 객체 접근 메서드다."
+    },
+    {
+        "id":  "11-pattern-1-93",
+        "statement":  "동기화 없이 스레드에서 Singleton을 사용하면 생성이나 출력 순서 문제가 생길 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 결과가 섞이는 문제를 설명한다."
+    },
+    {
+        "id":  "11-pattern-1-94",
+        "statement":  "synchronized getInstance()는 동시 실행을 막는 데 도움이 된다.",
+        "answer":  true,
+        "explanation":  "동기화로 임계 구역 접근을 제어한다."
+    },
+    {
+        "id":  "11-pattern-1-95",
+        "statement":  "동기화는 속도를 떨어뜨릴 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 동기화의 속도 저하를 언급한다."
+    },
+    {
+        "id":  "11-pattern-1-96",
+        "statement":  "처음부터 객체를 생성하면 Singleton 보장이 불가능해진다.",
+        "answer":  false,
+        "explanation":  "초기 생성은 동시 생성 문제를 피한다."
+    },
+    {
+        "id":  "11-pattern-1-97",
+        "statement":  "DCL 구현에는 volatile을 사용할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 DCL 구현 방법으로 volatile을 언급한다."
+    },
+    {
+        "id":  "11-pattern-1-98",
+        "statement":  "Brew()를 synchronized로 처리하면 음료 제조 출력이 섞이는 문제를 줄일 수 있다.",
+        "answer":  true,
+        "explanation":  "동시 제조 흐름을 순서화할 수 있다."
+    },
+    {
+        "id":  "11-pattern-1-99",
+        "statement":  "에스프레소 머신 예제는 여러 사용자가 하나의 머신 객체를 공유하는 상황을 설명한다.",
+        "answer":  true,
+        "explanation":  "Singleton 필요성을 보여주는 예제다."
+    },
+    {
+        "id":  "11-pattern-1-100",
+        "statement":  "Singleton의 핵심은 Name(), Kcal(), addTopping()으로 요약된다.",
+        "answer":  false,
+        "explanation":  "Name/Kcal/addTopping은 Decorator 쪽이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 2,
+  title: "11주차 디자인패턴 · ",
+  questions:
+[
+    {
+        "id":  "11-pattern-2-1",
+        "statement":  "동일한 설계 문제가 반복될 때 GoF 패턴은 해결책을 공유하는 언어로 활용될 수 있다.",
+        "answer":  true,
+        "explanation":  "설계 지식과 노하우를 패턴 형태로 일반화한 것이다."
+    },
+    {
+        "id":  "11-pattern-2-2",
+        "statement":  "재사용 가치가 있는 설계 구조를 정리하는 것은 디자인 패턴의 목적에 맞다.",
+        "answer":  true,
+        "explanation":  "반복 재사용 가능한 설계 해결책이어야 한다."
+    },
+    {
+        "id":  "11-pattern-2-3",
+        "statement":  "디자인 패턴은 문제 유형과 무관하게 아무 코드 예시나 모아 둔 것이다.",
+        "answer":  false,
+        "explanation":  "문제 유형별 설계 해결책을 구체화한 것이다."
+    },
+    {
+        "id":  "11-pattern-2-4",
+        "statement":  "GoF 디자인 패턴은 쉽게 재사용할 수 있도록 객체지향 개념에 따른 설계를 패턴으로 지정한다.",
+        "answer":  true,
+        "explanation":  "객체지향 설계 재사용이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-2-5",
+        "statement":  "디자인 패턴은 충분히 일반화된 설계 노하우를 다룬다.",
+        "answer":  true,
+        "explanation":  "패턴은 반복 적용 가능한 일반화가 필요하다."
+    },
+    {
+        "id":  "11-pattern-2-6",
+        "statement":  "디자인 패턴 이름은 의사소통과 무관하며 오직 컴파일러 명령어이다.",
+        "answer":  false,
+        "explanation":  "패턴 이름은 설계 구조를 간결하게 공유하게 한다."
+    },
+    {
+        "id":  "11-pattern-2-7",
+        "statement":  "디자인 패턴은 코드 복사본보다 설계 구조와 역할을 설명하는 개념에 가깝다.",
+        "answer":  true,
+        "explanation":  "패턴은 구체 코드보다 구조와 책임 배치가 중요하다."
+    },
+    {
+        "id":  "11-pattern-2-8",
+        "statement":  "행위 패턴은 반복적으로 사용되는 객체의 상호작용을 패턴화한 것라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "행위 패턴은 객체 간 상호작용과 책임 분산을 다룬다."
+    },
+    {
+        "id":  "11-pattern-2-9",
+        "statement":  "행위 패턴은 클래스나 객체가 상호작용하는 방법과 책임을 분산하는 방법을 정의한다.",
+        "answer":  true,
+        "explanation":  "상호작용 방식과 책임 분산이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-2-10",
+        "statement":  "행위 패턴은 메시지 교환과 무관하고 파일명만 정한다.",
+        "answer":  false,
+        "explanation":  "교안은 메시지 교환·행위·알고리즘을 언급한다."
+    },
+    {
+        "id":  "11-pattern-2-11",
+        "statement":  "strategy, state, observer, command, memento는 행위 패턴 목록에 포함된다.",
+        "answer":  true,
+        "explanation":  "factory method와 singleton은 생성 패턴이다."
+    },
+    {
+        "id":  "11-pattern-2-12",
+        "statement":  "Strategy 패턴은 자주 바뀌는 기능을 메서드에서 클래스로 바꾸고 인터페이스 타입의 상속 구조로 만든다.",
+        "answer":  true,
+        "explanation":  "기능 변화는 Strategy, 상태 변화는 State의 초점이다."
+    },
+    {
+        "id":  "11-pattern-2-13",
+        "statement":  "포켓몬 예제에서 자주 바뀌는 기능은 공격과 패시브라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "공격과 패시브 기술이 수정·추가되는 상황이다."
+    },
+    {
+        "id":  "11-pattern-2-14",
+        "statement":  "attack()과 passive()를 상위 클래스에 두면 기능 변화가 있어도 OCP 위반 가능성이 전혀 없다.",
+        "answer":  false,
+        "explanation":  "기능 교체 때 기존 클래스 수정이 반복될 수 있다."
+    },
+    {
+        "id":  "11-pattern-2-15",
+        "statement":  "Strategy 패턴은 attack()과 passive()를 별도의 상속 구조로 분리해 변경 영향을 줄인다.",
+        "answer":  true,
+        "explanation":  "변화하는 기능을 별도 전략 클래스로 분리한다."
+    },
+    {
+        "id":  "11-pattern-2-16",
+        "statement":  "Attack 인터페이스는 motion() 같은 공격 동작 메서드를 제공할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안에서 Attack은 motion()을 가진다."
+    },
+    {
+        "id":  "11-pattern-2-17",
+        "statement":  "Passive 인터페이스는 공격 motion()만 제공해야 한다.",
+        "answer":  false,
+        "explanation":  "교안에서 Passive는 detail()을 가진다."
+    },
+    {
+        "id":  "11-pattern-2-18",
+        "statement":  "Sing, Flame, millionVolt는 공격 전략 클래스의 예라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "이들은 Attack 인터페이스 구현체다."
+    },
+    {
+        "id":  "11-pattern-2-19",
+        "statement":  "Defensibility, Avoidability, Speedability는 패시브 전략 클래스의 예라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "이들은 Passive 인터페이스 구현체다."
+    },
+    {
+        "id":  "11-pattern-2-20",
+        "statement":  "Purin은 전략 객체를 절대 가질 수 없고 문자열만 저장해야 한다.",
+        "answer":  false,
+        "explanation":  "Strategy 적용 후 포켓몬은 전략 객체를 조합한다."
+    },
+    {
+        "id":  "11-pattern-2-21",
+        "statement":  "setAttack()과 setPassive()는 실행 중 전략 교체를 가능하게 할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제에서 푸린의 전략을 변경한다."
+    },
+    {
+        "id":  "11-pattern-2-22",
+        "statement":  "Strategy 패턴은 기능 추가를 기존 클래스 수정이 아니라 새 전략 클래스 추가로 처리하는 데 유리하다.",
+        "answer":  true,
+        "explanation":  "전략 분리는 OCP 위반 가능성을 낮춘다."
+    },
+    {
+        "id":  "11-pattern-2-23",
+        "statement":  "Strategy 패턴은 토핑 조합 수가 폭발하는 문제만 해결한다.",
+        "answer":  false,
+        "explanation":  "토핑 조합은 Decorator의 핵심 사례다."
+    },
+    {
+        "id":  "11-pattern-2-24",
+        "statement":  "Pokemon이 Attack과 Passive 필드를 가지면 기능을 객체 조합으로 선택할 수 있다.",
+        "answer":  true,
+        "explanation":  "전략 객체를 필드로 보관해 조합할 수 있다."
+    },
+    {
+        "id":  "11-pattern-2-25",
+        "statement":  "Strategy와 State는 모두 변화를 클래스로 분리하지만 Strategy는 기능 변화에 초점이 있다.",
+        "answer":  true,
+        "explanation":  "Strategy는 기능, State는 상태 변화가 초점이다."
+    },
+    {
+        "id":  "11-pattern-2-26",
+        "statement":  "State 패턴은 자주 바뀌는 상태를 클래스로 바꾸고 인터페이스 타입의 상속 구조로 만든다.",
+        "answer":  true,
+        "explanation":  "상태 변화는 State의 핵심이고 공격 기능은 Strategy의 예다."
+    },
+    {
+        "id":  "11-pattern-2-27",
+        "statement":  "선풍기 예제에서 상태는 정지, 송풍, 수면 등으로 확장될 수 있다.",
+        "answer":  true,
+        "explanation":  "Stop, Wind, Sleep 같은 상태가 등장한다."
+    },
+    {
+        "id":  "11-pattern-2-28",
+        "statement":  "일반적인 ElecFan 설계는 처음부터 모든 상태를 별도 인터페이스로만 처리한다.",
+        "answer":  false,
+        "explanation":  "초기 코드는 조건문과 문자열 상태를 사용한다."
+    },
+    {
+        "id":  "11-pattern-2-29",
+        "statement":  "상태가 추가될 때 on_button(), off_button()을 계속 수정해야 한다면 OCP 위반 문제가 생길 수 있다.",
+        "answer":  true,
+        "explanation":  "상태 추가·삭제 때 주 클래스 수정이 반복된다."
+    },
+    {
+        "id":  "11-pattern-2-30",
+        "statement":  "State 패턴을 적용하면 ElectricFan은 현재 상태 객체에게 버튼 처리를 위임할 수 있다.",
+        "answer":  true,
+        "explanation":  "state.on_button(this)처럼 위임한다."
+    },
+    {
+        "id":  "11-pattern-2-31",
+        "statement":  "State 인터페이스는 Name()과 Kcal()만 가져야 한다.",
+        "answer":  false,
+        "explanation":  "Name/Kcal은 Decorator 토핑 쪽이다."
+    },
+    {
+        "id":  "11-pattern-2-32",
+        "statement":  "Stop, Wind, Sleep은 State를 구현하는 상태 클래스가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "선풍기 상태를 클래스화한 예다."
+    },
+    {
+        "id":  "11-pattern-2-33",
+        "statement":  "Stop 상태에서 on 버튼을 누르면 Wind 상태로 전환될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 Stop 클래스의 on_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-2-34",
+        "statement":  "Wind 상태에서 on 버튼을 누르면 항상 객체가 삭제된다.",
+        "answer":  false,
+        "explanation":  "교안 Wind 클래스의 on_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-2-35",
+        "statement":  "Sleep 상태에서 off 버튼을 누르면 Stop 상태로 전환될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 Sleep 클래스의 off_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-2-36",
+        "statement":  "State 패턴은 상태 추가·삭제가 ElectricFan에 미치는 영향을 줄이는 데 목적이 있다.",
+        "answer":  true,
+        "explanation":  "상태 변화가 상태 클래스 내부에서 이루어지도록 한다."
+    },
+    {
+        "id":  "11-pattern-2-37",
+        "statement":  "상태별 동작 차이는 다형성과 무관하고 항상 switch 문만 사용해야 한다.",
+        "answer":  false,
+        "explanation":  "각 상태 클래스가 같은 메서드를 다르게 구현한다."
+    },
+    {
+        "id":  "11-pattern-2-38",
+        "statement":  "State 패턴은 상태 변화가 잦을수록 장점이 커진다.",
+        "answer":  true,
+        "explanation":  "변화 지점을 상태 클래스로 격리하기 때문이다."
+    },
+    {
+        "id":  "11-pattern-2-39",
+        "statement":  "State와 Strategy는 모두 변화 지점을 분리하지만 State는 상태 전이에 집중한다.",
+        "answer":  true,
+        "explanation":  "둘은 디자인 패턴이며 변화 대상이 다르다."
+    },
+    {
+        "id":  "11-pattern-2-40",
+        "statement":  "구조 패턴은 데이터나 인터페이스의 구조 설계에 활용될 수 있다.",
+        "answer":  true,
+        "explanation":  "구조 패턴은 구조 설계가 핵심이다."
+    },
+    {
+        "id":  "11-pattern-2-41",
+        "statement":  "구조 패턴은 클래스나 객체의 구성으로 더 큰 구조를 만들 때 유용하다.",
+        "answer":  true,
+        "explanation":  "구성·합성으로 큰 구조를 만든다."
+    },
+    {
+        "id":  "11-pattern-2-42",
+        "statement":  "decorator와 adapter는 생성 패턴에만 포함된다.",
+        "answer":  false,
+        "explanation":  "교안은 두 패턴을 구조 패턴으로 다룬다."
+    },
+    {
+        "id":  "11-pattern-2-43",
+        "statement":  "composite, bridge, facade, flyweight, proxy도 구조 패턴 목록에 포함된다.",
+        "answer":  true,
+        "explanation":  "singleton과 factory method는 생성 패턴이다."
+    },
+    {
+        "id":  "11-pattern-2-44",
+        "statement":  "Decorator 패턴은 기본 클래스를 조합해서 만들어야 할 클래스가 많아지는 문제를 줄인다.",
+        "answer":  true,
+        "explanation":  "이어폰 호환은 Adapter 사례다."
+    },
+    {
+        "id":  "11-pattern-2-45",
+        "statement":  "Decorator 패턴에서 장식은 꼭 있어야 하는 본체가 아니라 부가 기능에 가깝다.",
+        "answer":  true,
+        "explanation":  "장식은 없어도 되는 부가 요소로 설명된다."
+    },
+    {
+        "id":  "11-pattern-2-46",
+        "statement":  "토스트 예제는 클래스 수가 절대 늘지 않는 상황을 보여준다.",
+        "answer":  false,
+        "explanation":  "조합 폭발이 Decorator 적용 배경이다."
+    },
+    {
+        "id":  "11-pattern-2-47",
+        "statement":  "Toast는 식빵 종류의 상위 클래스 역할을 할 수 있다.",
+        "answer":  true,
+        "explanation":  "토스트 본체의 상위 개념이다."
+    },
+    {
+        "id":  "11-pattern-2-48",
+        "statement":  "NormalBread, WheatBread, MilkBread, ButterBread는 식빵 종류라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "식빵 하위 클래스다."
+    },
+    {
+        "id":  "11-pattern-2-49",
+        "statement":  "ToppingDecorator는 게임 서버 국가별 선택 메서드이다.",
+        "answer":  false,
+        "explanation":  "토핑 장식의 공통 부모다."
+    },
+    {
+        "id":  "11-pattern-2-50",
+        "statement":  "Cheese, Ham, Egg, Vegetable은 토핑 클래스의 예라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "토스트에 붙는 기본 재료다."
+    },
+    {
+        "id":  "11-pattern-2-51",
+        "statement":  "addTopping()은 토핑 이름과 칼로리를 누적하는 데 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "토핑 조합 결과를 누적한다."
+    },
+    {
+        "id":  "11-pattern-2-52",
+        "statement":  "serve()는 Singleton 객체 생성자를 public으로 바꾸는 메서드다.",
+        "answer":  false,
+        "explanation":  "토스트 제공 결과를 보여준다."
+    },
+    {
+        "id":  "11-pattern-2-53",
+        "statement":  "Decorator는 구성 또는 합성을 통해 실행 중 객체를 동적으로 확장할 수 있다.",
+        "answer":  true,
+        "explanation":  "구성은 동적 확장에 유리하다."
+    },
+    {
+        "id":  "11-pattern-2-54",
+        "statement":  "상속 구조는 상위·하위 클래스 사이에 강한 결합을 만들 수 있다.",
+        "answer":  true,
+        "explanation":  "상속은 강한 결합으로 묶일 수 있다."
+    },
+    {
+        "id":  "11-pattern-2-55",
+        "statement":  "Decorator는 혼합 재료 수만큼 복합 클래스를 전부 만드는 것이 핵심이다.",
+        "answer":  false,
+        "explanation":  "복합 클래스 폭증을 피한다."
+    },
+    {
+        "id":  "11-pattern-2-56",
+        "statement":  "Ham을 여러 번 추가하는 것도 Decorator 조합으로 표현할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제는 Ham 반복 추가를 보여준다."
+    },
+    {
+        "id":  "11-pattern-2-57",
+        "statement":  "Decorator는 선택적 기능이 계속 붙는 구조에 적합하다.",
+        "answer":  true,
+        "explanation":  "단일 객체 보장은 Singleton이다."
+    },
+    {
+        "id":  "11-pattern-2-58",
+        "statement":  "Adapter 패턴은 호환되지 않는 두 인터페이스를 작동시킬 수 있도록 맞춰 준다.",
+        "answer":  true,
+        "explanation":  "단일 객체 보장은 Singleton이다."
+    },
+    {
+        "id":  "11-pattern-2-59",
+        "statement":  "Adapter는 접속 소켓이나 맞추어 붙인다는 의미와 연결된다.",
+        "answer":  true,
+        "explanation":  "교안은 어댑터의 의미를 설명한다."
+    },
+    {
+        "id":  "11-pattern-2-60",
+        "statement":  "클래스 adapter는 상속을 전혀 사용하지 않는다.",
+        "answer":  false,
+        "explanation":  "교안의 구분이다."
+    },
+    {
+        "id":  "11-pattern-2-61",
+        "statement":  "인스턴스 adapter는 위임을 이용한 어댑터 패턴라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 구분이다."
+    },
+    {
+        "id":  "11-pattern-2-62",
+        "statement":  "Buds는 play(), stop() 메서드를 사용한다.",
+        "answer":  true,
+        "explanation":  "교안에서 Buds 표준 API는 play/stop이다."
+    },
+    {
+        "id":  "11-pattern-2-63",
+        "statement":  "AirPods는 play(), stop()만 사용한다고 설명된다.",
+        "answer":  false,
+        "explanation":  "교안에서 AirPods 메서드 이름은 다르다."
+    },
+    {
+        "id":  "11-pattern-2-64",
+        "statement":  "AirPodsInterface는 play(), stop()을 제공해 Buds와 같은 형태로 맞춘다.",
+        "answer":  true,
+        "explanation":  "Kcal/Name은 Decorator 토핑 쪽이다."
+    },
+    {
+        "id":  "11-pattern-2-65",
+        "statement":  "AirPodsAdapter의 play()는 AirPods의 playing()을 호출할 수 있다.",
+        "answer":  true,
+        "explanation":  "재생은 playing과 연결된다."
+    },
+    {
+        "id":  "11-pattern-2-66",
+        "statement":  "AirPodsAdapter의 stop()은 AirPods의 playing()을 호출해야 한다.",
+        "answer":  false,
+        "explanation":  "정지는 stopping과 연결된다."
+    },
+    {
+        "id":  "11-pattern-2-67",
+        "statement":  "Adapter는 기존 컴포넌트를 직접 수정하지 않고 호환 계층을 둘 수 있다.",
+        "answer":  true,
+        "explanation":  "중간 어댑터가 차이를 흡수한다."
+    },
+    {
+        "id":  "11-pattern-2-68",
+        "statement":  "SamsungPhone은 어댑터를 통해 Buds와 AirPods를 유사한 방식으로 사용할 수 있다.",
+        "answer":  true,
+        "explanation":  "어댑터는 호환성을 높인다."
+    },
+    {
+        "id":  "11-pattern-2-69",
+        "statement":  "생성 패턴은 객체의 생성과 참조 과정을 추상화한다.",
+        "answer":  true,
+        "explanation":  "객체 생성 과정 분리가 핵심이다."
+    },
+    {
+        "id":  "11-pattern-2-70",
+        "statement":  "생성 패턴은 특정 객체의 생성 과정을 분리한다.",
+        "answer":  true,
+        "explanation":  "변경 영향 최소화를 위해 생성 과정을 분리한다."
+    },
+    {
+        "id":  "11-pattern-2-71",
+        "statement":  "decorator와 adapter만 생성 패턴 목록에 포함된다.",
+        "answer":  false,
+        "explanation":  "decorator와 adapter는 구조 패턴이다."
+    },
+    {
+        "id":  "11-pattern-2-72",
+        "statement":  "생성 패턴은 코드의 유연성과 유지관리를 쉽게 만드는 데 기여한다.",
+        "answer":  true,
+        "explanation":  "생성 책임 분리로 유연성을 높인다."
+    },
+    {
+        "id":  "11-pattern-2-73",
+        "statement":  "Factory Method 패턴은 객체 생성을 직접 하지 않고 누군가에게 맡기고 싶을 때 고려한다.",
+        "answer":  true,
+        "explanation":  "단일 객체는 Singleton, 생성 위임은 Factory Method다."
+    },
+    {
+        "id":  "11-pattern-2-74",
+        "statement":  "클래스에서 다른 클래스 객체를 직접 만들면 의존 관계가 발생할 수 있다.",
+        "answer":  true,
+        "explanation":  "직접 생성은 결합을 높일 수 있다."
+    },
+    {
+        "id":  "11-pattern-2-75",
+        "statement":  "GameServer가 직접 new를 쓰면 게임 추가 시 수정할 부분이 없다.",
+        "answer":  false,
+        "explanation":  "게임 추가 때 수정 부담이 생긴다."
+    },
+    {
+        "id":  "11-pattern-2-76",
+        "statement":  "게임이 추가될 때마다 GameServer를 수정하면 OCP 위반 문제가 생길 수 있다.",
+        "answer":  true,
+        "explanation":  "OCP는 확장에는 열리고 변경에는 닫혀야 한다."
+    },
+    {
+        "id":  "11-pattern-2-77",
+        "statement":  "Factory Method 1단계는 객체 생성을 담당하는 factory 클래스를 만든다.",
+        "answer":  true,
+        "explanation":  "삭제는 2단계 차이점이다."
+    },
+    {
+        "id":  "11-pattern-2-78",
+        "statement":  "GameServerFactory는 토핑 칼로리만 계산한다.",
+        "answer":  false,
+        "explanation":  "게임 선택과 생성 책임을 맡는다."
+    },
+    {
+        "id":  "11-pattern-2-79",
+        "statement":  "1단계 적용 후 게임 추가·삭제 변화는 GameServer보다 GameServerFactory에 집중된다.",
+        "answer":  true,
+        "explanation":  "생성 책임을 팩토리로 옮긴다."
+    },
+    {
+        "id":  "11-pattern-2-80",
+        "statement":  "Factory Method 2단계에서는 GameServer를 확장해 KRGameServer와 JPGameServer를 만들 수 있다.",
+        "answer":  true,
+        "explanation":  "국가별 서버 확장을 고려한다."
+    },
+    {
+        "id":  "11-pattern-2-81",
+        "statement":  "2단계에서는 factory 클래스가 유일한 생성 책임자로 더 강화된다.",
+        "answer":  false,
+        "explanation":  "교안은 factory 클래스가 사라진다고 설명한다."
+    },
+    {
+        "id":  "11-pattern-2-82",
+        "statement":  "chooseGame()은 상위 GameServer에서 추상 메서드로 두고 하위 서버에서 구현할 수 있다.",
+        "answer":  true,
+        "explanation":  "하위 클래스가 생성 규칙을 구현한다."
+    },
+    {
+        "id":  "11-pattern-2-83",
+        "statement":  "KRSuperMario와 KRTetris는 나라별 게임 증가를 고려한 클래스가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "국가별 게임 클래스를 나타낸다."
+    },
+    {
+        "id":  "11-pattern-2-84",
+        "statement":  "Games 추상 클래스는 AirPods의 playing()만 제공해야 한다.",
+        "answer":  false,
+        "explanation":  "게임 실행 공통 기능을 제공한다."
+    },
+    {
+        "id":  "11-pattern-2-85",
+        "statement":  "Factory Method는 생성 책임 분리로 유지보수성을 높이는 생성 패턴라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "객체 생성 위임이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-2-86",
+        "statement":  "2단계의 차이점에는 GameServerFactory 클래스가 사라지는 것이 포함된다.",
+        "answer":  true,
+        "explanation":  "교안의 2단계 차이점이다."
+    },
+    {
+        "id":  "11-pattern-2-87",
+        "statement":  "Singleton 패턴은 의도적으로 단 하나의 객체만 생성하도록 하는 경우 사용한다.",
+        "answer":  true,
+        "explanation":  "단일 객체 보장이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-2-88",
+        "statement":  "Singleton은 객체가 프로그램 내에서 오직 하나만 생성되도록 보장한다.",
+        "answer":  true,
+        "explanation":  "생성 패턴 중 단일 인스턴스 패턴이다."
+    },
+    {
+        "id":  "11-pattern-2-89",
+        "statement":  "스레드 풀과 로그 기록 객체는 Singleton과 전혀 무관한 예로만 제시된다.",
+        "answer":  false,
+        "explanation":  "교안의 Singleton 활용 예시다."
+    },
+    {
+        "id":  "11-pattern-2-90",
+        "statement":  "Singleton 구현에서는 생성자를 private으로 선언할 수 있다.",
+        "answer":  true,
+        "explanation":  "외부 new 호출을 막기 위함이다."
+    },
+    {
+        "id":  "11-pattern-2-91",
+        "statement":  "Singleton 구현에서는 객체 참조를 static으로 선언할 수 있다.",
+        "answer":  true,
+        "explanation":  "클래스 수준에서 단일 객체를 보관한다."
+    },
+    {
+        "id":  "11-pattern-2-92",
+        "statement":  "getInstance()는 객체를 매번 새로 여러 개 생성해야 하는 메서드다.",
+        "answer":  false,
+        "explanation":  "단일 객체 접근 메서드다."
+    },
+    {
+        "id":  "11-pattern-2-93",
+        "statement":  "동기화 없이 스레드에서 Singleton을 사용하면 생성이나 출력 순서 문제가 생길 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 결과가 섞이는 문제를 설명한다."
+    },
+    {
+        "id":  "11-pattern-2-94",
+        "statement":  "synchronized getInstance()는 동시 실행을 막는 데 도움이 된다.",
+        "answer":  true,
+        "explanation":  "동기화로 임계 구역 접근을 제어한다."
+    },
+    {
+        "id":  "11-pattern-2-95",
+        "statement":  "동기화는 항상 성능을 무한히 향상시킨다.",
+        "answer":  false,
+        "explanation":  "교안은 동기화의 속도 저하를 언급한다."
+    },
+    {
+        "id":  "11-pattern-2-96",
+        "statement":  "처음부터 static 객체를 생성하는 방식은 동기화 부담을 줄이는 해결책이 될 수 있다.",
+        "answer":  true,
+        "explanation":  "초기 생성은 동시 생성 문제를 피한다."
+    },
+    {
+        "id":  "11-pattern-2-97",
+        "statement":  "DCL 구현에는 volatile을 사용할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 DCL 구현 방법으로 volatile을 언급한다."
+    },
+    {
+        "id":  "11-pattern-2-98",
+        "statement":  "Brew() 동기화는 출력 섞임과 아무 관련이 없다.",
+        "answer":  false,
+        "explanation":  "동시 제조 흐름을 순서화할 수 있다."
+    },
+    {
+        "id":  "11-pattern-2-99",
+        "statement":  "에스프레소 머신 예제는 여러 사용자가 하나의 머신 객체를 공유하는 상황을 설명한다.",
+        "answer":  true,
+        "explanation":  "Singleton 필요성을 보여주는 예제다."
+    },
+    {
+        "id":  "11-pattern-2-100",
+        "statement":  "Singleton의 핵심은 private 생성자, static 객체, getInstance()로 요약할 수 있다.",
+        "answer":  true,
+        "explanation":  "Name/Kcal/addTopping은 Decorator 쪽이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 3,
+  title: "11주차 디자인패턴 · ",
+  questions:
+[
+    {
+        "id":  "11-pattern-3-1",
+        "statement":  "GoF 디자인 패턴은 코딩 문법을 암기하기 위한 표준 함수 목록이다.",
+        "answer":  false,
+        "explanation":  "설계 지식과 노하우를 패턴 형태로 일반화한 것이다."
+    },
+    {
+        "id":  "11-pattern-3-2",
+        "statement":  "디자인 패턴은 한 번만 쓰이는 임시 해결책을 그대로 저장한 것이다.",
+        "answer":  false,
+        "explanation":  "반복 재사용 가능한 설계 해결책이어야 한다."
+    },
+    {
+        "id":  "11-pattern-3-3",
+        "statement":  "디자인 패턴은 동일한 유형의 문제를 해결하는 방법을 문제 유형별로 구체화한다.",
+        "answer":  true,
+        "explanation":  "문제 유형별 설계 해결책을 구체화한 것이다."
+    },
+    {
+        "id":  "11-pattern-3-4",
+        "statement":  "GoF 디자인 패턴은 객체지향 설계와 무관한 하드웨어 배선 규칙이다.",
+        "answer":  false,
+        "explanation":  "객체지향 설계 재사용이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-3-5",
+        "statement":  "일반화되지 않은 개인적 요령도 모두 디자인 패턴이다.",
+        "answer":  false,
+        "explanation":  "패턴은 반복 적용 가능한 일반화가 필요하다."
+    },
+    {
+        "id":  "11-pattern-3-6",
+        "statement":  "디자인 패턴 이름은 의사소통과 무관하며 오직 컴파일러 명령어이다.",
+        "answer":  false,
+        "explanation":  "패턴 이름은 설계 구조를 간결하게 공유하게 한다."
+    },
+    {
+        "id":  "11-pattern-3-7",
+        "statement":  "디자인 패턴은 반드시 그대로 복사해 붙여넣는 완성 코드 조각이다.",
+        "answer":  false,
+        "explanation":  "패턴은 구체 코드보다 구조와 책임 배치가 중요하다."
+    },
+    {
+        "id":  "11-pattern-3-8",
+        "statement":  "행위 패턴은 객체 생성자 호출 순서만 정하는 패턴이다.",
+        "answer":  false,
+        "explanation":  "행위 패턴은 객체 간 상호작용과 책임 분산을 다룬다."
+    },
+    {
+        "id":  "11-pattern-3-9",
+        "statement":  "행위 패턴은 데이터베이스 테이블 물리 배치만 정의한다.",
+        "answer":  false,
+        "explanation":  "상호작용 방식과 책임 분산이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-3-10",
+        "statement":  "행위 패턴은 메시지 교환과 객체 간 행위나 알고리즘과 관련된다.",
+        "answer":  true,
+        "explanation":  "교안은 메시지 교환·행위·알고리즘을 언급한다."
+    },
+    {
+        "id":  "11-pattern-3-11",
+        "statement":  "factory method와 singleton은 행위 패턴의 대표 예이다.",
+        "answer":  false,
+        "explanation":  "factory method와 singleton은 생성 패턴이다."
+    },
+    {
+        "id":  "11-pattern-3-12",
+        "statement":  "Strategy 패턴은 자주 바뀌는 상태를 on/off 조건문 하나에 계속 추가하는 패턴이다.",
+        "answer":  false,
+        "explanation":  "기능 변화는 Strategy, 상태 변화는 State의 초점이다."
+    },
+    {
+        "id":  "11-pattern-3-13",
+        "statement":  "포켓몬 예제에서 자주 바뀌는 것은 데이터베이스 서버 주소뿐이다.",
+        "answer":  false,
+        "explanation":  "공격과 패시브 기술이 수정·추가되는 상황이다."
+    },
+    {
+        "id":  "11-pattern-3-14",
+        "statement":  "일반 설계에서 attack()과 passive()를 Pokemon 상위 클래스의 메서드로 두면 기능 변화에 취약할 수 있다.",
+        "answer":  true,
+        "explanation":  "기능 교체 때 기존 클래스 수정이 반복될 수 있다."
+    },
+    {
+        "id":  "11-pattern-3-15",
+        "statement":  "Strategy 패턴은 모든 공격과 패시브를 Pokemon 클래스의 if문에 누적하는 것이 핵심이다.",
+        "answer":  false,
+        "explanation":  "변화하는 기능을 별도 전략 클래스로 분리한다."
+    },
+    {
+        "id":  "11-pattern-3-16",
+        "statement":  "Attack 인터페이스는 패시브 설명을 위한 detail()만 제공하고 공격과 무관하다.",
+        "answer":  false,
+        "explanation":  "교안에서 Attack은 motion()을 가진다."
+    },
+    {
+        "id":  "11-pattern-3-17",
+        "statement":  "Passive 인터페이스는 공격 motion()만 제공해야 한다.",
+        "answer":  false,
+        "explanation":  "교안에서 Passive는 detail()을 가진다."
+    },
+    {
+        "id":  "11-pattern-3-18",
+        "statement":  "Sing, Flame, millionVolt는 선풍기 상태 클래스이다.",
+        "answer":  false,
+        "explanation":  "이들은 Attack 인터페이스 구현체다."
+    },
+    {
+        "id":  "11-pattern-3-19",
+        "statement":  "Defensibility, Avoidability, Speedability는 패시브 전략 클래스의 예이다.",
+        "answer":  true,
+        "explanation":  "이들은 Passive 인터페이스 구현체다."
+    },
+    {
+        "id":  "11-pattern-3-20",
+        "statement":  "Purin은 전략 객체를 절대 가질 수 없고 문자열만 저장해야 한다.",
+        "answer":  false,
+        "explanation":  "Strategy 적용 후 포켓몬은 전략 객체를 조합한다."
+    },
+    {
+        "id":  "11-pattern-3-21",
+        "statement":  "setAttack()과 setPassive()는 객체 생성을 하나로 제한하기 위한 Singleton 전용 메서드다.",
+        "answer":  false,
+        "explanation":  "교안 예제에서 푸린의 전략을 변경한다."
+    },
+    {
+        "id":  "11-pattern-3-22",
+        "statement":  "Strategy 패턴은 새 기능 추가 때 반드시 모든 기존 포켓몬 클래스를 수정하게 만든다.",
+        "answer":  false,
+        "explanation":  "전략 분리는 OCP 위반 가능성을 낮춘다."
+    },
+    {
+        "id":  "11-pattern-3-23",
+        "statement":  "Strategy 패턴은 토핑 조합 수가 폭발하는 문제만 해결한다.",
+        "answer":  false,
+        "explanation":  "토핑 조합은 Decorator의 핵심 사례다."
+    },
+    {
+        "id":  "11-pattern-3-24",
+        "statement":  "Pokemon이 Attack과 Passive 필드를 가지면 기능을 객체 조합으로 선택할 수 있다.",
+        "answer":  true,
+        "explanation":  "전략 객체를 필드로 보관해 조합할 수 있다."
+    },
+    {
+        "id":  "11-pattern-3-25",
+        "statement":  "Strategy와 State는 이름만 다르고 둘 다 객체 생성을 하나로 제한한다.",
+        "answer":  false,
+        "explanation":  "Strategy는 기능, State는 상태 변화가 초점이다."
+    },
+    {
+        "id":  "11-pattern-3-26",
+        "statement":  "State 패턴은 자주 바뀌는 공격 기능을 Attack 클래스로 분리하는 패턴이다.",
+        "answer":  false,
+        "explanation":  "상태 변화는 State의 핵심이고 공격 기능은 Strategy의 예다."
+    },
+    {
+        "id":  "11-pattern-3-27",
+        "statement":  "선풍기 예제에서 상태는 토스트 칼로리 계산만 의미한다.",
+        "answer":  false,
+        "explanation":  "Stop, Wind, Sleep 같은 상태가 등장한다."
+    },
+    {
+        "id":  "11-pattern-3-28",
+        "statement":  "일반적인 ElecFan 설계는 문자열 State와 if~else if 조건문으로 상태 변화를 처리한다.",
+        "answer":  true,
+        "explanation":  "초기 코드는 조건문과 문자열 상태를 사용한다."
+    },
+    {
+        "id":  "11-pattern-3-29",
+        "statement":  "상태가 추가되어도 조건문 방식은 기존 코드 수정을 전혀 요구하지 않는다.",
+        "answer":  false,
+        "explanation":  "상태 추가·삭제 때 주 클래스 수정이 반복된다."
+    },
+    {
+        "id":  "11-pattern-3-30",
+        "statement":  "State 패턴을 적용하면 ElectricFan이 모든 상태 분기를 더 길게 가져야 한다.",
+        "answer":  false,
+        "explanation":  "state.on_button(this)처럼 위임한다."
+    },
+    {
+        "id":  "11-pattern-3-31",
+        "statement":  "State 인터페이스는 Name()과 Kcal()만 가져야 한다.",
+        "answer":  false,
+        "explanation":  "Name/Kcal은 Decorator 토핑 쪽이다."
+    },
+    {
+        "id":  "11-pattern-3-32",
+        "statement":  "Stop, Wind, Sleep은 AirPodsAdapter의 메서드 이름이다.",
+        "answer":  false,
+        "explanation":  "선풍기 상태를 클래스화한 예다."
+    },
+    {
+        "id":  "11-pattern-3-33",
+        "statement":  "Stop 상태에서 on 버튼을 누르면 Wind 상태로 전환될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 Stop 클래스의 on_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-3-34",
+        "statement":  "Wind 상태에서 on 버튼을 누르면 항상 객체가 삭제된다.",
+        "answer":  false,
+        "explanation":  "교안 Wind 클래스의 on_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-3-35",
+        "statement":  "Sleep 상태에서 off 버튼을 누르면 AirPods가 재생된다.",
+        "answer":  false,
+        "explanation":  "교안 Sleep 클래스의 off_button 동작이다."
+    },
+    {
+        "id":  "11-pattern-3-36",
+        "statement":  "State 패턴은 상태 추가 때 ElectricFan의 모든 조건문 수정을 강제하는 패턴이다.",
+        "answer":  false,
+        "explanation":  "상태 변화가 상태 클래스 내부에서 이루어지도록 한다."
+    },
+    {
+        "id":  "11-pattern-3-37",
+        "statement":  "상태별 동작 차이는 다형성과 무관하고 항상 switch 문만 사용해야 한다.",
+        "answer":  false,
+        "explanation":  "각 상태 클래스가 같은 메서드를 다르게 구현한다."
+    },
+    {
+        "id":  "11-pattern-3-38",
+        "statement":  "State 패턴은 상태 변화가 잦을수록 장점이 커진다.",
+        "answer":  true,
+        "explanation":  "변화 지점을 상태 클래스로 격리하기 때문이다."
+    },
+    {
+        "id":  "11-pattern-3-39",
+        "statement":  "State와 Strategy는 모두 정적 테스트 기법이다.",
+        "answer":  false,
+        "explanation":  "둘은 디자인 패턴이며 변화 대상이 다르다."
+    },
+    {
+        "id":  "11-pattern-3-40",
+        "statement":  "구조 패턴은 객체 생성 시점만을 다루는 패턴이다.",
+        "answer":  false,
+        "explanation":  "구조 패턴은 구조 설계가 핵심이다."
+    },
+    {
+        "id":  "11-pattern-3-41",
+        "statement":  "구조 패턴은 클래스와 객체의 조합을 금지한다.",
+        "answer":  false,
+        "explanation":  "구성·합성으로 큰 구조를 만든다."
+    },
+    {
+        "id":  "11-pattern-3-42",
+        "statement":  "decorator와 adapter는 구조 패턴에 포함된다.",
+        "answer":  true,
+        "explanation":  "교안은 두 패턴을 구조 패턴으로 다룬다."
+    },
+    {
+        "id":  "11-pattern-3-43",
+        "statement":  "singleton, factory method만 구조 패턴 목록에 포함된다.",
+        "answer":  false,
+        "explanation":  "singleton과 factory method는 생성 패턴이다."
+    },
+    {
+        "id":  "11-pattern-3-44",
+        "statement":  "Decorator 패턴은 호환되지 않는 이어폰 메서드 이름만 바꾸는 패턴이다.",
+        "answer":  false,
+        "explanation":  "이어폰 호환은 Adapter 사례다."
+    },
+    {
+        "id":  "11-pattern-3-45",
+        "statement":  "Decorator 패턴에서 장식은 반드시 본체보다 먼저 생성되어야 하는 필수 객체이다.",
+        "answer":  false,
+        "explanation":  "장식은 없어도 되는 부가 요소로 설명된다."
+    },
+    {
+        "id":  "11-pattern-3-46",
+        "statement":  "토스트 예제에서 재료 조합마다 클래스를 만들면 클래스 수가 폭증할 수 있다.",
+        "answer":  true,
+        "explanation":  "조합 폭발이 Decorator 적용 배경이다."
+    },
+    {
+        "id":  "11-pattern-3-47",
+        "statement":  "Toast는 AirPods의 정지 메서드 역할만 한다.",
+        "answer":  false,
+        "explanation":  "토스트 본체의 상위 개념이다."
+    },
+    {
+        "id":  "11-pattern-3-48",
+        "statement":  "NormalBread, WheatBread, MilkBread, ButterBread는 모두 패시브 전략이다.",
+        "answer":  false,
+        "explanation":  "식빵 하위 클래스다."
+    },
+    {
+        "id":  "11-pattern-3-49",
+        "statement":  "ToppingDecorator는 게임 서버 국가별 선택 메서드이다.",
+        "answer":  false,
+        "explanation":  "토핑 장식의 공통 부모다."
+    },
+    {
+        "id":  "11-pattern-3-50",
+        "statement":  "Cheese, Ham, Egg, Vegetable은 선풍기 상태 클래스이다.",
+        "answer":  false,
+        "explanation":  "토스트에 붙는 기본 재료다."
+    },
+    {
+        "id":  "11-pattern-3-51",
+        "statement":  "addTopping()은 토핑 이름과 칼로리를 누적하는 데 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "토핑 조합 결과를 누적한다."
+    },
+    {
+        "id":  "11-pattern-3-52",
+        "statement":  "serve()는 Singleton 객체 생성자를 public으로 바꾸는 메서드다.",
+        "answer":  false,
+        "explanation":  "토스트 제공 결과를 보여준다."
+    },
+    {
+        "id":  "11-pattern-3-53",
+        "statement":  "Decorator는 동적 확장을 금지하고 컴파일 전 조합만 허용한다.",
+        "answer":  false,
+        "explanation":  "구성은 동적 확장에 유리하다."
+    },
+    {
+        "id":  "11-pattern-3-54",
+        "statement":  "상속 구조는 항상 결합도를 0으로 만든다.",
+        "answer":  false,
+        "explanation":  "상속은 강한 결합으로 묶일 수 있다."
+    },
+    {
+        "id":  "11-pattern-3-55",
+        "statement":  "Decorator는 혼합 재료 수만큼 복합 클래스를 전부 만드는 것이 핵심이다.",
+        "answer":  false,
+        "explanation":  "복합 클래스 폭증을 피한다."
+    },
+    {
+        "id":  "11-pattern-3-56",
+        "statement":  "Ham을 여러 번 추가하는 것도 Decorator 조합으로 표현할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제는 Ham 반복 추가를 보여준다."
+    },
+    {
+        "id":  "11-pattern-3-57",
+        "statement":  "Decorator는 객체 하나만 생성해야 하는 로그 객체 전용 패턴이다.",
+        "answer":  false,
+        "explanation":  "단일 객체 보장은 Singleton이다."
+    },
+    {
+        "id":  "11-pattern-3-58",
+        "statement":  "Adapter 패턴은 객체를 반드시 하나만 만들도록 보장한다.",
+        "answer":  false,
+        "explanation":  "단일 객체 보장은 Singleton이다."
+    },
+    {
+        "id":  "11-pattern-3-59",
+        "statement":  "Adapter는 순환 복잡도 계산 공식의 이름이다.",
+        "answer":  false,
+        "explanation":  "교안은 어댑터의 의미를 설명한다."
+    },
+    {
+        "id":  "11-pattern-3-60",
+        "statement":  "클래스 adapter는 상속을 이용한 어댑터 패턴이다.",
+        "answer":  true,
+        "explanation":  "교안의 구분이다."
+    },
+    {
+        "id":  "11-pattern-3-61",
+        "statement":  "인스턴스 adapter는 위임과 무관하다.",
+        "answer":  false,
+        "explanation":  "교안의 구분이다."
+    },
+    {
+        "id":  "11-pattern-3-62",
+        "statement":  "Buds는 playing(), stopping()만 사용한다.",
+        "answer":  false,
+        "explanation":  "교안에서 Buds 표준 API는 play/stop이다."
+    },
+    {
+        "id":  "11-pattern-3-63",
+        "statement":  "AirPods는 play(), stop()만 사용한다고 설명된다.",
+        "answer":  false,
+        "explanation":  "교안에서 AirPods 메서드 이름은 다르다."
+    },
+    {
+        "id":  "11-pattern-3-64",
+        "statement":  "AirPodsInterface는 Kcal(), Name()만 제공한다.",
+        "answer":  false,
+        "explanation":  "Kcal/Name은 Decorator 토핑 쪽이다."
+    },
+    {
+        "id":  "11-pattern-3-65",
+        "statement":  "AirPodsAdapter의 play()는 AirPods의 playing()을 호출할 수 있다.",
+        "answer":  true,
+        "explanation":  "재생은 playing과 연결된다."
+    },
+    {
+        "id":  "11-pattern-3-66",
+        "statement":  "AirPodsAdapter의 stop()은 AirPods의 playing()을 호출해야 한다.",
+        "answer":  false,
+        "explanation":  "정지는 stopping과 연결된다."
+    },
+    {
+        "id":  "11-pattern-3-67",
+        "statement":  "Adapter는 기존 컴포넌트 코드를 반드시 직접 수정해야 한다.",
+        "answer":  false,
+        "explanation":  "중간 어댑터가 차이를 흡수한다."
+    },
+    {
+        "id":  "11-pattern-3-68",
+        "statement":  "SamsungPhone은 AirPodsAdapter를 사용하면 Buds를 전혀 사용할 수 없게 된다.",
+        "answer":  false,
+        "explanation":  "어댑터는 호환성을 높인다."
+    },
+    {
+        "id":  "11-pattern-3-69",
+        "statement":  "생성 패턴은 객체 간 메시지 교환만 패턴화한다.",
+        "answer":  false,
+        "explanation":  "객체 생성 과정 분리가 핵심이다."
+    },
+    {
+        "id":  "11-pattern-3-70",
+        "statement":  "생성 패턴은 생성 과정을 한 클래스에 무조건 고정한다.",
+        "answer":  false,
+        "explanation":  "변경 영향 최소화를 위해 생성 과정을 분리한다."
+    },
+    {
+        "id":  "11-pattern-3-71",
+        "statement":  "factory method, singleton, prototype, builder, abstract factory는 생성 패턴 목록에 포함된다.",
+        "answer":  true,
+        "explanation":  "decorator와 adapter는 구조 패턴이다."
+    },
+    {
+        "id":  "11-pattern-3-72",
+        "statement":  "생성 패턴은 변경을 어렵게 만들기 위해 사용한다.",
+        "answer":  false,
+        "explanation":  "생성 책임 분리로 유연성을 높인다."
+    },
+    {
+        "id":  "11-pattern-3-73",
+        "statement":  "Factory Method는 객체를 하나만 만들도록 private 생성자만 사용하는 패턴이다.",
+        "answer":  false,
+        "explanation":  "단일 객체는 Singleton, 생성 위임은 Factory Method다."
+    },
+    {
+        "id":  "11-pattern-3-74",
+        "statement":  "직접 new를 사용하면 두 클래스 사이 의존 관계가 항상 사라진다.",
+        "answer":  false,
+        "explanation":  "직접 생성은 결합을 높일 수 있다."
+    },
+    {
+        "id":  "11-pattern-3-75",
+        "statement":  "GameServer가 SuperMario와 Tetris를 직접 new로 만들면 게임 클래스에 의존한다.",
+        "answer":  true,
+        "explanation":  "게임 추가 때 수정 부담이 생긴다."
+    },
+    {
+        "id":  "11-pattern-3-76",
+        "statement":  "게임 추가 때 기존 클래스를 계속 수정하는 것이 OCP의 핵심이다.",
+        "answer":  false,
+        "explanation":  "OCP는 확장에는 열리고 변경에는 닫혀야 한다."
+    },
+    {
+        "id":  "11-pattern-3-77",
+        "statement":  "Factory Method 1단계에서는 factory 클래스를 반드시 삭제한다.",
+        "answer":  false,
+        "explanation":  "삭제는 2단계 차이점이다."
+    },
+    {
+        "id":  "11-pattern-3-78",
+        "statement":  "GameServerFactory는 토핑 칼로리만 계산한다.",
+        "answer":  false,
+        "explanation":  "게임 선택과 생성 책임을 맡는다."
+    },
+    {
+        "id":  "11-pattern-3-79",
+        "statement":  "1단계 적용 후 모든 변화는 반드시 GameServer 내부 조건문에 집중된다.",
+        "answer":  false,
+        "explanation":  "생성 책임을 팩토리로 옮긴다."
+    },
+    {
+        "id":  "11-pattern-3-80",
+        "statement":  "Factory Method 2단계에서는 GameServer를 확장해 KRGameServer와 JPGameServer를 만들 수 있다.",
+        "answer":  true,
+        "explanation":  "국가별 서버 확장을 고려한다."
+    },
+    {
+        "id":  "11-pattern-3-81",
+        "statement":  "2단계에서는 factory 클래스가 유일한 생성 책임자로 더 강화된다.",
+        "answer":  false,
+        "explanation":  "교안은 factory 클래스가 사라진다고 설명한다."
+    },
+    {
+        "id":  "11-pattern-3-82",
+        "statement":  "chooseGame()은 반드시 private 생성자로 선언해야 한다.",
+        "answer":  false,
+        "explanation":  "하위 클래스가 생성 규칙을 구현한다."
+    },
+    {
+        "id":  "11-pattern-3-83",
+        "statement":  "KRSuperMario와 KRTetris는 정적 테스트의 검토자 역할이다.",
+        "answer":  false,
+        "explanation":  "국가별 게임 클래스를 나타낸다."
+    },
+    {
+        "id":  "11-pattern-3-84",
+        "statement":  "Games 추상 클래스는 AirPods의 playing()만 제공해야 한다.",
+        "answer":  false,
+        "explanation":  "게임 실행 공통 기능을 제공한다."
+    },
+    {
+        "id":  "11-pattern-3-85",
+        "statement":  "Factory Method는 생성 책임 분리로 유지보수성을 높이는 생성 패턴이다.",
+        "answer":  true,
+        "explanation":  "객체 생성 위임이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-3-86",
+        "statement":  "2단계의 차이점은 GameServerFactory 클래스를 반드시 유지하는 것이다.",
+        "answer":  false,
+        "explanation":  "교안의 2단계 차이점이다."
+    },
+    {
+        "id":  "11-pattern-3-87",
+        "statement":  "Singleton 패턴은 객체를 가능한 많이 생성하도록 장려한다.",
+        "answer":  false,
+        "explanation":  "단일 객체 보장이 핵심이다."
+    },
+    {
+        "id":  "11-pattern-3-88",
+        "statement":  "Singleton은 객체 수와 무관하고 오직 토핑 조합만 다룬다.",
+        "answer":  false,
+        "explanation":  "생성 패턴 중 단일 인스턴스 패턴이다."
+    },
+    {
+        "id":  "11-pattern-3-89",
+        "statement":  "스레드 풀, 캐시, 로그 기록용 객체는 Singleton이 유용할 수 있는 예이다.",
+        "answer":  true,
+        "explanation":  "교안의 Singleton 활용 예시다."
+    },
+    {
+        "id":  "11-pattern-3-90",
+        "statement":  "Singleton 구현에서는 생성자를 반드시 public으로 두어야 한다.",
+        "answer":  false,
+        "explanation":  "외부 new 호출을 막기 위함이다."
+    },
+    {
+        "id":  "11-pattern-3-91",
+        "statement":  "Singleton 구현에서는 static 사용이 절대 금지된다.",
+        "answer":  false,
+        "explanation":  "클래스 수준에서 단일 객체를 보관한다."
+    },
+    {
+        "id":  "11-pattern-3-92",
+        "statement":  "getInstance()는 객체를 매번 새로 여러 개 생성해야 하는 메서드다.",
+        "answer":  false,
+        "explanation":  "단일 객체 접근 메서드다."
+    },
+    {
+        "id":  "11-pattern-3-93",
+        "statement":  "멀티스레드 환경에서는 동기화 문제가 절대 발생하지 않는다.",
+        "answer":  false,
+        "explanation":  "교안은 결과가 섞이는 문제를 설명한다."
+    },
+    {
+        "id":  "11-pattern-3-94",
+        "statement":  "synchronized getInstance()는 동시 실행을 막는 데 도움이 된다.",
+        "answer":  true,
+        "explanation":  "동기화로 임계 구역 접근을 제어한다."
+    },
+    {
+        "id":  "11-pattern-3-95",
+        "statement":  "동기화는 항상 성능을 무한히 향상시킨다.",
+        "answer":  false,
+        "explanation":  "교안은 동기화의 속도 저하를 언급한다."
+    },
+    {
+        "id":  "11-pattern-3-96",
+        "statement":  "처음부터 객체를 생성하면 Singleton 보장이 불가능해진다.",
+        "answer":  false,
+        "explanation":  "초기 생성은 동시 생성 문제를 피한다."
+    },
+    {
+        "id":  "11-pattern-3-97",
+        "statement":  "DCL은 volatile과 무관하며 오직 토핑 이름을 누적하는 기법이다.",
+        "answer":  false,
+        "explanation":  "교안은 DCL 구현 방법으로 volatile을 언급한다."
+    },
+    {
+        "id":  "11-pattern-3-98",
+        "statement":  "Brew() 동기화는 출력 섞임과 아무 관련이 없다.",
+        "answer":  false,
+        "explanation":  "동시 제조 흐름을 순서화할 수 있다."
+    },
+    {
+        "id":  "11-pattern-3-99",
+        "statement":  "에스프레소 머신 예제는 여러 사용자가 하나의 머신 객체를 공유하는 상황을 설명한다.",
+        "answer":  true,
+        "explanation":  "Singleton 필요성을 보여주는 예제다."
+    },
+    {
+        "id":  "11-pattern-3-100",
+        "statement":  "Singleton의 핵심은 Name(), Kcal(), addTopping()으로 요약된다.",
+        "answer":  false,
+        "explanation":  "Name/Kcal/addTopping은 Decorator 쪽이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 1,
+  title: "11주차 테스트1 · ",
+  questions:
+[
+    {
+        "id":  "11-test-1-1",
+        "statement":  "소프트웨어 개발 과정에서 테스트는 사전에 울타리를 치는 것에 비유된다.",
+        "answer":  true,
+        "explanation":  "테스트는 사전 예방과 결함 발견의 성격을 가진다."
+    },
+    {
+        "id":  "11-test-1-2",
+        "statement":  "패트리어트 사례는 테스트와 무관한 순수 행정 오류 사례다.",
+        "answer":  false,
+        "explanation":  "작은 시간 오차가 치명적 결과로 이어질 수 있다."
+    },
+    {
+        "id":  "11-test-1-3",
+        "statement":  "테락-25 사고는 이전 버전만 믿고 전체 테스트를 생략한 위험성을 보여준다.",
+        "answer":  true,
+        "explanation":  "버전업 후 전체 코드 테스트 생략이 문제였다."
+    },
+    {
+        "id":  "11-test-1-4",
+        "statement":  "아리안 5호 폭발 사례에서는 64비트 값을 16비트 정수로 변환하는 과정의 오버플로가 언급된다.",
+        "answer":  true,
+        "explanation":  "형 변환 오버플로가 사고 원인으로 제시된다."
+    },
+    {
+        "id":  "11-test-1-5",
+        "statement":  "데드 코드를 간과한 결과도 사고 원인이 될 수 있다.",
+        "answer":  true,
+        "explanation":  "아리안 5호 사례에서 불필요한 데드 코드가 언급된다."
+    },
+    {
+        "id":  "11-test-1-6",
+        "statement":  "테스트 사고 사례들은 테스트가 무의미하다는 결론을 낸다.",
+        "answer":  false,
+        "explanation":  "여러 사고는 사전 검증의 중요성을 보여준다."
+    },
+    {
+        "id":  "11-test-1-7",
+        "statement":  "테스트는 개발 마지막에 한 번 하는 활동만은 아니다.",
+        "answer":  true,
+        "explanation":  "교안은 개발 단계와 함께하는 활동으로 설명한다."
+    },
+    {
+        "id":  "11-test-1-8",
+        "statement":  "테스트는 소프트웨어 신뢰성 확보와 연결된다.",
+        "answer":  true,
+        "explanation":  "테스트의 결과적 목표는 신뢰성 향상이다."
+    },
+    {
+        "id":  "11-test-1-9",
+        "statement":  "IEEE 관점에서 테스트는 명시된 요구를 만족하는지 예상 결과와 실제 결과의 차이를 검사·평가하는 작업이다.",
+        "answer":  true,
+        "explanation":  "예상 결과와 실제 결과 비교가 포함된다."
+    },
+    {
+        "id":  "11-test-1-10",
+        "statement":  "테스트는 결함이 없음을 완벽히 증명한다.",
+        "answer":  false,
+        "explanation":  "테스트의 한계다."
+    },
+    {
+        "id":  "11-test-1-11",
+        "statement":  "소프트웨어 테스트는 숨어 있는 오류를 발견할 목적으로 문서나 프로그램 오류를 검출하는 작업이다.",
+        "answer":  true,
+        "explanation":  "숨은 오류 검출이 목적이다."
+    },
+    {
+        "id":  "11-test-1-12",
+        "statement":  "테스트의 작은 의미에는 원시 코드 속 오류 발견이 포함된다.",
+        "answer":  true,
+        "explanation":  "오류 발견이 작은 의미의 목표다."
+    },
+    {
+        "id":  "11-test-1-13",
+        "statement":  "테스트의 작은 의미에는 결함 예방이 포함된다.",
+        "answer":  true,
+        "explanation":  "결함이 생기지 않도록 예방하는 것도 목표다."
+    },
+    {
+        "id":  "11-test-1-14",
+        "statement":  "테스트의 큰 의미는 컴파일 속도 측정만 의미한다.",
+        "answer":  false,
+        "explanation":  "고객 요구 만족 확인이 포함된다."
+    },
+    {
+        "id":  "11-test-1-15",
+        "statement":  "테스트는 개발자와 고객에게 사용하기에 충분한 소프트웨어임을 보여주는 역할을 한다.",
+        "answer":  true,
+        "explanation":  "큰 의미의 테스트 목표다."
+    },
+    {
+        "id":  "11-test-1-16",
+        "statement":  "테스트의 결과적 목표는 개발된 소프트웨어의 신뢰성을 높이는 것이다.",
+        "answer":  true,
+        "explanation":  "교안의 목표 정리다."
+    },
+    {
+        "id":  "11-test-1-17",
+        "statement":  "테스트는 프로그램을 정상적으로 실행 가능하게 하는 데 기여하지만 완전성을 증명하지는 못한다.",
+        "answer":  true,
+        "explanation":  "정상 실행과 완전성 증명은 다르다."
+    },
+    {
+        "id":  "11-test-1-18",
+        "statement":  "명세가 항상 완벽하므로 테스트 한계는 존재하지 않는다.",
+        "answer":  false,
+        "explanation":  "테스트 시스템과 명세 모두 완전성을 보장하기 어렵다."
+    },
+    {
+        "id":  "11-test-1-19",
+        "statement":  "테스트 케이스가 적으면 테스트 효과에 한계가 있다.",
+        "answer":  true,
+        "explanation":  "케이스 부족은 효과를 제한한다."
+    },
+    {
+        "id":  "11-test-1-20",
+        "statement":  "완벽한 테스트 케이스는 항상 쉽게 도출된다.",
+        "answer":  false,
+        "explanation":  "테스트 수행의 어려움이다."
+    },
+    {
+        "id":  "11-test-1-21",
+        "statement":  "테스트를 위한 실제 사용 환경 구축은 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "환경 구축의 어려움이 있다."
+    },
+    {
+        "id":  "11-test-1-22",
+        "statement":  "작은 실수를 발견하기 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 어려움 항목이다."
+    },
+    {
+        "id":  "11-test-1-23",
+        "statement":  "테스트 중요성에 대한 인식 부족도 어려움이다.",
+        "answer":  true,
+        "explanation":  "조직적 인식도 중요하다."
+    },
+    {
+        "id":  "11-test-1-24",
+        "statement":  "테스트는 고객 요구사항을 무시해야 한다.",
+        "answer":  false,
+        "explanation":  "요구 충족은 테스트의 조건이다."
+    },
+    {
+        "id":  "11-test-1-25",
+        "statement":  "살충제 패러독스 문제를 해결하려면 테스트 케이스 업데이트가 필요하다.",
+        "answer":  true,
+        "explanation":  "같은 테스트 반복은 내성을 만들 수 있다."
+    },
+    {
+        "id":  "11-test-1-26",
+        "statement":  "완벽한 테스트는 불가능하다.",
+        "answer":  true,
+        "explanation":  "교안의 명시적 내용이다."
+    },
+    {
+        "id":  "11-test-1-27",
+        "statement":  "오류는 개발자에 의해 만들어지는 실수로 결함의 원인이 된다.",
+        "answer":  true,
+        "explanation":  "오류는 결함의 원인이다."
+    },
+    {
+        "id":  "11-test-1-28",
+        "statement":  "결함은 정상 동작을 의미한다.",
+        "answer":  false,
+        "explanation":  "결함은 고장의 원인이 될 수 있다."
+    },
+    {
+        "id":  "11-test-1-29",
+        "statement":  "고장, 실패, 문제, 장애는 시스템이 요구사항대로 작동하지 않는 것을 말한다.",
+        "answer":  true,
+        "explanation":  "요구사항대로 작동하지 않는 상태다."
+    },
+    {
+        "id":  "11-test-1-30",
+        "statement":  "필요 없는 정보가 포함되거나 필요한 정보가 없는 경우 결함이 될 수 있다.",
+        "answer":  true,
+        "explanation":  "결함 예시이다."
+    },
+    {
+        "id":  "11-test-1-31",
+        "statement":  "요구분석명세서가 잘못되어도 실패가 발생할 수 있다.",
+        "answer":  true,
+        "explanation":  "잘못된 명세도 실패 원인이 된다."
+    },
+    {
+        "id":  "11-test-1-32",
+        "statement":  "기술적으로 불가능한 요구사항은 항상 자동으로 수정된다.",
+        "answer":  false,
+        "explanation":  "요구사항 문제도 원인이 될 수 있다."
+    },
+    {
+        "id":  "11-test-1-33",
+        "statement":  "모든 결함이 반드시 실패를 유발하지는 않는다.",
+        "answer":  true,
+        "explanation":  "결함과 실패는 반드시 일대일이 아니다."
+    },
+    {
+        "id":  "11-test-1-34",
+        "statement":  "테스트 계획 단계에서는 테스트 목표, 대상, 범위를 결정한다.",
+        "answer":  true,
+        "explanation":  "계획의 핵심 처리 내용이다."
+    },
+    {
+        "id":  "11-test-1-35",
+        "statement":  "테스트 목표는 요구분석명세서와 무관하게 정한다.",
+        "answer":  false,
+        "explanation":  "요구 명세를 기반으로 한다."
+    },
+    {
+        "id":  "11-test-1-36",
+        "statement":  "테스트 대상 및 범위는 업무 시스템별로 구분할 수 있다.",
+        "answer":  true,
+        "explanation":  "업무 시스템별 구분이 가능하다."
+    },
+    {
+        "id":  "11-test-1-37",
+        "statement":  "테스트 계획서에는 목적, 담당 인원, 전략, 자원, 일정 등이 기록될 수 있다.",
+        "answer":  true,
+        "explanation":  "계획서 작성 항목이다."
+    },
+    {
+        "id":  "11-test-1-38",
+        "statement":  "테스트 케이스 설계 기법은 프로젝트 문제 성격에 맞게 선정한다.",
+        "answer":  true,
+        "explanation":  "적합한 기법 선정이 필요하다."
+    },
+    {
+        "id":  "11-test-1-39",
+        "statement":  "테스트 기법을 정해도 테스트 케이스는 만들지 않는다.",
+        "answer":  false,
+        "explanation":  "기법을 이용해 케이스를 도출한다."
+    },
+    {
+        "id":  "11-test-1-40",
+        "statement":  "테스트 케이스 수행을 위해 원시 데이터를 작성한다.",
+        "answer":  true,
+        "explanation":  "입력값으로 사용할 데이터를 작성한다."
+    },
+    {
+        "id":  "11-test-1-41",
+        "statement":  "테스트 환경 구축은 계획서에 정의된 환경과 자원을 설정하는 일이다.",
+        "answer":  true,
+        "explanation":  "실행 전 준비 단계다."
+    },
+    {
+        "id":  "11-test-1-42",
+        "statement":  "테스트 실행 및 측정은 정의된 테스트 케이스를 실행하고 결과를 측정한다.",
+        "answer":  true,
+        "explanation":  "실행 결과를 측정한다."
+    },
+    {
+        "id":  "11-test-1-43",
+        "statement":  "오류 추적 단계에서는 오류 위치를 확인하지 않는다.",
+        "answer":  false,
+        "explanation":  "어디서 어떤 오류가 발생했는지 찾는다."
+    },
+    {
+        "id":  "11-test-1-44",
+        "statement":  "오류 수정 계획은 테스트 결과 보고서를 기반으로 세울 수 있다.",
+        "answer":  true,
+        "explanation":  "보고서가 오류 위치 파악 근거가 된다."
+    },
+    {
+        "id":  "11-test-1-45",
+        "statement":  "오류 수정 우선순위를 정해 오류 제거 계획을 세울 수 있다.",
+        "answer":  true,
+        "explanation":  "계획 수립에 우선순위가 포함된다."
+    },
+    {
+        "id":  "11-test-1-46",
+        "statement":  "디버깅 도구는 오류 수정에 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "오류 제거에 활용 가능하다."
+    },
+    {
+        "id":  "11-test-1-47",
+        "statement":  "수정 후 검토나 보고서는 필요 없다.",
+        "answer":  false,
+        "explanation":  "수정 결과 확인이 필요하다."
+    },
+    {
+        "id":  "11-test-1-48",
+        "statement":  "테스트 절차는 계획에서 오류 추적 및 수정까지 이어지는 흐름이다.",
+        "answer":  true,
+        "explanation":  "전체 절차적 흐름이 있다."
+    },
+    {
+        "id":  "11-test-1-49",
+        "statement":  "확인 테스트는 개발자의 시각에서 설계서대로 만들었는지를 테스트한다.",
+        "answer":  true,
+        "explanation":  "개발자 시각의 테스트다."
+    },
+    {
+        "id":  "11-test-1-50",
+        "statement":  "검증 테스트는 개발자의 코딩 취향만 검사한다.",
+        "answer":  false,
+        "explanation":  "사용자 요구 충족 여부를 본다."
+    },
+    {
+        "id":  "11-test-1-51",
+        "statement":  "확인 테스트만으로는 사용자가 원하는 것을 만들었는지 항상 알 수 없다.",
+        "answer":  true,
+        "explanation":  "설계서가 요구를 잘못 반영할 수 있다."
+    },
+    {
+        "id":  "11-test-1-52",
+        "statement":  "요구가 곱셈인데 덧셈을 정확히 구현한 경우 확인은 통과해도 검증에서 문제가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "사용자 요구와 다르기 때문이다."
+    },
+    {
+        "id":  "11-test-1-53",
+        "statement":  "확인 테스트는 이전 단계 산출물이 현 단계 산출물에 반영되었는지 본다.",
+        "answer":  true,
+        "explanation":  "단계 간 반영 확인이다."
+    },
+    {
+        "id":  "11-test-1-54",
+        "statement":  "검증 테스트의 기준은 코드 줄 수뿐이다.",
+        "answer":  false,
+        "explanation":  "사용자 요구와 명세가 기준이다."
+    },
+    {
+        "id":  "11-test-1-55",
+        "statement":  "확인과 검증을 함께 사용하면 더 강력한 테스트가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 V\u0026V로 묶어 설명한다."
+    },
+    {
+        "id":  "11-test-1-56",
+        "statement":  "V\u0026V는 확인과 검증을 함께 보는 개념으로 이해할 수 있다.",
+        "answer":  true,
+        "explanation":  "확인과 검증의 결합이다."
+    },
+    {
+        "id":  "11-test-1-57",
+        "statement":  "성능 테스트는 실행 시간, 응답 시간, 처리 능력, 자원 사용량 등을 체크한다.",
+        "answer":  true,
+        "explanation":  "효율성 진단 테스트다."
+    },
+    {
+        "id":  "11-test-1-58",
+        "statement":  "스트레스 테스트는 정상 평균 부하에서만 실행 시간을 측정한다.",
+        "answer":  false,
+        "explanation":  "최고치 부하 상황을 본다."
+    },
+    {
+        "id":  "11-test-1-59",
+        "statement":  "보안 테스트는 불법적인 침투를 막아내는지 확인한다.",
+        "answer":  true,
+        "explanation":  "보안 시스템의 방어 능력을 확인한다."
+    },
+    {
+        "id":  "11-test-1-60",
+        "statement":  "안정성 테스트는 며칠 동안 부하를 주면서 시스템이 안정적으로 돌아가는지 본다.",
+        "answer":  true,
+        "explanation":  "장시간 안정성 확인이다."
+    },
+    {
+        "id":  "11-test-1-61",
+        "statement":  "메모리 누수는 사용 후 메모리를 반납하지 않아 사용 가능한 메모리가 줄어드는 현상이다.",
+        "answer":  true,
+        "explanation":  "안정성 테스트와 관련된다."
+    },
+    {
+        "id":  "11-test-1-62",
+        "statement":  "복원 가능성 테스트는 고장을 절대 발생시키지 않는다.",
+        "answer":  false,
+        "explanation":  "회복 능력을 평가한다."
+    },
+    {
+        "id":  "11-test-1-63",
+        "statement":  "복원 가능성 테스트는 운영체제, DBMS, 통신용 소프트웨어 안정성 테스트에 적용 가능하다.",
+        "answer":  true,
+        "explanation":  "교안의 적용 예다."
+    },
+    {
+        "id":  "11-test-1-64",
+        "statement":  "성능 테스트와 스트레스 테스트는 모두 부하와 관련될 수 있지만 초점은 다르다.",
+        "answer":  true,
+        "explanation":  "성능은 효율성, 스트레스는 과부하 반응이다."
+    },
+    {
+        "id":  "11-test-1-65",
+        "statement":  "정적 테스트는 프로그램을 실행하지 않고 코드나 산출물을 검토한다.",
+        "answer":  true,
+        "explanation":  "실행 없이 검토한다."
+    },
+    {
+        "id":  "11-test-1-66",
+        "statement":  "동적 테스트는 실행을 금지하고 문서만 본다.",
+        "answer":  false,
+        "explanation":  "실행 상태를 확인한다."
+    },
+    {
+        "id":  "11-test-1-67",
+        "statement":  "자동차 보닛을 열어 부품 상태를 보는 비유는 정적 테스트와 연결된다.",
+        "answer":  true,
+        "explanation":  "실행 없이 내부 상태를 점검한다."
+    },
+    {
+        "id":  "11-test-1-68",
+        "statement":  "자동차를 직접 주행해 이상을 확인하는 비유는 동적 테스트와 연결된다.",
+        "answer":  true,
+        "explanation":  "실행하면서 고장을 찾는 방식이다."
+    },
+    {
+        "id":  "11-test-1-69",
+        "statement":  "정적 테스트는 실패보다는 결함을 찾아내는 방법이다.",
+        "answer":  true,
+        "explanation":  "실행 전 산출물을 검토한다."
+    },
+    {
+        "id":  "11-test-1-70",
+        "statement":  "정적 테스트 도구는 코드 외 산출물을 절대 검토할 수 없다.",
+        "answer":  false,
+        "explanation":  "교안의 정적 테스트 개요다."
+    },
+    {
+        "id":  "11-test-1-71",
+        "statement":  "비공식 검토에는 개별 검토와 동료 검토가 주로 해당한다.",
+        "answer":  true,
+        "explanation":  "간단한 만남이나 책상 검토다."
+    },
+    {
+        "id":  "11-test-1-72",
+        "statement":  "공식 검토는 정의된 절차에 따라 계획되고 통제된다.",
+        "answer":  true,
+        "explanation":  "공식 검토의 특징이다."
+    },
+    {
+        "id":  "11-test-1-73",
+        "statement":  "검토 내용에는 원시 코드 오류, 요구 반영 여부, 표준 준수 여부가 포함된다.",
+        "answer":  true,
+        "explanation":  "검토 내용의 예다."
+    },
+    {
+        "id":  "11-test-1-74",
+        "statement":  "공식 검토 절차는 오류 수정 하나로 끝난다.",
+        "answer":  false,
+        "explanation":  "교안의 절차 흐름이다."
+    },
+    {
+        "id":  "11-test-1-75",
+        "statement":  "개별 검토는 본인이 체크리스트로 자기 코드와 산출물을 검토하는 것이다.",
+        "answer":  true,
+        "explanation":  "스스로 검토하는 방식이다."
+    },
+    {
+        "id":  "11-test-1-76",
+        "statement":  "동료 검토는 비공식 검토에 속한다.",
+        "answer":  true,
+        "explanation":  "정해진 형식이 없는 검토로 설명된다."
+    },
+    {
+        "id":  "11-test-1-77",
+        "statement":  "검토회의는 보통 3~5명 전문가가 절차에 따라 평가한다.",
+        "answer":  true,
+        "explanation":  "교안의 검토회의 설명이다."
+    },
+    {
+        "id":  "11-test-1-78",
+        "statement":  "검토회의 결과는 반드시 인사 평가 자료로 써야 한다.",
+        "answer":  false,
+        "explanation":  "검토회의 주의 사항이다."
+    },
+    {
+        "id":  "11-test-1-79",
+        "statement":  "소프트웨어 검사는 원시 코드뿐 아니라 단계별 산출물 문서도 분석한다.",
+        "answer":  true,
+        "explanation":  "품질 보증 기법으로 유용하다."
+    },
+    {
+        "id":  "11-test-1-80",
+        "statement":  "검사 회의 목적은 오류 발견이며 회의 중 오류 수정 자체를 하지 않는다.",
+        "answer":  true,
+        "explanation":  "검사 회의 원칙이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 2,
+  title: "11주차 테스트1 · ",
+  questions:
+[
+    {
+        "id":  "11-test-2-1",
+        "statement":  "소프트웨어 개발 과정에서 테스트는 사전에 울타리를 치는 것에 비유된다.",
+        "answer":  true,
+        "explanation":  "테스트는 사전 예방과 결함 발견의 성격을 가진다."
+    },
+    {
+        "id":  "11-test-2-2",
+        "statement":  "패트리어트 미사일 실패는 미세한 오차가 큰 사고로 이어질 수 있음을 보여준다.",
+        "answer":  true,
+        "explanation":  "작은 시간 오차가 치명적 결과로 이어질 수 있다."
+    },
+    {
+        "id":  "11-test-2-3",
+        "statement":  "테락-25 사례는 새 버전 테스트를 생략해도 된다는 근거이다.",
+        "answer":  false,
+        "explanation":  "버전업 후 전체 코드 테스트 생략이 문제였다."
+    },
+    {
+        "id":  "11-test-2-4",
+        "statement":  "아리안 5호 폭발 사례에서는 64비트 값을 16비트 정수로 변환하는 과정의 오버플로가 언급된다.",
+        "answer":  true,
+        "explanation":  "형 변환 오버플로가 사고 원인으로 제시된다."
+    },
+    {
+        "id":  "11-test-2-5",
+        "statement":  "데드 코드를 간과한 결과도 사고 원인이 될 수 있다.",
+        "answer":  true,
+        "explanation":  "아리안 5호 사례에서 불필요한 데드 코드가 언급된다."
+    },
+    {
+        "id":  "11-test-2-6",
+        "statement":  "테스트 사고 사례들은 테스트가 무의미하다는 결론을 낸다.",
+        "answer":  false,
+        "explanation":  "여러 사고는 사전 검증의 중요성을 보여준다."
+    },
+    {
+        "id":  "11-test-2-7",
+        "statement":  "테스트는 개발 마지막에 한 번 하는 활동만은 아니다.",
+        "answer":  true,
+        "explanation":  "교안은 개발 단계와 함께하는 활동으로 설명한다."
+    },
+    {
+        "id":  "11-test-2-8",
+        "statement":  "테스트는 소프트웨어 신뢰성 확보와 연결된다.",
+        "answer":  true,
+        "explanation":  "테스트의 결과적 목표는 신뢰성 향상이다."
+    },
+    {
+        "id":  "11-test-2-9",
+        "statement":  "IEEE 관점에서 테스트는 명시된 요구를 만족하는지 예상 결과와 실제 결과의 차이를 검사·평가하는 작업라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "예상 결과와 실제 결과 비교가 포함된다."
+    },
+    {
+        "id":  "11-test-2-10",
+        "statement":  "테스트는 결함이 있음을 보여줄 뿐 결함이 없음을 증명할 수는 없다.",
+        "answer":  true,
+        "explanation":  "테스트의 한계다."
+    },
+    {
+        "id":  "11-test-2-11",
+        "statement":  "소프트웨어 테스트는 이미 드러난 정상 기능만 칭찬하는 활동이다.",
+        "answer":  false,
+        "explanation":  "숨은 오류 검출이 목적이다."
+    },
+    {
+        "id":  "11-test-2-12",
+        "statement":  "테스트의 작은 의미에는 원시 코드 속 오류 발견이 포함된다.",
+        "answer":  true,
+        "explanation":  "오류 발견이 작은 의미의 목표다."
+    },
+    {
+        "id":  "11-test-2-13",
+        "statement":  "테스트의 작은 의미에는 결함 예방이 포함된다.",
+        "answer":  true,
+        "explanation":  "결함이 생기지 않도록 예방하는 것도 목표다."
+    },
+    {
+        "id":  "11-test-2-14",
+        "statement":  "테스트의 큰 의미는 컴파일 속도 측정만 의미한다.",
+        "answer":  false,
+        "explanation":  "고객 요구 만족 확인이 포함된다."
+    },
+    {
+        "id":  "11-test-2-15",
+        "statement":  "테스트는 개발자와 고객에게 사용하기에 충분한 소프트웨어임을 보여주는 역할을 한다.",
+        "answer":  true,
+        "explanation":  "큰 의미의 테스트 목표다."
+    },
+    {
+        "id":  "11-test-2-16",
+        "statement":  "테스트의 결과적 목표는 개발된 소프트웨어의 신뢰성을 높이는 것라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 목표 정리다."
+    },
+    {
+        "id":  "11-test-2-17",
+        "statement":  "테스트가 통과되면 프로그램이 완전하고 정확하다는 증명이 끝난다.",
+        "answer":  false,
+        "explanation":  "정상 실행과 완전성 증명은 다르다."
+    },
+    {
+        "id":  "11-test-2-18",
+        "statement":  "명세 자체가 완벽히 옳다고 확신하기 어렵기 때문에 완전 테스트에는 한계가 있다.",
+        "answer":  true,
+        "explanation":  "테스트 시스템과 명세 모두 완전성을 보장하기 어렵다."
+    },
+    {
+        "id":  "11-test-2-19",
+        "statement":  "테스트 케이스가 적으면 테스트 효과에 한계가 있다.",
+        "answer":  true,
+        "explanation":  "케이스 부족은 효과를 제한한다."
+    },
+    {
+        "id":  "11-test-2-20",
+        "statement":  "완벽한 테스트 케이스를 도출하기는 어렵다.",
+        "answer":  true,
+        "explanation":  "테스트 수행의 어려움이다."
+    },
+    {
+        "id":  "11-test-2-21",
+        "statement":  "실제 사용 환경은 테스트에서 항상 쉽게 재현된다.",
+        "answer":  false,
+        "explanation":  "환경 구축의 어려움이 있다."
+    },
+    {
+        "id":  "11-test-2-22",
+        "statement":  "작은 실수를 발견하기 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 어려움 항목이다."
+    },
+    {
+        "id":  "11-test-2-23",
+        "statement":  "테스트 중요성에 대한 인식 부족도 어려움라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "조직적 인식도 중요하다."
+    },
+    {
+        "id":  "11-test-2-24",
+        "statement":  "테스트는 고객 요구사항을 무시해야 한다.",
+        "answer":  false,
+        "explanation":  "요구 충족은 테스트의 조건이다."
+    },
+    {
+        "id":  "11-test-2-25",
+        "statement":  "살충제 패러독스 문제를 해결하려면 테스트 케이스 업데이트가 필요하다.",
+        "answer":  true,
+        "explanation":  "같은 테스트 반복은 내성을 만들 수 있다."
+    },
+    {
+        "id":  "11-test-2-26",
+        "statement":  "완벽한 테스트는 불가능하다.",
+        "answer":  true,
+        "explanation":  "교안의 명시적 내용이다."
+    },
+    {
+        "id":  "11-test-2-27",
+        "statement":  "오류는 개발자에 의해 만들어지는 실수로 결함의 원인이 된다.",
+        "answer":  true,
+        "explanation":  "오류는 결함의 원인이다."
+    },
+    {
+        "id":  "11-test-2-28",
+        "statement":  "결함은 오류에 의해 프로그램이 완전하지 못한 상태로 고장의 원인이 된다.",
+        "answer":  true,
+        "explanation":  "결함은 고장의 원인이 될 수 있다."
+    },
+    {
+        "id":  "11-test-2-29",
+        "statement":  "고장과 실패는 요구사항 만족 상태를 의미한다.",
+        "answer":  false,
+        "explanation":  "요구사항대로 작동하지 않는 상태다."
+    },
+    {
+        "id":  "11-test-2-30",
+        "statement":  "필요 없는 정보가 포함되거나 필요한 정보가 없는 경우 결함이 될 수 있다.",
+        "answer":  true,
+        "explanation":  "결함 예시이다."
+    },
+    {
+        "id":  "11-test-2-31",
+        "statement":  "요구분석명세서가 잘못되어도 실패가 발생할 수 있다.",
+        "answer":  true,
+        "explanation":  "잘못된 명세도 실패 원인이 된다."
+    },
+    {
+        "id":  "11-test-2-32",
+        "statement":  "기술적으로 불가능한 요구사항은 항상 자동으로 수정된다.",
+        "answer":  false,
+        "explanation":  "요구사항 문제도 원인이 될 수 있다."
+    },
+    {
+        "id":  "11-test-2-33",
+        "statement":  "모든 결함이 반드시 실패를 유발하지는 않는다.",
+        "answer":  true,
+        "explanation":  "결함과 실패는 반드시 일대일이 아니다."
+    },
+    {
+        "id":  "11-test-2-34",
+        "statement":  "테스트 계획 단계에서는 테스트 목표, 대상, 범위를 결정한다.",
+        "answer":  true,
+        "explanation":  "계획의 핵심 처리 내용이다."
+    },
+    {
+        "id":  "11-test-2-35",
+        "statement":  "테스트 목표는 요구분석명세서를 기반으로 정의할 수 있다.",
+        "answer":  true,
+        "explanation":  "요구 명세를 기반으로 한다."
+    },
+    {
+        "id":  "11-test-2-36",
+        "statement":  "테스트 대상과 범위는 절대 구분하지 않는다.",
+        "answer":  false,
+        "explanation":  "업무 시스템별 구분이 가능하다."
+    },
+    {
+        "id":  "11-test-2-37",
+        "statement":  "테스트 계획서에는 목적, 담당 인원, 전략, 자원, 일정 등이 기록될 수 있다.",
+        "answer":  true,
+        "explanation":  "계획서 작성 항목이다."
+    },
+    {
+        "id":  "11-test-2-38",
+        "statement":  "테스트 케이스 설계 기법은 프로젝트 문제 성격에 맞게 선정한다.",
+        "answer":  true,
+        "explanation":  "적합한 기법 선정이 필요하다."
+    },
+    {
+        "id":  "11-test-2-39",
+        "statement":  "테스트 기법을 정해도 테스트 케이스는 만들지 않는다.",
+        "answer":  false,
+        "explanation":  "기법을 이용해 케이스를 도출한다."
+    },
+    {
+        "id":  "11-test-2-40",
+        "statement":  "테스트 케이스 수행을 위해 원시 데이터를 작성한다.",
+        "answer":  true,
+        "explanation":  "입력값으로 사용할 데이터를 작성한다."
+    },
+    {
+        "id":  "11-test-2-41",
+        "statement":  "테스트 환경 구축은 계획서에 정의된 환경과 자원을 설정하는 일라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "실행 전 준비 단계다."
+    },
+    {
+        "id":  "11-test-2-42",
+        "statement":  "테스트 실행 및 측정은 코드를 보지 않고 계획서만 보관하는 단계다.",
+        "answer":  false,
+        "explanation":  "실행 결과를 측정한다."
+    },
+    {
+        "id":  "11-test-2-43",
+        "statement":  "오류 추적 및 수정 단계에서는 오류 위치와 종류를 확인한다.",
+        "answer":  true,
+        "explanation":  "어디서 어떤 오류가 발생했는지 찾는다."
+    },
+    {
+        "id":  "11-test-2-44",
+        "statement":  "오류 수정 계획은 테스트 결과 보고서를 기반으로 세울 수 있다.",
+        "answer":  true,
+        "explanation":  "보고서가 오류 위치 파악 근거가 된다."
+    },
+    {
+        "id":  "11-test-2-45",
+        "statement":  "오류 수정은 우선순위를 절대 정하지 않는다.",
+        "answer":  false,
+        "explanation":  "계획 수립에 우선순위가 포함된다."
+    },
+    {
+        "id":  "11-test-2-46",
+        "statement":  "디버깅 도구는 오류 수정에 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "오류 제거에 활용 가능하다."
+    },
+    {
+        "id":  "11-test-2-47",
+        "statement":  "수정된 코드를 검토한 후 오류 수정 결과 보고서를 작성할 수 있다.",
+        "answer":  true,
+        "explanation":  "수정 결과 확인이 필요하다."
+    },
+    {
+        "id":  "11-test-2-48",
+        "statement":  "테스트 절차는 실행 없이 이름만 정하는 활동이다.",
+        "answer":  false,
+        "explanation":  "전체 절차적 흐름이 있다."
+    },
+    {
+        "id":  "11-test-2-49",
+        "statement":  "확인 테스트는 개발자의 시각에서 설계서대로 만들었는지를 테스트한다.",
+        "answer":  true,
+        "explanation":  "개발자 시각의 테스트다."
+    },
+    {
+        "id":  "11-test-2-50",
+        "statement":  "검증 테스트는 사용자의 요구사항대로 만들었는지를 테스트한다.",
+        "answer":  true,
+        "explanation":  "사용자 요구 충족 여부를 본다."
+    },
+    {
+        "id":  "11-test-2-51",
+        "statement":  "확인 테스트만 통과하면 사용자 요구 충족이 항상 보장된다.",
+        "answer":  false,
+        "explanation":  "설계서가 요구를 잘못 반영할 수 있다."
+    },
+    {
+        "id":  "11-test-2-52",
+        "statement":  "요구가 곱셈인데 덧셈을 정확히 구현한 경우 확인은 통과해도 검증에서 문제가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "사용자 요구와 다르기 때문이다."
+    },
+    {
+        "id":  "11-test-2-53",
+        "statement":  "확인 테스트는 이전 단계 산출물이 현 단계 산출물에 반영되었는지 본다.",
+        "answer":  true,
+        "explanation":  "단계 간 반영 확인이다."
+    },
+    {
+        "id":  "11-test-2-54",
+        "statement":  "검증 테스트의 기준은 코드 줄 수뿐이다.",
+        "answer":  false,
+        "explanation":  "사용자 요구와 명세가 기준이다."
+    },
+    {
+        "id":  "11-test-2-55",
+        "statement":  "확인과 검증을 함께 사용하면 더 강력한 테스트가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 V\u0026V로 묶어 설명한다."
+    },
+    {
+        "id":  "11-test-2-56",
+        "statement":  "V\u0026V는 확인과 검증을 함께 보는 개념으로 이해할 수 있다.",
+        "answer":  true,
+        "explanation":  "확인과 검증의 결합이다."
+    },
+    {
+        "id":  "11-test-2-57",
+        "statement":  "성능 테스트는 실행 시간, 응답 시간, 처리 능력, 자원 사용량 등을 체크한다.",
+        "answer":  true,
+        "explanation":  "효율성 진단 테스트다."
+    },
+    {
+        "id":  "11-test-2-58",
+        "statement":  "스트레스 테스트는 비정상적이고 과도한 부하에서 시스템 반응과 오류를 확인한다.",
+        "answer":  true,
+        "explanation":  "최고치 부하 상황을 본다."
+    },
+    {
+        "id":  "11-test-2-59",
+        "statement":  "보안 테스트는 그래픽 디자인 색상만 검사한다.",
+        "answer":  false,
+        "explanation":  "보안 시스템의 방어 능력을 확인한다."
+    },
+    {
+        "id":  "11-test-2-60",
+        "statement":  "안정성 테스트는 며칠 동안 부하를 주면서 시스템이 안정적으로 돌아가는지 본다.",
+        "answer":  true,
+        "explanation":  "장시간 안정성 확인이다."
+    },
+    {
+        "id":  "11-test-2-61",
+        "statement":  "메모리 누수는 사용 후 메모리를 반납하지 않아 사용 가능한 메모리가 줄어드는 현상라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "안정성 테스트와 관련된다."
+    },
+    {
+        "id":  "11-test-2-62",
+        "statement":  "복원 가능성 테스트는 고장을 절대 발생시키지 않는다.",
+        "answer":  false,
+        "explanation":  "회복 능력을 평가한다."
+    },
+    {
+        "id":  "11-test-2-63",
+        "statement":  "복원 가능성 테스트는 운영체제, DBMS, 통신용 소프트웨어 안정성 테스트에 적용 가능하다.",
+        "answer":  true,
+        "explanation":  "교안의 적용 예다."
+    },
+    {
+        "id":  "11-test-2-64",
+        "statement":  "성능 테스트와 스트레스 테스트는 모두 부하와 관련될 수 있지만 초점은 다르다.",
+        "answer":  true,
+        "explanation":  "성능은 효율성, 스트레스는 과부하 반응이다."
+    },
+    {
+        "id":  "11-test-2-65",
+        "statement":  "정적 테스트는 프로그램을 실행하지 않고 코드나 산출물을 검토한다.",
+        "answer":  true,
+        "explanation":  "실행 없이 검토한다."
+    },
+    {
+        "id":  "11-test-2-66",
+        "statement":  "동적 테스트는 프로그램을 실행하면서 오류를 찾는다.",
+        "answer":  true,
+        "explanation":  "실행 상태를 확인한다."
+    },
+    {
+        "id":  "11-test-2-67",
+        "statement":  "보닛을 여는 비유는 동적 테스트에 해당한다.",
+        "answer":  false,
+        "explanation":  "실행 없이 내부 상태를 점검한다."
+    },
+    {
+        "id":  "11-test-2-68",
+        "statement":  "자동차를 직접 주행해 이상을 확인하는 비유는 동적 테스트와 연결된다.",
+        "answer":  true,
+        "explanation":  "실행하면서 고장을 찾는 방식이다."
+    },
+    {
+        "id":  "11-test-2-69",
+        "statement":  "정적 테스트는 실패보다는 결함을 찾아내는 방법라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "실행 전 산출물을 검토한다."
+    },
+    {
+        "id":  "11-test-2-70",
+        "statement":  "정적 테스트 도구는 코드뿐 아니라 HTML, XML 같은 산출물도 검토할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 정적 테스트 개요다."
+    },
+    {
+        "id":  "11-test-2-71",
+        "statement":  "비공식 검토에는 엄격한 공식 검사만 포함된다.",
+        "answer":  false,
+        "explanation":  "간단한 만남이나 책상 검토다."
+    },
+    {
+        "id":  "11-test-2-72",
+        "statement":  "공식 검토는 정의된 절차에 따라 계획되고 통제된다.",
+        "answer":  true,
+        "explanation":  "공식 검토의 특징이다."
+    },
+    {
+        "id":  "11-test-2-73",
+        "statement":  "검토 내용에는 원시 코드 오류, 요구 반영 여부, 표준 준수 여부가 포함된다.",
+        "answer":  true,
+        "explanation":  "검토 내용의 예다."
+    },
+    {
+        "id":  "11-test-2-74",
+        "statement":  "공식 검토 절차는 오류 수정 하나로 끝난다.",
+        "answer":  false,
+        "explanation":  "교안의 절차 흐름이다."
+    },
+    {
+        "id":  "11-test-2-75",
+        "statement":  "개별 검토는 본인이 체크리스트로 자기 코드와 산출물을 검토하는 것라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "스스로 검토하는 방식이다."
+    },
+    {
+        "id":  "11-test-2-76",
+        "statement":  "동료 검토는 비공식 검토에 속한다.",
+        "answer":  true,
+        "explanation":  "정해진 형식이 없는 검토로 설명된다."
+    },
+    {
+        "id":  "11-test-2-77",
+        "statement":  "검토회의는 반드시 100명 이상이 참여해야 한다.",
+        "answer":  false,
+        "explanation":  "교안의 검토회의 설명이다."
+    },
+    {
+        "id":  "11-test-2-78",
+        "statement":  "검토회의 결과를 인사 평가 자료로 사용해서는 안 된다.",
+        "answer":  true,
+        "explanation":  "검토회의 주의 사항이다."
+    },
+    {
+        "id":  "11-test-2-79",
+        "statement":  "소프트웨어 검사는 원시 코드뿐 아니라 단계별 산출물 문서도 분석한다.",
+        "answer":  true,
+        "explanation":  "품질 보증 기법으로 유용하다."
+    },
+    {
+        "id":  "11-test-2-80",
+        "statement":  "검사 회의의 목적은 오류 발견이 아니라 즉석 코드 수정이다.",
+        "answer":  false,
+        "explanation":  "검사 회의 원칙이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 3,
+  title: "11주차 테스트1 · ",
+  questions:
+[
+    {
+        "id":  "11-test-3-1",
+        "statement":  "소프트웨어 테스트는 사후약방문처럼 사고 후 대응만 강조한다.",
+        "answer":  false,
+        "explanation":  "테스트는 사전 예방과 결함 발견의 성격을 가진다."
+    },
+    {
+        "id":  "11-test-3-2",
+        "statement":  "패트리어트 사례는 테스트와 무관한 순수 행정 오류 사례다.",
+        "answer":  false,
+        "explanation":  "작은 시간 오차가 치명적 결과로 이어질 수 있다."
+    },
+    {
+        "id":  "11-test-3-3",
+        "statement":  "테락-25 사고는 이전 버전만 믿고 전체 테스트를 생략한 위험성을 보여준다.",
+        "answer":  true,
+        "explanation":  "버전업 후 전체 코드 테스트 생략이 문제였다."
+    },
+    {
+        "id":  "11-test-3-4",
+        "statement":  "아리안 5호 사례는 오버플로와 전혀 관련이 없다.",
+        "answer":  false,
+        "explanation":  "형 변환 오버플로가 사고 원인으로 제시된다."
+    },
+    {
+        "id":  "11-test-3-5",
+        "statement":  "데드 코드는 실행되지 않으므로 어떤 경우에도 위험하지 않다.",
+        "answer":  false,
+        "explanation":  "아리안 5호 사례에서 불필요한 데드 코드가 언급된다."
+    },
+    {
+        "id":  "11-test-3-6",
+        "statement":  "테스트 사고 사례들은 테스트가 무의미하다는 결론을 낸다.",
+        "answer":  false,
+        "explanation":  "여러 사고는 사전 검증의 중요성을 보여준다."
+    },
+    {
+        "id":  "11-test-3-7",
+        "statement":  "테스트는 반드시 개발 완료 후 한 번만 수행해야 한다.",
+        "answer":  false,
+        "explanation":  "교안은 개발 단계와 함께하는 활동으로 설명한다."
+    },
+    {
+        "id":  "11-test-3-8",
+        "statement":  "테스트는 소프트웨어 신뢰성 확보와 연결된다.",
+        "answer":  true,
+        "explanation":  "테스트의 결과적 목표는 신뢰성 향상이다."
+    },
+    {
+        "id":  "11-test-3-9",
+        "statement":  "IEEE 관점에서 테스트는 요구사항을 작성하는 활동만 의미한다.",
+        "answer":  false,
+        "explanation":  "예상 결과와 실제 결과 비교가 포함된다."
+    },
+    {
+        "id":  "11-test-3-10",
+        "statement":  "테스트는 결함이 없음을 완벽히 증명한다.",
+        "answer":  false,
+        "explanation":  "테스트의 한계다."
+    },
+    {
+        "id":  "11-test-3-11",
+        "statement":  "소프트웨어 테스트는 숨어 있는 오류를 발견할 목적으로 문서나 프로그램 오류를 검출하는 작업이다.",
+        "answer":  true,
+        "explanation":  "숨은 오류 검출이 목적이다."
+    },
+    {
+        "id":  "11-test-3-12",
+        "statement":  "테스트의 작은 의미는 고객 홍보 문구 작성만 포함한다.",
+        "answer":  false,
+        "explanation":  "오류 발견이 작은 의미의 목표다."
+    },
+    {
+        "id":  "11-test-3-13",
+        "statement":  "테스트는 결함 예방과는 무관하다.",
+        "answer":  false,
+        "explanation":  "결함이 생기지 않도록 예방하는 것도 목표다."
+    },
+    {
+        "id":  "11-test-3-14",
+        "statement":  "테스트의 큰 의미는 컴파일 속도 측정만 의미한다.",
+        "answer":  false,
+        "explanation":  "고객 요구 만족 확인이 포함된다."
+    },
+    {
+        "id":  "11-test-3-15",
+        "statement":  "테스트는 고객에게 아무 정보를 제공하지 않는다.",
+        "answer":  false,
+        "explanation":  "큰 의미의 테스트 목표다."
+    },
+    {
+        "id":  "11-test-3-16",
+        "statement":  "테스트의 결과적 목표는 개발된 소프트웨어의 신뢰성을 높이는 것이다.",
+        "answer":  true,
+        "explanation":  "교안의 목표 정리다."
+    },
+    {
+        "id":  "11-test-3-17",
+        "statement":  "테스트가 통과되면 프로그램이 완전하고 정확하다는 증명이 끝난다.",
+        "answer":  false,
+        "explanation":  "정상 실행과 완전성 증명은 다르다."
+    },
+    {
+        "id":  "11-test-3-18",
+        "statement":  "명세가 항상 완벽하므로 테스트 한계는 존재하지 않는다.",
+        "answer":  false,
+        "explanation":  "테스트 시스템과 명세 모두 완전성을 보장하기 어렵다."
+    },
+    {
+        "id":  "11-test-3-19",
+        "statement":  "테스트 케이스가 적을수록 항상 더 완벽한 테스트가 된다.",
+        "answer":  false,
+        "explanation":  "케이스 부족은 효과를 제한한다."
+    },
+    {
+        "id":  "11-test-3-20",
+        "statement":  "완벽한 테스트 케이스는 항상 쉽게 도출된다.",
+        "answer":  false,
+        "explanation":  "테스트 수행의 어려움이다."
+    },
+    {
+        "id":  "11-test-3-21",
+        "statement":  "테스트를 위한 실제 사용 환경 구축은 어려울 수 있다.",
+        "answer":  true,
+        "explanation":  "환경 구축의 어려움이 있다."
+    },
+    {
+        "id":  "11-test-3-22",
+        "statement":  "작은 실수는 테스트에서 반드시 자동으로 발견된다.",
+        "answer":  false,
+        "explanation":  "교안의 어려움 항목이다."
+    },
+    {
+        "id":  "11-test-3-23",
+        "statement":  "테스트 중요성 인식은 테스트 수행과 무관하다.",
+        "answer":  false,
+        "explanation":  "조직적 인식도 중요하다."
+    },
+    {
+        "id":  "11-test-3-24",
+        "statement":  "테스트는 고객 요구사항을 무시해야 한다.",
+        "answer":  false,
+        "explanation":  "요구 충족은 테스트의 조건이다."
+    },
+    {
+        "id":  "11-test-3-25",
+        "statement":  "살충제 패러독스는 테스트 케이스 업데이트와 무관하다.",
+        "answer":  false,
+        "explanation":  "같은 테스트 반복은 내성을 만들 수 있다."
+    },
+    {
+        "id":  "11-test-3-26",
+        "statement":  "완벽한 테스트는 불가능하다.",
+        "answer":  true,
+        "explanation":  "교안의 명시적 내용이다."
+    },
+    {
+        "id":  "11-test-3-27",
+        "statement":  "오류는 항상 사용자 컴퓨터 고장만 의미한다.",
+        "answer":  false,
+        "explanation":  "오류는 결함의 원인이다."
+    },
+    {
+        "id":  "11-test-3-28",
+        "statement":  "결함은 정상 동작을 의미한다.",
+        "answer":  false,
+        "explanation":  "결함은 고장의 원인이 될 수 있다."
+    },
+    {
+        "id":  "11-test-3-29",
+        "statement":  "고장, 실패, 문제, 장애는 시스템이 요구사항대로 작동하지 않는 것을 말한다.",
+        "answer":  true,
+        "explanation":  "요구사항대로 작동하지 않는 상태다."
+    },
+    {
+        "id":  "11-test-3-30",
+        "statement":  "필요 없는 정보 포함은 결함과 무관하다.",
+        "answer":  false,
+        "explanation":  "결함 예시이다."
+    },
+    {
+        "id":  "11-test-3-31",
+        "statement":  "요구분석명세서 오류는 실패와 무관하다.",
+        "answer":  false,
+        "explanation":  "잘못된 명세도 실패 원인이 된다."
+    },
+    {
+        "id":  "11-test-3-32",
+        "statement":  "기술적으로 불가능한 요구사항은 항상 자동으로 수정된다.",
+        "answer":  false,
+        "explanation":  "요구사항 문제도 원인이 될 수 있다."
+    },
+    {
+        "id":  "11-test-3-33",
+        "statement":  "모든 결함은 반드시 즉시 실패를 유발한다.",
+        "answer":  false,
+        "explanation":  "결함과 실패는 반드시 일대일이 아니다."
+    },
+    {
+        "id":  "11-test-3-34",
+        "statement":  "테스트 계획 단계에서는 목표와 범위를 정하지 않는다.",
+        "answer":  false,
+        "explanation":  "계획의 핵심 처리 내용이다."
+    },
+    {
+        "id":  "11-test-3-35",
+        "statement":  "테스트 목표는 요구분석명세서와 무관하게 정한다.",
+        "answer":  false,
+        "explanation":  "요구 명세를 기반으로 한다."
+    },
+    {
+        "id":  "11-test-3-36",
+        "statement":  "테스트 대상 및 범위는 업무 시스템별로 구분할 수 있다.",
+        "answer":  true,
+        "explanation":  "업무 시스템별 구분이 가능하다."
+    },
+    {
+        "id":  "11-test-3-37",
+        "statement":  "테스트 계획서에는 테스트와 무관한 광고 문구만 쓴다.",
+        "answer":  false,
+        "explanation":  "계획서 작성 항목이다."
+    },
+    {
+        "id":  "11-test-3-38",
+        "statement":  "테스트 기법은 문제 성격과 무관하게 무조건 하나로 고정된다.",
+        "answer":  false,
+        "explanation":  "적합한 기법 선정이 필요하다."
+    },
+    {
+        "id":  "11-test-3-39",
+        "statement":  "테스트 기법을 정해도 테스트 케이스는 만들지 않는다.",
+        "answer":  false,
+        "explanation":  "기법을 이용해 케이스를 도출한다."
+    },
+    {
+        "id":  "11-test-3-40",
+        "statement":  "원시 데이터는 테스트 실행과 무관하다.",
+        "answer":  false,
+        "explanation":  "입력값으로 사용할 데이터를 작성한다."
+    },
+    {
+        "id":  "11-test-3-41",
+        "statement":  "테스트 환경 구축은 계획서에 정의된 환경과 자원을 설정하는 일이다.",
+        "answer":  true,
+        "explanation":  "실행 전 준비 단계다."
+    },
+    {
+        "id":  "11-test-3-42",
+        "statement":  "테스트 실행 및 측정은 코드를 보지 않고 계획서만 보관하는 단계다.",
+        "answer":  false,
+        "explanation":  "실행 결과를 측정한다."
+    },
+    {
+        "id":  "11-test-3-43",
+        "statement":  "오류 추적 단계에서는 오류 위치를 확인하지 않는다.",
+        "answer":  false,
+        "explanation":  "어디서 어떤 오류가 발생했는지 찾는다."
+    },
+    {
+        "id":  "11-test-3-44",
+        "statement":  "오류 수정 계획은 테스트 결과 보고서와 무관하다.",
+        "answer":  false,
+        "explanation":  "보고서가 오류 위치 파악 근거가 된다."
+    },
+    {
+        "id":  "11-test-3-45",
+        "statement":  "오류 수정은 우선순위를 절대 정하지 않는다.",
+        "answer":  false,
+        "explanation":  "계획 수립에 우선순위가 포함된다."
+    },
+    {
+        "id":  "11-test-3-46",
+        "statement":  "디버깅 도구는 오류 수정에 사용될 수 있다.",
+        "answer":  true,
+        "explanation":  "오류 제거에 활용 가능하다."
+    },
+    {
+        "id":  "11-test-3-47",
+        "statement":  "수정 후 검토나 보고서는 필요 없다.",
+        "answer":  false,
+        "explanation":  "수정 결과 확인이 필요하다."
+    },
+    {
+        "id":  "11-test-3-48",
+        "statement":  "테스트 절차는 실행 없이 이름만 정하는 활동이다.",
+        "answer":  false,
+        "explanation":  "전체 절차적 흐름이 있다."
+    },
+    {
+        "id":  "11-test-3-49",
+        "statement":  "확인 테스트는 사용자 요구사항 자체가 맞는지만 보는 테스트이다.",
+        "answer":  false,
+        "explanation":  "개발자 시각의 테스트다."
+    },
+    {
+        "id":  "11-test-3-50",
+        "statement":  "검증 테스트는 개발자의 코딩 취향만 검사한다.",
+        "answer":  false,
+        "explanation":  "사용자 요구 충족 여부를 본다."
+    },
+    {
+        "id":  "11-test-3-51",
+        "statement":  "확인 테스트만으로는 사용자가 원하는 것을 만들었는지 항상 알 수 없다.",
+        "answer":  true,
+        "explanation":  "설계서가 요구를 잘못 반영할 수 있다."
+    },
+    {
+        "id":  "11-test-3-52",
+        "statement":  "덧셈이 정확하면 요구가 곱셈이어도 검증 테스트는 통과한다.",
+        "answer":  false,
+        "explanation":  "사용자 요구와 다르기 때문이다."
+    },
+    {
+        "id":  "11-test-3-53",
+        "statement":  "확인 테스트는 산출물 간 반영 여부와 무관하다.",
+        "answer":  false,
+        "explanation":  "단계 간 반영 확인이다."
+    },
+    {
+        "id":  "11-test-3-54",
+        "statement":  "검증 테스트의 기준은 코드 줄 수뿐이다.",
+        "answer":  false,
+        "explanation":  "사용자 요구와 명세가 기준이다."
+    },
+    {
+        "id":  "11-test-3-55",
+        "statement":  "확인과 검증은 함께 사용할 수 없다.",
+        "answer":  false,
+        "explanation":  "교안은 V\u0026V로 묶어 설명한다."
+    },
+    {
+        "id":  "11-test-3-56",
+        "statement":  "V\u0026V는 확인과 검증을 함께 보는 개념으로 이해할 수 있다.",
+        "answer":  true,
+        "explanation":  "확인과 검증의 결합이다."
+    },
+    {
+        "id":  "11-test-3-57",
+        "statement":  "성능 테스트는 불법 침입만 시도하는 테스트이다.",
+        "answer":  false,
+        "explanation":  "효율성 진단 테스트다."
+    },
+    {
+        "id":  "11-test-3-58",
+        "statement":  "스트레스 테스트는 정상 평균 부하에서만 실행 시간을 측정한다.",
+        "answer":  false,
+        "explanation":  "최고치 부하 상황을 본다."
+    },
+    {
+        "id":  "11-test-3-59",
+        "statement":  "보안 테스트는 불법적인 침투를 막아내는지 확인한다.",
+        "answer":  true,
+        "explanation":  "보안 시스템의 방어 능력을 확인한다."
+    },
+    {
+        "id":  "11-test-3-60",
+        "statement":  "안정성 테스트는 1초 동안만 화면 색을 보는 테스트이다.",
+        "answer":  false,
+        "explanation":  "장시간 안정성 확인이다."
+    },
+    {
+        "id":  "11-test-3-61",
+        "statement":  "메모리 누수는 메모리를 반납해 사용 가능 메모리가 늘어나는 현상이다.",
+        "answer":  false,
+        "explanation":  "안정성 테스트와 관련된다."
+    },
+    {
+        "id":  "11-test-3-62",
+        "statement":  "복원 가능성 테스트는 고장을 절대 발생시키지 않는다.",
+        "answer":  false,
+        "explanation":  "회복 능력을 평가한다."
+    },
+    {
+        "id":  "11-test-3-63",
+        "statement":  "복원 가능성 테스트는 운영체제나 DBMS와 무관하다.",
+        "answer":  false,
+        "explanation":  "교안의 적용 예다."
+    },
+    {
+        "id":  "11-test-3-64",
+        "statement":  "성능 테스트와 스트레스 테스트는 모두 부하와 관련될 수 있지만 초점은 다르다.",
+        "answer":  true,
+        "explanation":  "성능은 효율성, 스트레스는 과부하 반응이다."
+    },
+    {
+        "id":  "11-test-3-65",
+        "statement":  "정적 테스트는 반드시 프로그램을 실행해야 한다.",
+        "answer":  false,
+        "explanation":  "실행 없이 검토한다."
+    },
+    {
+        "id":  "11-test-3-66",
+        "statement":  "동적 테스트는 실행을 금지하고 문서만 본다.",
+        "answer":  false,
+        "explanation":  "실행 상태를 확인한다."
+    },
+    {
+        "id":  "11-test-3-67",
+        "statement":  "자동차 보닛을 열어 부품 상태를 보는 비유는 정적 테스트와 연결된다.",
+        "answer":  true,
+        "explanation":  "실행 없이 내부 상태를 점검한다."
+    },
+    {
+        "id":  "11-test-3-68",
+        "statement":  "직접 주행 비유는 정적 테스트만 의미한다.",
+        "answer":  false,
+        "explanation":  "실행하면서 고장을 찾는 방식이다."
+    },
+    {
+        "id":  "11-test-3-69",
+        "statement":  "정적 테스트는 실패만 관찰하고 결함은 보지 않는다.",
+        "answer":  false,
+        "explanation":  "실행 전 산출물을 검토한다."
+    },
+    {
+        "id":  "11-test-3-70",
+        "statement":  "정적 테스트 도구는 코드 외 산출물을 절대 검토할 수 없다.",
+        "answer":  false,
+        "explanation":  "교안의 정적 테스트 개요다."
+    },
+    {
+        "id":  "11-test-3-71",
+        "statement":  "비공식 검토에는 개별 검토와 동료 검토가 주로 해당한다.",
+        "answer":  true,
+        "explanation":  "간단한 만남이나 책상 검토다."
+    },
+    {
+        "id":  "11-test-3-72",
+        "statement":  "공식 검토는 계획 없이 즉흥적으로만 한다.",
+        "answer":  false,
+        "explanation":  "공식 검토의 특징이다."
+    },
+    {
+        "id":  "11-test-3-73",
+        "statement":  "검토 내용은 오직 개발자 출석 여부만 포함한다.",
+        "answer":  false,
+        "explanation":  "검토 내용의 예다."
+    },
+    {
+        "id":  "11-test-3-74",
+        "statement":  "공식 검토 절차는 오류 수정 하나로 끝난다.",
+        "answer":  false,
+        "explanation":  "교안의 절차 흐름이다."
+    },
+    {
+        "id":  "11-test-3-75",
+        "statement":  "개별 검토는 외부 고객이 시장에서 수행하는 베타 테스트이다.",
+        "answer":  false,
+        "explanation":  "스스로 검토하는 방식이다."
+    },
+    {
+        "id":  "11-test-3-76",
+        "statement":  "동료 검토는 비공식 검토에 속한다.",
+        "answer":  true,
+        "explanation":  "정해진 형식이 없는 검토로 설명된다."
+    },
+    {
+        "id":  "11-test-3-77",
+        "statement":  "검토회의는 반드시 100명 이상이 참여해야 한다.",
+        "answer":  false,
+        "explanation":  "교안의 검토회의 설명이다."
+    },
+    {
+        "id":  "11-test-3-78",
+        "statement":  "검토회의 결과는 반드시 인사 평가 자료로 써야 한다.",
+        "answer":  false,
+        "explanation":  "검토회의 주의 사항이다."
+    },
+    {
+        "id":  "11-test-3-79",
+        "statement":  "소프트웨어 검사는 원시 코드 외 문서는 절대 보지 않는다.",
+        "answer":  false,
+        "explanation":  "품질 보증 기법으로 유용하다."
+    },
+    {
+        "id":  "11-test-3-80",
+        "statement":  "검사 회의의 목적은 오류 발견이 아니라 즉석 코드 수정이다.",
+        "answer":  false,
+        "explanation":  "검사 회의 원칙이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 1,
+  title: "12주차 테스트2 · ",
+  questions:
+[
+    {
+        "id":  "12-test-1-1",
+        "statement":  "동적 테스트는 프로그램을 실행하면서 오류를 찾는 테스트이다.",
+        "answer":  true,
+        "explanation":  "실행 여부가 핵심이다."
+    },
+    {
+        "id":  "12-test-1-2",
+        "statement":  "명세 기반 테스트와 구현 기반 테스트는 모두 정적 검토만 의미한다.",
+        "answer":  false,
+        "explanation":  "12주차 동적 테스트의 큰 축이다."
+    },
+    {
+        "id":  "12-test-1-3",
+        "statement":  "구현 기반 테스트는 입력 데이터를 가지고 실행 상태를 추적하므로 동적 테스트 부류에 속한다.",
+        "answer":  true,
+        "explanation":  "실행 상태 추적이 핵심이다."
+    },
+    {
+        "id":  "12-test-1-4",
+        "statement":  "동적 테스트는 정적 테스트와 달리 실제 실행 결과를 확인한다.",
+        "answer":  true,
+        "explanation":  "프로그램 실행 여부로 구분한다."
+    },
+    {
+        "id":  "12-test-1-5",
+        "statement":  "명세 기반 테스트는 블랙박스 테스트라고도 한다.",
+        "answer":  true,
+        "explanation":  "내부 구조를 보지 않고 명세를 기반으로 한다."
+    },
+    {
+        "id":  "12-test-1-6",
+        "statement":  "블랙박스 테스트는 출력값을 보지 않고 내부 변수만 검사한다.",
+        "answer":  false,
+        "explanation":  "입력과 출력 관계를 본다."
+    },
+    {
+        "id":  "12-test-1-7",
+        "statement":  "블랙박스 테스트는 프로그램 내부 구조나 알고리즘을 보지 않는다.",
+        "answer":  true,
+        "explanation":  "명세 기반 테스트의 특징이다."
+    },
+    {
+        "id":  "12-test-1-8",
+        "statement":  "테스트 케이스는 요구분석명세서나 설계 사양서에서 추출할 수 있다.",
+        "answer":  true,
+        "explanation":  "명세 기반 테스트의 근거다."
+    },
+    {
+        "id":  "12-test-1-9",
+        "statement":  "블랙박스 테스트는 사용자가 원하는 기능을 수행하는가에 초점을 둔다.",
+        "answer":  true,
+        "explanation":  "사용자 기능 중심이다."
+    },
+    {
+        "id":  "12-test-1-10",
+        "statement":  "의료 장비 비유는 순환 복잡도 계산만 의미한다.",
+        "answer":  false,
+        "explanation":  "내부를 직접 열지 않고 진단하는 비유다."
+    },
+    {
+        "id":  "12-test-1-11",
+        "statement":  "블랙박스 테스트는 명세 기반 기법들을 포함한다.",
+        "answer":  true,
+        "explanation":  "신텍스·동등 분할·경계값·원인-결과 그래프가 관련된다."
+    },
+    {
+        "id":  "12-test-1-12",
+        "statement":  "신텍스 기법은 문법에 기반을 둔 테스트이다.",
+        "answer":  true,
+        "explanation":  "문법 기반 테스트다."
+    },
+    {
+        "id":  "12-test-1-13",
+        "statement":  "신텍스 기법은 부적합 입력을 절대 사용하지 않는다.",
+        "answer":  false,
+        "explanation":  "문법 기준 적합/부적합을 본다."
+    },
+    {
+        "id":  "12-test-1-14",
+        "statement":  "ID나 비밀번호 규칙 검사는 신텍스 기법 예가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "입력 문법 규칙 검사다."
+    },
+    {
+        "id":  "12-test-1-15",
+        "statement":  "신텍스 기법은 가장 단순한 방법으로 설명된다.",
+        "answer":  true,
+        "explanation":  "교안은 가장 단순한 문법 기반 방법으로 설명한다."
+    },
+    {
+        "id":  "12-test-1-16",
+        "statement":  "동등 분할 기법은 입력 영역을 나누어 대표값을 테스트한다.",
+        "answer":  true,
+        "explanation":  "영역별 대표값 테스트다."
+    },
+    {
+        "id":  "12-test-1-17",
+        "statement":  "동등 분할은 예상 출력값을 사용하지 않는다.",
+        "answer":  false,
+        "explanation":  "예상 결과와 실제 결과를 비교한다."
+    },
+    {
+        "id":  "12-test-1-18",
+        "statement":  "동등 분할은 단순하고 이해하기 쉬운 장점이 있다.",
+        "answer":  true,
+        "explanation":  "교안의 장점이다."
+    },
+    {
+        "id":  "12-test-1-19",
+        "statement":  "동등 분할은 사용자가 작성 가능하다는 장점이 있다.",
+        "answer":  true,
+        "explanation":  "사용자 작성 가능성이 장점이다."
+    },
+    {
+        "id":  "12-test-1-20",
+        "statement":  "점수 구간별 장학금 테스트는 동등 분할 예가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제와 연결된다."
+    },
+    {
+        "id":  "12-test-1-21",
+        "statement":  "경계 값 분석은 경계에 있는 값을 테스트 데이터로 생성한다.",
+        "answer":  true,
+        "explanation":  "경계값 중심 테스트다."
+    },
+    {
+        "id":  "12-test-1-22",
+        "statement":  "경계 값 분석은 경계 이전과 이후 값을 절대 쓰지 않는다.",
+        "answer":  false,
+        "explanation":  "교안 설명과 일치한다."
+    },
+    {
+        "id":  "12-test-1-23",
+        "statement":  "70점 경계라면 69, 70, 71이 후보가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "경계 전후를 본다."
+    },
+    {
+        "id":  "12-test-1-24",
+        "statement":  "경계 값 분석은 동등 분할 구간의 끝부분 오류를 찾는 데 유용하다.",
+        "answer":  true,
+        "explanation":  "경계 부근 오류 탐지에 적합하다."
+    },
+    {
+        "id":  "12-test-1-25",
+        "statement":  "허용 최대값이 100이면 101도 경계 이후값으로 테스트할 수 있다.",
+        "answer":  true,
+        "explanation":  "범위 밖 바로 다음 값도 후보가 된다."
+    },
+    {
+        "id":  "12-test-1-26",
+        "statement":  "경계 값 분석은 CC=E-N+2만 계산하는 기법이다.",
+        "answer":  false,
+        "explanation":  "순환 복잡도와 구분해야 한다."
+    },
+    {
+        "id":  "12-test-1-27",
+        "statement":  "원인-결과 그래프는 여러 입력 조건 조합과 출력 결과를 다룬다.",
+        "answer":  true,
+        "explanation":  "입력 조건과 결과의 논리 관계를 본다."
+    },
+    {
+        "id":  "12-test-1-28",
+        "statement":  "원인은 출력 조건이고 결과는 입력 조건이다.",
+        "answer":  false,
+        "explanation":  "교안의 용어 정의다."
+    },
+    {
+        "id":  "12-test-1-29",
+        "statement":  "큰 프로그램은 그래프 작성 가능한 크기로 분할할 수 있다.",
+        "answer":  true,
+        "explanation":  "제작 과정 1단계다."
+    },
+    {
+        "id":  "12-test-1-30",
+        "statement":  "요구분석명세서, 설계서, 프로그램에서 원인과 결과를 찾을 수 있다.",
+        "answer":  true,
+        "explanation":  "제작 과정 설명이다."
+    },
+    {
+        "id":  "12-test-1-31",
+        "statement":  "원인과 결과에는 식별자를 부여할 수 있다.",
+        "answer":  true,
+        "explanation":  "일련번호 같은 식별자를 부여한다."
+    },
+    {
+        "id":  "12-test-1-32",
+        "statement":  "원인-결과 그래프에서는 제한 조건 표시를 하지 않는다.",
+        "answer":  false,
+        "explanation":  "제한 조건 기호를 사용한다."
+    },
+    {
+        "id":  "12-test-1-33",
+        "statement":  "원인-결과 그래프는 의사결정 테이블로 변환할 수 있다.",
+        "answer":  true,
+        "explanation":  "결과 발생 조건을 테이블로 정리한다."
+    },
+    {
+        "id":  "12-test-1-34",
+        "statement":  "의사결정 테이블을 기반으로 테스트 케이스를 도출한다.",
+        "answer":  true,
+        "explanation":  "제작 과정의 마지막이다."
+    },
+    {
+        "id":  "12-test-1-35",
+        "statement":  "예제에서 P 또는 S로 시작하고 두 번째 열이 #이면 출입 가능이다.",
+        "answer":  true,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-1-36",
+        "statement":  "첫 번째 열이 P 또는 S로 시작하지 않으면 출입 가능이다.",
+        "answer":  false,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-1-37",
+        "statement":  "P/S로 시작하고 두 번째 열이 #이 아니면 비밀번호 오류이다.",
+        "answer":  true,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-1-38",
+        "statement":  "P는 Professor, S는 Student를 의미한다.",
+        "answer":  true,
+        "explanation":  "교안 예제의 의미다."
+    },
+    {
+        "id":  "12-test-1-39",
+        "statement":  "원인-결과 그래프는 명세 기반 테스트 기법이다.",
+        "answer":  true,
+        "explanation":  "블랙박스 테스트 장에서 다룬다."
+    },
+    {
+        "id":  "12-test-1-40",
+        "statement":  "구현 기반 테스트는 화이트박스 테스트라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "내부 구조 기반 테스트다."
+    },
+    {
+        "id":  "12-test-1-41",
+        "statement":  "구현 기반 테스트는 내부 구조를 절대 보지 않는다.",
+        "answer":  false,
+        "explanation":  "내부 변수·서브루틴 오류를 찾는다."
+    },
+    {
+        "id":  "12-test-1-42",
+        "statement":  "입력 데이터를 가지고 실행 상태를 추적해 오류를 찾는다.",
+        "answer":  true,
+        "explanation":  "동적 테스트 부류다."
+    },
+    {
+        "id":  "12-test-1-43",
+        "statement":  "내시경이나 개복 검사 비유는 구현 기반 테스트와 연결된다.",
+        "answer":  true,
+        "explanation":  "내부 확인 비유다."
+    },
+    {
+        "id":  "12-test-1-44",
+        "statement":  "화이트박스 절차에는 테스트 데이터 적합성 기준 선정이 포함된다.",
+        "answer":  true,
+        "explanation":  "첫 단계로 제시된다."
+    },
+    {
+        "id":  "12-test-1-45",
+        "statement":  "테스트 데이터는 기준과 무관하게 추첨으로만 정한다.",
+        "answer":  false,
+        "explanation":  "테스트 데이터 생성 단계다."
+    },
+    {
+        "id":  "12-test-1-46",
+        "statement":  "문장, 분기, 조건, 분기/조건, 다중 조건, 기본 경로 테스트는 화이트박스 방법이다.",
+        "answer":  true,
+        "explanation":  "구현 기반 테스트 방법 목록이다."
+    },
+    {
+        "id":  "12-test-1-47",
+        "statement":  "문장 검증 기준은 모든 문장이 최소 한 번 실행되도록 한다.",
+        "answer":  true,
+        "explanation":  "문장 실행 여부가 핵심이다."
+    },
+    {
+        "id":  "12-test-1-48",
+        "statement":  "문장 검증 기준은 제어 흐름 그래프와 무관하다.",
+        "answer":  false,
+        "explanation":  "절차에 포함된다."
+    },
+    {
+        "id":  "12-test-1-49",
+        "statement":  "문장 검증 기준은 최소한의 테스트로 다른 기준보다 약할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 한계다."
+    },
+    {
+        "id":  "12-test-1-50",
+        "statement":  "or를 and로 잘못 코딩해도 문장 검증 기준으로 발견하지 못할 수 있다.",
+        "answer":  true,
+        "explanation":  "문장 검증의 문제점이다."
+    },
+    {
+        "id":  "12-test-1-51",
+        "statement":  "선택한 경로에 해당하는 테스트 데이터를 가지고 실행한다.",
+        "answer":  true,
+        "explanation":  "절차의 일부다."
+    },
+    {
+        "id":  "12-test-1-52",
+        "statement":  "문장 검증은 조건식 오류를 반드시 모두 발견한다.",
+        "answer":  false,
+        "explanation":  "최소한의 테스트라 한계가 있다."
+    },
+    {
+        "id":  "12-test-1-53",
+        "statement":  "분기 검증 기준은 조건문의 T와 F가 최소 한 번씩 실행되도록 한다.",
+        "answer":  true,
+        "explanation":  "결정 검증 기준이다."
+    },
+    {
+        "id":  "12-test-1-54",
+        "statement":  "분기 검증 기준은 동등 분할 기법이라고도 한다.",
+        "answer":  false,
+        "explanation":  "교안의 명칭이다."
+    },
+    {
+        "id":  "12-test-1-55",
+        "statement":  "분기 시점 조건 오류와 합류 위치 오류 발견 가능성이 높다.",
+        "answer":  true,
+        "explanation":  "교안의 장점이다."
+    },
+    {
+        "id":  "12-test-1-56",
+        "statement":  "하나의 경로만으로는 분기 검증 기준을 만족하지 못할 수 있다.",
+        "answer":  true,
+        "explanation":  "경로 조합이 필요할 수 있다."
+    },
+    {
+        "id":  "12-test-1-57",
+        "statement":  "분기 검증 기준도 개별 조건식 오류를 놓칠 수 있다.",
+        "answer":  true,
+        "explanation":  "조건 검증 기준으로 보완한다."
+    },
+    {
+        "id":  "12-test-1-58",
+        "statement":  "or 조건에서 하나가 참이면 전체가 반드시 거짓이다.",
+        "answer":  false,
+        "explanation":  "or의 특성 때문이다."
+    },
+    {
+        "id":  "12-test-1-59",
+        "statement":  "조건 검증 기준은 개별 조건식의 T와 F를 최소 한 번씩 테스트한다.",
+        "answer":  true,
+        "explanation":  "개별 조건식 오류를 보기 위한 기준이다."
+    },
+    {
+        "id":  "12-test-1-60",
+        "statement":  "and 조건은 하나만 T여도 전체가 T이다.",
+        "answer":  false,
+        "explanation":  "and 연산 특성이다."
+    },
+    {
+        "id":  "12-test-1-61",
+        "statement":  "and에서 하나라도 F이면 전체 조건식은 F가 된다.",
+        "answer":  true,
+        "explanation":  "and 연산 특성이다."
+    },
+    {
+        "id":  "12-test-1-62",
+        "statement":  "or 조건은 둘 다 F일 때만 전체가 F이다.",
+        "answer":  true,
+        "explanation":  "or 연산 특성이다."
+    },
+    {
+        "id":  "12-test-1-63",
+        "statement":  "조건 검증은 분기 검증보다 개별 조건식 오류 발견에 더 강할 수 있다.",
+        "answer":  true,
+        "explanation":  "개별 조건식을 본다."
+    },
+    {
+        "id":  "12-test-1-64",
+        "statement":  "조건 검증 기준은 모든 오류를 완전히 보장한다.",
+        "answer":  false,
+        "explanation":  "이후 마스크 문제가 논의된다."
+    },
+    {
+        "id":  "12-test-1-65",
+        "statement":  "조건 검증 테스트 케이스는 (T,T), (T,F), (F,T), (F,F) 조합과 관련될 수 있다.",
+        "answer":  true,
+        "explanation":  "개별 조건식 조합을 고려한다."
+    },
+    {
+        "id":  "12-test-1-66",
+        "statement":  "분기/조건 검증 기준은 개별 조건식과 전체 조건식을 모두 만족하도록 테스트 케이스를 찾는다.",
+        "answer":  true,
+        "explanation":  "분기와 조건을 함께 고려한다."
+    },
+    {
+        "id":  "12-test-1-67",
+        "statement":  "분기/조건 검증은 마스크 문제를 완전히 해결한다.",
+        "answer":  false,
+        "explanation":  "교안은 한계로 마스크를 설명한다."
+    },
+    {
+        "id":  "12-test-1-68",
+        "statement":  "마스크는 어떤 개별 조건식이 다른 조건식 결과와 상관없이 전체 결과를 이미 결정하는 것이다.",
+        "answer":  true,
+        "explanation":  "교안의 정의다."
+    },
+    {
+        "id":  "12-test-1-69",
+        "statement":  "and 조건에서 하나가 F이면 다른 조건식 오류가 가려질 수 있다.",
+        "answer":  true,
+        "explanation":  "마스크 상황이다."
+    },
+    {
+        "id":  "12-test-1-70",
+        "statement":  "분기/조건 검증과 다중 조건 검증은 동일한 기준이 아니다.",
+        "answer":  true,
+        "explanation":  "다중 조건은 마스크 문제까지 보완한다."
+    },
+    {
+        "id":  "12-test-1-71",
+        "statement":  "다중 조건 검증 기준은 마스크 문제까지 해결한 테스트 데이터를 생성하는 기준이다.",
+        "answer":  true,
+        "explanation":  "교안의 정의다."
+    },
+    {
+        "id":  "12-test-1-72",
+        "statement":  "and 조건에서는 나머지 식의 T/F를 고려할 필요가 전혀 없다.",
+        "answer":  false,
+        "explanation":  "마스크 해결 방식이다."
+    },
+    {
+        "id":  "12-test-1-73",
+        "statement":  "or 조건에서 하나가 T이면 다른 조건식 오류가 가려질 수 있다.",
+        "answer":  true,
+        "explanation":  "or 마스크 문제다."
+    },
+    {
+        "id":  "12-test-1-74",
+        "statement":  "다중 조건 검증은 개별 조건 조합을 고려한다.",
+        "answer":  true,
+        "explanation":  "조건식 조합 기준이다."
+    },
+    {
+        "id":  "12-test-1-75",
+        "statement":  "다중 조건 검증은 분기/조건 기준보다 마스크 문제에 더 민감하게 대응한다.",
+        "answer":  true,
+        "explanation":  "마스크 문제 보완이 핵심이다."
+    },
+    {
+        "id":  "12-test-1-76",
+        "statement":  "기본 경로 테스트는 매케이브가 만들었다.",
+        "answer":  true,
+        "explanation":  "교안에 매케이브가 만든 것으로 설명된다."
+    },
+    {
+        "id":  "12-test-1-77",
+        "statement":  "기본 경로 테스트는 경로를 하나도 실행하지 않는다.",
+        "answer":  false,
+        "explanation":  "독립 경로 모두 수행이 목적이다."
+    },
+    {
+        "id":  "12-test-1-78",
+        "statement":  "절차에는 순서도 작성과 흐름 그래프 작성이 포함된다.",
+        "answer":  true,
+        "explanation":  "교안 절차다."
+    },
+    {
+        "id":  "12-test-1-79",
+        "statement":  "순환 복잡도는 원시 코드 복잡도를 정량적으로 평가하는 방법이다.",
+        "answer":  true,
+        "explanation":  "매케이브 메트릭이다."
+    },
+    {
+        "id":  "12-test-1-80",
+        "statement":  "순환 복잡도 공식에는 CC=E-N+2가 포함된다.",
+        "answer":  true,
+        "explanation":  "교안 공식이다."
+    },
+    {
+        "id":  "12-test-1-81",
+        "statement":  "P는 포켓몬 수를 의미하므로 CC=P+1은 디자인 패턴 공식이다.",
+        "answer":  false,
+        "explanation":  "P는 Predicate, 즉 분기 노드 수다."
+    },
+    {
+        "id":  "12-test-1-82",
+        "statement":  "R은 화살표와 노드로 둘러싸인 구역이며 외부 구역도 포함된다.",
+        "answer":  true,
+        "explanation":  "Region 정의다."
+    },
+    {
+        "id":  "12-test-1-83",
+        "statement":  "순환 복잡도는 테스트해야 할 독립 경로 수를 파악하는 데 활용될 수 있다.",
+        "answer":  true,
+        "explanation":  "독립 경로 수와 관련된다."
+    },
+    {
+        "id":  "12-test-1-84",
+        "statement":  "V 모델은 요구사항 정의, 분석, 설계, 구현 단계와 테스트 단계가 V자로 연결된다.",
+        "answer":  true,
+        "explanation":  "개발 단계와 테스트가 대응된다."
+    },
+    {
+        "id":  "12-test-1-85",
+        "statement":  "V 모델 과정에는 오직 디자인 패턴만 포함된다.",
+        "answer":  false,
+        "explanation":  "교안의 테스트 과정이다."
+    },
+    {
+        "id":  "12-test-1-86",
+        "statement":  "단위 테스트는 프로그램의 기본 단위인 모듈을 테스트한다.",
+        "answer":  true,
+        "explanation":  "모듈 테스트다."
+    },
+    {
+        "id":  "12-test-1-87",
+        "statement":  "단위 테스트는 각 모듈이 요구분석명세서대로 구현되었는지 확인한다.",
+        "answer":  true,
+        "explanation":  "개별 모듈 기능을 본다."
+    },
+    {
+        "id":  "12-test-1-88",
+        "statement":  "테스트 드라이버는 상위 모듈 역할을 하는 가상의 모듈이다.",
+        "answer":  true,
+        "explanation":  "대상 모듈을 호출한다."
+    },
+    {
+        "id":  "12-test-1-89",
+        "statement":  "스텁은 상위 모듈 역할만 한다.",
+        "answer":  false,
+        "explanation":  "호출받아 결과를 넘긴다."
+    },
+    {
+        "id":  "12-test-1-90",
+        "statement":  "드라이버와 스텁은 필요한 기능만 제공하도록 단순하게 구현한다.",
+        "answer":  true,
+        "explanation":  "테스트용 가상 모듈이다."
+    },
+    {
+        "id":  "12-test-1-91",
+        "statement":  "단위 테스트에서 잘못된 자료형, 논리 연산자, 알고리즘 오류, 틀린 수식, 탈출구 없는 반복문을 발견할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 오류 목록이다."
+    },
+    {
+        "id":  "12-test-1-92",
+        "statement":  "통합 테스트는 단위 테스트가 끝난 모듈 통합 과정의 오류를 찾는다.",
+        "answer":  true,
+        "explanation":  "모듈 간 인터페이스를 본다."
+    },
+    {
+        "id":  "12-test-1-93",
+        "statement":  "Big-bang 테스트는 항상 한 모듈만 따로 테스트한다.",
+        "answer":  false,
+        "explanation":  "한꺼번에 통합하는 방식이다."
+    },
+    {
+        "id":  "12-test-1-94",
+        "statement":  "Big-bang은 절차가 간단하지만 오류 원인 모듈을 찾기 어렵다.",
+        "answer":  true,
+        "explanation":  "한꺼번에 통합하기 때문이다."
+    },
+    {
+        "id":  "12-test-1-95",
+        "statement":  "하향식 통합은 최상위 모듈부터 하위 방향으로 통합한다.",
+        "answer":  true,
+        "explanation":  "상위에서 하위로 내려간다."
+    },
+    {
+        "id":  "12-test-1-96",
+        "statement":  "하향식 통합에서는 스텁이 필요할 수 있다.",
+        "answer":  true,
+        "explanation":  "미완성 하위 모듈을 대체한다."
+    },
+    {
+        "id":  "12-test-1-97",
+        "statement":  "상향식 통합은 최상위 모듈부터만 시작한다.",
+        "answer":  false,
+        "explanation":  "하위에서 상위로 올라간다."
+    },
+    {
+        "id":  "12-test-1-98",
+        "statement":  "상향식 통합에서는 테스트 드라이버가 필요할 수 있다.",
+        "answer":  true,
+        "explanation":  "상위 모듈 역할을 대신한다."
+    },
+    {
+        "id":  "12-test-1-99",
+        "statement":  "시스템 테스트는 모듈 통합 후 시스템 전체가 요구사항을 만족하는지 확인한다.",
+        "answer":  true,
+        "explanation":  "전체 시스템 요구 충족을 본다."
+    },
+    {
+        "id":  "12-test-1-100",
+        "statement":  "인수 테스트는 사용자가 시스템 인수 전 요구 충족 여부를 확인한다.",
+        "answer":  true,
+        "explanation":  "사용자 관점의 인수 확인이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 2,
+  title: "12주차 테스트2 · ",
+  questions:
+[
+    {
+        "id":  "12-test-2-1",
+        "statement":  "동적 테스트는 프로그램을 실행하면서 오류를 찾는 테스트라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "실행 여부가 핵심이다."
+    },
+    {
+        "id":  "12-test-2-2",
+        "statement":  "명세 기반 테스트와 구현 기반 테스트는 동적 테스트에서 다뤄진다.",
+        "answer":  true,
+        "explanation":  "12주차 동적 테스트의 큰 축이다."
+    },
+    {
+        "id":  "12-test-2-3",
+        "statement":  "구현 기반 테스트는 실행 상태 추적과 무관하다.",
+        "answer":  false,
+        "explanation":  "실행 상태 추적이 핵심이다."
+    },
+    {
+        "id":  "12-test-2-4",
+        "statement":  "동적 테스트는 정적 테스트와 달리 실제 실행 결과를 확인한다.",
+        "answer":  true,
+        "explanation":  "프로그램 실행 여부로 구분한다."
+    },
+    {
+        "id":  "12-test-2-5",
+        "statement":  "명세 기반 테스트는 블랙박스 테스트라고도 한다.",
+        "answer":  true,
+        "explanation":  "내부 구조를 보지 않고 명세를 기반으로 한다."
+    },
+    {
+        "id":  "12-test-2-6",
+        "statement":  "블랙박스 테스트는 입력값에 대한 예상 출력값을 정해 결과가 맞는지 확인한다.",
+        "answer":  true,
+        "explanation":  "입력과 출력 관계를 본다."
+    },
+    {
+        "id":  "12-test-2-7",
+        "statement":  "블랙박스 테스트는 내부 알고리즘 분석이 핵심이다.",
+        "answer":  false,
+        "explanation":  "명세 기반 테스트의 특징이다."
+    },
+    {
+        "id":  "12-test-2-8",
+        "statement":  "테스트 케이스는 요구분석명세서나 설계 사양서에서 추출할 수 있다.",
+        "answer":  true,
+        "explanation":  "명세 기반 테스트의 근거다."
+    },
+    {
+        "id":  "12-test-2-9",
+        "statement":  "블랙박스 테스트는 사용자가 원하는 기능을 수행하는가에 초점을 둔다.",
+        "answer":  true,
+        "explanation":  "사용자 기능 중심이다."
+    },
+    {
+        "id":  "12-test-2-10",
+        "statement":  "의료 장비 비유는 순환 복잡도 계산만 의미한다.",
+        "answer":  false,
+        "explanation":  "내부를 직접 열지 않고 진단하는 비유다."
+    },
+    {
+        "id":  "12-test-2-11",
+        "statement":  "블랙박스 테스트는 명세 기반 기법들을 포함한다.",
+        "answer":  true,
+        "explanation":  "신텍스·동등 분할·경계값·원인-결과 그래프가 관련된다."
+    },
+    {
+        "id":  "12-test-2-12",
+        "statement":  "신텍스 기법은 문법에 기반을 둔 테스트라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "문법 기반 테스트다."
+    },
+    {
+        "id":  "12-test-2-13",
+        "statement":  "신텍스 기법은 적합 입력과 부적합 입력의 예상 결과를 확인한다.",
+        "answer":  true,
+        "explanation":  "문법 기준 적합/부적합을 본다."
+    },
+    {
+        "id":  "12-test-2-14",
+        "statement":  "ID나 비밀번호 규칙 검사는 신텍스 기법과 무관하다.",
+        "answer":  false,
+        "explanation":  "입력 문법 규칙 검사다."
+    },
+    {
+        "id":  "12-test-2-15",
+        "statement":  "신텍스 기법은 가장 단순한 방법으로 설명된다.",
+        "answer":  true,
+        "explanation":  "교안은 가장 단순한 문법 기반 방법으로 설명한다."
+    },
+    {
+        "id":  "12-test-2-16",
+        "statement":  "동등 분할 기법은 입력 영역을 나누어 대표값을 테스트한다.",
+        "answer":  true,
+        "explanation":  "영역별 대표값 테스트다."
+    },
+    {
+        "id":  "12-test-2-17",
+        "statement":  "동등 분할은 각 영역 입력값과 예상 출력값을 실제 값과 비교한다.",
+        "answer":  true,
+        "explanation":  "예상 결과와 실제 결과를 비교한다."
+    },
+    {
+        "id":  "12-test-2-18",
+        "statement":  "동등 분할은 사용자가 이해하기 가장 어려운 기법으로 설명된다.",
+        "answer":  false,
+        "explanation":  "교안의 장점이다."
+    },
+    {
+        "id":  "12-test-2-19",
+        "statement":  "동등 분할은 사용자가 작성 가능하다는 장점이 있다.",
+        "answer":  true,
+        "explanation":  "사용자 작성 가능성이 장점이다."
+    },
+    {
+        "id":  "12-test-2-20",
+        "statement":  "점수 구간별 장학금 테스트는 동등 분할 예가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제와 연결된다."
+    },
+    {
+        "id":  "12-test-2-21",
+        "statement":  "경계 값 분석은 경계에 있는 값을 테스트 데이터로 생성한다.",
+        "answer":  true,
+        "explanation":  "경계값 중심 테스트다."
+    },
+    {
+        "id":  "12-test-2-22",
+        "statement":  "경계값, 경계 이전 값, 경계 이후 값을 가지고 테스트한다.",
+        "answer":  true,
+        "explanation":  "교안 설명과 일치한다."
+    },
+    {
+        "id":  "12-test-2-23",
+        "statement":  "70점 경계라면 70만 보고 69와 71은 무조건 제외한다.",
+        "answer":  false,
+        "explanation":  "경계 전후를 본다."
+    },
+    {
+        "id":  "12-test-2-24",
+        "statement":  "경계 값 분석은 동등 분할 구간의 끝부분 오류를 찾는 데 유용하다.",
+        "answer":  true,
+        "explanation":  "경계 부근 오류 탐지에 적합하다."
+    },
+    {
+        "id":  "12-test-2-25",
+        "statement":  "허용 최대값이 100이면 101도 경계 이후값으로 테스트할 수 있다.",
+        "answer":  true,
+        "explanation":  "범위 밖 바로 다음 값도 후보가 된다."
+    },
+    {
+        "id":  "12-test-2-26",
+        "statement":  "경계 값 분석은 CC=E-N+2만 계산하는 기법이다.",
+        "answer":  false,
+        "explanation":  "순환 복잡도와 구분해야 한다."
+    },
+    {
+        "id":  "12-test-2-27",
+        "statement":  "원인-결과 그래프는 여러 입력 조건 조합과 출력 결과를 다룬다.",
+        "answer":  true,
+        "explanation":  "입력 조건과 결과의 논리 관계를 본다."
+    },
+    {
+        "id":  "12-test-2-28",
+        "statement":  "원인은 입력 조건이고 결과는 출력 조건라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 용어 정의다."
+    },
+    {
+        "id":  "12-test-2-29",
+        "statement":  "원인-결과 그래프는 큰 프로그램을 절대 분할하지 않는다.",
+        "answer":  false,
+        "explanation":  "제작 과정 1단계다."
+    },
+    {
+        "id":  "12-test-2-30",
+        "statement":  "요구분석명세서, 설계서, 프로그램에서 원인과 결과를 찾을 수 있다.",
+        "answer":  true,
+        "explanation":  "제작 과정 설명이다."
+    },
+    {
+        "id":  "12-test-2-31",
+        "statement":  "원인과 결과에는 식별자를 부여할 수 있다.",
+        "answer":  true,
+        "explanation":  "일련번호 같은 식별자를 부여한다."
+    },
+    {
+        "id":  "12-test-2-32",
+        "statement":  "원인-결과 그래프에서는 제한 조건 표시를 하지 않는다.",
+        "answer":  false,
+        "explanation":  "제한 조건 기호를 사용한다."
+    },
+    {
+        "id":  "12-test-2-33",
+        "statement":  "원인-결과 그래프는 의사결정 테이블로 변환할 수 있다.",
+        "answer":  true,
+        "explanation":  "결과 발생 조건을 테이블로 정리한다."
+    },
+    {
+        "id":  "12-test-2-34",
+        "statement":  "의사결정 테이블을 기반으로 테스트 케이스를 도출한다.",
+        "answer":  true,
+        "explanation":  "제작 과정의 마지막이다."
+    },
+    {
+        "id":  "12-test-2-35",
+        "statement":  "예제에서 P 또는 S로 시작하고 #이면 출입 금지이다.",
+        "answer":  false,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-2-36",
+        "statement":  "첫 번째 열이 P 또는 S로 시작하지 않으면 출입 금지라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-2-37",
+        "statement":  "P/S로 시작하고 두 번째 열이 #이 아니면 비밀번호 오류라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-2-38",
+        "statement":  "P는 Password, S는 Security만 의미한다.",
+        "answer":  false,
+        "explanation":  "교안 예제의 의미다."
+    },
+    {
+        "id":  "12-test-2-39",
+        "statement":  "원인-결과 그래프는 명세 기반 테스트 기법라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "블랙박스 테스트 장에서 다룬다."
+    },
+    {
+        "id":  "12-test-2-40",
+        "statement":  "구현 기반 테스트는 화이트박스 테스트라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "내부 구조 기반 테스트다."
+    },
+    {
+        "id":  "12-test-2-41",
+        "statement":  "구현 기반 테스트는 코드 내부 구조를 테스트 설계의 기반으로 사용한다.",
+        "answer":  true,
+        "explanation":  "내부 변수·서브루틴 오류를 찾는다."
+    },
+    {
+        "id":  "12-test-2-42",
+        "statement":  "구현 기반 테스트는 입력 데이터를 사용하지 않는다.",
+        "answer":  false,
+        "explanation":  "동적 테스트 부류다."
+    },
+    {
+        "id":  "12-test-2-43",
+        "statement":  "내시경이나 개복 검사 비유는 구현 기반 테스트와 연결된다.",
+        "answer":  true,
+        "explanation":  "내부 확인 비유다."
+    },
+    {
+        "id":  "12-test-2-44",
+        "statement":  "화이트박스 절차에는 테스트 데이터 적합성 기준 선정이 포함된다.",
+        "answer":  true,
+        "explanation":  "첫 단계로 제시된다."
+    },
+    {
+        "id":  "12-test-2-45",
+        "statement":  "테스트 데이터는 기준과 무관하게 추첨으로만 정한다.",
+        "answer":  false,
+        "explanation":  "테스트 데이터 생성 단계다."
+    },
+    {
+        "id":  "12-test-2-46",
+        "statement":  "문장, 분기, 조건, 분기/조건, 다중 조건, 기본 경로 테스트는 화이트박스 방법라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "구현 기반 테스트 방법 목록이다."
+    },
+    {
+        "id":  "12-test-2-47",
+        "statement":  "문장 검증 기준은 모든 문장이 최소 한 번 실행되도록 한다.",
+        "answer":  true,
+        "explanation":  "문장 실행 여부가 핵심이다."
+    },
+    {
+        "id":  "12-test-2-48",
+        "statement":  "문장 검증 기준은 원시 코드를 제어 흐름 그래프 형태로 표현할 수 있다.",
+        "answer":  true,
+        "explanation":  "절차에 포함된다."
+    },
+    {
+        "id":  "12-test-2-49",
+        "statement":  "문장 검증 기준은 모든 오류를 보장하는 최강 기준이다.",
+        "answer":  false,
+        "explanation":  "교안의 한계다."
+    },
+    {
+        "id":  "12-test-2-50",
+        "statement":  "or를 and로 잘못 코딩해도 문장 검증 기준으로 발견하지 못할 수 있다.",
+        "answer":  true,
+        "explanation":  "문장 검증의 문제점이다."
+    },
+    {
+        "id":  "12-test-2-51",
+        "statement":  "선택한 경로에 해당하는 테스트 데이터를 가지고 실행한다.",
+        "answer":  true,
+        "explanation":  "절차의 일부다."
+    },
+    {
+        "id":  "12-test-2-52",
+        "statement":  "문장 검증은 조건식 오류를 반드시 모두 발견한다.",
+        "answer":  false,
+        "explanation":  "최소한의 테스트라 한계가 있다."
+    },
+    {
+        "id":  "12-test-2-53",
+        "statement":  "분기 검증 기준은 조건문의 T와 F가 최소 한 번씩 실행되도록 한다.",
+        "answer":  true,
+        "explanation":  "결정 검증 기준이다."
+    },
+    {
+        "id":  "12-test-2-54",
+        "statement":  "분기 검증 기준은 결정 검증 기준이라고도 한다.",
+        "answer":  true,
+        "explanation":  "교안의 명칭이다."
+    },
+    {
+        "id":  "12-test-2-55",
+        "statement":  "분기 검증은 분기 시점 오류와 무관하다.",
+        "answer":  false,
+        "explanation":  "교안의 장점이다."
+    },
+    {
+        "id":  "12-test-2-56",
+        "statement":  "하나의 경로만으로는 분기 검증 기준을 만족하지 못할 수 있다.",
+        "answer":  true,
+        "explanation":  "경로 조합이 필요할 수 있다."
+    },
+    {
+        "id":  "12-test-2-57",
+        "statement":  "분기 검증 기준도 개별 조건식 오류를 놓칠 수 있다.",
+        "answer":  true,
+        "explanation":  "조건 검증 기준으로 보완한다."
+    },
+    {
+        "id":  "12-test-2-58",
+        "statement":  "or 조건에서 하나가 참이면 전체가 반드시 거짓이다.",
+        "answer":  false,
+        "explanation":  "or의 특성 때문이다."
+    },
+    {
+        "id":  "12-test-2-59",
+        "statement":  "조건 검증 기준은 개별 조건식의 T와 F를 최소 한 번씩 테스트한다.",
+        "answer":  true,
+        "explanation":  "개별 조건식 오류를 보기 위한 기준이다."
+    },
+    {
+        "id":  "12-test-2-60",
+        "statement":  "and로 연결된 두 조건식은 둘 다 T일 때만 전체 조건식이 T라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "and 연산 특성이다."
+    },
+    {
+        "id":  "12-test-2-61",
+        "statement":  "and에서 하나가 F여도 전체가 반드시 T이다.",
+        "answer":  false,
+        "explanation":  "and 연산 특성이다."
+    },
+    {
+        "id":  "12-test-2-62",
+        "statement":  "or 조건은 둘 다 F일 때만 전체가 F라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "or 연산 특성이다."
+    },
+    {
+        "id":  "12-test-2-63",
+        "statement":  "조건 검증은 분기 검증보다 개별 조건식 오류 발견에 더 강할 수 있다.",
+        "answer":  true,
+        "explanation":  "개별 조건식을 본다."
+    },
+    {
+        "id":  "12-test-2-64",
+        "statement":  "조건 검증 기준은 모든 오류를 완전히 보장한다.",
+        "answer":  false,
+        "explanation":  "이후 마스크 문제가 논의된다."
+    },
+    {
+        "id":  "12-test-2-65",
+        "statement":  "조건 검증 테스트 케이스는 (T,T), (T,F), (F,T), (F,F) 조합과 관련될 수 있다.",
+        "answer":  true,
+        "explanation":  "개별 조건식 조합을 고려한다."
+    },
+    {
+        "id":  "12-test-2-66",
+        "statement":  "분기/조건 검증 기준은 개별 조건식과 전체 조건식을 모두 만족하도록 테스트 케이스를 찾는다.",
+        "answer":  true,
+        "explanation":  "분기와 조건을 함께 고려한다."
+    },
+    {
+        "id":  "12-test-2-67",
+        "statement":  "분기/조건 검증 기준에도 마스크 문제가 남을 수 있다.",
+        "answer":  true,
+        "explanation":  "교안은 한계로 마스크를 설명한다."
+    },
+    {
+        "id":  "12-test-2-68",
+        "statement":  "마스크는 테스트 케이스 이름을 가리는 주석 규칙이다.",
+        "answer":  false,
+        "explanation":  "교안의 정의다."
+    },
+    {
+        "id":  "12-test-2-69",
+        "statement":  "and 조건에서 하나가 F이면 다른 조건식 오류가 가려질 수 있다.",
+        "answer":  true,
+        "explanation":  "마스크 상황이다."
+    },
+    {
+        "id":  "12-test-2-70",
+        "statement":  "분기/조건 검증과 다중 조건 검증은 동일한 기준이 아니다.",
+        "answer":  true,
+        "explanation":  "다중 조건은 마스크 문제까지 보완한다."
+    },
+    {
+        "id":  "12-test-2-71",
+        "statement":  "다중 조건 검증 기준은 마스크 문제까지 해결한 테스트 데이터를 생성하는 기준라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 정의다."
+    },
+    {
+        "id":  "12-test-2-72",
+        "statement":  "and 조건에서 나머지 식이 T인 경우와 F인 경우를 추가로 고려할 수 있다.",
+        "answer":  true,
+        "explanation":  "마스크 해결 방식이다."
+    },
+    {
+        "id":  "12-test-2-73",
+        "statement":  "or 조건에서 하나가 T이면 다른 조건식 오류가 반드시 드러난다.",
+        "answer":  false,
+        "explanation":  "or 마스크 문제다."
+    },
+    {
+        "id":  "12-test-2-74",
+        "statement":  "다중 조건 검증은 개별 조건 조합을 고려한다.",
+        "answer":  true,
+        "explanation":  "조건식 조합 기준이다."
+    },
+    {
+        "id":  "12-test-2-75",
+        "statement":  "다중 조건 검증은 분기/조건 기준보다 마스크 문제에 더 민감하게 대응한다.",
+        "answer":  true,
+        "explanation":  "마스크 문제 보완이 핵심이다."
+    },
+    {
+        "id":  "12-test-2-76",
+        "statement":  "기본 경로 테스트는 매케이브가 만들었다.",
+        "answer":  true,
+        "explanation":  "교안에 매케이브가 만든 것으로 설명된다."
+    },
+    {
+        "id":  "12-test-2-77",
+        "statement":  "기본 경로 테스트는 독립적인 경로가 최소 한 번 실행되도록 테스트한다.",
+        "answer":  true,
+        "explanation":  "독립 경로 모두 수행이 목적이다."
+    },
+    {
+        "id":  "12-test-2-78",
+        "statement":  "기본 경로 테스트에서는 흐름 그래프를 작성하지 않는다.",
+        "answer":  false,
+        "explanation":  "교안 절차다."
+    },
+    {
+        "id":  "12-test-2-79",
+        "statement":  "순환 복잡도는 원시 코드 복잡도를 정량적으로 평가하는 방법라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "매케이브 메트릭이다."
+    },
+    {
+        "id":  "12-test-2-80",
+        "statement":  "순환 복잡도 공식에는 CC=E-N+2가 포함된다.",
+        "answer":  true,
+        "explanation":  "교안 공식이다."
+    },
+    {
+        "id":  "12-test-2-81",
+        "statement":  "P는 포켓몬 수를 의미하므로 CC=P+1은 디자인 패턴 공식이다.",
+        "answer":  false,
+        "explanation":  "P는 Predicate, 즉 분기 노드 수다."
+    },
+    {
+        "id":  "12-test-2-82",
+        "statement":  "R은 화살표와 노드로 둘러싸인 구역이며 외부 구역도 포함된다.",
+        "answer":  true,
+        "explanation":  "Region 정의다."
+    },
+    {
+        "id":  "12-test-2-83",
+        "statement":  "순환 복잡도는 테스트해야 할 독립 경로 수를 파악하는 데 활용될 수 있다.",
+        "answer":  true,
+        "explanation":  "독립 경로 수와 관련된다."
+    },
+    {
+        "id":  "12-test-2-84",
+        "statement":  "V 모델은 요구사항 정의, 분석, 설계, 구현 단계와 테스트 단계가 V자로 연결된다.",
+        "answer":  true,
+        "explanation":  "개발 단계와 테스트가 대응된다."
+    },
+    {
+        "id":  "12-test-2-85",
+        "statement":  "V 모델 과정에는 단위, 통합, 시스템, 인수, 회귀 테스트가 포함된다.",
+        "answer":  true,
+        "explanation":  "교안의 테스트 과정이다."
+    },
+    {
+        "id":  "12-test-2-86",
+        "statement":  "단위 테스트는 사용자 인수만 확인한다.",
+        "answer":  false,
+        "explanation":  "모듈 테스트다."
+    },
+    {
+        "id":  "12-test-2-87",
+        "statement":  "단위 테스트는 각 모듈이 요구분석명세서대로 구현되었는지 확인한다.",
+        "answer":  true,
+        "explanation":  "개별 모듈 기능을 본다."
+    },
+    {
+        "id":  "12-test-2-88",
+        "statement":  "테스트 드라이버는 상위 모듈 역할을 하는 가상의 모듈라고 볼 수 있다.",
+        "answer":  true,
+        "explanation":  "대상 모듈을 호출한다."
+    },
+    {
+        "id":  "12-test-2-89",
+        "statement":  "스텁은 상위 모듈 역할만 한다.",
+        "answer":  false,
+        "explanation":  "호출받아 결과를 넘긴다."
+    },
+    {
+        "id":  "12-test-2-90",
+        "statement":  "드라이버와 스텁은 필요한 기능만 제공하도록 단순하게 구현한다.",
+        "answer":  true,
+        "explanation":  "테스트용 가상 모듈이다."
+    },
+    {
+        "id":  "12-test-2-91",
+        "statement":  "단위 테스트에서 잘못된 자료형, 논리 연산자, 알고리즘 오류, 틀린 수식, 탈출구 없는 반복문을 발견할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 오류 목록이다."
+    },
+    {
+        "id":  "12-test-2-92",
+        "statement":  "통합 테스트는 모듈 간 상호작용과 무관하다.",
+        "answer":  false,
+        "explanation":  "모듈 간 인터페이스를 본다."
+    },
+    {
+        "id":  "12-test-2-93",
+        "statement":  "Big-bang 테스트는 단위 테스트가 끝난 모듈을 한꺼번에 결합한다.",
+        "answer":  true,
+        "explanation":  "한꺼번에 통합하는 방식이다."
+    },
+    {
+        "id":  "12-test-2-94",
+        "statement":  "Big-bang은 절차가 간단하지만 오류 원인 모듈을 찾기 어렵다.",
+        "answer":  true,
+        "explanation":  "한꺼번에 통합하기 때문이다."
+    },
+    {
+        "id":  "12-test-2-95",
+        "statement":  "하향식 통합은 항상 최하위 모듈부터 시작한다.",
+        "answer":  false,
+        "explanation":  "상위에서 하위로 내려간다."
+    },
+    {
+        "id":  "12-test-2-96",
+        "statement":  "하향식 통합에서는 스텁이 필요할 수 있다.",
+        "answer":  true,
+        "explanation":  "미완성 하위 모듈을 대체한다."
+    },
+    {
+        "id":  "12-test-2-97",
+        "statement":  "상향식 통합은 가장 아래 모듈부터 테스트를 시작한다.",
+        "answer":  true,
+        "explanation":  "하위에서 상위로 올라간다."
+    },
+    {
+        "id":  "12-test-2-98",
+        "statement":  "상향식 통합에서는 테스트 드라이버가 절대 필요 없다.",
+        "answer":  false,
+        "explanation":  "상위 모듈 역할을 대신한다."
+    },
+    {
+        "id":  "12-test-2-99",
+        "statement":  "시스템 테스트는 모듈 통합 후 시스템 전체가 요구사항을 만족하는지 확인한다.",
+        "answer":  true,
+        "explanation":  "전체 시스템 요구 충족을 본다."
+    },
+    {
+        "id":  "12-test-2-100",
+        "statement":  "인수 테스트는 사용자가 시스템 인수 전 요구 충족 여부를 확인한다.",
+        "answer":  true,
+        "explanation":  "사용자 관점의 인수 확인이다.\n\n---"
+    }
+]
+});
+
+
+window.OX_SECTIONS.push({
+  week: 11,
+  set: 3,
+  title: "12주차 테스트2 · ",
+  questions:
+[
+    {
+        "id":  "12-test-3-1",
+        "statement":  "동적 테스트는 프로그램을 절대 실행하지 않는 테스트이다.",
+        "answer":  false,
+        "explanation":  "실행 여부가 핵심이다."
+    },
+    {
+        "id":  "12-test-3-2",
+        "statement":  "명세 기반 테스트와 구현 기반 테스트는 모두 정적 검토만 의미한다.",
+        "answer":  false,
+        "explanation":  "12주차 동적 테스트의 큰 축이다."
+    },
+    {
+        "id":  "12-test-3-3",
+        "statement":  "구현 기반 테스트는 입력 데이터를 가지고 실행 상태를 추적하므로 동적 테스트 부류에 속한다.",
+        "answer":  true,
+        "explanation":  "실행 상태 추적이 핵심이다."
+    },
+    {
+        "id":  "12-test-3-4",
+        "statement":  "동적 테스트는 정적 테스트와 완전히 같아 실행 여부 차이가 없다.",
+        "answer":  false,
+        "explanation":  "프로그램 실행 여부로 구분한다."
+    },
+    {
+        "id":  "12-test-3-5",
+        "statement":  "명세 기반 테스트는 화이트박스 테스트만 의미한다.",
+        "answer":  false,
+        "explanation":  "내부 구조를 보지 않고 명세를 기반으로 한다."
+    },
+    {
+        "id":  "12-test-3-6",
+        "statement":  "블랙박스 테스트는 출력값을 보지 않고 내부 변수만 검사한다.",
+        "answer":  false,
+        "explanation":  "입력과 출력 관계를 본다."
+    },
+    {
+        "id":  "12-test-3-7",
+        "statement":  "블랙박스 테스트는 프로그램 내부 구조나 알고리즘을 보지 않는다.",
+        "answer":  true,
+        "explanation":  "명세 기반 테스트의 특징이다."
+    },
+    {
+        "id":  "12-test-3-8",
+        "statement":  "테스트 케이스는 명세나 설계 사양서와 무관하다.",
+        "answer":  false,
+        "explanation":  "명세 기반 테스트의 근거다."
+    },
+    {
+        "id":  "12-test-3-9",
+        "statement":  "블랙박스 테스트는 기능 수행 여부보다 내부 코드 줄 수만 본다.",
+        "answer":  false,
+        "explanation":  "사용자 기능 중심이다."
+    },
+    {
+        "id":  "12-test-3-10",
+        "statement":  "의료 장비 비유는 순환 복잡도 계산만 의미한다.",
+        "answer":  false,
+        "explanation":  "내부를 직접 열지 않고 진단하는 비유다."
+    },
+    {
+        "id":  "12-test-3-11",
+        "statement":  "블랙박스 테스트는 원시 코드 제어 흐름만 포함한다.",
+        "answer":  false,
+        "explanation":  "신텍스·동등 분할·경계값·원인-결과 그래프가 관련된다."
+    },
+    {
+        "id":  "12-test-3-12",
+        "statement":  "신텍스 기법은 문법과 무관한 경로 테스트이다.",
+        "answer":  false,
+        "explanation":  "문법 기반 테스트다."
+    },
+    {
+        "id":  "12-test-3-13",
+        "statement":  "신텍스 기법은 부적합 입력을 절대 사용하지 않는다.",
+        "answer":  false,
+        "explanation":  "문법 기준 적합/부적합을 본다."
+    },
+    {
+        "id":  "12-test-3-14",
+        "statement":  "ID나 비밀번호 규칙 검사는 신텍스 기법 예가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "입력 문법 규칙 검사다."
+    },
+    {
+        "id":  "12-test-3-15",
+        "statement":  "신텍스 기법은 가장 복잡한 순환 복잡도 계산 기법이다.",
+        "answer":  false,
+        "explanation":  "교안은 가장 단순한 문법 기반 방법으로 설명한다."
+    },
+    {
+        "id":  "12-test-3-16",
+        "statement":  "동등 분할은 모든 입력값을 전수 검사해야 한다.",
+        "answer":  false,
+        "explanation":  "영역별 대표값 테스트다."
+    },
+    {
+        "id":  "12-test-3-17",
+        "statement":  "동등 분할은 예상 출력값을 사용하지 않는다.",
+        "answer":  false,
+        "explanation":  "예상 결과와 실제 결과를 비교한다."
+    },
+    {
+        "id":  "12-test-3-18",
+        "statement":  "동등 분할은 단순하고 이해하기 쉬운 장점이 있다.",
+        "answer":  true,
+        "explanation":  "교안의 장점이다."
+    },
+    {
+        "id":  "12-test-3-19",
+        "statement":  "동등 분할은 사용자가 절대 작성할 수 없다.",
+        "answer":  false,
+        "explanation":  "사용자 작성 가능성이 장점이다."
+    },
+    {
+        "id":  "12-test-3-20",
+        "statement":  "점수 구간별 장학금 테스트는 경로 독립성 계산만 의미한다.",
+        "answer":  false,
+        "explanation":  "교안 예제와 연결된다."
+    },
+    {
+        "id":  "12-test-3-21",
+        "statement":  "경계 값 분석은 경계값을 의도적으로 제외한다.",
+        "answer":  false,
+        "explanation":  "경계값 중심 테스트다."
+    },
+    {
+        "id":  "12-test-3-22",
+        "statement":  "경계 값 분석은 경계 이전과 이후 값을 절대 쓰지 않는다.",
+        "answer":  false,
+        "explanation":  "교안 설명과 일치한다."
+    },
+    {
+        "id":  "12-test-3-23",
+        "statement":  "70점 경계라면 69, 70, 71이 후보가 될 수 있다.",
+        "answer":  true,
+        "explanation":  "경계 전후를 본다."
+    },
+    {
+        "id":  "12-test-3-24",
+        "statement":  "경계 값 분석은 구간 끝부분 오류와 무관하다.",
+        "answer":  false,
+        "explanation":  "경계 부근 오류 탐지에 적합하다."
+    },
+    {
+        "id":  "12-test-3-25",
+        "statement":  "허용 최대값이 100이면 101은 절대 테스트하면 안 된다.",
+        "answer":  false,
+        "explanation":  "범위 밖 바로 다음 값도 후보가 된다."
+    },
+    {
+        "id":  "12-test-3-26",
+        "statement":  "경계 값 분석은 CC=E-N+2만 계산하는 기법이다.",
+        "answer":  false,
+        "explanation":  "순환 복잡도와 구분해야 한다."
+    },
+    {
+        "id":  "12-test-3-27",
+        "statement":  "원인-결과 그래프는 단일 문장 실행 여부만 확인한다.",
+        "answer":  false,
+        "explanation":  "입력 조건과 결과의 논리 관계를 본다."
+    },
+    {
+        "id":  "12-test-3-28",
+        "statement":  "원인은 출력 조건이고 결과는 입력 조건이다.",
+        "answer":  false,
+        "explanation":  "교안의 용어 정의다."
+    },
+    {
+        "id":  "12-test-3-29",
+        "statement":  "큰 프로그램은 그래프 작성 가능한 크기로 분할할 수 있다.",
+        "answer":  true,
+        "explanation":  "제작 과정 1단계다."
+    },
+    {
+        "id":  "12-test-3-30",
+        "statement":  "원인과 결과는 오직 실행 로그에서만 찾는다.",
+        "answer":  false,
+        "explanation":  "제작 과정 설명이다."
+    },
+    {
+        "id":  "12-test-3-31",
+        "statement":  "원인과 결과에는 식별자를 부여하면 안 된다.",
+        "answer":  false,
+        "explanation":  "일련번호 같은 식별자를 부여한다."
+    },
+    {
+        "id":  "12-test-3-32",
+        "statement":  "원인-결과 그래프에서는 제한 조건 표시를 하지 않는다.",
+        "answer":  false,
+        "explanation":  "제한 조건 기호를 사용한다."
+    },
+    {
+        "id":  "12-test-3-33",
+        "statement":  "원인-결과 그래프는 의사결정 테이블과 무관하다.",
+        "answer":  false,
+        "explanation":  "결과 발생 조건을 테이블로 정리한다."
+    },
+    {
+        "id":  "12-test-3-34",
+        "statement":  "의사결정 테이블을 기반으로 테스트 케이스를 도출한다.",
+        "answer":  true,
+        "explanation":  "제작 과정의 마지막이다."
+    },
+    {
+        "id":  "12-test-3-35",
+        "statement":  "예제에서 P 또는 S로 시작하고 #이면 출입 금지이다.",
+        "answer":  false,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-3-36",
+        "statement":  "첫 번째 열이 P 또는 S로 시작하지 않으면 출입 가능이다.",
+        "answer":  false,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-3-37",
+        "statement":  "P/S로 시작하고 #이 아니면 항상 출입 가능이다.",
+        "answer":  false,
+        "explanation":  "교안 예제 조건이다."
+    },
+    {
+        "id":  "12-test-3-38",
+        "statement":  "P는 Password, S는 Security만 의미한다.",
+        "answer":  false,
+        "explanation":  "교안 예제의 의미다."
+    },
+    {
+        "id":  "12-test-3-39",
+        "statement":  "원인-결과 그래프는 명세 기반 테스트 기법이다.",
+        "answer":  true,
+        "explanation":  "블랙박스 테스트 장에서 다룬다."
+    },
+    {
+        "id":  "12-test-3-40",
+        "statement":  "구현 기반 테스트는 블랙박스 테스트와 완전히 같은 말이다.",
+        "answer":  false,
+        "explanation":  "내부 구조 기반 테스트다."
+    },
+    {
+        "id":  "12-test-3-41",
+        "statement":  "구현 기반 테스트는 내부 구조를 절대 보지 않는다.",
+        "answer":  false,
+        "explanation":  "내부 변수·서브루틴 오류를 찾는다."
+    },
+    {
+        "id":  "12-test-3-42",
+        "statement":  "입력 데이터를 가지고 실행 상태를 추적해 오류를 찾는다.",
+        "answer":  true,
+        "explanation":  "동적 테스트 부류다."
+    },
+    {
+        "id":  "12-test-3-43",
+        "statement":  "내시경 비유는 내부를 전혀 보지 않는 블랙박스 테스트만 의미한다.",
+        "answer":  false,
+        "explanation":  "내부 확인 비유다."
+    },
+    {
+        "id":  "12-test-3-44",
+        "statement":  "화이트박스 절차에서는 적합성 기준을 정하지 않는다.",
+        "answer":  false,
+        "explanation":  "첫 단계로 제시된다."
+    },
+    {
+        "id":  "12-test-3-45",
+        "statement":  "테스트 데이터는 기준과 무관하게 추첨으로만 정한다.",
+        "answer":  false,
+        "explanation":  "테스트 데이터 생성 단계다."
+    },
+    {
+        "id":  "12-test-3-46",
+        "statement":  "문장·분기·조건 검증은 모두 디자인 패턴이다.",
+        "answer":  false,
+        "explanation":  "구현 기반 테스트 방법 목록이다."
+    },
+    {
+        "id":  "12-test-3-47",
+        "statement":  "문장 검증 기준은 모든 가능한 경로를 반드시 실행해야만 한다.",
+        "answer":  false,
+        "explanation":  "문장 실행 여부가 핵심이다."
+    },
+    {
+        "id":  "12-test-3-48",
+        "statement":  "문장 검증 기준은 제어 흐름 그래프와 무관하다.",
+        "answer":  false,
+        "explanation":  "절차에 포함된다."
+    },
+    {
+        "id":  "12-test-3-49",
+        "statement":  "문장 검증 기준은 최소한의 테스트로 다른 기준보다 약할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 한계다."
+    },
+    {
+        "id":  "12-test-3-50",
+        "statement":  "or를 and로 잘못 코딩하면 문장 검증이 항상 발견한다.",
+        "answer":  false,
+        "explanation":  "문장 검증의 문제점이다."
+    },
+    {
+        "id":  "12-test-3-51",
+        "statement":  "문장 검증에서는 테스트 데이터를 실행하지 않는다.",
+        "answer":  false,
+        "explanation":  "절차의 일부다."
+    },
+    {
+        "id":  "12-test-3-52",
+        "statement":  "문장 검증은 조건식 오류를 반드시 모두 발견한다.",
+        "answer":  false,
+        "explanation":  "최소한의 테스트라 한계가 있다."
+    },
+    {
+        "id":  "12-test-3-53",
+        "statement":  "분기 검증 기준은 조건문의 참/거짓을 보지 않는다.",
+        "answer":  false,
+        "explanation":  "결정 검증 기준이다."
+    },
+    {
+        "id":  "12-test-3-54",
+        "statement":  "분기 검증 기준은 동등 분할 기법이라고도 한다.",
+        "answer":  false,
+        "explanation":  "교안의 명칭이다."
+    },
+    {
+        "id":  "12-test-3-55",
+        "statement":  "분기 시점 조건 오류와 합류 위치 오류 발견 가능성이 높다.",
+        "answer":  true,
+        "explanation":  "교안의 장점이다."
+    },
+    {
+        "id":  "12-test-3-56",
+        "statement":  "분기 검증은 항상 하나의 경로만 있으면 충분하다.",
+        "answer":  false,
+        "explanation":  "경로 조합이 필요할 수 있다."
+    },
+    {
+        "id":  "12-test-3-57",
+        "statement":  "분기 검증은 개별 조건식 오류를 모두 보장해 발견한다.",
+        "answer":  false,
+        "explanation":  "조건 검증 기준으로 보완한다."
+    },
+    {
+        "id":  "12-test-3-58",
+        "statement":  "or 조건에서 하나가 참이면 전체가 반드시 거짓이다.",
+        "answer":  false,
+        "explanation":  "or의 특성 때문이다."
+    },
+    {
+        "id":  "12-test-3-59",
+        "statement":  "조건 검증 기준은 전체 조건식만 보고 개별 조건식은 무시한다.",
+        "answer":  false,
+        "explanation":  "개별 조건식 오류를 보기 위한 기준이다."
+    },
+    {
+        "id":  "12-test-3-60",
+        "statement":  "and 조건은 하나만 T여도 전체가 T이다.",
+        "answer":  false,
+        "explanation":  "and 연산 특성이다."
+    },
+    {
+        "id":  "12-test-3-61",
+        "statement":  "and에서 하나라도 F이면 전체 조건식은 F가 된다.",
+        "answer":  true,
+        "explanation":  "and 연산 특성이다."
+    },
+    {
+        "id":  "12-test-3-62",
+        "statement":  "or 조건은 하나만 T여도 전체가 F이다.",
+        "answer":  false,
+        "explanation":  "or 연산 특성이다."
+    },
+    {
+        "id":  "12-test-3-63",
+        "statement":  "조건 검증은 분기 검증보다 항상 약해서 개별 조건식은 보지 않는다.",
+        "answer":  false,
+        "explanation":  "개별 조건식을 본다."
+    },
+    {
+        "id":  "12-test-3-64",
+        "statement":  "조건 검증 기준은 모든 오류를 완전히 보장한다.",
+        "answer":  false,
+        "explanation":  "이후 마스크 문제가 논의된다."
+    },
+    {
+        "id":  "12-test-3-65",
+        "statement":  "조건 검증은 T/F 조합과 전혀 무관하다.",
+        "answer":  false,
+        "explanation":  "개별 조건식 조합을 고려한다."
+    },
+    {
+        "id":  "12-test-3-66",
+        "statement":  "분기/조건 검증은 개별 조건식을 절대 보지 않는다.",
+        "answer":  false,
+        "explanation":  "분기와 조건을 함께 고려한다."
+    },
+    {
+        "id":  "12-test-3-67",
+        "statement":  "분기/조건 검증은 마스크 문제를 완전히 해결한다.",
+        "answer":  false,
+        "explanation":  "교안은 한계로 마스크를 설명한다."
+    },
+    {
+        "id":  "12-test-3-68",
+        "statement":  "마스크는 어떤 개별 조건식이 다른 조건식 결과와 상관없이 전체 결과를 이미 결정하는 것이다.",
+        "answer":  true,
+        "explanation":  "교안의 정의다."
+    },
+    {
+        "id":  "12-test-3-69",
+        "statement":  "and 조건에서 하나가 F이면 다른 조건식 오류는 항상 드러난다.",
+        "answer":  false,
+        "explanation":  "마스크 상황이다."
+    },
+    {
+        "id":  "12-test-3-70",
+        "statement":  "분기/조건 검증은 다중 조건 검증과 완전히 같은 말이다.",
+        "answer":  false,
+        "explanation":  "다중 조건은 마스크 문제까지 보완한다."
+    },
+    {
+        "id":  "12-test-3-71",
+        "statement":  "다중 조건 검증은 마스크 문제와 무관하다.",
+        "answer":  false,
+        "explanation":  "교안의 정의다."
+    },
+    {
+        "id":  "12-test-3-72",
+        "statement":  "and 조건에서는 나머지 식의 T/F를 고려할 필요가 전혀 없다.",
+        "answer":  false,
+        "explanation":  "마스크 해결 방식이다."
+    },
+    {
+        "id":  "12-test-3-73",
+        "statement":  "or 조건에서 하나가 T이면 다른 조건식 오류가 가려질 수 있다.",
+        "answer":  true,
+        "explanation":  "or 마스크 문제다."
+    },
+    {
+        "id":  "12-test-3-74",
+        "statement":  "다중 조건 검증은 파일 줄 수만 세는 기준이다.",
+        "answer":  false,
+        "explanation":  "조건식 조합 기준이다."
+    },
+    {
+        "id":  "12-test-3-75",
+        "statement":  "다중 조건 검증은 문장 검증보다도 약해 문장만 본다.",
+        "answer":  false,
+        "explanation":  "마스크 문제 보완이 핵심이다."
+    },
+    {
+        "id":  "12-test-3-76",
+        "statement":  "기본 경로 테스트는 GoF가 디자인 패턴으로 만들었다.",
+        "answer":  false,
+        "explanation":  "교안에 매케이브가 만든 것으로 설명된다."
+    },
+    {
+        "id":  "12-test-3-77",
+        "statement":  "기본 경로 테스트는 경로를 하나도 실행하지 않는다.",
+        "answer":  false,
+        "explanation":  "독립 경로 모두 수행이 목적이다."
+    },
+    {
+        "id":  "12-test-3-78",
+        "statement":  "절차에는 순서도 작성과 흐름 그래프 작성이 포함된다.",
+        "answer":  true,
+        "explanation":  "교안 절차다."
+    },
+    {
+        "id":  "12-test-3-79",
+        "statement":  "순환 복잡도는 토스트 칼로리 계산 공식이다.",
+        "answer":  false,
+        "explanation":  "매케이브 메트릭이다."
+    },
+    {
+        "id":  "12-test-3-80",
+        "statement":  "순환 복잡도 공식은 항상 CC=E+N+2만 쓴다.",
+        "answer":  false,
+        "explanation":  "교안 공식이다."
+    },
+    {
+        "id":  "12-test-3-81",
+        "statement":  "P는 포켓몬 수를 의미하므로 CC=P+1은 디자인 패턴 공식이다.",
+        "answer":  false,
+        "explanation":  "P는 Predicate, 즉 분기 노드 수다."
+    },
+    {
+        "id":  "12-test-3-82",
+        "statement":  "외부 구역은 R 계산에서 제외된다.",
+        "answer":  false,
+        "explanation":  "Region 정의다."
+    },
+    {
+        "id":  "12-test-3-83",
+        "statement":  "순환 복잡도는 테스트해야 할 독립 경로 수를 파악하는 데 활용될 수 있다.",
+        "answer":  true,
+        "explanation":  "독립 경로 수와 관련된다."
+    },
+    {
+        "id":  "12-test-3-84",
+        "statement":  "V 모델은 테스트와 개발 단계가 전혀 연결되지 않는다.",
+        "answer":  false,
+        "explanation":  "개발 단계와 테스트가 대응된다."
+    },
+    {
+        "id":  "12-test-3-85",
+        "statement":  "V 모델 과정에는 오직 디자인 패턴만 포함된다.",
+        "answer":  false,
+        "explanation":  "교안의 테스트 과정이다."
+    },
+    {
+        "id":  "12-test-3-86",
+        "statement":  "단위 테스트는 프로그램의 기본 단위인 모듈을 테스트한다.",
+        "answer":  true,
+        "explanation":  "모듈 테스트다."
+    },
+    {
+        "id":  "12-test-3-87",
+        "statement":  "단위 테스트는 명세와 무관하게 화면 색만 본다.",
+        "answer":  false,
+        "explanation":  "개별 모듈 기능을 본다."
+    },
+    {
+        "id":  "12-test-3-88",
+        "statement":  "테스트 드라이버는 하위 모듈 역할만 한다.",
+        "answer":  false,
+        "explanation":  "대상 모듈을 호출한다."
+    },
+    {
+        "id":  "12-test-3-89",
+        "statement":  "스텁은 상위 모듈 역할만 한다.",
+        "answer":  false,
+        "explanation":  "호출받아 결과를 넘긴다."
+    },
+    {
+        "id":  "12-test-3-90",
+        "statement":  "드라이버와 스텁은 실제 전체 시스템보다 복잡해야 한다.",
+        "answer":  false,
+        "explanation":  "테스트용 가상 모듈이다."
+    },
+    {
+        "id":  "12-test-3-91",
+        "statement":  "단위 테스트에서 잘못된 자료형, 논리 연산자, 알고리즘 오류, 틀린 수식, 탈출구 없는 반복문을 발견할 수 있다.",
+        "answer":  true,
+        "explanation":  "교안의 오류 목록이다."
+    },
+    {
+        "id":  "12-test-3-92",
+        "statement":  "통합 테스트는 모듈 간 상호작용과 무관하다.",
+        "answer":  false,
+        "explanation":  "모듈 간 인터페이스를 본다."
+    },
+    {
+        "id":  "12-test-3-93",
+        "statement":  "Big-bang 테스트는 항상 한 모듈만 따로 테스트한다.",
+        "answer":  false,
+        "explanation":  "한꺼번에 통합하는 방식이다."
+    },
+    {
+        "id":  "12-test-3-94",
+        "statement":  "Big-bang은 오류 원인 위치를 항상 가장 쉽게 찾는다.",
+        "answer":  false,
+        "explanation":  "한꺼번에 통합하기 때문이다."
+    },
+    {
+        "id":  "12-test-3-95",
+        "statement":  "하향식 통합은 항상 최하위 모듈부터 시작한다.",
+        "answer":  false,
+        "explanation":  "상위에서 하위로 내려간다."
+    },
+    {
+        "id":  "12-test-3-96",
+        "statement":  "하향식 통합에서는 스텁이 필요할 수 있다.",
+        "answer":  true,
+        "explanation":  "미완성 하위 모듈을 대체한다."
+    },
+    {
+        "id":  "12-test-3-97",
+        "statement":  "상향식 통합은 최상위 모듈부터만 시작한다.",
+        "answer":  false,
+        "explanation":  "하위에서 상위로 올라간다."
+    },
+    {
+        "id":  "12-test-3-98",
+        "statement":  "상향식 통합에서는 테스트 드라이버가 절대 필요 없다.",
+        "answer":  false,
+        "explanation":  "상위 모듈 역할을 대신한다."
+    },
+    {
+        "id":  "12-test-3-99",
+        "statement":  "시스템 테스트는 개별 함수 하나만 검사한다.",
+        "answer":  false,
+        "explanation":  "전체 시스템 요구 충족을 본다."
+    },
+    {
+        "id":  "12-test-3-100",
+        "statement":  "인수 테스트는 개발자가 코드 줄 수만 확인한다.",
+        "answer":  false,
+        "explanation":  "사용자 관점의 인수 확인이다.\n\n---"
+    }
+]
+});
+
